@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: chetan sachdev
-subtitle:
+title: Chetan Sachdev
+subtitle: planting ideas
 description: chetan sachdev's personal website
-keywords: javascript developer, kenexa viewertemplate developer, adobe flex engineer, freelance developer
+keywords: bangalore javascript developer, kenexa viewertemplate developer, 508 developer, adobe flex engineer, freelance flash developer, Javascript trainer bangalore, Vue trainer bangalore
 author: Chetan Sachdev
-language: english
+language: en_US
 timezone: Asia/Kolkata
 
 feed:
@@ -35,6 +35,10 @@ jsonContent:
     categories: false
     tags: true
 
+# To automatically generate a Sitemap 
+a Sitemap :
+   path : sitemap.xml 
+
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://chetansachdev.com
@@ -59,14 +63,14 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
-  enable: true
-  line_number: true
-  auto_detect: false
-  tab_replace:
+  enable: false
+  #line_number: true
+  #auto_detect: false
+  #tab_replace:
   
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -75,7 +79,9 @@ highlight:
 index_generator:
   path: ''
   per_page: 10
-  order_by: -date
+  order_by:
+    top: -1
+    date: -1
   
 # Category & Tag
 default_category: uncategorized
@@ -97,7 +103,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: indigo
+theme: indigo-plus
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
