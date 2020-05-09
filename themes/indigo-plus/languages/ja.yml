@@ -1,0 +1,12 @@
+global:
+  search_input_hint: "Search"
+
+post:
+  continue_reading: "read more…"
+  last_updated: "Final update："
+
+footer: false
+
+tag:
+  all: "全て"
+  tags: "タグ"
