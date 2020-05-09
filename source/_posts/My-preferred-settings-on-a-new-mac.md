@@ -10,7 +10,7 @@ toc: false
 date: 2020-03-14 18:30:02
 ---
 
-These instructions are for a new mac and tested in macOS Catalina.
+These instructions are for a new mac and tested in macOS Catalina. 
 **Step 1**
 Run laptop script
 https://github.com/thoughtbot/laptop
