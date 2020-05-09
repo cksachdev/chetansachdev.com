@@ -17,7 +17,7 @@ https://github.com/thoughtbot/laptop
 **Step 2**
 Download all that I need to work on javascript based projects.
 ```language
-brew cask install iterm2 alfred bartender dropbox google-chrome licecap messenger skype slack sublime-text virtualbox whatsapp visual-studio-code karabiner-elements sourcetree araxis-merge itsycal the-unarchiver brave-browser
+brew cask install iterm2 alfred bartender dropbox google-chrome licecap messenger skype slack sublime-text virtualbox whatsapp visual-studio-code karabiner-elements sourcetree araxis-merge itsycal the-unarchiver brave-browser easyfind
 ```
 
 **Step 3**
