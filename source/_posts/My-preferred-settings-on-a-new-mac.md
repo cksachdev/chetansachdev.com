@@ -38,6 +38,14 @@ Configure Karabiner Elements
 - Configure Itsycal 
 	- EEEE, d-MMM-y h:mm a
 
+**Step 5**
+Download VLC 2.2.8 
+https://download.videolan.org/pub/videolan/vlc/
+
+**Step 6**
+Apps from App Store
+1. Super Easy Timer
+2. 
 
 **Reset default settings for function keys to make debugging easier**
 
