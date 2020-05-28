@@ -43,41 +43,41 @@ email: mail@chetansachdev.com
 # 设置 Android L Chrome 浏览器状态栏颜色
 color: '#3F51B5'
 
-# 页面标题
+# page title
 tags_title: Tags
 archives_title: Archives
 categories_title: Categories
 
-# 文章截断
+# atricle truncation
 excerpt_render: true
 excerpt_length: 200
 excerpt_link: Read more...
 mathjax: true
 archive_yearly: true
 
-# 是否显示文章最后更新时间
+# last update time of article
 show_last_updated: true
 
-# 是否开启分享
+# sharing
 share: true
 
-# 是否开启打赏，关闭 
+# reward
 reward: false
 # reward:
-#   title: 感谢支持！
-#   wechat: /img/wechat.png     #微信，关闭设为 false
-#   alipay: /img/alipay.jpg     #支付宝，关闭设为 false
+#   title:Thanks for the support！
+#   wechat: /img/wechat.png     #wechat，close to false
+#   alipay: /img/alipay.jpg     #alipay，close to false
 
-# 是否开启搜索
+# search
 search: true
 
-# 是否大屏幕下文章页隐藏导航
+# navigation
 hideMenu: true
 
-# 是否开启toc
+# open toc
 # toc: false
 toc:
-  list_number: false  # 是否显示数字排序
+  list_number: false  # numeric sorting
 
 # 文章页留言内容，hexo中所有变量及辅助函数等均可调用，具体请查阅 hexo.io
 postMessage: Article publishing address：<a href="<%- url_for(page.path).replace(/index\.html$/, '') %>" target="_blank" rel="external"><%- page.permalink.replace(/index\.html$/, '') %></a>
