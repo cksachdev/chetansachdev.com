@@ -1,4 +1,30 @@
 # Header
-menu:
-  Home: /
-  Archives: /archives
+  menu:
+  home:
+    text: Home
+    url: /
+  archives:
+    text: Archives
+    url: /archives/
+  th-list:
+    text: Categories
+    url: /categories/
+  tags:
+    text: Tags
+    url: /tags/
+  github:
+    text: Github
+    url: https://github.com/cksachdev
+    target : _blank  
+  info-circle:
+    text: About me
+    url: /about/
+
+avatar: /img/cksachdev.jpg
+
+favicon: /img/favicon.ico
+
+email: mail@chetansachdev.com
+
+# Read More text
+excerpt_link: Read More

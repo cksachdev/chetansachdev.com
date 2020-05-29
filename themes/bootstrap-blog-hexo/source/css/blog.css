@@ -164,3 +164,17 @@ h6, .h6 {
 .blog-footer p:last-child {
     margin-bottom: 0;
 }
+.blog-tags-container, .blog-categories-container {
+    margin-top: 30px;
+    font-size: 20px;
+}
+.blog-tags-container span.glyphicon, .blog-categories-container span.glyphicon {
+    margin-right: 20px;
+}
+.blog-post-title-archive {
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+.blog-archive-title {
+    margin-bottom: 50px;
+}
