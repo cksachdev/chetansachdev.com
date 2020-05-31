@@ -20,11 +20,4 @@
     text: About me
     url: /about/
 
-avatar: /img/cksachdev.jpg
-
-favicon: /img/favicon.ico
-
-email: mail@chetansachdev.com
-
-# Read More text
-excerpt_link: Read More
+  
