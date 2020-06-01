@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- partial('_partial/head.ejs')%>
+<body>
+    <body class="bg-gray-900">
+    
+        <div class="flex justify-between mx-20 my-20">
+    
+            <!-- Sidebar -->
+            <div class="w-64">
+                <%- partial('_partial/sidebar.ejs') %>
+            </div>
+            <!-- Main Content -->
+            <div class="mx-20">
+                <%- body %>
+            </div>
+            
+        </div>
+    
+        <%- partial('_partial/footer.ejs')%>
+    </body>
+</body>
+</html>

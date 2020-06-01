@@ -1,0 +1,10 @@
+<nav>
+    <ul class="pager text-white my-12 ">
+        <% if (page.prev){ %>
+            <li><a class="border" href="<%- config.root %><%- page.prev_link %>">Previous</a></li>
+        <% } %>
+        <% if (page.next){ %>
+            <li><a class="border border-gray-700 text-gray-600 px-6 py-2 rounded-full" href="<%- config.root %><%- page.next_link %>">Next</a></li>
+        <% } %>
+    </ul>
+</nav>
