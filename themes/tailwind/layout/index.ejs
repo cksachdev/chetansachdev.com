@@ -1,7 +1,7 @@
-<div class=" px-8">
+
     <%- partial('_partial/header.ejs')%>
 
-   <div class="my-20 ">
+   
     <% page.posts.each(function(item){ %>
         <%- partial('_partial/article-excerpt', {item: item}) %>
     <% }); %>
@@ -11,6 +11,6 @@
     <% }); %>
     <%- partial('_partial/pagination') %>
     
-    </div>
-</div>
+    
+
 
