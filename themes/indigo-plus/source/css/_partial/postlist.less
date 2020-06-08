@@ -2,12 +2,16 @@
     padding: 0;
     margin: 0 -12px;
     list-style: none;
+    background-color: rgb(45, 43, 43);
 }
 
 .post-list-item {
     padding: 0 12px;
     margin-bottom: 30px;
+    background-color: rgb(45, 43, 43);
+   
 }
+
 
 .post-title {
     margin: 0 0 16px;
@@ -15,15 +19,16 @@
 
 
 .post-title-link {
-    color: @primaryColor;
-    .hoverLine(@primaryColor);
-}
+    color: whitesmoke;
+    .hoverLine(#42749a);
+} 
 
 .post-meta {
     margin: 0 0 10px;
     line-height: 14px;
     font-size: 13px;
     font-weight: bold;
+    background-color: rgb(45, 43, 43);
     color: @secondaryTextColor;
     overflow: hidden;
     >*:not(:first-child) {
@@ -55,9 +60,9 @@
 }
 
 .article-category-list-link {
-    color: @accentColor;
+    color: rgb(179, 138, 33);
     &:hover {
-        color: @accentColor;
+        color: rgb(179, 138, 33);
     }
 }
 
@@ -108,7 +113,7 @@
     display: inline-block;
     padding: 0 6px;
     font-weight: 500;
-    color: @primaryColor!important;
+    color: #42749a!important;
     border: none!important;
     border-radius: 3px;
 
@@ -149,7 +154,7 @@
 
     .current {
         color: #fff;
-        background: @primaryColor;
+        background: #42749a;
     }
 }
 
@@ -169,5 +174,6 @@
     .post-list-item {
         padding: 0;
         margin-bottom: 16px;
+        background-color: rgb(45, 43, 43);
     }
 }

@@ -105,11 +105,12 @@
     margin-top: -150px;
     min-height: 100px;
     padding: 35px;
-    background: #fff;
+    background:rgb(45, 43, 43);
     border-radius: 4px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
     .post-meta {
         margin-top: 8px;
+        
     }
 }
 .post-card-title {
@@ -239,8 +240,8 @@
     p,
     li {
         a {
-            color: @accentColor;
-            border-bottom: 1px dotted lighten(@accentColor, 20%);
+            color: rgb(179, 138, 33);
+            border-bottom: 1px dotted lighten(rgb(179, 138, 33), 20%);
             word-break: break-all;
 
             &:hover,
@@ -254,7 +255,7 @@
 
     strong {
         font-weight: 600;
-        color: @primaryColor;
+        color: #42749a;
         a {
             border-color: @accentColor
         }
@@ -354,11 +355,12 @@
     blockquote {
         position: relative;
         padding: 16px 20px;
-        border-left: 4px solid @primaryColor;
+        border-left: 2px solid gray;
         color: lighten(@primaryTextColor, 30%);
-        background: @codeBg;
+        background: rgb(55, 52, 52);
         font-size: 14px;
         border-radius: 0 2px 2px 0;
+    
 
         p {
             margin: 0;
@@ -432,13 +434,14 @@
 
     code,
     pre {
-        background: @codeBg
+        background:  rgb(45, 43, 43);
+        color: lightgray;
         // background: @inline-codeBg
     }
 
     p code,
     li code {
-        color: @accentColor;
+        color: rgb(179, 138, 33);;
         line-height: 1;
         margin: 0 4px;
         font-size: 80%;

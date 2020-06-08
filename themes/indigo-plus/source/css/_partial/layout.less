@@ -18,7 +18,7 @@
     z-index: 66;
     width: @menuWidth;
     min-height: 100%;
-    background: #fff;
+    background:  rgb(45, 43, 43);
     box-shadow: @boxShadow;
     .transition(.4s, cubic-bezier(.18, .81, .3, .89));
     will-change: transform, -webkit-transform;
@@ -130,6 +130,7 @@
 .container {
     width: @contentWidth;
     margin: 0 auto;
+   
 
     &:after {
         content: "";
@@ -161,7 +162,7 @@
 
 .footer {
     color: rgba(255,255,255,.6);
-    background: @darkPrimaryColor;
+    background: rgb(45, 43, 43);
     p {
         margin: 0;
         line-height: 1.6;
@@ -183,7 +184,8 @@
 
     .top {
         padding: 16px;
-        background: @primaryColor;
+        background: rgb(45, 43, 43);
+        border-bottom: 1px  dotted rgba(69, 67, 67, 0.536);
     }
     a {
         color: inherit;
@@ -199,7 +201,7 @@
     }
 }
 
-a[title="站长统计"] {
+a[title="Webmaster Statistics"] {
     display: none;
 }
 

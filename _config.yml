@@ -45,6 +45,7 @@ url: http://chetansachdev.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
+  lang: en
 
 # Directory
 source_dir: source
@@ -63,7 +64,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: true
 future: true
 highlight:
@@ -103,7 +104,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: tailwind-css
+theme: flavio_theme
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

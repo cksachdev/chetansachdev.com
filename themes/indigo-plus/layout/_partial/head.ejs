@@ -11,6 +11,7 @@
     <% }%>
     <% if(theme.canonical){ %>
     <link rel="canonical" href="<%- (theme.canonical + url_for(page.path)).replace(/index\.html$/, '') %>">
+   
     <% }%>
     <%
         var title = page.title;
@@ -53,6 +54,7 @@
     <%- favicon_tag(theme.favicon) %>
     <link rel="stylesheet" href="<%- url_for(theme_css('/css/style', cache)) %>">
     <link href="/css/prism/prism-<%- theme.prism.theme %>.css" rel="stylesheet" />
+    
     <script>window.lazyScripts=[]</script>
 
     <!-- custom head -->
