@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- partial('_partial/head') %>
-<body class="bg-gray-900">
-
-    <div class="grid grid-cols-2 ">
-        <div class="w-1/2">
-            <%- partial('_partial/sidebar.ejs') %>
+<body class="">
+    <div class="wrapper">
+        <div class="container single-post-container has-sidebar">
+            <div class=" flex justify-center">
+                <%- partial('_partial/sidebar.ejs') %>
+            </div>
+            <div class="">
+                <%- body %>
+            </div>
+            
         </div>
-      
-         <%- body %>
     </div>
+    
     
     <%- partial('_partial/footer') %>
 </body>

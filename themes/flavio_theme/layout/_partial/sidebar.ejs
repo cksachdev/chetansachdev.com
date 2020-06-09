@@ -1,38 +1,22 @@
-<aside id="menu" class="text-white" <% if((is_post() || page.layout === 'page') && theme.hideMenu){ %>class="hide"<% } %> >
-    <div class="">
-      <a href="javascript:;" class="" id="menu-off">
-          <i class=""></i>
-      </a>
-      <div class="" style="background-image:url(<%- url_for(theme.brand) %>)">
-        <div class="brand">
-          <a href="<%- url_for(theme.avatar_link) %>" class="">
-            <img src="<%- url_for(theme.avatar) %>">
-          </a>
-          <hgroup class="introduce">
-            <h5 class="nickname"><%- config.author %></h5>
-            <%- mail_to(theme.email, theme.email, {class: 'mail'}) %>
-          </hgroup>
-        </div>
-      </div>
-      <div class="scroll-wrap flex-col">
-        <ul class="nav">
-          <%
-            var menuItem, isActive = function(item) {
-                var pageUrl = url_for(page.path)
-                return item.url === '/' ? pageUrl === url_for(item.url + 'index.html') : _.startsWith(pageUrl, url_for(item.url))
-            };
-            for (var i in theme.menu) {
-              menuItem = theme.menu[i];
-            %>
-              <li class="waves-block waves-effect<% if(isActive(menuItem)){ %> active<% } %>">
-                <a href="<%- url_for(menuItem.url) %>" <% if(menuItem.target){ %>target="_blank"<% } %> >
-                  <i class="icon icon-lg icon-<%= i %>"></i>
-                  <%=(menuItem.text || _.startCase(i)) %>
-                </a>
-              </li>
-          <% } %>
-        </ul>
-      </div>
-    </div>
-  </aside>
-  
+<aside class="flex-col ">
+
+  <img class="h-24 w-24 rounded-full" src="<%= ('img/cksachdev.jpg') %>" alt="">
+  <h1 class="text-white font-semibold mt-4 mb-2">Chetan Sachdev</h1>
+  <email class="text-gray-600 opacity-75  font-light text-lg">mail@chetanscahdev.com</email>
+  <div class="grid grid-rows-6 gap-3 my-12">
+    <a class="text-white" href="#"> Home</a>
+    <a class="text-white" href="#"> Archive</a>
+    <a class="text-white" href="#"> Categories</a>
+    <a class="text-white" href="#"> Tags</a>
+    <a class="text-white" href="#"> Github</a>
+    <a class="text-white" href="#"> About me</a>
+  </div>
+  <div class="grid grid-rows-6 gap-3 ">
+    <a class="text-white" href="https://twitter.com/cksachdev">🐦 <span class="border-b border-dotted">Follow me</span>
+       on Twitter</a>
+    <a class="text-white" href="https://www.linkedin.com/in/cksachdev/"> Linkedin</a>
+    <a class="text-white" href="https://www.facebook.com/cksachdev">Facebook</a> 
+  </div>
+  <p class="text-white leading-6">✉️ Questions? <a class="border-b border-dotted" href="#">Email me</a>  (no guest posts, no "add this link", no product placement or review requests pls)
+  </p>
+</aside

@@ -1,4 +1,4 @@
-<div class="blog-post text-white ">
+<div class="blog-post text-white  p-12">
     <!-- Title -->
     <div class="flex  ">
         <h2 class="blog-post-title">
@@ -7,7 +7,7 @@
             </a>
         </h2>
         <!-- Date and Author -->
-        <p class="blog-post-meta font-mono ml-32">
+        <p class="blog-post-meta font-mono ml-32 text-sm">
             <%= item.date.format(config.date_format) %>
             <% if(item.author) { %>
                 by <%- item.author %>
@@ -16,7 +16,7 @@
     </div>
     
     <!-- Content -->
-    <div class="">
+    <div class="text-lg tracking-wider leading-8 mt-4">
         <%- item.excerpt || item.content %>
     </div>
    
