@@ -12,5 +12,6 @@ date: 2020-05-10 22:35:47
 ---
 
 ```
-PATH=$PATH:/Applications/Postgres.app/Contents/Versions/12/bin gem install pg -v '1.2.2' --source 'https://rubygems.org/'
+PATH=$PATH:/Applications/Postgres.app/Contents/Versions/12/bin
+gem installs pg -v '1.2.2' --source 'https://rubygems.org/'
 ```

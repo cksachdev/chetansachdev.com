@@ -26,6 +26,7 @@ Open footer.mustache in editor of your choice
 In theme boost footer.mustache looks like below:
 ![image.png](/images/2020/02/12/62befb40-4d05-11ea-93b3-3feac072eb06.png)
 
+
 Save the file and upload it back to EC2 instance. This should remove the moodle logo from "boost" theme. 
 
 Note: These instructions may vary for different themes.
