@@ -1,3 +1,4 @@
+# Header
 menu:
   home:
     text: Home
@@ -19,15 +20,29 @@ menu:
     text: About me
     url: /about/
 
+
 # Your avatar url
 avatar: /img/cksachdev.jpg
 # avatar link
 avatar_link: /
 
-# Avatar background image
-brand: /img/black-bg-img.jpeg
 # favicon
 favicon: /img/favicon.ico
 
 # email
 email: mail@chetansachdev.com
+
+# copyright start year
+since_year: 2018
+
+# atricle truncation
+excerpt_render: true
+excerpt_length: 150
+excerpt_link: Read more...
+mathjax: true
+archive_yearly: true
+
+# Total site visit
+visit_counter:
+  site_uv: Total number of visitors to the site：
+  site_pv: Total site visits：

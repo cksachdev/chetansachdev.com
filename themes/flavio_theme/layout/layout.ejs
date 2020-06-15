@@ -3,18 +3,28 @@
 <%- partial('_partial/head') %>
 <body class="">
     <div class="wrapper">
+        <h1 class=" w-auto"><%- partial('_partial/header') %> </h1>
+        
         <div class="container single-post-container has-sidebar">
+            
             <div class=" flex justify-center">
                 <%- partial('_partial/sidebar.ejs') %>
             </div>
             <div class="">
-                <%- body %>
+               <div class="mx-8">
+               
+                   <div class="">
+                    <%- body %>
+                   </div>
+               </div>
+               
             </div>
             
         </div>
+        
     </div>
     
     
-    <%- partial('_partial/footer') %>
+  
 </body>
 </html>

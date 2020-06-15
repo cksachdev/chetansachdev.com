@@ -7,15 +7,33 @@ body{
     font-size: 20px;
 }
 html{
-    line-height: 1.15;
+    line-height: 1.7;
 }
 div{
     display: block;
 }
-
+p{
+    margin-bottom: 30px;
+}
+.post-title-h2{
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1.2;
+}
+.post-stub{
+    border-color: #303030;;
+}
+.post-title{
+    width: 661px;
+    height: 100px;
+}
+.post-meta{
+    width: 140px;
+    height: 100px;
+}
 .container{
     display: grid;
-    grid-template-columns: 220px 1fr;
+    grid-template-columns: 220px auto;
     column-gap: 45px;
     grid-template-areas: "sidebar main";
     max-width: 1200px;
@@ -52,4 +70,13 @@ div{
     height: auto;
     min-height: 100%;
     margin-bottom: -265px;
+}
+.menu-item:hover{
+    background-color:dimgrey;
+}
+.header-main{
+    background-color: #2C2B2B;
+}
+.header-main:hover{
+    background-color: dimgrey ;
 }

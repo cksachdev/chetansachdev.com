@@ -1,13 +1,11 @@
+  
+<%
+   var posts = [];
+   page.posts.each(function(item){ %>
+    <%- partial('_partial/article-excerpt', {item: item}) %>
+<% }); %>
 
-  <div class="">
-    <% page.posts.each(function(item){ %>
-        <%- partial('_partial/article-excerpt', {item: item}) %>
-    <% }); %>
-    
-    <% page.posts.each(function(item){ %>
-        <%- partial('_partial/article-excerpt', {item: item}) %>
-    <% }); %>
-    <%- partial('_partial/pagination') %>
-</div>
-
- 
+<% page.posts.each(function(item){ %>
+    <%- partial('_partial/article-excerpt', {item: item}) %>
+<% }); %>
+<%- partial('_partial/pagination') %>
