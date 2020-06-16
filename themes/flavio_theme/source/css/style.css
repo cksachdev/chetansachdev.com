@@ -1,0 +1,82 @@
+body{
+    background-color:#1e2227;
+    color: #fff;
+    margin: 0;
+    color: #424242;
+    font-family: 'Avenir', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
+    font-size: 20px;
+}
+html{
+    line-height: 1.7;
+}
+div{
+    display: block;
+}
+p{
+    margin-bottom: 30px;
+}
+.post-title-h2{
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1.2;
+}
+.post-stub{
+    border-color: #303030;;
+}
+.post-title{
+    width: 661px;
+    height: 100px;
+}
+.post-meta{
+    width: 140px;
+    height: 100px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 220px auto;
+    column-gap: 45px;
+    grid-template-areas: "sidebar main";
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.single-post-container {
+    margin-top: 70px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+.single-post-container.has-sidebar aside {
+    grid-area: sidebar;
+    padding-left: 10px;
+    font-size: 1rem;
+}
+.home-section-col, aside {
+    display: block;
+    padding-top: 30px;
+}
+
+.single-post-container.has-sidebar article {
+    grid-area: main;
+}
+.post-container {
+    margin: 0 40px;
+}
+::selection {
+    background: #fff5b8;
+    color: #000;
+    display: block;
+}
+#wrapper {
+    height: auto;
+    min-height: 100%;
+    margin-bottom: -265px;
+}
+.menu-item:hover{
+    background-color:dimgrey;
+}
+.header-main{
+    background-color: #2C2B2B;
+}
+.header-main:hover{
+    background-color: dimgrey ;
+}

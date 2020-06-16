@@ -1,7 +1,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/favicon.ico">
     <title><%= config.title %> </title>
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
-    <link rel="stylesheet" href="/themes/flavio_theme/source/public/build/tailwind.css">
+    <base href="/">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/themes/flavio_theme/source/css/style.css">
+    <%- css('public/build/tailwind.css') %>
+    <%- css('css/style.css') %>
 </head>
