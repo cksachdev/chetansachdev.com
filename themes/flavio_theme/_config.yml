@@ -1,0 +1,33 @@
+menu:
+  home:
+    text: Home
+    url: /
+  archives:
+    text: Archives
+    url: /archives/
+  th-list:
+    text: Categories
+    url: /categories/
+  tags:
+    text: Tags
+    url: /tags/
+  github:
+    text: Github
+    url: https://github.com/cksachdev
+    target : _blank  
+  info-circle:
+    text: About me
+    url: /about/
+
+# Your avatar url
+avatar: /img/cksachdev.jpg
+# avatar link
+avatar_link: /
+
+# Avatar background image
+brand: /img/black-bg-img.jpeg
+# favicon
+favicon: /img/favicon.ico
+
+# email
+email: mail@chetansachdev.com
