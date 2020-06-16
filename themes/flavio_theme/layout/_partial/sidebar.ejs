@@ -1,4 +1,4 @@
-<aside class="flex-col ">
+<aside class=" ">
 
   <img class="h-24 w-24 rounded-full" src="<%- theme.avatar %>" alt="">
   <h1 class="text-white font-semibold mt-4 mb-2"><%= config.title %> </h1>
@@ -10,14 +10,16 @@
   
   <div class="grid grid-rows-6  my-8 ">
 
-    <a class="menu-item text-white px-2 py-4" href="#"> <i  class="fa fa-home fa-lg mr-6 fill-current text-gray-400" aria-hidden="true"></i>Home </a> 
-    <a class="menu-item text-white px-2 py-4" href="#"><i class="fa fa-archive mr-6 fill-current text-gray-400" aria-hidden="true"></i>Archives</a>
-    <a class=" menu-item text-white px-2 py-4" href="#"> <i class="fa fa-list mr-8 fill-current text-gray-400" aria-hidden="true"></i>Categories</a>
-    <a class="menu-item  text-white px-2 py-4" href="#"><i class="fa fa-tags mr-6 fill-current text-gray-400" aria-hidden="true"></i> Tags</a>
-    <a class="menu-item text-white px-2 py-4" href="#"> <i class="fa fa-github mr-8 fill-current text-gray-400" aria-hidden="true"></i>Github</a>
-    <a class="menu-item text-white px-2 py-4" href="#"><i class="fa fa-info-circle mr-6 fill-current text-gray-400" aria-hidden="true"></i> About me</a>
+    <a class="menu-item text-white px-2 py-4" href="<%- url_for(theme.menu.home.url) %>"> <i  class="fa fa-home fa-lg mr-6 fill-current text-gray-400" aria-hidden="true"></i><%- theme.menu.home.text %> </a> 
+    <a class="menu-item text-white px-2 py-4" href="<%- url_for(theme.menu.archives.url) %>"><i class="fa fa-archive mr-6 fill-current text-gray-400" aria-hidden="true"></i>Archives</a>
+    <a class=" menu-item text-white px-2 py-4" href="<%- url_for(theme.menu.categories.url) %>"> <i class="fa fa-list mr-6 fill-current text-gray-400" aria-hidden="true"></i>Categories</a>
+    <a class="menu-item  text-white px-2 py-4" href="<%- url_for(theme.menu.tags.url) %>"><i class="fa fa-tags mr-6 fill-current text-gray-400" aria-hidden="true"></i>Tags</a>
+    <a class="menu-item text-white px-2 py-4" href="https://github.com/cksachdev"><i class="fa fa-github mr-6 fill-current text-gray-400" aria-hidden=""></i>Github</a>
+    <a class="menu-item text-white px-2 py-4" href="<%- url_for(theme.menu.about.url) %>"><i class="fa fa-info-circle mr-6 fill-current text-gray-400" aria-hidden="true"></i>About me</a>
 
   </div>
+  
+
   <div class="grid grid-rows-4 gap-6  my-16 ">
     <a class="text-white  " href="https://twitter.com/cksachdev"><i class="fa fa-twitter fa-lg fill-current text-blue-600 mr-1" aria-hidden="true"></i><span class="border-b border-dotted">Follow me</span>
        on Twitter</a>
@@ -28,6 +30,6 @@
   </div>
   <p class="text-white leading-6">✉️ Questions? <a class="border-b border-dotted" href="#">Email me</a>  (no guest posts, no "add this link", no product placement or review requests pls)
   </p>
-
-  <p class="my-20"><%- partial('_partial/footer') %></p>
+  
+  <p><%- partial('_partial/footer') %> </p>
 </aside>

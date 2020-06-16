@@ -1,19 +1,21 @@
 <div class="blog-post">
     <!-- Title -->
-    <h2 class="blog-post-title">
+    <h2 class="blog-post-title text-gray-700">
         <a href="<%- config.root %><%- item.path %>">
             <%- item.title || item.link%>
         </a>
     </h2>
     <!-- Date and Author -->
-    <p class="blog-post-meta">
+    <p class="blog-post-meta text-gray-700">
         <%= item.date.format(config.date_format) %>
         <% if(item.author) { %>
             by <%- item.author %>
         <% } %>
     </p>
     <!-- Content -->
-    <%- item.content %>
+    <div class="text-white">
+        <%- item.content %>
+    </div>
     <hr />
     <!-- Tags and Categories links -->
     <%- partial('article-tags', {item: item}) %>

@@ -1,7 +1,8 @@
-<% page.posts.each(function(item){ %>
-    <%- partial('_partial/article-archive', {item: item}) %>
-    <% }); %>
-    <%- partial('_partial/pagination') %>
+<div class="text-white">
+   <%# page.posts.each(function(item){ %>
+    <%#- partial('_partial/article-archive', {item: item}) %>
+    <%# }); %>
+    <%#- partial('_partial/pagination') %>
 
     <%
     var title = '';
@@ -13,9 +14,10 @@
     }
 %>
 <% if(title) { %>
-   <h2 class="archive-title"><%- title %></h2>
+   <h2 class="archive-title text-gray-700"><%- title %></h2>
 <% } %>
 <% page.posts.each(function(item){ %>
 <%- partial('_partial/article-archive', {item: item}) %>
 <% }); %>
 <%- partial('_partial/pagination') %>
+</div>

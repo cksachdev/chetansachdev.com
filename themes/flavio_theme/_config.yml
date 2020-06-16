@@ -5,20 +5,20 @@ menu:
     url: /
   archives:
     text: Archives
-    url: /archives/
-  th-list:
+    url: archives/
+  categories:
     text: Categories
-    url: /categories/
+    url: categories/
   tags:
     text: Tags
-    url: /tags/
+    url: tags/
   github:
     text: Github
     url: https://github.com/cksachdev
     target : _blank  
-  info-circle:
+  about:
     text: About me
-    url: /about/
+    url: about/
 
 
 # Your avatar url
