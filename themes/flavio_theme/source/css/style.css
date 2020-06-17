@@ -15,6 +15,9 @@ div{
 p{
     margin-bottom: 30px;
 }
+.post{
+    overflow-wrap: break-word;
+}
 .post-title-h2{
     font-size: 30px;
     font-weight: 900;
@@ -24,7 +27,7 @@ p{
     border-color: #303030;;
 }
 .post-title{
-    width: 661px;
+    width: 400px;
     height: 100px;
 }
 .post-meta{
@@ -80,3 +83,32 @@ p{
 .header-main:hover{
     background-color: dimgrey ;
 }
+.container {
+    position: relative;
+    min-width: 320px;
+  }
+/*.sidebar {
+    position: absolute;
+    margin-right: 30px;
+    overflow-wrap: break-word;
+    left: 0px;
+  }*/
+  
+  
+.post {
+    
+    margin-right: 165px;
+      min-width: 420px;
+    
+  }
+
+ /*@media only screen and (max-width: 400px) {
+    .post {
+      margin-left: 0px;
+      margin-bottom: 20px;
+    }
+    .sidebar {
+      position: static;
+      float: left;
+    }
+  } */
