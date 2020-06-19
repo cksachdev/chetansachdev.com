@@ -7,25 +7,19 @@
         
         <div class="container single-post-container has-sidebar  ">
             
-            
-            <div class="side-page flex justify-center">
+            <article class="post-page ">
+                <%- body %>
+            </article>
+            <aside class="side-page  ">
                 <%- partial('_partial/sidebar.ejs') %>
-            </div>
-            <div class="sm:mx-8">
+            </aside>
                 
-                <div class="post-page flex-row">
-                     <%- body %>
-                </div>
-            </div>
-                
-        
-           
             
         </div>
         
     </div>
     
     
-  
+<script id="dsq-count-scr" src="//EXAMPLE.disqus.com/count.js" async></script>
 </body>
 </html>

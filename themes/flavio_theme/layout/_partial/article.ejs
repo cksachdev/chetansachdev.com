@@ -1,23 +1,35 @@
-<div class="post max-w-sm -ml-64 ">
-    <!-- Title -->
-    <h2 class="blog-post-title text-gray-700">
-        <a href="<%- config.root %><%- item.path %>">
-            <%- item.title || item.link%>
-        </a>
-    </h2>
-    <!-- Date and Author -->
-    <p class="blog-post-meta text-gray-700">
-        <%= item.date.format(config.date_format) %>
-        <% if(item.author) { %>
-            by <%- item.author %>
-        <% } %>
-    </p>
+<div class="content-post  ">
+    
+    <div class="post-header">
+        <!-- Title -->
+        <h2 class="content-post-title ">
+            <a href="<%- config.root %><%- item.path %>">
+                <%- item.title || item.link%>
+            </a>
+        </h2>
+        <!-- Date and Author -->
+        <p class="content-post-meta">Published on
+            <%= item.date.format(config.date_format) %>
+            <% if(item.author) { %>
+                by <%- item.author %>
+            <% } %>
+        </p>
+    </div>
+    
     <!-- Content -->
-    <div class="text-white ">
+    <div class="text-white ml-3 ">
         <%- item.content %>
     </div>
-    <hr />
     <!-- Tags and Categories links -->
     <%- partial('article-tags', {item: item}) %>
     <%- partial('article-categories', {item: item}) %>
+    <section class="comments" id="comments">
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname = 'chetansachdev';
+        lazyScripts.push('//' + disqus_shortname + '.disqus.com/embed.js')
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+    
 </div>

@@ -1,20 +1,26 @@
-<div class="post text-white  sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg ">
+<div class="post flex flex-wrap sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg ">
    
     <!-- Title -->
 
-    <div class="post-stub flex justify-between  hover:bg-gray-800 border-b border-dotted border-gray-800 px-2 py-8 " onclick="location.href='  <%= theme.excerpt_link %>';">
-        <h2 class="post-title ">
+    <div class="post-stub   hover:bg-gray-800  px-2 py-8 " onclick="location.href='  <%= theme.excerpt_link %>';">
+        <h2 class="post-title  ">
             <a href="<%- config.root %><%- item.path %>" class="post-title-h2  ">
                 <%- item.title %>
             </a>
         </h2>
-        <!-- Date and Author -->
-        <p class="post-meta font-mono text-sm flex-wrap">
+        <div class="date-tag">
+            <!-- Date and Author -->
+        <p class="post-meta flex-wrap">
             <%= item.date.format(config.date_format) %>
             <% if(item.author) { %>
                 by <%- item.author %>
             <% } %>
         </p>
+        <div class="tag">
+            <a href="https://chetansachdev.com/tags/js/" class="button js  text-sm font-semibold">Javascript</a>
+        </div>
+        </div>
+        
     </div>
     
     <!-- Content -->
