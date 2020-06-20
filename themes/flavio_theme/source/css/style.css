@@ -100,7 +100,9 @@ div.post-stub {
     flex-direction: row;
     justify-content: space-between;
 }
-
+.post{
+    width:auto;
+}
 .post-stub {
     overflow-wrap: break-word;
     border-bottom: 1px dotted #303030;
@@ -109,6 +111,9 @@ div.post-stub {
     padding: 20px 12px;
     height: 163px;
     width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .post-page, p, ul {
     line-height: 1.7em;
@@ -120,13 +125,21 @@ div.post-stub {
 .item-content a{
     border-bottom: 1px dotted;
 }
-.archive-title{
+.arcive-container{
     font-size: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    line-height: 1.2;
+    
+}
+.archive-title{
+    font-size: 55px;
     font-weight: 900;
+    margin: 25px 0 0;
+    text-align: left;
+    border-bottom: 1px solid #333;
+    margin: 0 0 50px;
+    padding: 0 0 50px;
+
 } 
+
 .post-page h2 {
     
     font-size: 30px;
@@ -135,9 +148,13 @@ div.post-stub {
     line-height: 1.2;
     
 }
+.post-title{
+    width:auto;
+}
 .post-title-h2{
     font-weight: 900;
     flex-wrap: wrap;
+    width: auto;
 }
 .post-meta{
     display: flex;
@@ -177,6 +194,7 @@ div.post-stub {
     text-align:inherit;
     overflow-wrap: break-word;
     flex-wrap: wrap;
+
 }
 .post-header {
     border-bottom: 1px solid #333;

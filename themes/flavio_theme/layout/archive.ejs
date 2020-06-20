@@ -1,4 +1,4 @@
-<div class="text-white">
+<div class="archive-container ">
    <%# page.posts.each(function(item){ %>
     <%#- partial('_partial/article-archive', {item: item}) %>
     <%# }); %>
@@ -14,7 +14,9 @@
     }
 %>
 <% if(title) { %>
-   <h2 class="archive-title "><%- title %></h2>
+  
+    <h2 class="archive-title "><%- title %></h2>
+   
 <% } %>
 <% page.posts.each(function(item){ %>
 <%- partial('_partial/article-archive', {item: item}) %>
