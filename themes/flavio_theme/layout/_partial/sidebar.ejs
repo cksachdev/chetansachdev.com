@@ -1,17 +1,21 @@
-<aside class="sidebar sm:block  ">
+<aside class="sidebar">
 
   <div >
-    <div class="flex " >
-      <img class="h-24 w-24 rounded-full" src="<%- theme.avatar %>" alt="">
+    <div class="" >
+      <a href="index.html">
+        <img class="image-id" src="<%- theme.avatar %>" alt="">
+      </a>
+      
     </div>
     <div class="flex">
       <h1 class=" font-semibold mt-4 mb-2 "><%= config.title %> </h1>
     </div>
     
-    <email class="text-gray-600 opacity-75 font-light text-lg"> <%- theme.email %> </email>
+    <a class="text-gray-600 opacity-75 font-light text-lg" href="mailto:mail@chetansachdev.com"><%- theme.email %></a>
+  
   
     <div class="flex my-12">
-      <input class="border-2 border-gray-800 px-2 py-1 bg-gray-900" type="text" placeholder="Search">
+      <input id="searchbar" class="border-2 border-gray-800 px-2 py-1 bg-gray-900" onkeyup="search_post()" type="text" placeholder="Search">
     </div>
     
     <div class="grid  my-8 max-w-xs">
@@ -40,19 +44,26 @@
   
   <p class=" leading-6">✉️ Questions? <a class="border-b border-dotted" href="#">Email me</a>  (no guest posts, no "add this link", no product placement or review requests pls)
   </p>
-
   <div class="footer-tags">
     <%- partial('_partial/tag-side-footer') %> 
   </div>
   
   <p class=""><%- partial('_partial/footer') %> </p>
   <script>
-    $(".like").on("click", function (e) {
-    e.preventDefault();
-    $.post(this.href);
-    $(this).hide();
-});
+    function search_post(){
+      let input = document.getElementById("searchbar").value
+      input = input.toLowerCase();
+      let x = document.getElementsByClassName("post-stub");
+      for (i=0; i<x.length; i++){
+         if (!x[i].innerHTML.toLowerCase().includes(input)){
+           x[i].style.display = "none";
+         }
+         else{
+           x[i].style.dispaly = "post-item";
+         }
+      }
+    }
   </script>
-  <a class="like" href="like1?sellerid=-1">Hide me</a>
+ 
 
 </aside>

@@ -24,8 +24,10 @@ For MongoDB >4.0 mongo-sync module doesn't seem to work. I had a mongodb<br> ins
 4 . restore the data in local machine
 <br>
 
-```
-ssh -i PATH_TO_KEYPAIR.pem USERNAME@IP_ADDRESS 'mongodump > 
-/dev/null && tar -zc dump && rm -rf dump' | tar -zx && 
+```sh
+ssh -i PATH_TO_KEYPAIR.pem 
+USERNAME@IP_ADDRESS 'mongodump > 
+/dev/null && tar -zc dump && rm -rf dump' 
+| tar -zx && 
 mongorestore dump && rm -rf dump
 ```
