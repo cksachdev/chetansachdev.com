@@ -2,8 +2,7 @@
 title: Backup and restore an adapt authoring instance
 category:
   - null
-tags:
-  - null
+tags: web plateform
 top: 1
 originContent: ''
 categories: []

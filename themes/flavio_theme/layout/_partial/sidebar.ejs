@@ -7,42 +7,42 @@
       </a>
       
     </div>
-    <div class="flex">
-      <h1 class=" font-semibold mt-4 mb-2 "><%= config.title %> </h1>
+    <div class="">
+      <h1 class="sidebar-title"><%= config.title %> </h1>
     </div>
     
-    <a class="text-gray-600 opacity-75 font-light text-lg" href="mailto:mail@chetansachdev.com"><%- theme.email %></a>
+    <a class="email" href="mailto:mail@chetansachdev.com"><%- theme.email %></a>
   
   
-    <div class="flex my-12">
-      <input id="searchbar" class="border-2 border-gray-800 px-2 py-1 bg-gray-900" onkeyup="search_post()" type="text" placeholder="Search">
+    <div class="searchbar-container">
+      <input id="searchbar" class="searchbar" onkeyup="search_post()" type="text" placeholder="Search">
     </div>
     
-    <div class="grid  my-8 max-w-xs">
+    <div class="menu-bar ">
      
   
-      <a class="menu-item block px-2 py-4" id="home" onclick="hide()" href="<%- url_for(theme.menu.home.url) %>"> <i  class="fa fa-home fa-lg mr-6 fill-current text-gray-400" aria-hidden="true"></i><%- theme.menu.home.text %> </a> 
-      <a class="menu-item px-2 py-4" href="<%- url_for(theme.menu.archives.url) %>"><i class="fa fa-archive mr-6 fill-current text-gray-400" aria-hidden="true"></i>Archives</a>
-      <a class=" menu-item  px-2 py-4" href="<%- url_for(theme.menu.categories.url) %>"> <i class="fa fa-list mr-6 fill-current text-gray-400" aria-hidden="true"></i>Categories</a>
-      <a class="menu-item  px-2 py-4" href="<%- url_for(theme.menu.tags.url) %>"><i class="fa fa-tags mr-6 fill-current text-gray-400" aria-hidden="true"></i>Tags</a>
-      <a class="menu-item  px-2 py-4" href="https://github.com/cksachdev"><i class="fa fa-github mr-6 fill-current text-gray-400" aria-hidden=""></i>Github</a>
-      <a class="menu-item  px-2 py-4" href="<%- url_for(theme.menu.about.url) %>"><i class="fa fa-info-circle mr-6 fill-current text-gray-400" aria-hidden="true"></i>About me</a>
+      <a class="menu-item home " id="home" onclick="hide()" href="<%- url_for(theme.menu.home.url) %>"> <i  class="fa fa-home fa-lg " aria-hidden="true"></i><%- theme.menu.home.text %> </a> 
+      <a class="menu-item" href="<%- url_for(theme.menu.archives.url) %>"> <i class="fa fa-archive " aria-hidden="true"></i>Archives</a>
+      <a class=" menu-item " href="<%- url_for(theme.menu.categories.url) %>"> <i class="fa fa-list " aria-hidden="true"></i>Categories</a>
+      <a class="menu-item " href="<%- url_for(theme.menu.tags.url) %>"><i class="fa fa-tags " aria-hidden="true"></i>Tags</a>
+      <a class="menu-item  " href="https://github.com/cksachdev"><i class="fa fa-github " aria-hidden=""></i>Github</a>
+      <a class="menu-item  " href="<%- url_for(theme.menu.about.url) %>"><i class="fa fa-info-circle " aria-hidden="true"></i>About me</a>
   
     </div>
     
   
-    <div class="grid grid-rows-3 gap-4   my-16 ">
-      <a class="  " href="https://twitter.com/cksachdev"><i class="fa fa-twitter fa-lg fill-current text-blue-600 mr-1" aria-hidden="true"></i><span class="border-b border-dotted">Follow me</span>
+    <div class="social-bar  ">
+      <a class="" href="https://twitter.com/cksachdev"><i class="fa fa-twitter fa-lg " aria-hidden="true"></i><span class="social-link ">Follow me</span>
          on Twitter</a>
-      <a class="" href="https://www.linkedin.com/in/cksachdev/"><i class="fa fa-linkedin-square fa-lg fill-current text-blue-600 bg-white rounded-lg " aria-hidden="true"></i>
-       <span class="border-b border-dotted">Linkedin</span> </a>
-      <a class="" href="https://www.facebook.com/cksachdev"><i class="fa fa-facebook-square fa-lg fill-current text-blue-600 bg-white rounded-lg " aria-hidden="true"></i>
-        <span class="border-b border-dotted">Facebook</span> </a> 
+      <a class="" href="https://www.linkedin.com/in/cksachdev/"><i class="fa fa-linkedin-square fa-lg  " aria-hidden="true"></i>
+       <span class="social-link">Linkedin</span> </a>
+      <a class="" href="https://www.facebook.com/cksachdev"><i class="fa fa-facebook-square fa-lg  " aria-hidden="true"></i>
+        <span class="social-link">Facebook</span> </a> 
     </div>
   </div>
 
   
-  <p class=" leading-6">✉️ Questions? <a class="border-b border-dotted" href="#">Email me</a>  (no guest posts, no "add this link", no product placement or review requests pls)
+  <p class=" ">✉️ Questions? <a class="email-link" href="#">Email me</a>  (no guest posts, no "add this link", no product placement or review requests pls)
   </p>
   <div class="footer-tags">
     <%- partial('_partial/tag-side-footer') %> 
@@ -63,6 +63,12 @@
          }
       }
     }
+
+    function hide(){
+      var x = document.getElementById("home");
+        x.style.visibility = "hidden"
+    }
+
   </script>
  
 

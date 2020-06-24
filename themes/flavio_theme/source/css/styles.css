@@ -1,4 +1,4 @@
-body {
+  body {
     margin: 0;
     background: #fefefe;
     color: #424242;
@@ -54,133 +54,6 @@ div {
     padding-left: 15px;
     padding-right: 15px;
     box-sizing: border-box;
-}
-.sidebar-title{
-    font-size: medium;
-    font-weight: 500;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-.email{
-    color:#718096;
-    font-size: large;
-}
-.email:hover{
-   text-decoration: underline;
-}
-.searchbar {
-    border: 1px solid #333;
-    padding: 5px;
-    
-}
-input::placeholder{
-    color: #718096;
-    background-color: #1a202c;
-}
-.searchbar-container{
-    display: flex;
-    margin: 48px 0;
-}
-.menu-bar{
-    display: grid;
-    margin: 48px 0;
-}
-.menu-item{
-    padding: 16px 8px;
-    color: #cbd5e0;
-}
-.menu-item:hover{
-    background-color: #2d3748;;
-
-}
-.menu-item i{
-    margin-right: 28px;
-} 
-a.menu-item.home:active{
-    display: block;
-}
-a.menu-item.home:visited {
-    display: none;
-}
-.social-bar{
-    display: grid;
-    grid-template-rows: 3;
-    grid-gap: 16px;
-    margin: 64px 0;
-}
-.social-bar a .fa{
-    margin-right: 4px;
-}
-.sidebar p{
-    line-height: 24px;
-}
-.email-link{
-    border-bottom:1px dotted;
-}
-.social-link{
-    border-bottom: 1px dotted;
-}
-.fa-twitter{
-    color:#3182ce;
-}
-.fa-linkedin-square{
-    color:#3182ce;
-    background-color: #fff;
-    border-radius: 100%;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    -ms-border-radius: 100%;
-    -o-border-radius: 100%;
-}
-.fa-facebook-square{
-    color:#3182ce;
-    background-color: #fff;
-    border-radius: 100%;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    -ms-border-radius: 100%;
-    -o-border-radius: 100%;
-}
-.pager{
-    color:#fff;
-    margin: 48px 0;
-    display: flex;
-    justify-content: center;
-}
-.button-previous{
-    border:1px;
-    border-color: gainsboro;
-    color: #718096;
-    padding: 0 24px;
-}
-.button-next{
-    border-style: solid;
-    border-color: #aeadad;
-    color: #718096;
-    padding: 8px 24px;
-}
-.header-title{
-    font-weight: 700;
-    font-size: 1.5rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-.header-subtitle{
-    --text-opacity: 1;
-    color: #a0aec0;
-    color: rgba(160, 174, 192, var(--text-opacity));
-    font-size: 1.25rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    margin-top: -0.5rem;
-}
-.footer{
-    --text-opacity: 1;
-    color: #718096;
-    color: rgba(113, 128, 150, var(--text-opacity));
-    font-size: 0.875rem;
-    font-weight: 300;
-    text-align: center;
 }
 .video-container{
     width:auto;
@@ -240,24 +113,18 @@ div.post-stub {
 .post{
     width:auto;
     height: auto;
-    border-bottom: 1px dotted #303030;
-    overflow-wrap: break-word;
-    
 }
 .post-stub {
     overflow-wrap: break-word;
+    border-bottom: 1px dotted #303030;
     margin: 0;
-    padding: 20px 12px;
     display: block;
-    height: auto;
+    padding: 8px 32px;
+    height: 163px;
     width: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-.post-stub:hover{
-    --bg-opacity: 1;
-    background-color: #2d3748;
 }
 .post-page, p, ul {
     line-height: 1.7em;
@@ -345,6 +212,7 @@ blockquote p {
 } 
 
 .post-page h2 {
+    
     font-size: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -353,19 +221,15 @@ blockquote p {
 }
 .post-title{
     width:auto;
-    flex-wrap: wrap;
-    overflow-wrap: break-word;
 }
 .post-title-h2{
     font-weight: 900;
     flex-wrap: wrap;
     width: auto;
-    overflow-wrap: break-word;
 }
 .post-meta{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
 }
 @media (prefers-color-scheme: light){
     body, body input {
@@ -418,26 +282,27 @@ blockquote p {
     font-family: 'Inconsolata', monospace;
     display: inline-block;
     font-size: 18px;
-    padding-top:10px;
+    padding-top: 8px;
 }
 .date-tag {
     display: flex;
     flex-direction: column;
 }
-.tags {
+.tag {
     float: left;
     padding-top: 10px;
     width: 140px;
     height: 60px;
 }
-.tags .js {
+.tag .js {
     background-color: #ecdb54;
     color: #000!important;
     border-radius: 3px;
 }
-.tags .button {
+.tag .button {
     display: block;
     padding: 8px;
+
     margin-left: 0px;
     float: right;
 }
@@ -646,11 +511,11 @@ a {
     .post{
         max-width: 440px;
         width:440px;
-        height:120px;
-        margin-left: -30px;
+        height:180px;
+        margin-left: -20px;
     }.post-stub{
         width:440px;
-        height:120px; 
+        height:180px; 
     }
 
     .sidebar{
@@ -729,7 +594,5 @@ a {
         max-width: 340px;
     }
  }
- 
- 
  
  

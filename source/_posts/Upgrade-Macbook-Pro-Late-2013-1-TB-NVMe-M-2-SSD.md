@@ -2,8 +2,7 @@
 title: Upgrade Macbook Pro Late 2013 1 TB NVMe M.2 SSD
 category:
   - null
-tags:
-  - null
+tags: computers
 top: 1
 originContent: ''
 categories: []

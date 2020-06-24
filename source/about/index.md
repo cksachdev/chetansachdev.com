@@ -10,12 +10,7 @@ date: 2019-05-08 12:51:14
  planting ideas
  Javascript engineer, Adobe Flex developer
  ```
- <br>
-  <br>
-   <br>
-    <br>
-    <br>
-    <br>
+
      
 
 
