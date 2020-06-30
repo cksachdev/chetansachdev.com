@@ -9,11 +9,29 @@
                     <%- partial('_partial/header') %> 
                     <%- partial('_partial/search-bar') %> 
                     <%- partial('_partial/intro') %> 
-               </div>
+                    <div class="card-container">
+                        <div class="main-head-container">
+                            <div class="main-head">
+                                <span class="main-head-s1">What's New</span>
+                                <span class="main-head-s2">Latest published posts</span>
+                            </div>
+                            <div>
+                                <button class="Browse-all">browse all <span> ▸</span>
 
-           </section>
+                                </button>
+                            </div>
+                            
+                        </div>
+                        <div class="post-container">
+                            <%- body %> 
+                        </div>
+                    </div>
+               </div>
+            </section>
        </div>
-       <div></div>
+       <div>
+
+       </div>
     </div>
 </body>
 </html>

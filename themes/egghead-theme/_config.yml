@@ -19,3 +19,10 @@ email: mail@chetansachdev.com
 
 # copyright start year
 since_year: 2018
+
+# atricle truncation
+excerpt_render: true
+excerpt_length: 150
+excerpt_link: Read more...
+mathjax: true
+archive_yearly: true

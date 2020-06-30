@@ -1,0 +1,35 @@
+<div class="content-post ">
+    
+    <div class="post-header">
+        <!-- Title -->
+        <h2 class="content-post-title ">
+            <a href="<%- config.root %><%- item.path %>">
+                <%- item.title || item.link%>
+            </a>
+        </h2>
+        <!-- Date and Author -->
+        <p class="content-post-meta">Published on
+            <%= item.date.format(config.date_format) %>
+            <% if(item.author) { %>
+                by <%- item.author %>
+            <% } %>
+        </p>
+    </div>
+    
+    <!-- Content -->
+    <div class="item-content "  >
+        <%- item.content %>
+    </div>
+    <!-- Tags and Categories links -->
+    <%- partial('article-tags', {item: item}) %>
+    <%- partial('article-categories', {item: item}) %>
+    <section class="comments" id="comments">
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname = 'chetansachdev';
+        lazyScripts.push('//' + disqus_shortname + '.disqus.com/embed.js')
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+    
+</div>
