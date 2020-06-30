@@ -1,33 +1,34 @@
-<div class="post">
+ <div class="post" id="post" class="post-stub" onclick="location.href='  <%= theme.excerpt_link %>';">
    
     <!-- Title -->
 
-    <div id="post" class="post-stub" onclick="location.href='  <%= theme.excerpt_link %>';">
-        <h2 class="post-title">
+     <div id="post" class="post-stub" onclick="location.href='   <%= theme.excerpt_link %>';">
+       <h2 class="post-title">
             <a href="<%- config.root %><%- item.path %>" class="post-title-h2  ">
                 <%- item.title %>
             </a>
         </h2>
         <div class="date-tag">
             <!-- Date and Author -->
-           <p class="post-meta ">
+           <p class="post-meta " style="width: 140px;">
             <%= item.date.format(config.date_format) %>
             <% if(item.author) { %>
                 by <%- item.author %>
             <% } %>
            </p>
-           <div class="tags">                 
-           <a href="https://chetansachdev.com/tags/js/" class="button js">Javascript</a>
-
+           <div class="tag">                 
+               <a href="https://chetansachdev.com/tags/js/" class="button js"><% if(item.tags) { %>
+                   <%- item.tags %>
+                   <% } %></a>      
            </div>
-        </div>
+        </div> 
         
-    </div>
+    </div> 
     
     <!-- Content -->
      <%#- item.excerpt || item.content %>
    
-    <!-- Only display the Read More link if we are displaying an excerpt -->
+    <!-- Only display the Read More link if we are displaying an excerpt-->
     <% if(item.excerpt) { %>
         <p>
             <a href="<%- config.root %><%- item.path %>">
@@ -35,4 +36,4 @@
             </a>
         </p>
     <% } %>
-</div>
+</div> 

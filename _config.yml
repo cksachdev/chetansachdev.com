@@ -18,7 +18,7 @@ feed:
 
 jsonContent:
   meta: false
-  pages: false
+  pages: true
   posts: 
     title: true
     date: true

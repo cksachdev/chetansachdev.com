@@ -2,9 +2,9 @@
 title: How to mount Thunderbolt display on a VESA stand?
 category:
   - null
-tags:
-  - null
+tags: [computer]
 top: 1
+author: chetan sachdev
 categories: []
 toc: false
 date: 2020-05-26 01:30:51

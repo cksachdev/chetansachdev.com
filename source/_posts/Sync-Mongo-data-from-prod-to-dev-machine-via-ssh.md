@@ -31,3 +31,12 @@ USERNAME@IP_ADDRESS 'mongodump >
 | tar -zx && 
 mongorestore dump && rm -rf dump
 ```
+
+```javascript
+  var text = "Hello World";
+  console.log("text");
+```
+{% codeblock lang:javascript %}
+   var text = "Hello World";
+   console.log("text");
+{% endcodeblock %}

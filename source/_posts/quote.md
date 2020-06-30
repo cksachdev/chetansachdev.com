@@ -1,6 +1,7 @@
 ---
 title: Quote of the day
-category:
+author: 
+category: Quote
   - null
 tags:
   - null
@@ -13,3 +14,8 @@ date: 2020-06-22 20:02:20;
 {% blockquote %}
   Development is like martial arts.  Practicing your foundations in HTML, CSS, and JS is always a good idea no matter what level you are on.  🔥 Wax on, wax off 🔥
 {% endblockquote %}
+
+{% codeblock lang:javascript %}
+  alert("hello world")
+  var myText = "hello world";
+{% endcodeblock %}

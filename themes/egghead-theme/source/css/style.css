@@ -3,7 +3,6 @@ body{
     background-color: #141618;
     min-height: 100vh;
     margin: 0;
-    background: #232c3b;
     color: #63768d;
     font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
 }
@@ -17,7 +16,7 @@ body{
     max-width: 83.75rem;
 }
 .search{
-    width: 1216px;
+    max-width: 1216px;
     height: 48px;
     background-color: #21252d;
     color: #B0B6BE;
@@ -25,4 +24,36 @@ body{
 .search-container{
     width: 1216px;
     height: 48px;
+}
+.intro-section{
+    background-image:linear-gradient(170deg,#212A39 0%,#181E28 100%);
+}
+.intro-h2{
+    color: #B0B6BE;
+    font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+}
+@media (min-width: 768px){
+  .intro-section {
+    padding: 80px 40px;
+  }
+}
+.start-btn{
+    background-color: #1345dd;
+    padding: 8px 23px 8px 23px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    -webkit-box-pack: center;
+    min-width: 180px;
+    max-width: 280px;
+    height: 48px;
+}
+.start-btn:hover{
+    max-width: 285px;
+    height: 52px;
+}
+
+.cks-img:hover{
+    height:330px ;
+    width: 330px;
 }

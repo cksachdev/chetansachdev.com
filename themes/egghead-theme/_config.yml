@@ -1,0 +1,21 @@
+menu:
+  topics:
+    text : Topics
+    url: topics/
+  browse:
+    text: Browse Catalog
+    url: browse/
+
+# Your avatar url
+avatar: /img/cksachdev.jpg
+# avatar link
+avatar_link: /
+
+# favicon
+favicon: /img/favicon.ico
+
+# email
+email: mail@chetansachdev.com
+
+# copyright start year
+since_year: 2018
