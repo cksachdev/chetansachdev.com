@@ -12,13 +12,12 @@
             <!-- Date and Author -->
            <p class="post-meta " style="width: 140px;">
             <%= item.date.format(config.date_format) %>
-            <% if(item.author) { %>
-                by <%- item.author %>
-            <% } %>
+           
+           
            </p>
-           <div class="tag">                 
-               <a href="https://chetansachdev.com/tags/js/" class="button js"><% if(item.tags) { %>
-                   <%- item.tags %>
+           <div class="tags">                 
+               <a href="https://chetansachdev.com/tags/js/" class="button js"><% if(item.author) { %>
+                   <%- item.author %>
                    <% } %></a>      
            </div>
         </div> 
@@ -27,7 +26,7 @@
     
     <!-- Content -->
      <%#- item.excerpt || item.content %>
-   
+      
     <!-- Only display the Read More link if we are displaying an excerpt-->
     <% if(item.excerpt) { %>
         <p>

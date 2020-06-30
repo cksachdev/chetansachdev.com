@@ -1,10 +1,8 @@
 ---
 title: Quote of the day
-author: 
-category: Quote
-  - null
-tags:
-  - null
+author: Quote
+category: Quote;
+tags: [Practice]
 top: 1
 originContent: ''
 categories: []

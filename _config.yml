@@ -32,7 +32,7 @@ jsonContent:
     link: true
     permalink: false
     excerpt: true
-    categories: false
+    categories: true
     tags: true
 
 # To automatically generate a Sitemap 
@@ -68,9 +68,9 @@ post_asset_folder: true
 relative_link: true
 future: true
 highlight:
-  enable: false
+  enable: true
   #line_number: true
-  #auto_detect: false
+  #auto_detect: true
   #tab_replace:
   
 # Home page setting

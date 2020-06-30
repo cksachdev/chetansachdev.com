@@ -2,7 +2,7 @@
 title: {{ title }}
 category:
   - 
-tags:
+tags: {{ tag }}
   - 
 date: {{ date }}
 top: 1

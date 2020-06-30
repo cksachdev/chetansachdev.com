@@ -27,6 +27,14 @@ body{
 }
 .intro-section{
     background-image:linear-gradient(170deg,#212A39 0%,#181E28 100%);
+    display: flex;
+}
+.intro-h1{
+    color:#fff;
+    font-size: 48px;
+    font-weight: 500;
+    flex-wrap: wrap;
+    font-family: sans-serif;
 }
 .intro-h2{
     color: #B0B6BE;
@@ -39,14 +47,23 @@ body{
 }
 .start-btn{
     background-color: #1345dd;
-    padding: 8px 23px 8px 23px;
+    color:#fff;
+    text-decoration: none;
+    padding: 8px 23px 8px 23px; 
     font-size: 15px;
     font-weight: 500;
     line-height: 20px;
+    letter-spacing: 1px;
     -webkit-box-pack: center;
     min-width: 180px;
-    max-width: 280px;
+    max-width: 260px;
     height: 48px;
+    width: 254.66px;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
 }
 .start-btn:hover{
     max-width: 285px;
@@ -56,4 +73,11 @@ body{
 .cks-img:hover{
     height:330px ;
     width: 330px;
+}
+.cks-img{
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
 }

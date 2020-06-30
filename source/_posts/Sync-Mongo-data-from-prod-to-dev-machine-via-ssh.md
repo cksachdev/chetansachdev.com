@@ -2,6 +2,7 @@
 title: Sync Mongo data from prod to dev machine via ssh
 category:
   - null
+author: Database
 tags:
   - null
 top: 1
