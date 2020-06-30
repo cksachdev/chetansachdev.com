@@ -11,7 +11,7 @@ date: 2020-06-03 10:49:47
     Planting Ideas
  {% endblockquote %}
 
- {% codeblock %}
+ {% codeblock lang:javascript %}
  alert('Hello World!');
  {% endcodeblock %}
 
