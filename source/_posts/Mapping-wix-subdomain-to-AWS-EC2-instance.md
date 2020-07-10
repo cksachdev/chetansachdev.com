@@ -3,7 +3,8 @@ title: Mapping wix subdomain to AWS EC2 instance
 category:
   - null
 tags:
-  - null
+  - [AWS]
+author: [AWS]
 top: 1
 originContent: ''
 categories: []

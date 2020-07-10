@@ -1,0 +1,19 @@
+<div class="about-container text-black" id="about">
+    <div class="tag-clouds">
+        <% if (site.tags.length){ %>
+            <div class="widget-wrap">
+                  <h3 class="widget-title"><%#= __('tagcloud') %></h3>
+                  <div class="widget tagcloud">
+                
+                    <%- tagcloud() %>
+                  </div>
+            </div>
+        <% } %> 
+       
+    </div>
+    <div class="sub-conatiner">
+        <h1 class="about-heading">What is Plantyouridea</h1>
+        <p class="about-content">Plantyouridea is a website which provides you different courses & solutions to your problem. It is a learning platform for various languages and framework.</p>
+    </div>
+    
+</div>

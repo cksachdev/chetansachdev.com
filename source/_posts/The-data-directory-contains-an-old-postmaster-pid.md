@@ -3,7 +3,7 @@ title: The data directory contains an old postmaster.pid
 category:
   - null
 tags:
-  - null
+  - [Database]
 top: 1
 author: Database
 originContent: ''

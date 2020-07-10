@@ -2,7 +2,7 @@
 title: Quote of the day
 author: Quote
 category: Quote;
-tags: [Practice]
+tags: [Quote]
 top: 1
 originContent: ''
 categories: []

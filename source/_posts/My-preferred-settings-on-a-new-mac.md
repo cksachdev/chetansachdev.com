@@ -3,7 +3,8 @@ title: My preferred settings on a new mac
 category:
   - null
 tags:
-  - null
+  - [Computers]
+author: [Computers]
 top: 1
 categories: []
 toc: false

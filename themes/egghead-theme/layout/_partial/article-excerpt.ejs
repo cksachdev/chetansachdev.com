@@ -1,4 +1,4 @@
- <div class="post" id="post" class="post-stub" onclick="location.href='  <%= theme.excerpt_link %>';">
+ <div class="post" id="post" class="post-stub" onclick="location.href='  <%= theme.excerpt_link %>'; " onclick="hide()">
    
     <!-- Title -->
 
@@ -38,6 +38,8 @@
     <% } %>
     <script>
         function hide(){
+            var x = document.getElementById("intro")
+            x.style.display = "none";
             
         }
     </script>

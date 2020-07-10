@@ -3,8 +3,7 @@ menu:
     text : Topics
     url: topics/
   browse:
-    text: Browse Catalog
-    url: browse/
+    text: About
 
 # Your avatar url
 avatar: /img/cksachdev.jpg
@@ -14,6 +13,10 @@ avatar_link: /
 # favicon
 favicon: /img/favicon.ico
 
+# website
+website: Plantyouridea
+# website link
+website_link: plantyouridea.com
 # email
 email: mail@chetansachdev.com
 

@@ -442,6 +442,19 @@ blockquote p {
     margin-left: 0px;
     float: right;
 }
+.tagcloud a{
+    font-size: 1em;
+    padding: 1em;
+
+}
+
+.tagcloud{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: -10px;
+
+}
 .tags {
     float: left;
     padding-top: 10px;

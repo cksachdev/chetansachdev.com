@@ -3,7 +3,7 @@ title: Understanding javascript better
 category:
   - null
 tags:
-  - null
+  - Javascript
 top: 1
 originContent: ''
 categories: node.js

@@ -3,7 +3,8 @@ title: How to install adaptauthoring on AWS EC2 instance
 category:
   - null
 tags:
-  - null
+  - [AWS]
+author: [AWS]
 top: 1
 categories: []
 toc: false

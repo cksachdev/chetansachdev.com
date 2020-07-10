@@ -2,8 +2,8 @@
 title: Same File to Multiple Folders in Google Drive
 category:
   - null
-tags:
-author: Computers
+tags: [Database]
+author: 
 top: 1
 originContent: ''
 categories: []

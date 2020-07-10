@@ -3,7 +3,8 @@ title: Migrating data from one macbook to another macbook
 category:
   - null
 tags:
-  - null
+  - [Computers]
+author: [Computers]
 top: 1
 categories: computer
 toc: false

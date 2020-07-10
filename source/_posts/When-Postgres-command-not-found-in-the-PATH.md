@@ -3,7 +3,7 @@ title: When Postgres command not found in the PATH
 category:
   - null
 tags:
-  - null
+  - SSH
 top: 1
 author: Database
 originContent: ''

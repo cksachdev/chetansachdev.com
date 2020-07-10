@@ -1,0 +1,194 @@
+body{
+    -webkit-font-smoothing: antialiased;
+    background-color: #141618;
+    min-height: 100vh;
+    margin: 0;
+    color: #63768d;
+    font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+}
+.head-container{
+    min-height: 100vh;
+}
+.top-header{
+    background-color: #141618;
+}
+.eh-section{
+    max-width: 83.75rem;
+}
+.search{
+    max-width: 1216px;
+    height: 48px;
+    background-color: #21252d;
+    color: #B0B6BE;
+}
+.search-container{
+    width: 1216px;
+    height: 48px;
+}
+.intro-section{
+    background-image:linear-gradient(170deg,#212A39 0%,#181E28 100%);
+    display: flex;
+}
+.intro-h1{
+    color:#fff;
+    font-size: 48px;
+    font-weight: 500;
+    flex-wrap: wrap;
+    font-family: sans-serif;
+}
+.intro-h2{
+    color: #B0B6BE;
+    font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+}
+@media (min-width: 768px){
+  .intro-section {
+    padding: 80px 40px;
+  }
+}
+.start-btn{
+    background-color: #1345dd;
+    color:#fff;
+    text-decoration: none;
+    padding: 8px 23px 8px 23px; 
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 1px;
+    -webkit-box-pack: center;
+    min-width: 180px;
+    max-width: 260px;
+    height: 48px;
+    width: 254.66px;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+.start-btn:hover{
+    max-width: 285px;
+    height: 52px;
+}
+
+.cks-img:hover{
+    height:330px ;
+    width: 330px;
+}
+.cks-img{
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+.card-container{
+    background-color: #f4f7f9;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+.main-head{
+    display: flex;
+    flex-direction: column;
+}
+.main-head-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 40px 0 40px;
+}
+.main-head-s1{
+    color: #141618;
+    font-size: 2.25rem;
+    font-weight: 400;
+}
+.main-head-s2{
+    color: rgba(0,0,0,.6);
+    font-size: 1rem;
+    font-weight: 400;
+}
+.Browse-all{
+    background-color: #316aff;
+    border-color: #316aff;
+    font-size: .875rem;
+    font-weight: 500;
+    border-width: 1px;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+    transition: all .1s ease-in-out;
+    color:#fff;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+.post-container{
+    color: black;
+    margin:48px 40px 0 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    
+    
+}
+.post-stub{
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+.post-title-h2, .button-js {
+   text-decoration: none;
+}
+.date-tag{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 50px 0px 0 0px;
+}
+.tags{
+    font-size: 14px;
+    border-radius: 0.2rem;
+    margin-top: 8px;
+    width: 80px;
+    height: 25px;
+    text-align: center;
+    background-color: #316aff;
+    margin-right: 20px;
+    padding:8px 10px 8px 10px;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    -ms-border-radius: 0.2rem;
+    -o-border-radius: 0.2rem;
+}
+.button-js{
+    text-align: center;
+    font-weight: 700;
+    height: 20px;
+    color:#fff;
+    padding:px 10px 8px 10px;
+}
+.post-meta{
+    align-self: flex-end;
+}
+.post-img{
+    width: 230px;
+    height: 230px;
+    margin-top: 48px;
+    border-radius: 9999px;
+    -webkit-border-radius: 9999px;
+    -moz-border-radius: 9999px;
+    -ms-border-radius: 9999px;
+    -o-border-radius: 9999px;
+}
+.post-title-h2{
+    height: 56px;
+    color: #141618;
+    font-size: 22px;
+    font-weight: 400;
+}
