@@ -2,7 +2,7 @@
 title: focus inside iframe from skip to main content
 category:
   - null
-tags: [HTML]
+tags: HTML
 author: [HTML]
 top: 1
 originContent: ''

@@ -1,20 +1,26 @@
 <div>
-    <header class="px-8 py-4 flex justify-between">
+    <header class="px-4 py-4 flex justify-between">
         <div class="flex">
             <a class="" href="#">
                 <span class="flex">
                    <!-- <img class="h-8 w-8" src="/img/favicon.ico" alt=""> -->
-                    <p class="align-middle font-extrabold text-xl ml-1">🌱 plantyouridea.com</p> 
+                   <img src="/img/favicon_plant.ico" alt="" width="30" height="20">
+                    <p class="align-middle font-extrabold text-white text-xl ml-1">
+                         plantyouridea.com</p> 
                 </span>
             </a>
-            <a  class="align-middle text-sm mt-1  mx-6" href="<%- url_for(page.title) %> "> <span class="text-gray-600">〈/〉</span> <%- theme.menu.topics.text %> </a>
-            <a class="flex mx-6 text-sm align-items-center mt-1" href="#"> 
+            <a  class="align-middle text-sm mt-1 text-white ml-12 " href="<%- url_for(page.title) %>" onclick="location.href ='<%- url_for(site.topics) %>' ">
+                 <span class=""><i class="fa fa-briefcase mr-1 text-gray-600" aria-hidden="true"></i>
+                 </span> <%- theme.menu.topics.text %> 
+            </a>
+
+            <a class="flex mx-6 text-sm align-items-center text-white mt-1" href="#"> 
                 <i class="fa fa-info-circle mt-1 mr-2 text-gray-600 " aria-hidden="true"></i>
                  <%- theme.menu.browse.text %>
             </a> 
         </div>
         <div>
-            <a href="#">Sign in</a>
+            <a href="#" class="text-white text-sm">Sign in</a>
         </div>
     </header>
 </div>

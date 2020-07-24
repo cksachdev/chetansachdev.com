@@ -3,9 +3,9 @@ title: How to solve permission denied public key error
 category:
   - null
 tags:
-  - [Git]
+  - Git
 author: [Git]
-top: 1
+top: git
 originContent: ''
 categories: []
 toc: false

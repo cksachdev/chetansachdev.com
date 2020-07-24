@@ -3,7 +3,7 @@ title: Git clone into non-empty directory
 category:
   - null
 tags:
-  - [Git]
+  - Git
 author: [Git]
 top: 1
 categories: []

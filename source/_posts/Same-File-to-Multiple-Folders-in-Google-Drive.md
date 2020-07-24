@@ -2,9 +2,9 @@
 title: Same File to Multiple Folders in Google Drive
 category:
   - null
-tags: [Database]
-author: 
-top: 1
+tags: Database
+author: Database 
+top: ggl-drive
 originContent: ''
 categories: []
 toc: false

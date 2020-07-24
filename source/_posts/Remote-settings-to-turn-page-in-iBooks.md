@@ -3,7 +3,7 @@ title: Remote settings to turn page in iBooks
 category:
   - null
 tags:
-  - [Computers]
+  - Computers
 top: 1
 originContent: ''
 categories: []

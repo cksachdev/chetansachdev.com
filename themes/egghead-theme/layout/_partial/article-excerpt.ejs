@@ -1,15 +1,53 @@
- <div class="post" id="post" class="post-stub" onclick="location.href='  <%= theme.excerpt_link %>'; " onclick="hide()">
+ <div class="post sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl" id="post" class="post-stub" onclick="location.href='  <%= theme.excerpt_link %>'; ">
    
     <!-- Title -->
-
-     <div id="post" class="post-stub" onclick="location.href='   <%= theme.excerpt_link %>';" onclick="hide()">
-       <img class="post-img" src="<%- theme.avatar %>" alt="">
+ 
+     <div id="post" class="post-stub" onclick="location.href='   <%= theme.excerpt_link %>';">
+       <p>
+           <% if(item.top === 'git') { %> 
+              <div class="flex justify-center">
+                <img class=" " src="/img/git.png" alt="" width="200" height="150">
+              </div> 
+               
+           <% } %> 
+           <% if(item.top === 'ggl-drive') { %> 
+            <div class="flex justify-center">
+              <img class=" " src="/img/ggl-drive.jpg" alt="" width="200" height="150">
+            </div> 
+             
+          <% } %> 
+          <% if(item.top === 'macbook') { %> 
+            <div class="flex justify-center">
+              <img class=" " src="/img/macbook.jpg" alt="" width="200" height="150">
+            </div> 
+             
+          <% } %> 
+          <% if(item.top === 'ssh') { %> 
+            <div class="flex justify-center">
+              <img class=" " src="/img/ssh.png" alt="" width="200" height="150">
+            </div> 
+             
+          <% } %> 
+          <% if(item.top === 'thunderbolt') { %> 
+            <div class="flex justify-center">
+              <img class=" " src="/img/thunderbolt.jpg" alt="" width="200" height="150">
+            </div> 
+             
+          <% } %>
+          <% if(item.top === 'postgres') { %> 
+            <div class="flex justify-center">
+              <img class=" " src="/img/postgres.jpg" alt="" width="200" height="150">
+            </div> 
+             
+          <% } %>
+       </p>
        <h2 class="post-title">
             <a href="<%- config.root %><%- item.path %>" class="post-title-h2  ">
                 <%- item.title %>
+                <%- item.author %> 
             </a>
         </h2>
-        <div class="date-tag">
+        <div class="date-tag pb-5">
             <!-- Date and Author -->
            <p class="post-meta" style="width: 140px;">
             <%= item.date.format(config.date_format) %>
@@ -17,9 +55,10 @@
            
            </p>
            <div class="tags">                 
-               <a href="https://chetansachdev.com/tags/js/" class="button-js"><% if(item.author) { %>
+               <a href="https://chetansachdev.com/tags/js/" class="button-js"><%# if(site.tags) { %>
                    <%- item.author %>
-                   <% } %></a>      
+                   <%# } %>
+                        
            </div>
         </div> 
         
@@ -36,11 +75,5 @@
             </a>
         </p>
     <% } %>
-    <script>
-        function hide(){
-            var x = document.getElementById("intro")
-            x.style.display = "none";
-            
-        }
-    </script>
+    
 </div> 

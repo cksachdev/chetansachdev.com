@@ -1,7 +1,7 @@
 menu:
   topics:
-    text : Topics
-    url: topics/
+    text : Services
+    url: services/
   browse:
     text: About
 

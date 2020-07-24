@@ -3,7 +3,7 @@ title: Resetting Visual Studio Code in macOS
 category:
   - null
 tags:
-  - [Computers]
+  - Computers
 top: 1
 originContent: ''
 categories: []

@@ -3,7 +3,7 @@ title: wix certificate won't work for externally hosted
 category:
   - null
 tags:
-  - [Web platform]
+  - Web platform
 top: 1
 originContent: >+
   https://community.letsencrypt.org/t/wix-wildcard-ssl-for-externally-hosted-site/77346
