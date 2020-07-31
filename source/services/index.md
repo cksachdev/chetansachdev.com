@@ -2,13 +2,16 @@
 layout: page
 title: services
 top: 0
-date: 2020-06-29 16:34:13
+item1: Web Developement
+item2: Node.js
+item3: Vue.js
+item4: HTML
+item5: CSS
+item6: Javascript
 ---
  
-services we provide
-<br>
-Website Developement                                        
-<br>
+
+
      We develope amazing websites for you with
      Responsive, Dynamic and Attractive designs
 <br>

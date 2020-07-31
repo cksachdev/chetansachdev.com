@@ -4,7 +4,7 @@
     <div class="post-header ml-16">
         <!-- Title -->
         <h2 class="content-post-title ">
-            <a href="<%- config.root %><%- item.path %>">
+            <a class="text-gray-800 text-4xl font-bold" href="<%- config.root %><%- item.path %>">
                 <%- item.title || item.link%>
             </a>
         </h2>
@@ -12,15 +12,36 @@
         <p class="content-post-meta">Published on
             <%= item.date.format(config.date_format) %>
             <% if(item.author) { %>
-                by <%- item.author %>
+               <!-- by <%#- item.author %>-->
             <% } %>
         </p>
     </div>
     
     <!-- Content -->
-    <div class="item-content ml-16 "  >
-        <%- item.content %>
+    <div class="flex justify-around">
+        <div class="item-content ml- text-gray-800 font-medium"  >
+        
+            <div class="flex justify-between">
+                 <h3 class="mt-16 ml-32 pb-6 font-semibold text-xl"><%- item.item1 %></h3>
+                 
+            </div>
+            
+              
+            <%- item.content %>
+         
+           <div class="flex flex-wrap justify-end mt-16 max-w-xs font-semibold">
+              <% if(item.item1 || item.item2) { %> 
+                 <p class="bg-gray-700 p-4 text-white text-center  m-2 h-24 
+                 w-32"><%- item.item2 %></p>
+                 <p class="bg-gray-700 p-4 text-white text-center  m-2 h-24 w-32"><%- item.item3 %></p>
+                 <p class="bg-gray-700 p-4 text-white text-center  m-2 h-24 w-32"><%- item.item4 %></p>
+                 <p class="bg-gray-700 p-4 text-white text-center  m-2 h-24 w-32"><%- item.item5 %></p>
+                 <p class="bg-gray-700 p-4 text-white text-center mr-20  m-2 h-24 w-32"><%- item.item6 %></p>
+              <% } %> 
+            </div>    
+        </div>
     </div>
+   
     <!-- Tags and Categories links -->
     <%#- partial('article-tags', {item: item}) %>
     <%#- partial('article-categories', {item: item}) %>

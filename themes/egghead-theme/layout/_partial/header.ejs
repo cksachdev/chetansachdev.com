@@ -1,6 +1,6 @@
 <div>
     <header class="px-4 py-4 flex justify-between">
-        <div class="flex w-full">
+        <div class="flex w-full justify-between">
             <a class="" href="#">
                 <span class="flex">
                    <!-- <img class="h-8 w-8" src="/img/favicon.ico" alt=""> -->
@@ -9,27 +9,35 @@
                          plantyouridea.com</p> 
                 </span>
             </a>
-            <div class="top-nav  overflow-hidden flex w-full justify-between " id="top-menu">
-                <div class="flex ">
-                    <a  class="  align-middle text-sm mt-1 text-white ml-12 " href="<%- url_for(page.title) %>" onclick="location.href ='<%- url_for(site.topics) %>' ">
-                        <span class=""><i class="fa fa-briefcase mr-1 text-gray-600" aria-hidden="true"></i>
-                        </span> <%- theme.menu.topics.text %> 
+            <header class="pt-0 pr-0 ">
+                <a href="#main-menu" id="main-menu-toggle" class="menu-toggle  no-underline  "  aria-label="Open main menu">
+                  <span class="sr-only">Open main menu</span>
+                  <span class="fa fa-bars text-white " aria-hidden="true"></span>
                 </a>
-       
-                <a class="  mx-6 text-sm align-items-center text-white mt-1" href="#"> 
-                       <i class="fa fa-info-circle mt-1 mr-2 text-gray-600 " aria-hidden="true"></i>
-                        <%- theme.menu.browse.text %>
-                </a>
-                </div>
                 
                 
                 
-                <div class="pr-4">
-                   <a href="#" class="text-white text-sm">Sign in</a>
-                </div>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()"> <i class="fa fa-bars text-white  block float-right" aria-hidden="true"></i>
-                </a>
-           </div>
+                <nav id="main-menu" class="main-menu flex flex-col " aria-label="Main menu">
+                  <a href="#main-menu-toggle" class="menu-close  no-underline " id="main-menu-close" aria-label="Close main menu">
+                    <span class="sr-only">Close main menu</span>  
+                    <span class="fa fa-close text-white" aria-hidden="true"></span>
+                  </a>
+                  <ul class="">
+                    <li class=""><a href="<%- url_for(page.title) %>" class="text-white no-underline mt-2 " onclick="location.href ='<%- url_for(site.topics) %>' " >Services</a></li>
+                    <li class="py-2"><a class=" no-underline    text-sm align-items-center text-white " href="#"> 
+                        <!--<i class="fa fa-info-circle mt-1 mr-2 text-gray-600 " aria-hidden="true"></i>-->
+                         <%- theme.menu.browse.text %>
+                        </a>
+                    </li>
+                    <li class="py-2"><a href="#" class="text-white  no-underline ">Contact</a></li>
+                    <div class="py-2">
+                        <a href="#" class="text-white  text-sm  no-underline ">Sign in</a>
+                    </div>
+                  </ul>
+                </nav>
+                <a href="#main-menu-toggle" class="backdrop" tabindex="-1" aria-hidden="true" hidden></a>
+            </header>
+    
            <script>
                function myFunction(){
                    var x = document.getElementById('top-menu');
@@ -38,6 +46,7 @@
                    }
                }
            </script>
+          
                 
         </div>
            
