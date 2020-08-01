@@ -3,8 +3,9 @@ title: Removing Moodle logo and updating favicon
 category:
   - null
 tags:
-  - Graphics
+  - HTML
 top: 1
+author: HTML
 categories: []
 toc: false
 date: 2020-02-12 01:08:47

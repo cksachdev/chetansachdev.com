@@ -5,6 +5,7 @@ category:
 tags:
   - Web platform
 top: 1
+author: Web-Platform
 originContent: >+
   https://community.letsencrypt.org/t/wix-wildcard-ssl-for-externally-hosted-site/77346
 
