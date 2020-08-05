@@ -83,13 +83,13 @@ div {
    text-decoration: underline;
 }
 .searchbar {
-    border: 1px solid #333;
+    border: 1px solid rgb(60, 59, 59);
     padding: 5px;
     
 }
 input::placeholder{
-    color: #718096;
-    background-color: #1a202c;
+    color: #737376;
+    background-color: transparent;
 }
 .searchbar-container{
     display: flex;
@@ -101,7 +101,7 @@ input::placeholder{
 }
 .menu-item{
     padding: 16px 8px;
-    color: #717274;
+    color: hsl(0, 0%, 98%);
 }
 .menu-item:hover{
     background-color: #2d3748;;
@@ -254,25 +254,24 @@ div.post-stub {
 }
 .post{
     width:95%;
-    height: 35%;
-    margin:0px;
     border-bottom: 1px dotted #303030;
     overflow-wrap: break-word;
     
 }
+.post:hover{
+    background-color: hsl(220, 13%, 18%);
+}
 .post-stub {
     overflow-wrap: break-word;
-    padding: 20px 12px;
+    padding: 10px 12px 0 12px;
     display: block;
-    height: auto;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 .post-stub:hover{
-    --bg-opacity: 1;
-    background-color: #2d3748;
+    background-color: hsl(220, 13%, 18%);
 }
 .post-page, p, ul {
     line-height: 1.7em;
@@ -409,10 +408,17 @@ blockquote p {
     }
     input::placeholder{
         color: #bdc1c6;
-        background-color: #686a6d;
+        background-color: #fff;
     }
     .searchbar{
-        background-color: #686a6d;
+        background-color: #fff;
+    }
+    .header-main{
+        background-color: black;
+    }
+    .menu-item{
+        color: black;
+        font-weight: 400;
     }
 }
 .content-post-meta{
@@ -487,13 +493,7 @@ blockquote p {
 
 }
 
-.tagcloud{
-    display: flex;
-    flex-wrap: wrap;
-    width: 80%;
-    margin-left: -10px;
 
-}
 .tags {
     float: left;
     width: 140px;
@@ -590,7 +590,7 @@ a {
 }
 
 .tags .js {
-    background-color: #17d3c7;
+    background-color: #aae45d;
     color: #000!important
 }
 
