@@ -241,7 +241,7 @@ a.menu-item.home:visited {
     padding-top: 30px;
 }
 .post-page {
-    margin:55px 10px;
+    margin:55px 0px;
     
 }
 @media (max-width:960px){
