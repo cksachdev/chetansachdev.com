@@ -241,8 +241,13 @@ a.menu-item.home:visited {
     padding-top: 30px;
 }
 .post-page {
-    margin:0 40px;
-    padding-top: 25px;
+    margin:55px 10px;
+    
+}
+@media (max-width:960px){
+    .post-page{
+        margin-top: 0px;
+    }
 }
 .hljs, article, aside, blockquote p, details, figcaption, figure, footer, header, img, main, menu, nav, section {
     display: block;
@@ -252,20 +257,13 @@ div.post-stub {
     flex-direction: row;
     justify-content: space-between;
 }
-.post{
-    width:95%;
+.post-stub {
     border-bottom: 1px dotted #303030;
     overflow-wrap: break-word;
-    
-}
-.post:hover{
-    background-color: hsl(220, 13%, 18%);
-}
-.post-stub {
-    overflow-wrap: break-word;
-    padding: 10px 12px 0 12px;
+    padding: 10px 12px 10px 12px;
     display: block;
     width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -358,13 +356,13 @@ blockquote p {
 
 } 
 
-.post-page h2 {
+/*.post-page h2 {
     font-size: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
     line-height: 1.2;
     
-}
+}*/
 .post-title{
     width:auto;
     flex-wrap: wrap;
@@ -373,7 +371,7 @@ blockquote p {
 .post-title-h2{
     font-weight: 900;
     flex-wrap: wrap;
-    width: auto;
+    width: 70%;
     overflow-wrap: break-word;
 }
 .post-meta{
@@ -391,8 +389,9 @@ blockquote p {
     color: #2C2B2B
     }
     .post:hover{
-        background: #d2cbcb;
+        background: #d2cbcb; 
     }
+   
     .header-subtitle{
         color: rgb(74, 71, 71);
     }
@@ -456,7 +455,6 @@ blockquote p {
     width: auto;
 }
 .post-meta{
-    
     text-align: right;
     font-family: 'Inconsolata', monospace;
     display: inline-block;
@@ -639,15 +637,10 @@ a {
             "main"
             "sidebar";
     }
-    .post{
-        max-width: 860px;
-        width:860px;
-        height:240px;
-        margin-left: -50px;
-    }
+    
     .post-stub{
-        width:860px;
-        height:220px; 
+        width:920px;
+        height:150px; 
     }
     .sidebar{
         max-width: 860px;
@@ -671,8 +664,8 @@ a {
             "main"
             "sidebar";
     }
-    .post{
-        max-width: 740px;
+    .post-stub{
+        width: 740px;
     }
     .sidebar{
         max-width: 740px;
@@ -694,14 +687,9 @@ a {
             "main"
             "sidebar";
     }
-    .post{
-        max-width: 440px;
+    .post-stub{
         width:440px;
-        height:220px;
-        margin-left: -30px;
-    }.post-stub{
-        width:440px;
-        height:220px; 
+        height:160px;
     }
 
     .sidebar{
@@ -728,19 +716,20 @@ a {
     .post{
         max-width: 400px;
         width:400px;
-        height:220px;
-        margin-left: -50px;
+        height:180px;
+       
     }
     .post-stub{
         width:400px;
-        height:220px; 
+        height:180px; 
+        padding-right: 20px;
+        padding-left: 5px;
     }
     .sidebar{
         max-width: 380px;
     }
     .content-post{
         max-width: 380px;
-        margin-left: -40px;
     }
     .video-container{
        max-width:360px;
@@ -757,21 +746,19 @@ a {
             "sidebar";
     }
     .post{
-        max-width: 360px;
-        width:340px;
+        max-width: 375px;
+        width:370px;
         height:220px;
-        margin-left: -50px;
     }
     .post-stub{
-        width:340px;
-        height:220px; 
+        width:370px;
+        height:225px; 
     }
     .sidebar{
         max-width: 360px;
     }
     .content-post{
         max-width: 360px;
-        margin-left: -40px;
     }
     .video-container{
        max-width:340px;
