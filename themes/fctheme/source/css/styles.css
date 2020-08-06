@@ -661,6 +661,8 @@ a {
     }
     .post-stub{
         width: 740px;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
     .sidebar{
         max-width: 740px;
@@ -750,6 +752,7 @@ a {
         height:220px; 
         margin-right: 10px;
         padding-bottom: 10px;
+        padding-top: 30px;
     }
     .date-tag{
         margin-bottom: 10px;
@@ -757,6 +760,7 @@ a {
         flex-direction: row;
     }
     .tags{
+        margin-left: 60px;
         margin-top: -10px;
     }
     .sidebar{
