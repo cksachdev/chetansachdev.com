@@ -18,15 +18,12 @@ https://github.com/thoughtbot/laptop
 **Step 2**
 Download all that I need to work on javascript based projects.
 ```language
-brew cask install iterm2 alfred bartender dropbox google-chrome
- licecap skype slack sublime-text virtualbox whatsapp 
- visual-studio-code karabiner-elements sourcetree araxis-merge 
- itsycal the-unarchiver brave-browser easyfind omnidisksweeper
+brew cask install iterm2 alfred bartender dropbox google-chrome licecap skype slack sublime-text virtualbox whatsapp visual-studio-code karabiner-elements sourcetree araxis-merge itsycal the-unarchiver brave-browser easyfind omnidisksweeper vlc barrier keycastr
 ```
 
 **Step 3**
-Download Brave Beta from
-https://brave.com/download-beta/
+Download Microsoft Remote Desktop
+https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12
 Note: No cask available thus a manual effort.
 
 Download HexoClient
