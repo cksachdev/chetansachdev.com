@@ -260,7 +260,7 @@ div.post-stub {
 .post-stub {
     border-bottom: 1px dotted #303030;
     overflow-wrap: break-word;
-    padding: 10px 12px 10px 12px;
+    padding: 25px 12px 25px 12px;
     width: 100%;
     height: auto;
 }
@@ -318,7 +318,7 @@ code .lang-sh{
     margin-bottom: 30px!important;
     white-space: pre-wrap!important;
     padding:1em;
-    width: auto;
+    width: 100%;
     flex-wrap: wrap;
 }
 blockquote{
@@ -625,7 +625,7 @@ a {
 }
 
 
-@media only screen and (max-width: 1024px) {
+/*@media (min-width: 901px) {
     .single-post-container.has-sidebar {
            grid-template-columns: auto;
            grid-template-areas:
@@ -651,8 +651,8 @@ a {
         max-width: 840px;
     }
  }
-
-@media only screen and (max-width: 910px) {
+*/
+@media  (max-width:670px) {
     .single-post-container.has-sidebar {
            grid-template-columns: auto;
            grid-template-areas:
@@ -660,12 +660,12 @@ a {
             "sidebar";
     }
     .post-stub{
-        width: 740px;
+        width: 100%;
         padding-top: 30px;
         padding-bottom: 30px;
     }
     .sidebar{
-        max-width: 740px;
+        width: 100%;
     }
     .content-post{
         max-width: 740px;
@@ -679,6 +679,57 @@ a {
  }
  @media  (max-width: 500px) {
     .single-post-container.has-sidebar {
+        grid-template-columns: auto;
+        grid-template-areas:
+         "main"
+         "sidebar";
+}
+ .post{
+     width:100%;
+     height:220px;
+     margin-right: 10px;
+    
+ }
+ div.post-stub{
+     display: flex;
+     flex-direction: column;
+ }
+ .post-stub{
+     width:100%;
+     height:220px; 
+     padding-bottom: 10px;
+     padding-top: 30px;
+ }
+ .date-tag{
+     margin-bottom: 10px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+ }
+ .tags{
+     margin-left: 60px;
+     margin-top: -10px;
+ }
+ .sidebar{
+     max-width: 65%;
+ }
+ .item-content{
+     width:100%;
+ }
+ .content-post{
+     width: 90%;
+ }
+ .video-container{
+    max-width:90%;
+ }
+ .video-container iframe{
+     max-width: 90%;
+ }
+ .item-content pre{
+     width: 65%;
+ }
+}
+   /* .single-post-container.has-sidebar {
            grid-template-columns: auto;
            grid-template-areas:
             "main"
@@ -704,7 +755,7 @@ a {
         max-width: 420px;
     }
  }
- @media  (max-width: 480px) {
+ /*@media  (max-width: 480px) {
     .single-post-container.has-sidebar {
            grid-template-columns: auto;
            grid-template-areas:

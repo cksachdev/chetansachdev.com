@@ -1,4 +1,4 @@
- <div class="post" id="post" class="post-stub sm:max-w-sm " onclick="location.href='  <%= theme.excerpt_link %>';"> 
+ <div class="post" id="post" class="post-stub sm:max-w-sm " onclick="location.href='  <%- config.root %><%- item.path %>';"> 
    
     <!-- Title -->
 
@@ -16,7 +16,7 @@
            
            </p>
            <div class="tags">                 
-               <a href="https://chetansachdev.com/tags/js/" class="button js text-sm font-bold bg-teal-700"><% if(item.author) { %>
+               <a href="" class="button js text-sm font-bold bg-teal-700"><% if(item.author) { %>
                    <%- item.author %>
                    <% } %></a>      
            </div>
