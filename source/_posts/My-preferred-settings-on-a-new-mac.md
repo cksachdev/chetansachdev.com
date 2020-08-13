@@ -3,11 +3,11 @@ title: My preferred settings on a new mac
 category:
   - null
 tags:
-  - Computers
-author: [Computers]
+  - null
 top: 1
 categories: []
 toc: false
+author: Computers
 date: 2020-03-14 18:30:02
 ---
 
@@ -22,10 +22,6 @@ brew cask install iterm2 alfred bartender dropbox google-chrome licecap skype sl
 ```
 
 **Step 3**
-Download Microsoft Remote Desktop
-https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12
-Note: No cask available thus a manual effort.
-
 Download HexoClient
 
 ```
@@ -46,7 +42,7 @@ https://download.videolan.org/pub/videolan/vlc/
 **Step 6**
 Apps from App Store
 1. Super Easy Timer
-2. 
+2. Microsoft Remote Desktop (https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12)
 
 **Reset default settings for function keys to make debugging easier**
 
@@ -65,3 +61,9 @@ Apps from App Store
 ![image.png](/images/2020/03/14/40a51e10-65f4-11ea-b442-29d283043002.png)
 
 ---
+
+Solution to Connect a PC and Mac to share files (Share files between Mac and PC with ethernet cable LAN)
+https://www.youtube.com/watch?v=Pcf0YjPEKuU
+
+Solution to Blackmagic Intensity Shuttle configuration to direct output of Macbook to OBS running in Windows 10
+https://forum.blackmagicdesign.com/viewtopic.php?f=3&t=63035
