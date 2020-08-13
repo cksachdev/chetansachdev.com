@@ -198,9 +198,8 @@ a.menu-item.home:visited {
     text-align: center;
 }
 .video-container{
-    width:auto;
-    height: 494px;
-    height: 0;
+    width:100%;
+    height: 380px;
     overflow: hidden;
     padding-bottom: 56.25%;
     padding-top: 30px;
@@ -211,8 +210,8 @@ a.menu-item.home:visited {
   
 }
 .video-container iframe{
-    width: auto;
-    height: 494px;
+    width: 100%;
+    height: 380px;
     height: 100%;
     left: 0;
     position: absolute;
@@ -244,7 +243,7 @@ a.menu-item.home:visited {
     margin:55px 0px;
     
 }
-@media (max-width:960px){
+@media (max-width:670px){
     .post-page{
         margin-top: 0px;
     }
@@ -262,7 +261,6 @@ div.post-stub {
     overflow-wrap: break-word;
     padding: 25px 12px 25px 12px;
     width: 100%;
-    height: auto;
 }
 .post-stub:hover{
     background-color: hsl(220, 13%, 18%);
@@ -271,7 +269,7 @@ div.post-stub {
     line-height: 1.7em;
 }
 .item-content{
-    width:auto;
+    width:95%;
     overflow-wrap: break-word;
     flex-wrap: wrap;
 }
@@ -302,6 +300,9 @@ code .lang-sh{
     -ms-hyphens: none;
     hyphens: none;
 }
+.gutter{
+    visibility: hidden;
+}
 
 .item-content p a{
     border-bottom: 1px dotted;
@@ -318,7 +319,7 @@ code .lang-sh{
     margin-bottom: 30px!important;
     white-space: pre-wrap!important;
     padding:1em;
-    width: 100%;
+    width: 90%;
     flex-wrap: wrap;
 }
 blockquote{
@@ -352,13 +353,6 @@ blockquote p {
 
 } 
 
-/*.post-page h2 {
-    font-size: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    line-height: 1.2;
-    
-}*/
 .post-title{
     width:auto;
     flex-wrap: wrap;
@@ -425,18 +419,19 @@ blockquote p {
     margin: 25px 0 0;
     text-align: left;
 }
-.content-post-title a{
+.content-post-title a {
     font-size: 55px;
     font-weight: 900;
     margin: 22px 0;
     text-align: left;
     overflow-wrap: break-word;
     width: auto;
-    
+    line-height: 51.75px;
 }
+
 .content-post{
     overflow-wrap: break-word;
-    width: auto;
+    width: 95%;
     flex-wrap: wrap;
 }
 .post{
@@ -625,33 +620,7 @@ a {
 }
 
 
-/*@media (min-width: 901px) {
-    .single-post-container.has-sidebar {
-           grid-template-columns: auto;
-           grid-template-areas:
-            "main"
-            "sidebar";
-    }
-    
-    .post-stub{
-        width:920px;
-        height:150px; 
-    }
-    .sidebar{
-        max-width: 860px;
-    }
-    .content-post{
-        max-width: 860px;
-      
-    }
-    .video-container{
-       max-width:840px;
-    }
-    .video-container iframe{
-        max-width: 840px;
-    }
- }
-*/
+
 @media  (max-width:670px) {
     .single-post-container.has-sidebar {
            grid-template-columns: auto;
@@ -683,151 +652,56 @@ a {
         grid-template-areas:
          "main"
          "sidebar";
-}
- .post{
-     width:100%;
-     height:220px;
-     margin-right: 10px;
-    
- }
- div.post-stub{
-     display: flex;
-     flex-direction: column;
- }
- .post-stub{
-     width:100%;
-     height:220px; 
-     padding-bottom: 10px;
-     padding-top: 30px;
- }
- .date-tag{
-     margin-bottom: 10px;
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
- }
- .tags{
-     margin-left: 60px;
-     margin-top: -10px;
- }
- .sidebar{
-     max-width: 65%;
- }
- .item-content{
-     width:100%;
- }
- .content-post{
-     width: 90%;
- }
- .video-container{
-    max-width:90%;
- }
- .video-container iframe{
-     max-width: 90%;
- }
- .item-content pre{
-     width: 65%;
- }
-}
-   /* .single-post-container.has-sidebar {
-           grid-template-columns: auto;
-           grid-template-areas:
-            "main"
-            "sidebar";
-    }
-    .post-stub{
-        width:440px;
-        height:180px;
-        padding-bottom: 20px;
-    }
-
-    .sidebar{
-        max-width: 440px;
-    }
-    .content-post{
-        max-width: 440px;
-        margin-left: -10px;;
-    }
-    .video-container{
-       max-width:420px;
-    }
-    .video-container iframe{
-        max-width: 420px;
-    }
- }
- /*@media  (max-width: 480px) {
-    .single-post-container.has-sidebar {
-           grid-template-columns: auto;
-           grid-template-areas:
-            "main"
-            "sidebar";
-    }
-    .post-stub{
-        width:440px;
-        height:170px;
-        padding-bottom: 20px;
-    }
-
-    .sidebar{
-        max-width: 440px;
-    }
-    .content-post{
-        max-width: 440px;
-        margin-left: -10px;;
-    }
-    .video-container{
-       max-width:420px;
-    }
-    .video-container iframe{
-        max-width: 420px;
-    }
- }
- @media only screen and (max-width: 414px) {
-    .single-post-container.has-sidebar {
-           grid-template-columns: auto;
-           grid-template-areas:
-            "main"
-            "sidebar";
     }
     .post{
-        width:380px;
-        height:220px;
-       
+    width:100%;
+    height:220px;
+    margin: 0;
+
     }
     div.post-stub{
-        display: flex;
-        flex-direction: column;
+    display: flex;
+    flex-direction: column;
     }
+
     .post-stub{
-        width:380px;
-        height:220px; 
-        margin-right: 10px;
-        padding-bottom: 10px;
-        padding-top: 30px;
+    width:100%;
+    height:220px; 
+    margin: 0;
+    padding-bottom: 10px;
+    padding-top: 30px;
     }
     .date-tag{
-        margin-bottom: 10px;
-        display: flex;
-        flex-direction: row;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     }
     .tags{
-        margin-left: 60px;
-        margin-top: -10px;
+    margin-left: 60px;
+    margin-top: -10px;
     }
     .sidebar{
-        max-width: 380px;
+    max-width: 65%;
+    }
+    .item-content{
+    width:100%;
     }
     .content-post{
-        max-width: 380px;
+    width: 90%;
     }
     .video-container{
-       max-width:360px;
+    max-width:90%;
     }
     .video-container iframe{
-        max-width: 360px;
+    max-width: 90%;
     }
- }
- @media only screen and (max-width: 375px) {
+    .item-content pre{
+    width: 65%;
+    }
+}
+ 
+ @media (max-width: 375px) {
     .single-post-container.has-sidebar {
            grid-template-columns: auto;
            grid-template-areas:
