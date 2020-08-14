@@ -52,13 +52,18 @@
       input = input.toLowerCase();
       let x = document.getElementsByClassName("post-stub");
       for (i=0; i<x.length; i++){
-         if (!x[i].innerHTML.toLowerCase().includes(input)){
-           x[i].style.display = "none";
+        x[i].style.display = "flex";
+      }
+      if (input != '' ){
+      for (i=0; i<x.length; i++){
+         if (x[i].innerHTML.toLowerCase().includes(input)){
+           x[i].style.display = "flex";
          }
          else{
-           x[i].style.dispaly = "post-item";
+           x[i].style.display = "none";
          }
       }
+     }
     }
 
     function hide(){
