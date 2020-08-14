@@ -721,6 +721,9 @@ a {
         width:345px;
         height:225px; 
     }
+    .post-meta{
+        width:140px;
+    }
     .sidebar{
         max-width: 360px;
     }
