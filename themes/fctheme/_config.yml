@@ -19,6 +19,9 @@ menu:
   about:
     text: About me
     url: about/
+  payment: 
+    text: payment
+    url: payment/
 
 
 # Your avatar url
