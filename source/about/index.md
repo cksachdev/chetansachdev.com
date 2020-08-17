@@ -13,10 +13,10 @@ date: 2019-05-08 12:51:14
        <div class="details text-center mt-2 font-serif tracking-wide" id="name"> Chetan Sachdev
        </div>
        <ul class="social-icon flex text-center justify-center mt-4">
-           <li class="bg-white rounded-full border hover:border hover:border-gray-500 mx-2 md:mx-6"><a href="#"><i class="fa fa-facebook px-3 text-blue-700" area-hidden="true"></i></a></li>
-           <li class="bg-white rounded-full border hover:border hover:border-gray-500 mx-2 md:mx-6"><a href="#"><i class="fa fa-twitter px-2" area-hidden="true"></i></a></li>
-           <li class="bg-white rounded-full border hover:border hover:border-gray-500 mx-2 md:mx-6"><a href="#"><i class="fa fa-linkedin px-2 text-blue-600" area-hidden="true"></i></a></li>
-           <li class="bg-white rounded-full border hover:border hover:border-gray-500 mx-2 md:mx-6"><a href="#"><i class="fa fa-github px-2" area-hidden="true"></i></a></li>
+           <li class="bg-white rounded-full border hover:border hover:border-gray-500 mx-2 md:mx-6"><a href="https://www.facebook.com/cksachdev"><i class="fa fa-facebook px-3 text-blue-700" area-hidden="true"></i></a></li>
+           <li class="bg-white rounded-full border hover:border hover:border-gray-500 mx-2 md:mx-6"><a href="https://twitter.com/cksachdev"><i class="fa fa-twitter px-2" area-hidden="true"></i></a></li>
+           <li class="bg-white rounded-full border hover:border hover:border-gray-500 mx-2 md:mx-6"><a href="https://www.linkedin.com/in/cksachdev/"><i class="fa fa-linkedin px-2 text-blue-600" area-hidden="true"></i></a></li>
+           <li class="bg-white rounded-full border hover:border hover:border-gray-500 mx-2 md:mx-6"><a href="https://github.com/cksachdev"><i class="fa fa-github px-2" area-hidden="true"></i></a></li>
        </ul>
   </div>
 </div>
