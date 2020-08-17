@@ -10,6 +10,7 @@
                     </span>
                     <% } %>
             </p>
+    </div>
     <div class="bottom  ">
         <p>
             <span>
@@ -20,12 +21,11 @@
                                 <%- date(new Date(), 'YYYY') %>
             </span>
             <span>
-                <% if(theme.ICP_license) {%>
+                 <% if(theme.ICP_license) {%>
                     <a href="http://www.miitbeian.gov.cn/" target="_blank">
                         <%- theme.ICP_license %>
-                    </a>
-                    <br>
-                    <% } %>
+                    </a><br>
+                    <% } %> 
                         Power by
                         <a href="http://hexo.io/" target="_blank">Hexo</a>
                         <p class="host">Hosted by <a href="https://github.com/cksachdev/chetansachdev.com" style="font-weight: bold">Github Pages</a></p>

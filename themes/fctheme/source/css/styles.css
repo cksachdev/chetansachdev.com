@@ -69,6 +69,9 @@ div {
     padding-right: 15px;
     box-sizing: border-box;
 }
+.container{
+    margin: 20px auto;
+}
 .sidebar-title{
     font-size: medium;
     font-weight: 500;
@@ -122,13 +125,11 @@ a.menu-item.home:visited {
     visibility: hidden;
 }
 .social-bar{
-    display: grid;
-    grid-template-rows: 3;
-    grid-gap: 16px;
-    margin: 64px 0;
+    
+    margin-bottom: 30px;
 }
 .social-bar a .fa{
-    margin-right: 4px;
+    margin-right: 20px;
 }
 .sidebar p{
     line-height: 24px;
@@ -166,18 +167,7 @@ a.menu-item.home:visited {
     display: flex;
     justify-content: center;
 }
-.button-previous{
-    border:1px;
-    border-color: gainsboro;
-    color: #718096;
-    padding: 0 24px;
-}
-.button-next{
-    border-style: solid;
-    border-color: #aeadad;
-    color: #718096;
-    padding: 8px 24px;
-}
+
 .header-title{
     font-weight: 700;
     font-size: 1.5rem;
@@ -244,7 +234,7 @@ a.menu-item.home:visited {
     padding-top: 30px;
 }
 .post-page {
-    margin:55px 0px;
+    margin: 0 0;
     
 }
 @media (max-width:670px){
@@ -252,7 +242,7 @@ a.menu-item.home:visited {
         margin-top: 0px;
     }
 }
-.hljs, article, aside, blockquote p, details, figcaption, figure, footer, header, img, main, menu, nav, section {
+.hljs, article, aside, blockquote p, details, figcaption, figure, header, img, main, menu, nav, section {
     display: block;
 }
 div.post-stub {
@@ -281,10 +271,10 @@ div.post-stub {
     line-height: 2em;
     margin-bottom: 20px;;
 }
-code .lang-sh{
+code {
     display: flex;
     overflow-wrap: break-word;
-    width:500px;
+    width:490px;
     flex-wrap: wrap;
     word-break: break-all;
     color: #ccc;
@@ -623,7 +613,42 @@ a {
     background-color: #f2552c
 }
 
+/* about me page */
 
+
+@media (min-width:1px),(max-width: 670px){
+    
+    .social-bar{
+        display: flex;
+        width:100%;
+        justify-content: space-around;
+    }
+    .social-bar a{
+        margin: 0 20px 0 0px;
+    }
+    .sidebar,.side-page{
+        margin:30px 0;
+        padding: 0;
+    }
+}
+@media (min-width: 671px){
+    .nav-toggle, .nav,.nav__list{
+        display: none;
+    }
+    .menu-container{
+        display:block;
+        margin-top: 20px;
+    }
+    .social-bar{
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .social-bar a{
+        margin:0 0 20px 0;
+    }
+        
+}
 
 @media  (max-width:670px) {
     .single-post-container.has-sidebar {
@@ -637,7 +662,7 @@ a {
         padding-top: 30px;
         padding-bottom: 30px;
     }
-    .sidebar{
+    .side-page,.sidebar{
         width: 100%;
     }
     .content-post{
@@ -645,10 +670,88 @@ a {
     }
     .video-container{
         width:620px;
+        height:400px;
      }
      .video-container iframe{
          width: 620px;
+         height:400px;
      }
+     
+     
+    .nav {
+        width: 100%;
+    }
+    .nav-toggle {
+        cursor: pointer;
+        border: 0;
+        width: 2em;
+        height: 2em;
+        padding: 0em;
+        margin-left: 15px;
+        border-radius: 50%;
+        background: #2b2a2a;
+        color: rgb(242, 232, 232);
+        transition: opacity 250ms ease;
+        
+        position: absolute;
+        left: 0;
+    }
+    .nav__list{
+        color:hsl(0, 0%, 98%);
+    }
+    .nav__link{
+        font-size: 15px;
+        color: hsl(0, 8%, 87%);
+    }
+    .nav-toggle:focus,
+    .nav-toggle:hover {
+        opacity: .75;
+    }
+    
+    .hamburger {
+        width: 50%;
+        position: relative;
+    }
+    
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+        display: block;
+        margin: 0 auto;
+        height: 3px;
+        background: white;
+    }
+    
+    .hamburger::before,
+    .hamburger::after {
+        content: '';
+        width: 100%;
+    }
+    
+    .hamburger::before {
+        transform: translateY(-6px);
+    }
+    
+    .hamburger::after {
+        transform: translateY(3px);
+    }
+    
+    /* made changes here from video
+       to make it more accessible.
+       
+       Works the same :) */
+    .nav {
+        visibility: hidden;
+        height: 0;
+        position: absolute;
+    }
+    
+    .nav--visible {
+        visibility: visible;
+        height: auto;
+        position: relative;
+    }
+    
  }
  @media  (max-width: 500px) {
     .single-post-container.has-sidebar {
@@ -685,23 +788,26 @@ a {
     margin-left: 60px;
     margin-top: -10px;
     }
-    .sidebar{
-    max-width: 65%;
+    .sidebar,.side-page{
+       width: 100%;
     }
+    
     .item-content{
     width:100%;
     }
     .content-post{
-    width: 100%;
+    width: 480px;
     }
     .video-container{
-      width:100%;
+      width:460px;
+      height:300px;
     }
     .video-container iframe{
-      width: 100%;
+      width: 460px;
+      height:300px;
     }
     .item-content pre{
-    width: 65%;
+      width:80%;
     }
 }
  
@@ -724,8 +830,8 @@ a {
     .post-meta{
         width:140px;
     }
-    .sidebar{
-        max-width: 360px;
+    .sidebar,.side-page{
+        max-width: 370px;
     }
     .date-tag{
         margin-bottom: 10px;
@@ -738,11 +844,11 @@ a {
     }
     .video-container{
        width:340px;
-       height: 400px;
+       height: 200px;
     }
     .video-container iframe{
         width: 340px;
-        height: 400px;
+        height: 200px;
     }
  }
  

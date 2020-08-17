@@ -13,15 +13,17 @@ date: 2020-02-12 01:08:47
 
 **Updating favicon**
 Generate favicon of your choice. I prefer using https://www.photopea.com/ for minor image editing.
-In bitnami version of moodle, navigate to ```/opt/bitnami/apps/moodle/htdocs/theme/boost/pix```
+In bitnami version of moodle, navigate to```/opt/bitnami/apps/moodle/htdocs/theme/boost/pix```
+
 rename existing favicon.ico file to have a backup
 Upload your new favicon.ico file in the same directory
 
-You may require a hard refresh in the browser to update favicon. If it still doesn't work, try the steps below:
+You may require a hard refresh in the browser to update favicon.
+If it still doesn't work, try the steps below:
 Access Settings > Appearance > Themes > Theme settings > Theme designer mode check box and save. Refresh your browser. Uncheck the box after it works.
 
 **Removing moodle logo from theme boost footer**
-In bitnami version of moodle, navigate to ```/opt/bitnami/apps/moodle/htdocs/theme/boost/templates```
+In bitnami version of moodle, navigate to```/opt/bitnami/apps/moodle/htdocs/theme/boost/templates```
 Open footer.mustache in editor of your choice
 
 In theme boost footer.mustache looks like below:
