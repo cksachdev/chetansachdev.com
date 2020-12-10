@@ -1,0 +1,29 @@
+<div  class="" onclick="location.href='  <%- config.root %><%- item.path %>';"> 
+   
+    <!-- Title -->
+
+    <div  class="" >
+       <h2 class="">
+            <a href="<%- config.root %><%- item.path %>" class="">
+                <%- item.title %>
+            </a>
+        </h2>
+        <div class="">
+            <!-- Date and Author -->
+           <p class="" >
+            <%= item.date.format(config.date_format) %>
+           
+           
+           </p>
+           <div class="">                 
+               <a href="" class=""><% if(item.author) { %>
+                   <%- item.author %>
+                   <% } %></a>      
+           </div>
+           <div>
+
+           </div>
+        </div> 
+        
+    </div> 
+</div>
