@@ -19,7 +19,7 @@ feed:
 jsonContent:
   meta: false
   pages: true
-  posts: 
+  posts:
     title: true
     date: true
     path: true
@@ -35,9 +35,9 @@ jsonContent:
     categories: true
     tags: true
 
-# To automatically generate a Sitemap 
-a Sitemap :
-   path : sitemap.xml 
+# To automatically generate a Sitemap
+a Sitemap:
+  path: sitemap.xml
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -72,7 +72,7 @@ highlight:
   #line_number: true
   #auto_detect: true
   #tab_replace:
-  
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -83,7 +83,7 @@ index_generator:
   order_by:
     top: -1
     date: -1
-  
+
 # Category & Tag
 default_category: uncategorized
 category_map:
@@ -104,7 +104,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: fctheme
+theme: dark-theme
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -112,4 +112,4 @@ deploy:
   type: git
   repo: https://github.com/cksachdev/chetansachdev.com.git
   branch: gh-pages
-  message:  
+  message:
