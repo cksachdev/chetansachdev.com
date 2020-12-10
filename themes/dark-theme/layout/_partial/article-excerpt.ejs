@@ -1,29 +1,27 @@
-<div  class="" onclick="location.href='  <%- config.root %><%- item.path %>';"> 
+<div  class="post" onclick="location.href='  <%- config.root %><%- item.path %>';"> 
    
     <!-- Title -->
 
-    <div  class="" >
-       <h2 class="">
-            <a href="<%- config.root %><%- item.path %>" class="">
+    <!-- <div  class="" > -->
+       <h2 class="post_title">
+            <a style="color: aliceblue;" href="<%- config.root %><%- item.path %>" class="">
                 <%- item.title %>
             </a>
         </h2>
-        <div class="">
+        <div class="post_info">
             <!-- Date and Author -->
-           <p class="" >
+           <p style="width: 140px;" class="post_date" >
             <%= item.date.format(config.date_format) %>
            
            
            </p>
-           <div class="">                 
+           <div class="post_tag">                 
                <a href="" class=""><% if(item.author) { %>
                    <%- item.author %>
                    <% } %></a>      
            </div>
-           <div>
-
-           </div>
+           
         </div> 
         
-    </div> 
+    <!-- </div>  -->
 </div>
