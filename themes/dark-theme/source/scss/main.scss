@@ -272,6 +272,7 @@ input::placeholder {
   margin-left: 15px;
   border-radius: 50%;
   color: #f2e8e8;
+  background-color: #2c2b2b;
   transition: opacity 250ms ease;
 
   position: absolute;
@@ -336,9 +337,11 @@ input::placeholder {
 
 // full-article view
 .full-article {
+  color: white;
   padding: 16px;
 }
 .article-title a {
+  color: white;
   font-size: 28px;
   font-weight: 600;
 }
@@ -346,9 +349,17 @@ input::placeholder {
   color: #718096;
 }
 .article-content {
+  color: white;
   width: 90%;
   & p a {
+    color: white;
     word-wrap: break-word;
+  }
+  & li a {
+    color: white;
+    text-decoration: underline;
+    word-wrap: break-word;
+    line-height: 2;
   }
 }
 
