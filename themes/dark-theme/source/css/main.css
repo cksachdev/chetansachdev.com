@@ -21,8 +21,16 @@ ul {
   margin: 0 0 20px;
 }
 
+ul {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
+}
+
+h2 {
+  margin: 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -47,43 +55,12 @@ a {
   text-align: center;
 }
 
-.single-post-container.has-sidebar {
-  display: grid;
-  grid-template-columns: 220px auto;
-  grid-column-gap: 45px;
-  grid-template-areas: 'sidebar main';
-  max-width: 1200px;
-}
-
-.single-post-container.has-sidebar article {
-  grid-area: main;
-}
-
-.single-post-container.has-sidebar article .post-list {
-  list-style: none;
-  padding: 0;
-  width: 100%;
-}
-
-.single-post-container.has-sidebar .post-container {
-  margin: 0 40px;
-}
-
-.single-post-container {
-  margin-top: 70px;
-  padding-left: 15px;
-  padding-right: 15px;
-  box-sizing: border-box;
-}
-
-.container {
-  margin: 70px auto;
-}
-
 .sidebar {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  margin: 0 0 0 -20px;
 }
 
 .sidebar_img-container {
@@ -94,14 +71,14 @@ a {
   margin: 20px 0 0 0;
 }
 
-.sidebar_img-container a .sidebar_img {
+.sidebar_img-container .sidebar_img {
   width: 96px;
   height: 96px;
   object-fit: cover;
   border-radius: 100%;
 }
 
-.sidebar_title .sidebar_title-text {
+.sidebar_title-text {
   font-size: medium;
   font-weight: 500;
   margin: 20px 0 10px 0;
@@ -133,17 +110,16 @@ input::placeholder {
 
 .sidebar_menu {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 0 48px 0;
-  width: 100%;
+  justify-content: center;
+  margin: 0;
+  width: 60%;
 }
 
 .sidebar_menu .menu_item {
-  padding: 16px 8px;
+  padding: 16px 8px 16px 16px;
   color: #fafafa;
   text-decoration: none;
-  width: 90%;
+  width: 80%;
 }
 
 .sidebar_menu .menu_item i {
@@ -155,17 +131,17 @@ input::placeholder {
 }
 
 .sidebar_social {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  width: 85%;
 }
 
 .sidebar_social .social-link {
-  width: 65%;
+  width: 60%;
   color: white;
   text-decoration: none;
-  margin: 0 0 20px 0;
+  margin: 20px 0 20px 0;
 }
 
 .sidebar_social .social-link span {
@@ -173,7 +149,7 @@ input::placeholder {
 }
 
 .sidebar_social .social-link .fa {
-  margin-right: 20px;
+  margin-right: 0;
 }
 
 .sidebar_social .social-link .fa.fa-twitter {
@@ -201,8 +177,10 @@ input::placeholder {
 }
 
 .sidebar_text {
+  width: 80%;
   line-height: 24px;
   font-size: 1em;
+  margin: 0 0 20px 0;
 }
 
 .sidebar_text a {
@@ -211,22 +189,33 @@ input::placeholder {
   border-bottom: 1px dotted;
 }
 
+.post-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0 0 0;
+}
+
 .post {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   border-bottom: 1px dotted #303030;
   line-height: 2.125;
-  padding: 25px 12px 25px 12px;
-  width: 100%;
+  padding: 16px 12px 16px 12px;
+  width: 90%;
 }
 
 .post:hover {
   background-color: #282c34;
 }
 
+.post h2 {
+  margin: 0;
+}
+
 .post h2 a {
-  font-size: 30px;
+  font-size: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
   line-height: 1.2;
@@ -241,12 +230,12 @@ input::placeholder {
 }
 
 .post .post_info .post_date {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 2.125;
   text-align: right;
   font-family: 'Inconsolata', monospace;
   display: inline-block;
-  padding-top: 24px;
+  padding-top: 0;
 }
 
 .post .post_info .post_tag a {
@@ -258,6 +247,84 @@ input::placeholder {
   border-radius: 3px;
   font-size: 14px;
   font-weight: 700;
-  padding: 10px 12px;
+  padding: 10px 10px;
+}
+
+.nav {
+  width: 100%;
+}
+
+.nav-toggle {
+  cursor: pointer;
+  border: 0;
+  width: 3em;
+  height: 2em;
+  padding: 0em;
+  margin-left: 15px;
+  border-radius: 50%;
+  background: #2b2a2a;
+  color: #f2e8e8;
+  transition: opacity 250ms ease;
+  position: absolute;
+  left: 0;
+}
+
+.nav__list {
+  background-color: #282c34;
+  color: #fafafa;
+}
+
+.nav__link {
+  font-size: 15px;
+  color: #e1dbdb;
+}
+
+.nav-toggle:focus,
+.nav-toggle:hover {
+  opacity: 0.75;
+}
+
+.hamburger {
+  width: 50%;
+  position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  margin: 0 auto;
+  height: 3px;
+  background: white;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  width: 100%;
+}
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
+
+/* made changes here from video
+     to make it more accessible.
+     
+     Works the same :) */
+.nav {
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+}
+
+.nav--visible {
+  visibility: visible;
+  height: auto;
+  position: relative;
 }
 /*# sourceMappingURL=main.css.map */

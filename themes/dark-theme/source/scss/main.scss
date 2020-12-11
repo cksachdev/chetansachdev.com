@@ -18,8 +18,14 @@ pre,
 ul {
   margin: 0 0 20px;
 }
+ul {
+  list-style: none;
+}
 a {
   text-decoration: none;
+}
+h2 {
+  margin: 0;
 }
 
 // dark theme settigns
@@ -44,39 +50,41 @@ a {
   font-size: 1.5rem;
   text-align: center;
 }
-.single-post-container.has-sidebar {
-  display: grid;
-  grid-template-columns: 220px auto;
-  grid-column-gap: 45px;
-  grid-template-areas: 'sidebar main';
-  max-width: 1200px;
-  & article {
-    grid-area: main;
-    & .post-list {
-      list-style: none;
-      padding: 0;
-      width: 100%;
-    }
-  }
-  & .post-container {
-    margin: 0 40px;
-  }
-}
-.single-post-container {
-  margin-top: 70px;
-  padding-left: 15px;
-  padding-right: 15px;
-  box-sizing: border-box;
-}
-.container {
-  margin: 70px auto;
-}
+// .single-post-container.has-sidebar {
+//   display: grid;
+//   grid-template-columns: 220px auto;
+//   grid-column-gap: 45px;
+//   grid-template-areas: 'sidebar main';
+//   max-width: 1200px;
+//   & article {
+//     grid-area: main;
+//     & .post-list {
+//       list-style: none;
+//       padding: 0;
+//       width: 100%;
+//     }
+//   }
+//   & .post-container {
+//     margin: 0 40px;
+//   }
+// }
+// .single-post-container {
+//   margin-top: 70px;
+//   padding-left: 15px;
+//   padding-right: 15px;
+//   box-sizing: border-box;
+// }
+// .container {
+//   margin: 70px auto;
+// }
 
 //sidebar
 .sidebar {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  margin: 0 0 0 -20px;
 }
 .sidebar_img-container {
   display: flex;
@@ -84,21 +92,20 @@ a {
   justify-content: center;
   align-items: center;
   margin: 20px 0 0 0;
-  & a .sidebar_img {
+  & .sidebar_img {
     width: 96px;
     height: 96px;
     object-fit: cover;
     border-radius: 100%;
   }
 }
-.sidebar_title {
-  & .sidebar_title-text {
-    font-size: medium;
-    font-weight: 500;
-    margin: 20px 0 10px 0;
-    text-align: center;
-  }
+.sidebar_title-text {
+  font-size: medium;
+  font-weight: 500;
+  margin: 20px 0 10px 0;
+  text-align: center;
 }
+
 .sidebar_email {
   color: #718096;
   font-size: large;
@@ -121,16 +128,15 @@ input::placeholder {
 }
 .sidebar_menu {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 0 48px 0;
-  width: 100%;
+  justify-content: center;
+  margin: 0;
+  width: 60%;
 
   & .menu_item {
-    padding: 16px 8px;
+    padding: 16px 8px 16px 16px;
     color: #fafafa;
     text-decoration: none;
-    width: 90%;
+    width: 80%;
 
     & i {
       margin: 0 28px 0 20px;
@@ -141,23 +147,24 @@ input::placeholder {
   }
 }
 .sidebar_social {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   align-items: center;
+  width: 85%;
 
   & .social-link {
-    width: 65%;
+    width: 60%;
     color: white;
     text-decoration: none;
-    margin: 0 0 20px 0;
+    margin: 20px 0 20px 0;
 
     & span {
       border-bottom: 1px dotted;
     }
 
     & .fa {
-      margin-right: 20px;
+      margin-right: 0;
 
       &.fa-twitter {
         color: #3182ce;
@@ -184,8 +191,10 @@ input::placeholder {
   }
 }
 .sidebar_text {
+  width: 80%;
   line-height: 24px;
   font-size: 1em;
+  margin: 0 0 20px 0;
   & a {
     color: white;
     text-decoration: none;
@@ -194,38 +203,47 @@ input::placeholder {
 }
 
 // articles
+.post-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0 0 0;
+}
 .post {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   border-bottom: 1px dotted #303030;
   line-height: 2.125;
-  padding: 25px 12px 25px 12px;
-  width: 100%;
+  padding: 16px 12px 16px 12px;
+  width: 90%;
   &:hover {
-    background-color: hsl(220, 13%, 18%);
+    background-color: #282c34;
   }
 
-  & h2 a {
-    font-size: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    line-height: 1.2;
-    display: inline-block;
+  & h2 {
     margin: 0;
-    font-weight: 900;
+    & a {
+      font-size: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      line-height: 1.2;
+      display: inline-block;
+      margin: 0;
+      font-weight: 900;
+    }
   }
 
   & .post_info {
     display: flex;
     flex-direction: column;
     & .post_date {
-      font-size: 18px;
+      font-size: 16px;
       line-height: 2.125;
       text-align: right;
       font-family: 'Inconsolata', monospace;
       display: inline-block;
-      padding-top: 24px;
+      padding-top: 0;
     }
 
     & .post_tag a {
@@ -237,7 +255,82 @@ input::placeholder {
       border-radius: 3px;
       font-size: 14px;
       font-weight: 700;
-      padding: 10px 12px;
+      padding: 10px 10px;
     }
   }
+}
+// navbar
+.nav {
+  width: 100%;
+}
+.nav-toggle {
+  cursor: pointer;
+  border: 0;
+  width: 3em;
+  height: 2em;
+  padding: 0em;
+  margin-left: 15px;
+  border-radius: 50%;
+  background: #2b2a2a;
+  color: #f2e8e8;
+  transition: opacity 250ms ease;
+
+  position: absolute;
+  left: 0;
+}
+.nav__list {
+  background-color: #282c34;
+  color: #fafafa;
+}
+.nav__link {
+  font-size: 15px;
+  color: #e1dbdb;
+}
+.nav-toggle:focus,
+.nav-toggle:hover {
+  opacity: 0.75;
+}
+
+.hamburger {
+  width: 50%;
+  position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  margin: 0 auto;
+  height: 3px;
+  background: white;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  width: 100%;
+}
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
+
+/* made changes here from video
+     to make it more accessible.
+     
+     Works the same :) */
+.nav {
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+}
+
+.nav--visible {
+  visibility: visible;
+  height: auto;
+  position: relative;
 }
