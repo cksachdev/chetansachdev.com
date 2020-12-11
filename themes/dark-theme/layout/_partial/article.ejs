@@ -1,20 +1,20 @@
-<div class="">
+<div class="full-article">
     
-    <div class="">
+    <div class="article-heading">
         <!-- Title -->
-        <h2 class="">
+        <h2 class=" article-title">
             <a class="" href="<%- config.root %><%- item.path %>">
                 <%- item.title || item.link%>
             </a>
         </h2>
         <!-- Date and Author -->
-        <p class="">Published on
+        <p class="article-date">Published on
             <%= item.date.format(config.date_format) %>
         </p>
     </div>
     
     <!-- Content -->
-    <div class=""  >
+    <div class=" article-content">
         <%- item.content %>
     </div>
     <!-- Tags and Categories links -->

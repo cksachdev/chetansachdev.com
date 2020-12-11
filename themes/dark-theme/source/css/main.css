@@ -262,7 +262,6 @@ input::placeholder {
   padding: 0em;
   margin-left: 15px;
   border-radius: 50%;
-  background: #2b2a2a;
   color: #f2e8e8;
   transition: opacity 250ms ease;
   position: absolute;
@@ -326,5 +325,31 @@ input::placeholder {
   visibility: visible;
   height: auto;
   position: relative;
+}
+
+.full-article {
+  padding: 16px;
+}
+
+.article-title a {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.article-date {
+  color: #718096;
+}
+
+.article-content {
+  width: 90%;
+}
+
+.article-content p a {
+  word-wrap: break-word;
+}
+
+.code pre span.line {
+  width: 400px;
+  word-wrap: break-word !important;
 }
 /*# sourceMappingURL=main.css.map */
