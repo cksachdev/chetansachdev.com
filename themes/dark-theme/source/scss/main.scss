@@ -14,8 +14,8 @@ ul {
   line-height: 1.7em;
 }
 ol,
-pre,
-ul {
+ul,
+p {
   margin: 0 0 20px;
 }
 ul {
@@ -235,7 +235,7 @@ input::placeholder {
       border-radius: 3px;
       font-size: 14px;
       font-weight: 700;
-      padding: 10px 10px;
+      padding: 10px;
     }
   }
 }
@@ -316,14 +316,17 @@ input::placeholder {
 
 // full-article view
 .full-article {
+  width: 100%;
   color: white;
   padding: 20px;
+  max-width: 800px;
 }
 .article-heading {
   border-bottom: 1px solid #333;
   padding: 0 0 30px 0;
 }
 .article-title a {
+  width: 100%;
   color: white;
   font-size: 28px;
   font-weight: 600;
@@ -337,11 +340,25 @@ input::placeholder {
 .article-content {
   color: white;
   width: 90%;
-  margin: 20px 0 0 0;
+  margin: 20px 0 20px 0;
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+  & .video-container iframe {
+    width: 100%;
+    height: 400px;
+  }
+  & p,
+  li {
+    font-size: 20px;
+  }
 
-  & p a {
+  & a {
     color: white;
     word-wrap: break-word;
+    text-decoration: underline;
+    line-height: 2;
   }
   & li a {
     color: white;
@@ -350,9 +367,35 @@ input::placeholder {
     line-height: 2;
   }
 }
+.highlight.plain,
+.highlight.sh,
+.highlight.javascript {
+  width: auto;
+  background-color: #343434;
+  word-wrap: break-word;
+  border: 1px solid #dddbcc;
+  border-radius: 3px;
+  overflow: auto;
 
+  & a {
+    color: white;
+    text-decoration: underline;
+  }
+
+  & tbody {
+    background-color: #343434;
+    border: 1px solid #dddbcc;
+    color: #f8f8f2;
+    border-radius: 3px;
+    padding: 10px;
+    word-wrap: break-word;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
 .code pre span.line {
   width: 400px;
+  line-height: 1.5;
   word-wrap: break-word !important;
 }
 @media (min-width: 769px) {
@@ -519,5 +562,12 @@ input::placeholder {
     & h2 a {
       font-size: 1.875rem;
     }
+  }
+  // full article
+  .article-date {
+    margin: 25px 0 0 0;
+  }
+  .article-title a {
+    font-size: 48px;
   }
 }
