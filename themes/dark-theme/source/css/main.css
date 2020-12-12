@@ -420,7 +420,6 @@ input::placeholder {
 .highlight.sh tbody,
 .highlight.javascript tbody {
   background-color: #343434;
-  border: 1px solid #dddbcc;
   color: #f8f8f2;
   border-radius: 3px;
   padding: 10px;
