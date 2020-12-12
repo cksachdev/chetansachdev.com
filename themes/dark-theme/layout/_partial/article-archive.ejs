@@ -1,0 +1,12 @@
+<div class="archive-post">
+    <!-- Title -->
+    <h2 class="post-title">
+        <a href="<%- config.root %><%- item.path %>">
+            <%- item.title || item.link%>
+        </a>
+    </h2>
+    <!-- Date -->
+    <p class="post-info">
+        <%= item.date.format(config.date_format) %>
+    </p>
+</div>

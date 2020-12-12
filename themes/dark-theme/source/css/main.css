@@ -435,6 +435,28 @@ input::placeholder {
   word-wrap: break-word !important;
 }
 
+.archive-container {
+  margin: 20px 0;
+}
+
+.archive-title {
+  font-size: 35px;
+  border-bottom: 1px solid #333;
+  padding: 0 0 30px 0;
+}
+
+.archive-post {
+  margin: 20px 0 0 0;
+}
+
+.post-title a {
+  color: white;
+}
+
+.post-info {
+  color: #aeadad;
+}
+
 @media (min-width: 769px) {
   .hamburger-container {
     display: none;
@@ -470,7 +492,7 @@ input::placeholder {
     box-sizing: border-box;
   }
   .container {
-    margin: 70px auto;
+    margin: 50px auto;
   }
   .sidebar {
     display: flex;
