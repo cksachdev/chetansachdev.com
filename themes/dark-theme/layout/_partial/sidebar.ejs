@@ -15,7 +15,7 @@
     </div>
     
     <div class="sidebar_menu">
-        <a class="menu_item"  href=""> 
+        <a class="menu_item"  href="<%- url_for(theme.menu.home.url) %>"> 
             <i  class="fa fa-home fa-lg " aria-hidden="true"></i>Home</a> 
         <a class="menu_item" href="<%- url_for(theme.menu.archives.url) %>">
              <i class="fa fa-archive " aria-hidden="true"></i> Archives</a>
@@ -23,7 +23,7 @@
             <i class="fa fa-github " aria-hidden=""></i>  Github</a>
         <a class="menu_item" href="http://plantyouridea.com/services/" target="_blank"> 
             <i class="fa fa-briefcase" aria-hidden="true"></i> Services </a>
-        <a class="menu_item" href="">
+        <a class="menu_item" href="<%- url_for(theme.menu.about.url) %>">
             <i class="fa fa-info-circle " aria-hidden="true">
         </i> About me</a>
         <a class="menu_item" href="">
