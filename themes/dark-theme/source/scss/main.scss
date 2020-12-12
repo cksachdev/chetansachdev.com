@@ -416,7 +416,23 @@ input::placeholder {
 .post-info {
   color: #aeadad;
 }
+// footer
+.footer {
+  --text-opacity: 1;
+  color: #718096;
+  color: rgba(113, 128, 150, var(--text-opacity));
+  font-size: 0.875rem;
+  font-weight: 300;
+  text-align: center;
+
+  & .bottom a {
+    color: #718096;
+  }
+}
 @media (min-width: 769px) {
+  .post-footer {
+    visibility: hidden;
+  }
   .hamburger-container {
     display: none;
   }
