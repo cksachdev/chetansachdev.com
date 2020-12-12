@@ -512,4 +512,12 @@ input::placeholder {
       border-bottom: 1px dotted;
     }
   }
+  // post list
+  .post {
+    padding: 25px 12px 25px 12px;
+
+    & h2 a {
+      font-size: 1.875rem;
+    }
+  }
 }

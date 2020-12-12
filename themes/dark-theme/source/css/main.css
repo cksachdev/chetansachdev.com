@@ -531,5 +531,11 @@ input::placeholder {
     text-decoration: none;
     border-bottom: 1px dotted;
   }
+  .post {
+    padding: 25px 12px 25px 12px;
+  }
+  .post h2 a {
+    font-size: 1.875rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
