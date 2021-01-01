@@ -5,12 +5,6 @@ category:
 tags:
   - null
 top: 1
-originContent: |+
-
-
-  Remove elements from an array at index
-  _.pullAt
-
 categories: []
 toc: false
 date: 2021-01-02 01:07:30
@@ -31,6 +25,9 @@ document.head.appendChild(el);
 javascript:var el=document.createElement('script');el.src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js";el.type = "text/javascript";document.head.appendChild(el);
 ```
 
+Remove multiple keys from an object
+_.omit
+
 Divide array in batch
 _.chunk
 
@@ -40,5 +37,3 @@ _.pullAt
 
 Implementation in Native
 https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore
-
-
