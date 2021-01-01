@@ -1,0 +1,73 @@
+<div  class="hamburger-container" >
+    
+    <button class="nav-toggle" aria-label="open navigation">
+        <span class="hamburger"></span>
+    </button>
+    <p class="header-strip" >🌱 <%= config.subtitle %> 🌱</p>
+    
+    <nav class="nav" >
+        <ul class="nav__list nav__list--primary hamburger-menu">
+            <a class="img-container" href="index.html">
+                <img class="img " src="<%- theme.avatar %>" alt="" width="96" height="96">
+            </a>
+            <h1 class="title-text"><%= config.title %> </h1>
+            <a class="email" href="mailto:mail@chetansachdev.com"><%- theme.email %></a>
+            <div class="">
+                <input  class="searchbar"  type="text" placeholder="Search">
+            </div>
+            <li class="nav__item menu-list">
+                <a class="nav-link menu_item"  href=""> 
+                    <i  class="fa fa-home fa-lg " aria-hidden="true"></i>Home
+                </a> 
+            </li>
+            <li class="nav__item menu-list">
+                <a class="nav-link menu_item" href="">
+                    <i class="fa fa-archive " aria-hidden="true"></i> Archives</a>
+            </li>
+            <li class="nav__item menu-list">
+                <a class="nav-link menu_item" href="https://github.com/cksachdev" target="_blank">
+                    <i class="fa fa-github " aria-hidden=""></i>  Github</a>
+            </li>
+            <li class="nav__item menu-list">
+                <a class="nav-link menu_item" href="http://plantyouridea.com/services/" target="_blank"> 
+                    <i class="fa fa-briefcase" aria-hidden="true"></i> Services </a>
+            </li>
+            <li class="nav__item menu-list">
+                <a class="nav-link menu_item" href="">
+                    <i class="fa fa-info-circle " aria-hidden="true">
+                </i> About me</a>
+            </li>
+            <li class="nav__item menu-list">
+                <a class="nav-link menu_item" href="">
+                    <i class="fa fa-money " aria-hidden="true">
+                </i>Payment</a>
+            </li>
+
+            <div class="social-site">
+                <a class="social-link" href="https://twitter.com/cksachdev" target="_blank">
+                    <i class="fa fa-twitter fa-lg " aria-hidden="true"></i>
+                    <span class="">Twitter</span>
+                </a>
+                <a class="social-link" href="https://www.linkedin.com/in/cksachdev/" target="_blank">
+                    <i class="fa fa-linkedin-square fa-lg " aria-hidden="true"></i>
+                    <span class="">Linkedin</span> 
+                </a>
+                <a class="social-link" href="https://www.facebook.com/cksachdev" target="_blank">
+                    <i class="fa fa-facebook-square fa-lg " aria-hidden="true"></i>
+                    <span class="">Facebook</span> 
+                </a> 
+            </div>
+            <p class="text">✉️ Questions? <a class="" href="mailto:mail@chetansachdev.com">Email me</a>  (no guest posts, no "add this link", no product placement or review requests pls)
+            </p>
+        </ul>
+        
+    </nav>
+</div>
+<script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+
+    navToggle.addEventListener('click', () => {
+    nav.classList.toggle('nav--visible');
+    })
+</script>

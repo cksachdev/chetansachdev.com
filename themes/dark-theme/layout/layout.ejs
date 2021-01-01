@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- partial('_partial/head') %>
+
+<body>
+<%- partial('_partial/header') %> 
+<%- partial('_partial/hamburger-menu') %> 
+
+<main class="container">
+    <div class="container single-post-container has-sidebar">
+        <article class="post-container">
+            <%- body %>
+        </article>
+        <div class="post-footer">
+            <%- partial('_partial/footer') %> 
+        </div>
+
+        
+        <aside class="page_aside">
+          <%- partial('_partial/sidebar') %> 
+        </aside>
+    </div>
+</main>
+   
+</body>
+</html>

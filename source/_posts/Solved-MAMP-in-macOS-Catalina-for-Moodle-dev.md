@@ -4,6 +4,7 @@ category:
   - null
 tags:
   - null
+author: [Computers]
 top: 1
 originContent: ''
 categories: []
@@ -11,8 +12,8 @@ toc: false
 date: 2020-08-30 15:02:14
 ---
 
-
 **Steps**
+
 1. Download Moodle package from https://download.moodle.org/macosx/
 2. Disable Security in macOS Catalina
    ```
@@ -30,16 +31,16 @@ date: 2020-08-30 15:02:14
    ```
 4. Stop your server and restart MAMP. Import should now run as expected.
 
-
-**Other relevant links** 
+**Other relevant links**
 suspend_data encoding and its usage:
 https://stackoverflow.com/questions/944582/what-is-cmistring4096-and-how-can-i-extract-the-data-within-it
 https://community.adaptlearning.org/mod/forum/discuss.php?d=3756
 
 Tracking course specific data:
-https://elearningindustry.com/getting-started-with-scorm-tracking-course-specific-data	
+https://elearningindustry.com/getting-started-with-scorm-tracking-course-specific-data
 
 Reference:
+
 - https://moodle.org/mod/forum/discuss.php?d=224311
 - https://osxdaily.com/2015/05/04/disable-gatekeeper-command-line-mac-osx/
 - https://www.rjerz.com/professional/work/Presentations/MoodleMoot2019/Moodle_Sandbox.html

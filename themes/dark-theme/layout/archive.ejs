@@ -1,0 +1,10 @@
+<div class="archive-container ">
+    <h2 class="archive-title"><%- title %></h2>
+
+   <div class="archive-post-list">
+        <% page.posts.each(function(item){ %>
+           <%- partial('_partial/article-archive', {item: item}) %>
+        <% }); %>
+   </div>
+   
+</div>
