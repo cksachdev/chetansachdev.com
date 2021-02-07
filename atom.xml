@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Chetan Sachdev</title>
+  
+  <subtitle>planting ideas</subtitle>
+  <link href="http://chetansachdev.com/atom.xml" rel="self"/>
+  
+  <link href="http://chetansachdev.com/"/>
+  <updated>2021-02-07T20:35:15.749Z</updated>
+  <id>http://chetansachdev.com/</id>
+  
+  <author>
+    <name>Chetan Sachdev</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Day 1 with Macbook Air - Apple Silicon</title>
+    <link href="http://chetansachdev.com/2021/02/08/Day-1-with-Macbook-Air-Apple-Silicon/"/>
+    <id>http://chetansachdev.com/2021/02/08/Day-1-with-Macbook-Air-Apple-Silicon/</id>
+    <published>2021-02-07T20:31:36.000Z</published>
+    <updated>2021-02-07T20:35:15.749Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>First impression:</strong></p><ul><li>No heating issue</li><li>Loooong battery backup</li><li>Good sound quality</li></ul><p><em>Initial stats without any installation:</em><br><img src="/images/2021/02/08/a099994a-0d3c-4f1f-abe3-fd040dcdd4c4.png" alt="Screenshot 20210207 at 11.22.00 PM.png"></p><p><img src="/images/2021/02/08/6b2654e2-94d0-4f09-884f-38d5b9f93fdb.png" alt="Screenshot 20210207 at 11.21.51 PM.png"></p><p><img src="/images/2021/02/08/a3d7957c-33b1-4813-af22-486ce75195e2.png" alt="Screenshot 20210207 at 11.21.20 PM.png"></p><p><strong>Development environment setup:</strong><br>It’s difficult to figure out all the apps which are ported to Apple Silicon. I tried to setup the nodejs development environment and run into following issues:</p><ol><li>I need different node versions and manage them using nvm. Installing nvm and trying to install node doesn’t work(as of 8th feb 2021). Solution is to launch terminal/iterm with “Open using Rosetta” and then proceed with installing node. This enables x64 for all the apps running from Terminal.<ul><li>right click your terminal app from Finder</li><li>select “Get Info”</li><li>enable “Open using Rosetta”<br><img src="/images/2021/02/08/c8b67c00-5d51-4211-8b3a-97a0188de194.png" alt="image.png"><br><em>Reference</em>:</li></ul></li></ol><ul><li><a href="https://stackoverflow.com/questions/64899827/nodejs-on-apple-silicon-m1">https://stackoverflow.com/questions/64899827/nodejs-on-apple-silicon-m1</a></li><li><a href="https://news.ycombinator.com/item?id=25132217">https://news.ycombinator.com/item?id=25132217</a></li><li><a href="https://github.com/nodejs/TSC/issues/886">https://github.com/nodejs/TSC/issues/886</a></li></ul><ol><li>Install Rosetta using the command below:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">softwareupdate --install-rosetta</span><br></pre></td></tr></table></figure><em>Reference</em>: <a href="https://apple.stackexchange.com/questions/408375/zsh-bad-cpu-type-in-executable">https://apple.stackexchange.com/questions/408375/zsh-bad-cpu-type-in-executable</a></li><li>If running into issues with node applications, ensure you are running with right arch type:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -p process.arch</span><br></pre></td></tr></table></figure>to change arch run the command below:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arch -x86_64 $SHELL</span><br></pre></td></tr></table></figure></li><li>With the above settings, I was able to install all required apps using brew<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install iterm2 alfred licecap sublime-text visual-studio-code karabiner-elements sourcetree araxis-merge itsycal the-unarchiver  easyfind omnidisksweeper</span><br></pre></td></tr></table></figure></li></ol><p><strong>Miscellaneous issues:</strong><br>“You don’t have permission to open the application”<br><img src="/images/2021/02/08/4ef93402-f751-4fcb-9946-2eb202206bd5.png" alt="Screenshot 20210208 at 1.25.18 AM.png"><br>To fix this issue:</p><ol><li>Open terminal</li><li>Enter:   sudo chmod -R 755 /path/to/app</li><li>Press enter</li><li>Then enter your password</li><li>Open the app and it should work.</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;First impression:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;No heating issue&lt;/li&gt;
+&lt;li&gt;Loooong battery backup&lt;/li&gt;
+&lt;li&gt;Good sound quality&lt;/li&gt;
+&lt;/ul&gt;
+&lt;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>How to write test cases in Manual testing</title>
+    <link href="http://chetansachdev.com/2021/01/22/How-to-write-test-cases-in-Manual-testing/"/>
+    <id>http://chetansachdev.com/2021/01/22/How-to-write-test-cases-in-Manual-testing/</id>
+    <published>2021-01-22T05:50:27.000Z</published>
+    <updated>2021-02-07T20:00:59.155Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.youtube.com/watch?v=g0PrXoWKM2Y">https://www.youtube.com/watch?v=g0PrXoWKM2Y</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=g0PrXoWKM2Y&quot;&gt;https://www.youtube.com/watch?v=g0PrXoWKM2Y&lt;/a&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>XAPI</title>
+    <link href="http://chetansachdev.com/2021/01/02/XAPI/"/>
+    <id>http://chetansachdev.com/2021/01/02/XAPI/</id>
+    <published>2021-01-01T20:31:26.000Z</published>
+    <updated>2021-02-07T20:00:59.156Z</updated>
+    
+    <content type="html"><![CDATA[<p>How to write XAPI statements:<br><a href="https://learningsolutionsmag.com/articles/1526/five-things-a-web-developer-needs-to-know-about-the-xapi">https://learningsolutionsmag.com/articles/1526/five-things-a-web-developer-needs-to-know-about-the-xapi</a><br><a href="https://www.devlinpeck.com/tutorials/write-xapi-statement">https://www.devlinpeck.com/tutorials/write-xapi-statement</a></p><p>Confusion between JSON and JavaScript Object:<br><a href="https://medium.com/@alifabdullah/never-confuse-json-and-javascript-object-ever-again-7c32f4c071ad">https://medium.com/@alifabdullah/never-confuse-json-and-javascript-object-ever-again-7c32f4c071ad</a></p><p>Context:<br><a href="https://learningpool.com/xapi-statement-101-context-element/">https://learningpool.com/xapi-statement-101-context-element/</a><br><a href="https://xapi.com/blog/deep-dive-context/">https://xapi.com/blog/deep-dive-context/</a></p><p><a href="https://trello.com/b/NHz6aCDV/experience-api-xapi-tincan">https://trello.com/b/NHz6aCDV/experience-api-xapi-tincan</a><br><a href="https://github.com/liris-tweak/csv-to-xapi">https://github.com/liris-tweak/csv-to-xapi</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;How to write XAPI statements:&lt;br&gt;&lt;a href=&quot;https://learningsolutionsmag.com/articles/1526/five-things-a-web-developer-needs-to-know-about-</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Lodash - quick experiments in Chrome</title>
+    <link href="http://chetansachdev.com/2021/01/02/Lodash-quick-experiments-in-Chrome/"/>
+    <id>http://chetansachdev.com/2021/01/02/Lodash-quick-experiments-in-Chrome/</id>
+    <published>2021-01-01T19:37:30.000Z</published>
+    <updated>2021-02-07T20:00:59.155Z</updated>
+    
+    <content type="html"><![CDATA[<p>chrome://settings/content/javascript<br><img src="/images/2021/01/02/8e018702-ea26-48d5-8cfb-71a16bb03974.png" alt="image.png"></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var el &#x3D; document.createElement(&#39;script&#39;);</span><br><span class="line">el.src &#x3D; &quot;https:&#x2F;&#x2F;cdnjs.cloudflare.com&#x2F;ajax&#x2F;libs&#x2F;lodash.js&#x2F;4.17.20&#x2F;lodash.min.js&quot;;</span><br><span class="line">el.type &#x3D; &quot;text&#x2F;javascript&quot;;</span><br><span class="line">document.head.appendChild(el);</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; Use the following in a bookmarklet:</span><br><span class="line">javascript:var el&#x3D;document.createElement(&#39;script&#39;);el.src&#x3D;&quot;https:&#x2F;&#x2F;cdnjs.cloudflare.com&#x2F;ajax&#x2F;libs&#x2F;lodash.js&#x2F;4.17.20&#x2F;lodash.min.js&quot;;el.type &#x3D; &quot;text&#x2F;javascript&quot;;document.head.appendChild(el);</span><br></pre></td></tr></table></figure><p>Remove multiple keys from an object<br>_.omit</p><p>Divide array in batch<br>_.chunk</p><p>Remove elements from an array at index<br>_.pullAt</p><p>Implementation in Native<br><a href="https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore">https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;chrome://settings/content/javascript&lt;br&gt;&lt;img src=&quot;/images/2021/01/02/8e018702-ea26-48d5-8cfb-71a16bb03974.png&quot; alt=&quot;image.png&quot;&gt;&lt;/p&gt;
+&lt;figu</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Installing SSL certificate for Adapt Authoring</title>
+    <link href="http://chetansachdev.com/2020/12/11/Installing-SSL-certificate-for-Adapt-Authoring/"/>
+    <id>http://chetansachdev.com/2020/12/11/Installing-SSL-certificate-for-Adapt-Authoring/</id>
+    <published>2020-12-10T18:45:23.000Z</published>
+    <updated>2021-02-07T20:00:59.155Z</updated>
+    
+    <content type="html"><![CDATA[<p>What is an SSL Certificate<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.cloudflare.com&#x2F;learning&#x2F;ssl&#x2F;what-is-an-ssl-certificate&#x2F;</span><br></pre></td></tr></table></figure><br>Checking Ubuntu Version:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsb_release -a</span><br></pre></td></tr></table></figure><br>SSL on localhost for development<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;expeditedsecurity.com&#x2F;blog&#x2F;localhost-ssl-fix&#x2F;</span><br></pre></td></tr></table></figure><br>Configuring NGINX and SSL with Node.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.sitepoint.com&#x2F;configuring-nginx-ssl-node-js&#x2F;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;What is an SSL Certificate&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/t</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Solved: MAMP in macOS Catalina for Moodle dev</title>
+    <link href="http://chetansachdev.com/2020/08/30/Solved-MAMP-in-macOS-Catalina-for-Moodle-dev/"/>
+    <id>http://chetansachdev.com/2020/08/30/Solved-MAMP-in-macOS-Catalina-for-Moodle-dev/</id>
+    <published>2020-08-30T09:32:14.000Z</published>
+    <updated>2021-02-07T20:00:59.156Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>Steps</strong></p><ol><li>Download Moodle package from <a href="https://download.moodle.org/macosx/">https://download.moodle.org/macosx/</a></li><li>Disable Security in macOS Catalina<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo spctl --master-disable</span><br></pre></td></tr></table></figure></li><li>edit the php.ini file for the php version you are using. i.e. v7.2.1. First check which version you’re using by going to<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MAMP-&gt; Preferences -&gt; PHP -&gt; Select&#x2F;Specify PHP Version</span><br></pre></td></tr></table></figure>Then go to /Applications/MAMP/bin/php/php7.2.10/conf/php.ini and input the new settings there.<br>Increase SCORM package file size limit<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- change the &quot;post_max_size&quot; to 100M</span><br><span class="line">- change the &quot; upload_max_filesize&quot; to 90M</span><br></pre></td></tr></table></figure></li><li>Stop your server and restart MAMP. Import should now run as expected.</li></ol><p><strong>Other relevant links</strong><br>suspend_data encoding and its usage:<br><a href="https://stackoverflow.com/questions/944582/what-is-cmistring4096-and-how-can-i-extract-the-data-within-it">https://stackoverflow.com/questions/944582/what-is-cmistring4096-and-how-can-i-extract-the-data-within-it</a><br><a href="https://community.adaptlearning.org/mod/forum/discuss.php?d=3756">https://community.adaptlearning.org/mod/forum/discuss.php?d=3756</a></p><p>Tracking course specific data:<br><a href="https://elearningindustry.com/getting-started-with-scorm-tracking-course-specific-data">https://elearningindustry.com/getting-started-with-scorm-tracking-course-specific-data</a></p><p>Reference:</p><ul><li><a href="https://moodle.org/mod/forum/discuss.php?d=224311">https://moodle.org/mod/forum/discuss.php?d=224311</a></li><li><a href="https://osxdaily.com/2015/05/04/disable-gatekeeper-command-line-mac-osx/">https://osxdaily.com/2015/05/04/disable-gatekeeper-command-line-mac-osx/</a></li><li><a href="https://www.rjerz.com/professional/work/Presentations/MoodleMoot2019/Moodle_Sandbox.html">https://www.rjerz.com/professional/work/Presentations/MoodleMoot2019/Moodle_Sandbox.html</a></li><li><a href="https://moodle.org/mod/forum/discuss.php?d=392057">https://moodle.org/mod/forum/discuss.php?d=392057</a></li><li><a href="https://vimeo.com/367749541">https://vimeo.com/367749541</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;Steps&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Download Moodle package from &lt;a href=&quot;https://download.moodle.org/macosx/&quot;&gt;https://download.moodle.or</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Fix: MacBookPro 2010 crashing after macOS upgrade</title>
+    <link href="http://chetansachdev.com/2020/08/13/Fix-MacBookPro-2010-crashing-after-macOS-upgrade/"/>
+    <id>http://chetansachdev.com/2020/08/13/Fix-MacBookPro-2010-crashing-after-macOS-upgrade/</id>
+    <published>2020-08-13T10:48:48.000Z</published>
+    <updated>2021-02-07T20:00:59.155Z</updated>
+    
+    <content type="html"><![CDATA[<p>After upgrading my old MacBook Pro 2010 to High Sierra, the os kept crashing abruptly making it unusable. I kept reporting the crash issues, hoping there will be an upgrade in os which will fix the issue.<br>Searching on the web, found a hotfix in NVIDIA graphics, which seems to be fix the issue. Download the app from:<br><a href="https://github.com/julian-poidevin/MBPMid2010_GPUFix">https://github.com/julian-poidevin/MBPMid2010_GPUFix</a><br>and then Refer to video below for the steps:<br><div class="video-container"><iframe src="https://www.youtube.com/embed/8-7UNFKG1eE" frameborder="0" loading="lazy" allowfullscreen></iframe></div></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;After upgrading my old MacBook Pro 2010 to High Sierra, the os kept crashing abruptly making it unusable. I kept reporting the crash issu</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>How to solve permission denied public key error</title>
+    <link href="http://chetansachdev.com/2020/06/30/How-to-solve-permission-denied-public-key-error/"/>
+    <id>http://chetansachdev.com/2020/06/30/How-to-solve-permission-denied-public-key-error/</id>
+    <published>2020-06-30T17:18:59.000Z</published>
+    <updated>2021-02-07T20:00:59.155Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Header-3"><a href="#Header-3" class="headerlink" title="Header 3"></a>Header 3</h3><p><a href="https://stackoverflow.com/questions/2643502/how-to-solve-permission-denied-publickey-error-when-using-git">https://stackoverflow.com/questions/2643502/how-to-solve-permission-denied-publickey-error-when-using-git</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;Header-3&quot;&gt;&lt;a href=&quot;#Header-3&quot; class=&quot;headerlink&quot; title=&quot;Header 3&quot;&gt;&lt;/a&gt;Header 3&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/2</summary>
+      
+    
+    
+    
+    
+    <category term="Git" scheme="http://chetansachdev.com/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Same File to Multiple Folders in Google Drive</title>
+    <link href="http://chetansachdev.com/2020/06/13/Same-File-to-Multiple-Folders-in-Google-Drive/"/>
+    <id>http://chetansachdev.com/2020/06/13/Same-File-to-Multiple-Folders-in-Google-Drive/</id>
+    <published>2020-06-13T09:58:40.000Z</published>
+    <updated>2021-02-07T20:00:59.155Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.labnol.org/internet/add-files-multiple-drive-folders/28715/#:~:text=Open%20the%20Google%20Drive%20website,%2Dup%20(see%20screenshot">https://www.labnol.org/internet/add-files-multiple-drive-folders/28715/#:~:text=Open%20the%20Google%20Drive%20website,%2Dup%20(see%20screenshot</a>).</p><p><a href="https://www.youtube.com/watch?v=stPoO-zRT6g">https://www.youtube.com/watch?v=stPoO-zRT6g</a></p><p><a href="https://www.androidpolice.com/2020/04/10/google-completely-ruined-shared-folders-in-drive/">https://www.androidpolice.com/2020/04/10/google-completely-ruined-shared-folders-in-drive/</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.labnol.org/internet/add-files-multiple-drive-folders/28715/#:~:text=Open%20the%20Google%20Drive%20website,%2Dup%20(s</summary>
+      
+    
+    
+    
+    
+    <category term="Database" scheme="http://chetansachdev.com/tags/Database/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Upgrade Macbook Pro Late 2013 1 TB NVMe M.2 SSD</title>
+    <link href="http://chetansachdev.com/2020/06/05/Upgrade-Macbook-Pro-Late-2013-1-TB-NVMe-M-2-SSD/"/>
+    <id>http://chetansachdev.com/2020/06/05/Upgrade-Macbook-Pro-Late-2013-1-TB-NVMe-M-2-SSD/</id>
+    <published>2020-06-05T17:14:01.000Z</published>
+    <updated>2021-02-07T20:00:59.156Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.youtube.com/watch?v=4SSxtWPogFQ"><img src="https://img.youtube.com/vi/4SSxtWPogFQ/0.jpg" alt="first way to take it out"></a><br><div class="video-container"><iframe src="https://www.youtube.com/embed/4SSxtWPogFQ" frameborder="0" loading="lazy" allowfullscreen></iframe></div><br>Guide to upgrade NVMe M.2 SSD</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=4SSxtWPogFQ&quot;&gt;&lt;img src=&quot;https://img.youtube.com/vi/4SSxtWPogFQ/0.jpg&quot; alt=&quot;first way to take it o</summary>
+      
+    
+    
+    
+    
+    <category term="Computers" scheme="http://chetansachdev.com/tags/Computers/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sync Mongo data from prod to dev machine via ssh</title>
+    <link href="http://chetansachdev.com/2020/06/04/Sync-Mongo-data-from-prod-to-dev-machine-via-ssh/"/>
+    <id>http://chetansachdev.com/2020/06/04/Sync-Mongo-data-from-prod-to-dev-machine-via-ssh/</id>
+    <published>2020-06-04T09:10:32.000Z</published>
+    <updated>2021-02-07T20:00:59.156Z</updated>
+    
+    <content type="html"><![CDATA[<p>With MongoDB 4.0 and earlier there db.copyDatabase() and db.cloneDatabase().<br> Stackoverflow script available on the link below for MongoDB 4.0 and earlier:<br><br><a href="https://stackoverflow.com/questions/16619598/sync-mongodb-via-ssh">https://stackoverflow.com/questions/16619598/sync-mongodb-via-ssh</a><br><a href="https://sheharyar.me/blog/sync-mongodb-local-and-production-heroku/">https://sheharyar.me/blog/sync-mongodb-local-and-production-heroku/</a><br><br></p><p>For MongoDB &gt;4.0 mongo-sync module doesn’t seem to work. I had a mongodb<br> instance on AWS EC2 and needed to sync the data to debug the issue and <br>replicate in dev environment. Below is a command which will sync mongodb from<br> aws ec2. Below command does the following:<br><br><br>1 .  connect to aws instance using keypair pem file<br>2 . use mongodump to export the data from server<br>3 . pipe the data to local machine<br>4 . restore the data in local machine<br><br></p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ssh -i PATH_TO_KEYPAIR.pem </span><br><span class="line">USERNAME@IP_ADDRESS <span class="string">&#x27;mongodump &gt; </span></span><br><span class="line"><span class="string">/dev/null &amp;&amp; tar -zc dump &amp;&amp; rm -rf dump&#x27;</span> </span><br><span class="line">| tar -zx &amp;&amp; </span><br><span class="line">mongorestore dump &amp;&amp; rm -rf dump</span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> text = <span class="string">&quot;Hello World&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;text&quot;</span>);</span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> text = <span class="string">&quot;Hello World&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;text&quot;</span>);</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;With MongoDB 4.0 and earlier there db.copyDatabase() and db.cloneDatabase().&lt;br&gt; Stackoverflow script available on the link below for Mon</summary>
+      
+    
+    
+    
+    
+    <category term="Database" scheme="http://chetansachdev.com/tags/Database/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How to mount Thunderbolt display on a VESA stand?</title>
+    <link href="http://chetansachdev.com/2020/05/26/How-to-mount-Thunderbolt-display-on-a-VESA-stand/"/>
+    <id>http://chetansachdev.com/2020/05/26/How-to-mount-Thunderbolt-display-on-a-VESA-stand/</id>
+    <published>2020-05-25T20:00:51.000Z</published>
+    <updated>2021-02-07T20:00:59.155Z</updated>
+    
+    <content type="html"><![CDATA[<p>I have been trying to fix my thunderbolt displays on VESA mount and ended up loosing the <br> mount which holds the screws. It went inside and after so many tries, I managed to &amp;<br> get it out. This post captures couple of useful links to the same:</p><p>[![first way to take it out]<div class="video-container"><iframe src="https://www.youtube.com/embed/IjnAEnPmbEg" frameborder="0" loading="lazy" allowfullscreen></iframe></div>]<br>How to remove the stand</p><p><a href="https://www.youtube.com/watch?v=9M-JZ4DV9kA"><img src="https://img.youtube.com/vi/9M-JZ4DV9kA/0.jpg" alt="second way to take it out"> </a><br>How to remove the stand</p><p><a href="https://www.youtube.com/watch?v=XdY2jXus22E"><img src="https://img.youtube.com/vi/XdY2jXus22E/0.jpg" alt="first way to take it out"></a><br>How to get it out, if you loose it</p><p><a href="https://www.youtube.com/watch?v=RUVgzVlvWcQ"><img src="https://img.youtube.com/vi/RUVgzVlvWcQ/0.jpg" alt="second way to take it out"></a><br>How to get it out, if you loose it</p><p><a href="https://www.youtube.com/watch?v=InGXgPqLQH8"><img src="https://img.youtube.com/vi/InGXgPqLQH8/0.jpg" alt="Why thunderbolt display in 2020"></a><br><div class="video-container"><iframe src="https://www.youtube.com/embed/InGXgPqLQH8" frameborder="0" loading="lazy" allowfullscreen></iframe></div><br>Why to still use Thunderbolt display in 2020?</p><p>I finally ended up opening Thunderbolt display and then fix the screws on the stand.<br> Below 3 links have more details and step by step guide:<br><br></p><ul><li><a href="https://www.ifixit.com/Teardown/Apple+Thunderbolt+Display+Teardown/6525">https://www.ifixit.com/Teardown/Apple+Thunderbolt+Display+Teardown/6525</a></li><li><a href="https://apple.stackexchange.com/questions/91219/i-cant-re-attach-my-thunderbolt-display-stand">https://apple.stackexchange.com/questions/91219/i-cant-re-attach-my-thunderbolt-display-stand</a></li><li><a href="https://discussions.apple.com/thread/5032560">https://discussions.apple.com/thread/5032560</a><br><br></li></ul><p>How to use a thunderbolt display with Windows PC?<br><a href="https://www.youtube.com/watch?v=ICQUVY-93aE">https://www.youtube.com/watch?v=ICQUVY-93aE</a><br><div class="video-container"><iframe src="https://www.youtube.com/embed/ICQUVY-93aE" frameborder="0" loading="lazy" allowfullscreen></iframe></div></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;I have been trying to fix my thunderbolt displays on VESA mount and ended up loosing the &lt;br&gt; mount which holds the screws. It went insid</summary>
+      
+    
+    
+    
+    
+    <category term="Computers" scheme="http://chetansachdev.com/tags/Computers/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>When Postgres command not found in the PATH</title>
+    <link href="http://chetansachdev.com/2020/05/10/When-Postgres-command-not-found-in-the-PATH/"/>
+    <id>http://chetansachdev.com/2020/05/10/When-Postgres-command-not-found-in-the-PATH/</id>
+    <published>2020-05-10T17:05:47.000Z</published>
+    <updated>2021-02-07T20:00:59.156Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PATH&#x3D;$PATH:&#x2F;Applications&#x2F;Postgres.app&#x2F;Contents&#x2F;Versions&#x2F;12&#x2F;bin</span><br><span class="line">gem installs pg -v &#39;1.2.2&#39;--source &#39;https:&#x2F;&#x2F;rubygems.org&#x2F;&#39;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="SSH" scheme="http://chetansachdev.com/tags/SSH/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>The data directory contains an old postmaster.pid</title>
+    <link href="http://chetansachdev.com/2020/05/10/The-data-directory-contains-an-old-postmaster-pid/"/>
+    <id>http://chetansachdev.com/2020/05/10/The-data-directory-contains-an-old-postmaster-pid/</id>
+    <published>2020-05-10T17:04:17.000Z</published>
+    <updated>2021-02-07T20:00:59.156Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/2020/05/10/b672658d-3c3c-43da-89bc-3b9a1465b68a.png" alt="image.png"></p><p><strong>Solution</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm ~&#x2F;Library&#x2F;Application\ Support&#x2F;Postgres&#x2F;var-12&#x2F;postmaster.pid</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/images/2020/05/10/b672658d-3c3c-43da-89bc-3b9a1465b68a.png&quot; alt=&quot;image.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;&lt;br&gt;&lt;figure class</summary>
+      
+    
+    
+    
+    
+    <category term="Database" scheme="http://chetansachdev.com/tags/Database/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Backup and restore an adapt authoring instance</title>
+    <link href="http://chetansachdev.com/2020/05/10/Backup-and-restore-an-adapt-authoring-instance/"/>
+    <id>http://chetansachdev.com/2020/05/10/Backup-and-restore-an-adapt-authoring-instance/</id>
+    <published>2020-05-10T17:00:47.000Z</published>
+    <updated>2021-02-07T20:00:59.154Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">zip -r * app&#x2F;* -x\app&#x2F;bower_components&#x2F;* -x\node_modules&#x2F;* -x*.zip</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">zip -r customadapt.zip .&#x2F;custom_adapt&#x2F;* -x &quot;*.git*&quot; -x</span><br><span class="line">&quot;**&#x2F;node_modules&#x2F;*&quot;</span><br><span class="line"></span><br><span class="line">mongodump</span><br><span class="line">zip -r adaptdata.zip .&#x2F;adapt-tenant-master&#x2F;*</span><br><span class="line"></span><br><span class="line">mongorestore --db adapt-tenant-master --drop .&#x2F;adapt-tenant-master</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class</summary>
+      
+    
+    
+    
+    
+    <category term="Web plateform" scheme="http://chetansachdev.com/tags/Web-plateform/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Running production node on port 80 on AWS</title>
+    <link href="http://chetansachdev.com/2020/05/10/Running-production-node-on-port-80-on-AWS/"/>
+    <id>http://chetansachdev.com/2020/05/10/Running-production-node-on-port-80-on-AWS/</id>
+    <published>2020-05-10T16:54:13.000Z</published>
+    <updated>2021-02-07T20:00:59.155Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo setcap &#39;cap_net_bind_service&#x3D;+ep&#39; $(which node)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span cla</summary>
+      
+    
+    
+    
+    
+    <category term="AWS" scheme="http://chetansachdev.com/tags/AWS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>My preferred settings on a new mac</title>
+    <link href="http://chetansachdev.com/2020/03/14/My-preferred-settings-on-a-new-mac/"/>
+    <id>http://chetansachdev.com/2020/03/14/My-preferred-settings-on-a-new-mac/</id>
+    <published>2020-03-14T13:00:02.000Z</published>
+    <updated>2021-02-07T20:00:59.155Z</updated>
+    
+    <content type="html"><![CDATA[<p>These instructions are for a new mac and tested in macOS Catalina.<br><strong>Step 1</strong><br>Run laptop script<br><a href="https://github.com/thoughtbot/laptop">https://github.com/thoughtbot/laptop</a><br><strong>Step 2</strong><br>Download all that I need to work on javascript based projects.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cask install iterm2 alfred bartender dropbox google-chrome licecap skype slack sublime-text virtualbox whatsapp visual-studio-code karabiner-elements sourcetree araxis-merge itsycal the-unarchiver brave-browser easyfind omnidisksweeper vlc barrier keycastr</span><br></pre></td></tr></table></figure></p><p><strong>Step 3</strong><br>Download HexoClient</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure><p><strong>Step 4</strong><br>Configure Hydra<br>Configure Karabiner Elements<br><strong>Step 5</strong></p><ul><li>Disable Siri</li><li>Configure Itsycal <ul><li>EEEE, d-MMM-y h:mm a</li></ul></li></ul><p><strong>Step 5</strong><br>Download VLC 2.2.8<br><a href="https://download.videolan.org/pub/videolan/vlc/">https://download.videolan.org/pub/videolan/vlc/</a></p><p><strong>Step 6</strong><br>Apps from App Store</p><ol><li>Super Easy Timer</li><li>Microsoft Remote Desktop (<a href="https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12">https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12</a>)</li></ol><p><strong>Reset default settings for function keys to make debugging easier</strong></p><blockquote><p><em>Step 1</em><br><img src="/images/2020/03/14/de9b8d30-65df-11ea-b442-29d283043002.png" alt="image.png"></p><p><em>Step 2</em><br><img src="/images/2020/03/14/e7fcacb0-65df-11ea-b442-29d283043002.png" alt="image.png">  </p></blockquote><hr><p><strong>Increase Tracking speed of Apple mouse</strong><br><img src="/images/2020/03/14/f3fcba00-65df-11ea-b442-29d283043002.png" alt="image.png"></p><hr><p><strong>Show battery percentage in Menu</strong><br><img src="/images/2020/03/14/40a51e10-65f4-11ea-b442-29d283043002.png" alt="image.png"></p><hr><p>Solution to Connect a PC and Mac to share files (Share files between Mac and PC with ethernet cable LAN)<br><a href="https://www.youtube.com/watch?v=Pcf0YjPEKuU">https://www.youtube.com/watch?v=Pcf0YjPEKuU</a></p><p>Solution to Blackmagic Intensity Shuttle configuration to direct output of Macbook to OBS running in Windows 10<br><a href="https://forum.blackmagicdesign.com/viewtopic.php?f=3&amp;t=63035">https://forum.blackmagicdesign.com/viewtopic.php?f=3&amp;t=63035</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;These instructions are for a new mac and tested in macOS Catalina.&lt;br&gt;&lt;strong&gt;Step 1&lt;/strong&gt;&lt;br&gt;Run laptop script&lt;br&gt;&lt;a href=&quot;https://gi</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>wix certificate won&#39;t work for externally hosted</title>
+    <link href="http://chetansachdev.com/2020/03/13/wix-certificate-won-t-work-for-externally-hosted/"/>
+    <id>http://chetansachdev.com/2020/03/13/wix-certificate-won-t-work-for-externally-hosted/</id>
+    <published>2020-03-13T06:42:32.000Z</published>
+    <updated>2021-02-07T20:00:59.156Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://community.letsencrypt.org/t/wix-wildcard-ssl-for-externally-hosted-site/77346">https://community.letsencrypt.org/t/wix-wildcard-ssl-for-externally-hosted-site/77346</a><br><a href="https://crt.sh/?q=chetansachdev.com">https://crt.sh/?q=chetansachdev.com</a></p><p><a href="https://support.wix.com/en/article/request-third-party-ssl-certificates">https://support.wix.com/en/article/request-third-party-ssl-certificates</a></p><p><a href="https://www.rapidsslonline.com/ssl/how-to-install-an-ssl-certificate-on-aws-ec2-instance/">https://www.rapidsslonline.com/ssl/how-to-install-an-ssl-certificate-on-aws-ec2-instance/</a><br><a href="https://stackoverflow.com/questions/34945299/how-to-add-ssl-certificate-to-aws-ec2-with-the-help-of-new-aws-certificate-manag">https://stackoverflow.com/questions/34945299/how-to-add-ssl-certificate-to-aws-ec2-with-the-help-of-new-aws-certificate-manag</a><br><a href="https://serverfault.com/questions/947057/install-aws-ssl-certificate-to-ec2-instance-without-load-balancer">https://serverfault.com/questions/947057/install-aws-ssl-certificate-to-ec2-instance-without-load-balancer</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://community.letsencrypt.org/t/wix-wildcard-ssl-for-externally-hosted-site/77346&quot;&gt;https://community.letsencrypt.org/t/wix-w</summary>
+      
+    
+    
+    
+    
+    <category term="Web platform" scheme="http://chetansachdev.com/tags/Web-platform/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Migrating data from one macbook to another macbook</title>
+    <link href="http://chetansachdev.com/2020/03/13/Migrating-data-from-one-macbook-to-another-macbook/"/>
+    <id>http://chetansachdev.com/2020/03/13/Migrating-data-from-one-macbook-to-another-macbook/</id>
+    <published>2020-03-13T06:34:57.000Z</published>
+    <updated>2021-02-07T20:00:59.155Z</updated>
+    
+    <content type="html"><![CDATA[<p>How do I import or export browsing data?</p><ol><li>Launch Brave (the one you have your data on currently) and from main menu, navigate to Settings —&gt; Passwords.</li><li>Here, click the menu button for more options: image1340×152 7.22 KB.</li><li>Select Export and save the file somewhere accessible.</li></ol><p>Transfer all saved passwords from keychain<br><a href="https://www.lifewire.com/recover-email-password-from-os-x-keychain-1174067">https://www.lifewire.com/recover-email-password-from-os-x-keychain-1174067</a><br><a href="https://support.apple.com/en-in/guide/keychain-access/kyca1121/mac">https://support.apple.com/en-in/guide/keychain-access/kyca1121/mac</a></p><p>Delete all node_modules to transfer source<br><code>find . -name &quot;node_modules&quot; -type d -prune -exec rm -rf &#39;&#123;&#125;&#39; +</code><br><a href="https://rtmccormick.com/2018/01/10/clear-node-modules-folders-recursively-mac-linux/">https://rtmccormick.com/2018/01/10/clear-node-modules-folders-recursively-mac-linux/</a></p><p>Transfer Slack<br><a href="https://www.reddit.com/r/Slack/comments/68ytrn/transfer_slack_to_new_computer/?utm_source=share&amp;utm_medium=web2x">https://www.reddit.com/r/Slack/comments/68ytrn/transfer_slack_to_new_computer/?utm_source=share&amp;utm_medium=web2x</a></p><p>Tip:<br>Use airdrop to transfer the files, its much faster compared to copying the files in a ssd.</p><p>Get backup of your emails and google drive from takeout.<br><a href="https://takeout.google.com/">https://takeout.google.com/</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;How do I import or export browsing data?&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Launch Brave (the one you have your data on currently) and from main menu, navigate</summary>
+      
+    
+    
+    
+    <category term="computer" scheme="http://chetansachdev.com/categories/computer/"/>
+    
+    
+    <category term="Computers" scheme="http://chetansachdev.com/tags/Computers/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Understanding javascript better</title>
+    <link href="http://chetansachdev.com/2020/03/03/Understanding-javascript-better/"/>
+    <id>http://chetansachdev.com/2020/03/03/Understanding-javascript-better/</id>
+    <published>2020-03-03T18:01:55.000Z</published>
+    <updated>2021-02-07T20:00:59.156Z</updated>
+    
+    <content type="html"><![CDATA[<p>Visualise JavaScript<br><a href="https://tylermcginnis.com/javascript-visualizer/">https://tylermcginnis.com/javascript-visualizer/</a><br><a href="http://pythontutor.com/javascript.html#mode=display">http://pythontutor.com/javascript.html#mode=display</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var data &#x3D; [];</span><br><span class="line">for (var k &#x3D; 0; k &lt; 3; k++) &#123;</span><br><span class="line">  data[k] &#x3D; function() &#123;</span><br><span class="line">    console.log(k);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line">data[0]();</span><br><span class="line"></span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function a() &#123;</span><br><span class="line">  let fn;</span><br><span class="line">  &#123;</span><br><span class="line">    var x &#x3D; 5;</span><br><span class="line">    fn &#x3D; function() &#123;</span><br><span class="line">      console.log(x);</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  return fn;</span><br><span class="line">&#125;</span><br><span class="line">var x &#x3D; 10;</span><br><span class="line">const b &#x3D; a();</span><br><span class="line">b();</span><br><span class="line"></span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var a &#x3D; 100;</span><br><span class="line">function abc(x) &#123;</span><br><span class="line">  var a &#x3D; 10;</span><br><span class="line">  return function(y) &#123;</span><br><span class="line">    return a + y;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line">a &#x3D; 50;</span><br><span class="line">var inner &#x3D; abc(20);</span><br><span class="line">function foo() &#123;</span><br><span class="line">  var a &#x3D; 30;</span><br><span class="line">  console.log(inner(5));</span><br><span class="line">&#125;</span><br><span class="line">foo();</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Visualise JavaScript&lt;br&gt;&lt;a href=&quot;https://tylermcginnis.com/javascript-visualizer/&quot;&gt;https://tylermcginnis.com/javascript-visualizer/&lt;/a&gt;&lt;b</summary>
+      
+    
+    
+    
+    <category term="node.js" scheme="http://chetansachdev.com/categories/node-js/"/>
+    
+    
+    <category term="Javascript" scheme="http://chetansachdev.com/tags/Javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How to install adaptauthoring on AWS EC2 instance</title>
+    <link href="http://chetansachdev.com/2020/03/03/How-to-install-adaptauthoring-on-AWS-EC2-instance/"/>
+    <id>http://chetansachdev.com/2020/03/03/How-to-install-adaptauthoring-on-AWS-EC2-instance/</id>
+    <published>2020-03-03T11:02:51.000Z</published>
+    <updated>2021-02-07T20:00:59.155Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://github.com/pvadimr/docker-adaptauthoring">https://github.com/pvadimr/docker-adaptauthoring</a></p><p>Switch to root account, where password isn’t set<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo su</span><br></pre></td></tr></table></figure></p><p>Install docker on AWS EC2 instance<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;www.digitalocean.com&#x2F;community&#x2F;tutorials&#x2F;how-to</span><br><span class="line">-install-and-use-docker-on-ubuntu-16-04#step-1-%E2%80%94</span><br><span class="line">-installing-docker</span><br><span class="line">https:&#x2F;&#x2F;blog.e-zest.com&#x2F;install-docker-on-aws-ec2</span><br></pre></td></tr></table></figure><br><br> </p><p>Pull docker image<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull pvadimr&#x2F;adaptauthoring</span><br></pre></td></tr></table></figure><br>Follow the instructions on <a href="https://hub.docker.com/r/pvadimr/adaptauthoring">https://hub.docker.com/r/pvadimr/adaptauthoring</a></p><h3 id="Set-the-password-for-root"><a href="#Set-the-password-for-root" class="headerlink" title="Set the password for root"></a>Set the password for root</h3><p><a href="https://aws.amazon.com/premiumsupport/knowledge-center/set-change-root-linux/">https://aws.amazon.com/premiumsupport/knowledge-center/set-change-root-linux/</a></p><p>Reference links:<br><a href="https://medium.com/statuscode/dockerising-a-node-js-and-mongodb-app-d22047e2806f">https://medium.com/statuscode/dockerising-a-node-js-and-mongodb-app-d22047e2806f</a><br><a href="https://dev.to/nyagarcia/pokeapi-rest-in-nodejs-with-express-typescript-mongodb-and-docker-part-2-b56">https://dev.to/nyagarcia/pokeapi-rest-in-nodejs-with-express-typescript-mongodb-and-docker-part-2-b56</a><br><a href="https://github.com/hueter/docker-node-express-boilerplate">https://github.com/hueter/docker-node-express-boilerplate</a><br><a href="https://blog.sourcerer.io/a-crash-course-on-docker-learn-to-swim-with-the-big-fish-6ff25e8958b0">https://blog.sourcerer.io/a-crash-course-on-docker-learn-to-swim-with-the-big-fish-6ff25e8958b0</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/pvadimr/docker-adaptauthoring&quot;&gt;https://github.com/pvadimr/docker-adaptauthoring&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Switch to root acc</summary>
+      
+    
+    
+    
+    
+    <category term="AWS" scheme="http://chetansachdev.com/tags/AWS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Using google sheet as db for experimental project</title>
+    <link href="http://chetansachdev.com/2020/02/25/Using-google-sheet-as-db-for-experimental-project/"/>
+    <id>http://chetansachdev.com/2020/02/25/Using-google-sheet-as-db-for-experimental-project/</id>
+    <published>2020-02-25T17:17:55.000Z</published>
+    <updated>2021-02-07T20:00:59.156Z</updated>
+    
+    <content type="html"><![CDATA[<p>After searching around for libraries, concluded on following 3:</p><ol><li>Sheetrock</li><li>Tabletop</li><li>sheetsee</li></ol><p>Most recent useful link:<br><a href="https://gist.github.com/nyancodeid/abc7f2c3ce47eda753dee8a2b63070ab">https://gist.github.com/nyancodeid/abc7f2c3ce47eda753dee8a2b63070ab</a><br><br></p><ol><li><a href="https://videlais.com/2018/05/16/working-with-google-sheets-in-twine/">https://videlais.com/2018/05/16/working-with-google-sheets-in-twine/</a></li><li><a href="https://github.com/jsoma/tabletop">https://github.com/jsoma/tabletop</a></li><li><a href="https://jlord.us/sheetsee.js/docs/basics.html">https://jlord.us/sheetsee.js/docs/basics.html</a></li><li><a href="https://jlord.us/sheetsee.js/docs/about.html">https://jlord.us/sheetsee.js/docs/about.html</a></li><li><a href="https://github.com/jlord/sheetsee">https://github.com/jlord/sheetsee</a></li><li><a href="https://css-tricks.com/creating-an-editable-webpage-with-google-spreadsheets-and-tabletop-js/">https://css-tricks.com/creating-an-editable-webpage-with-google-spreadsheets-and-tabletop-js/</a><br><br></li></ol><p><strong>More reference links:</strong><br>Getting started</p><ul><li><a href="https://github.com/edfasano70/crudOnGas/blob/master/Code.gs">https://github.com/edfasano70/crudOnGas/blob/master/Code.gs</a></li><li><a href="https://github.com/ashrafali46/Google-Sheets-Web-App/blob/master/Code.gs">https://github.com/ashrafali46/Google-Sheets-Web-App/blob/master/Code.gs</a></li><li><a href="https://github.com/rheajt/gradebook-google-script/blob/master/Code.gs">https://github.com/rheajt/gradebook-google-script/blob/master/Code.gs</a></li><li><a href="https://codepen.io/ashrafali46/pen/pKGzjQ">https://codepen.io/ashrafali46/pen/pKGzjQ</a><br><br></li></ul><p><em>Links for google app script</em> </p><ul><li><a href="https://github.com/ziaongit/CRUD-GoogleSheet/blob/master/assets/js/main.js">https://github.com/ziaongit/CRUD-GoogleSheet/blob/master/assets/js/main.js</a></li><li><a href="https://github.com/dklimok/google-apps-script-sheets-to-front-end-crud/blob/master/_log.js">https://github.com/dklimok/google-apps-script-sheets-to-front-end-crud/blob/master/_log.js</a></li><li><a href="https://github.com/KevinCayenne/googleSheetApiTest.github.io/blob/master/js/script.js">https://github.com/KevinCayenne/googleSheetApiTest.github.io/blob/master/js/script.js</a></li><li><a href="https://github.com/abhishek-parmar1/CRUD/blob/master/base.gs">https://github.com/abhishek-parmar1/CRUD/blob/master/base.gs</a></li><li><a href="https://github.com/idindrakusuma/example-crud-google-sheets-script/blob/master/google-script.js">https://github.com/idindrakusuma/example-crud-google-sheets-script/blob/master/google-script.js</a></li><li><a href="https://github.com/ashrafali46/Google-Sheet-Data-CRUD-App-Script-jQuery/blob/master/script.js">https://github.com/ashrafali46/Google-Sheet-Data-CRUD-App-Script-jQuery/blob/master/script.js</a></li></ul><p>Working samples</p><ul><li><a href="https://docs.google.com/spreadsheets/d/1qtuaxOUQx5zzLFMgdAqBX8z1TSGmxCwVI3MtC3dHXQY/edit#gid=0">https://docs.google.com/spreadsheets/d/1qtuaxOUQx5zzLFMgdAqBX8z1TSGmxCwVI3MtC3dHXQY/edit#gid=0</a></li><li><a href="https://codepen.io/ashrafali46/pen/bJgwEN">https://codepen.io/ashrafali46/pen/bJgwEN</a></li><li><a href="https://programming-steps.blogspot.com/2016/10/google-sheet-data-crud-app-script-jquery.html">https://programming-steps.blogspot.com/2016/10/google-sheet-data-crud-app-script-jquery.html</a></li></ul><p>Awesome library to render data from Google Sheets</p><ul><li><a href="https://chriszarate.github.io/sheetrock/">https://chriszarate.github.io/sheetrock/</a></li><li><a href="https://www.youtube.com/channel/UCwqNP1r17-2xJFweoACbW8g">https://www.youtube.com/channel/UCwqNP1r17-2xJFweoACbW8g</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;After searching around for libraries, concluded on following 3:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Sheetrock&lt;/li&gt;
+&lt;li&gt;Tabletop&lt;/li&gt;
+&lt;li&gt;sheetsee&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="Database" scheme="http://chetansachdev.com/tags/Database/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Remote settings to turn page in iBooks</title>
+    <link href="http://chetansachdev.com/2020/02/23/Remote-settings-to-turn-page-in-iBooks/"/>
+    <id>http://chetansachdev.com/2020/02/23/Remote-settings-to-turn-page-in-iBooks/</id>
+    <published>2020-02-23T17:31:36.000Z</published>
+    <updated>2021-02-07T20:00:59.155Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.reddit.com/r/books/comments/dffqdn/remote_page_turning_on_ios_almost_any_reading_app/">https://www.reddit.com/r/books/comments/dffqdn/remote_page_turning_on_ios_almost_any_reading_app/</a></p><p><a href="https://www.mobileread.com/forums/showthread.php?t=285348">https://www.mobileread.com/forums/showthread.php?t=285348</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.reddit.com/r/books/comments/dffqdn/remote_page_turning_on_ios_almost_any_reading_app/&quot;&gt;https://www.reddit.com/r/book</summary>
+      
+    
+    
+    
+    
+    <category term="Computers" scheme="http://chetansachdev.com/tags/Computers/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mapping wix subdomain to AWS EC2 instance</title>
+    <link href="http://chetansachdev.com/2020/02/14/Mapping-wix-subdomain-to-AWS-EC2-instance/"/>
+    <id>http://chetansachdev.com/2020/02/14/Mapping-wix-subdomain-to-AWS-EC2-instance/</id>
+    <published>2020-02-13T21:45:57.000Z</published>
+    <updated>2021-02-07T20:00:59.155Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>Configure A record in wix Advance settings. Refer to link below for step by step details.<br><a href="https://support.wix.com/en/article/connecting-a-subdomain-to-an-external-resource-eg-a-blog">https://support.wix.com/en/article/connecting-a-subdomain-to-an-external-resource-eg-a-blog</a></li><li>Set up Elastic IP and associate address to Private IP. Refer to link below:<br><a href="https://dev.to/maybebored/how-to-set-up-a-custom-domain-for-your-ec2-instance-without-using-route53-f9">https://dev.to/maybebored/how-to-set-up-a-custom-domain-for-your-ec2-instance-without-using-route53-f9</a></li><li>Check DNS propagation status for your new subdomain<br><a href="https://www.whatsmydns.net/#A/chetansachdev.com">https://www.whatsmydns.net/#A/chetansachdev.com</a></li></ol><p>Installing LetsEncrypt SSL certificate. Below is a link for bitnami installation.<br><a href="https://docs.bitnami.com/general/how-to/understand-bncert/">https://docs.bitnami.com/general/how-to/understand-bncert/</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;Configure A record in wix Advance settings. Refer to link below for step by step details.&lt;br&gt;&lt;a href=&quot;https://support.wix.com/en/ar</summary>
+      
+    
+    
+    
+    
+    <category term="AWS" scheme="http://chetansachdev.com/tags/AWS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git clone into non-empty directory</title>
+    <link href="http://chetansachdev.com/2020/02/14/Git-clone-into-non-empty-directory/"/>
+    <id>http://chetansachdev.com/2020/02/14/Git-clone-into-non-empty-directory/</id>
+    <published>2020-02-13T21:30:36.000Z</published>
+    <updated>2021-02-07T20:00:59.155Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">cd nonemptydir</span><br><span class="line">git init</span><br><span class="line">git remote add origin https:path&#x2F;to&#x2F;the&#x2F;repository.git</span><br><span class="line">git pull origin master --allow-unrelated-histories</span><br><span class="line">stree . &#x2F;&#x2F; To view the repo</span><br><span class="line">git add -A</span><br><span class="line">git commit -m &#39;first commit&#39;</span><br><span class="line">git push -u origin master</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class</summary>
+      
+    
+    
+    
+    
+    <category term="Git" scheme="http://chetansachdev.com/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Removing Moodle logo and updating favicon</title>
+    <link href="http://chetansachdev.com/2020/02/12/Removing-Moodle-logo-and-updating-favicon/"/>
+    <id>http://chetansachdev.com/2020/02/12/Removing-Moodle-logo-and-updating-favicon/</id>
+    <published>2020-02-11T19:38:47.000Z</published>
+    <updated>2021-02-07T20:00:59.155Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>Updating favicon</strong><br>Generate favicon of your choice. I prefer using <a href="https://www.photopea.com/">https://www.photopea.com/</a> for minor image editing.<br>In bitnami version of moodle, navigate to<code>/opt/bitnami/apps/moodle/htdocs/theme/boost/pix</code></p><p>rename existing favicon.ico file to have a backup<br>Upload your new favicon.ico file in the same directory</p><p>You may require a hard refresh in the browser to update favicon.<br>If it still doesn’t work, try the steps below:<br>Access Settings &gt; Appearance &gt; Themes &gt; Theme settings &gt; Theme designer mode check box and save. Refresh your browser. Uncheck the box after it works.</p><p><strong>Removing moodle logo from theme boost footer</strong><br>In bitnami version of moodle, navigate to<code>/opt/bitnami/apps/moodle/htdocs/theme/boost/templates</code><br>Open footer.mustache in editor of your choice</p><p>In theme boost footer.mustache looks like below:<br><img src="/images/2020/02/12/62befb40-4d05-11ea-93b3-3feac072eb06.png" alt="image.png"></p><p>Save the file and upload it back to EC2 instance. This should remove the moodle logo from “boost” theme. </p><p>Note: These instructions may vary for different themes.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;Updating favicon&lt;/strong&gt;&lt;br&gt;Generate favicon of your choice. I prefer using &lt;a href=&quot;https://www.photopea.com/&quot;&gt;https://www.phot</summary>
+      
+    
+    
+    
+    
+    <category term="HTML" scheme="http://chetansachdev.com/tags/HTML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>focus inside iframe from skip to main content</title>
+    <link href="http://chetansachdev.com/2020/02/08/focus-inside-iframe-from-skip-to-main-content/"/>
+    <id>http://chetansachdev.com/2020/02/08/focus-inside-iframe-from-skip-to-main-content/</id>
+    <published>2020-02-07T22:53:50.000Z</published>
+    <updated>2021-02-07T20:00:59.156Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;skipnav&quot;&gt;&lt;a tabindex&#x3D;&quot;1&quot; href&#x3D;&quot;#groupFrame&quot;&gt;Skip to main content&lt;&#x2F;a&gt;&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">jQuery(document).ready(function() &#123;</span><br><span class="line">    jQuery(&#39;a[href&#x3D;&quot;#groupFrame&quot;]&#39;).click(function(e) &#123;</span><br><span class="line">        e.preventDefault();</span><br><span class="line">        setTimeout(setFocusIframe, 100);</span><br><span class="line">        return false;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    function setFocusIframe() &#123;</span><br><span class="line">        console.log(&quot;Focusing on iframe!!&quot;);</span><br><span class="line">        jQuery(&quot;#groupFrame&quot;)[0].contentWindow.focus();</span><br><span class="line">        &#x2F;&#x2F; jQuery(&quot;html, body&quot;).animate(&#123; scrollTop: &quot;0px&quot; &#125;, 1000, function()&#123;</span><br><span class="line">        &#x2F;&#x2F;     jQuery(&#39;input#Name_First&#39;).focus();</span><br><span class="line">        &#x2F;&#x2F; &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span cla</summary>
+      
+    
+    
+    
+    
+    <category term="HTML" scheme="http://chetansachdev.com/tags/HTML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Resetting Visual Studio Code in macOS</title>
+    <link href="http://chetansachdev.com/2020/02/08/Resetting-Visual-Studio-Code-in-macOS/"/>
+    <id>http://chetansachdev.com/2020/02/08/Resetting-Visual-Studio-Code-in-macOS/</id>
+    <published>2020-02-07T21:59:30.000Z</published>
+    <updated>2021-02-07T20:00:59.155Z</updated>
+    
+    <content type="html"><![CDATA[<p>I have been exploring lot of visual studio code extensions and the side affect of it was that it slowed down my experience with Visual Studio Code. I wanted to preserve the extensions which I have already tried. To achieve this I found the settings folder of VSCode and then took a backup of those files. Below are the commands, in case you are trying to achieve the same:<br>Close VScode and run below two commands in terminal<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mv ~&#x2F;Library&#x2F;Application Support&#x2F;Code ~&#x2F;Library&#x2F;Application Support&#x2F;backup-Code</span><br><span class="line">mv ~&#x2F;.vscode ~&#x2F;backup-vscode</span><br></pre></td></tr></table></figure><br>After these, all your settings and extensions are backed up. Next launch VSCode and then press <strong>⌘ + ,</strong> to open Visual Studio Code settings.<br>and then add:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;workbench.colorTheme&quot;: &quot;ArtSchool&quot;,</span><br><span class="line">    &quot;editor.fontFamily&quot;: &quot;Operator Mono&quot;,</span><br><span class="line">    &quot;editor.fontLigatures&quot;: true,</span><br><span class="line">    &quot;editor.wordWrap&quot;: &quot;on&quot;,</span><br><span class="line">    &quot;editor.mouseWheelZoom&quot;: true,</span><br><span class="line">    &quot;editor.formatOnSave&quot;: true,</span><br><span class="line">    &quot;editor.defaultFormatter&quot;: &quot;esbenp.prettier-vscode&quot;,</span><br><span class="line">    &quot;[javascript]&quot;: &#123;</span><br><span class="line">        &quot;editor.defaultFormatter&quot;: &quot;esbenp.prettier-vscode&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>Ofcourse, you need to install the specified theme, font and formatter plugin to make it work. After the above settings, your editor should look like below screenshot:<br><img src="/images/2020/02/08/06ba4fb0-49f5-11ea-984d-f70f4cd221c6.png" alt="image.png"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;I have been exploring lot of visual studio code extensions and the side affect of it was that it slowed down my experience with Visual St</summary>
+      
+    
+    
+    
+    
+    <category term="Computers" scheme="http://chetansachdev.com/tags/Computers/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue-awesomeconf-2019</title>
+    <link href="http://chetansachdev.com/2019/05/08/Vue-awesomeconf-2019/"/>
+    <id>http://chetansachdev.com/2019/05/08/Vue-awesomeconf-2019/</id>
+    <published>2019-05-08T07:07:34.000Z</published>
+    <updated>2021-02-07T20:00:59.156Z</updated>
+    
+    
+    
+    
+    
+    <category term="Veu" scheme="http://chetansachdev.com/tags/Veu/"/>
+    
+  </entry>
+  
+</feed>
