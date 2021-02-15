@@ -67,3 +67,8 @@ https://www.youtube.com/watch?v=Pcf0YjPEKuU
 
 Solution to Blackmagic Intensity Shuttle configuration to direct output of Macbook to OBS running in Windows 10
 https://forum.blackmagicdesign.com/viewtopic.php?f=3&t=63035
+
+Reference articles:
+https://ahadsheriff.medium.com/how-to-get-a-better-development-experience-on-your-mac-8478be58bba4
+Mac setup video from Coding Garden
+https://www.youtube.com/watch?v=tMNOpaQrfAE&t=275s
