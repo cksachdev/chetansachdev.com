@@ -5,7 +5,6 @@ category:
 tags:
   - null
 top: 1
-originContent: ''
 categories: []
 toc: false
 date: 2021-02-16 00:29:22
@@ -35,3 +34,7 @@ Reference: [https://answers.microsoft.com/en-us/msoffice/forum/msoffice_powerpoi
 [https://appuals.com/office-2016-grant-access-error-on-macos/](https://appuals.com/office-2016-grant-access-error-on-macos/
 )[https://translate.google.com/translate?hl=en&sl=zh-CN&u=https://w6u.netlify.app/microsoft-office-mac-grant-access.html&prev=search&pto=aue](https://translate.google.com/translate?hl=en&sl=zh-CN&u=https://w6u.netlify.app/microsoft-office-mac-grant-access.html&prev=search&pto=aue
 )
+
+Disable snapshot thumbnail in VLC:
+https://forum.videolan.org/viewtopic.php?f=12&p=517835
+This is quite hidden indeed. Click on "Show all" in the Preferences dialog, then on Video on the left and uncheck "Display video snapshot preview" on the right (you need to scroll down). Save and restart VLC.
