@@ -29,11 +29,11 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     
-<link rel="stylesheet" href="../../css/styles.css">
+<link rel="stylesheet" href="../../../../css/styles.css">
 
     <!-- <link rel="stylesheet" href="/./css/main.css"> -->
     <!-- 
-<link rel="stylesheet" href="../../css/main.css">
+<link rel="stylesheet" href="../../../../css/main.css">
  -->
 
 <meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="atom.xml" title="Chetan Sachdev" type="application/atom+xml">
@@ -54,12 +54,12 @@
             </a>
             <h1 class="sidebar-title">Chetan Sachdev </h1>
             <a class="email" href="mailto:mail@chetansachdev.com">mail@chetansachdev.com</a>
-            <li class="nav__item hover:bg-gray-800"><a href="../../index.html" class="nav__link ">Home</a></li>
-            <li class="nav__item hover:bg-gray-800"><a href="../" class="nav__link ">Archives</a></li>
+            <li class="nav__item hover:bg-gray-800"><a href="../../../../index.html" class="nav__link ">Home</a></li>
+            <li class="nav__item hover:bg-gray-800"><a href="../../../../archives/" class="nav__link ">Archives</a></li>
             <li class="nav__item hover:bg-gray-800"><a target="_blank" rel="noopener" href="http://plantyouridea.com/services/" class="nav__link ">Services</a></li>
             <li class="nav__item hover:bg-gray-800"><a target="_blank" rel="noopener" href="https://github.com/cksachdev" class="nav__link ">Github</a></li>
-            <li class="nav__item hover:bg-gray-800"><a href="../../about/" class="nav__link ">About</a></li>
-            <li class="nav__item hover:bg-gray-800"><a href="../../payment/" class="nav__link ">Payment</a></li>
+            <li class="nav__item hover:bg-gray-800"><a href="../../../../about/" class="nav__link ">About</a></li>
+            <li class="nav__item hover:bg-gray-800"><a href="../../../../payment/" class="nav__link ">Payment</a></li>
         </ul>
         
     </nav>
@@ -78,167 +78,87 @@
         <div class="container page-wrapper single-post-container has-sidebar ">
             
             <article class="post-page">
-                <div class="archive-container ">
-   
+                <div class="content-post  ">
+    
+    <div class="post-header">
+        <!-- Title -->
+        <h2 class="content-post-title ">
+            <a class="content-title" href="/2021/12/28/How-to-set-file-permissions-in-WSL/">
+                How to set file permissions in WSL?
+            </a>
+        </h2>
+        <!-- Date and Author -->
+        <p class="content-post-meta">Published on
+            Dec 28, 2021
+        </p>
+    </div>
+    
+    <!-- Content -->
+    <div class="item-content "  >
+        <h2 id="What-is-WSL"><a href="#What-is-WSL" class="headerlink" title="What is WSL?"></a>What is WSL?</h2><p>Windows Subsystem for Linux lets developrs run Linux environment. You can use your favorite commands from linux such as grep, sed, awk etc. I am using Ubuntu 18 on my Windows 10 machine.</p>
+<h2 id="File-permissions"><a href="#File-permissions" class="headerlink" title="File permissions"></a>File permissions</h2><p>File permissions in linux work in a different way, compared to windows. You need to set it in rwxrwxrwx format. Here r gets a value of 4, w gets a value of 2 and x i.e. execute gets a value of 1, total 7.</p>
+<p>If you are trying to using a .pem or .cer file, you will be getting error saying too open permissions. For a .pem or .cer file you should set it to 600 i.e. <code>rw-------</code>.</p>
+<p><span class="ql-cursor">﻿</span></p>
+<h2 id="Steps-to-retain-the-chmod-settings-in-Windows"><a href="#Steps-to-retain-the-chmod-settings-in-Windows" class="headerlink" title="Steps to retain the chmod settings in Windows"></a>Steps to retain the chmod settings in Windows</h2><p>If you try to use chmod in the WSL, your permissions won’t take affect on the file. You need to have wsl.conf file in place to retain the permissions set using chmod command.</p>
+<p><strong>Step 1: Create wsl.conf file</strong></p>
+<p>Commands:</p>
+<p><code>**sudo nano /etc/wsl.conf**</code></p>
+<p>Add following lines in wsl.conf</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[automount]</span><br><span class="line">enabled  &#x3D; true</span><br><span class="line">root     &#x3D; &#x2F;mnt&#x2F;</span><br><span class="line">options  &#x3D; &quot;metadata,umask&#x3D;22,fmask&#x3D;11&quot;</span><br></pre></td></tr></table></figure>
+<p>Save the file using <code>**Ctrl + x**</code></p>
+<p><strong>Step 2: Shutdown wsl for the settings to take affect</strong></p>
+<p>Open normal command prompt and run</p>
+<p><code>wsl --shutdown</code></p>
+<p><strong>Step 3: Run chmod again to apply the permissions</strong></p>
+<p>Open Windows Terminal again and switch to Ubuntu shell.</p>
+<p><code>chmod 600 mykey.pem</code></p>
+<p><strong>Step 4: Verify using</strong> <code>**ls -l**</code></p>
+<p>Run <code>ls -l</code> to verify that permissions are set properly</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rw-------    mykey.pem</span><br></pre></td></tr></table></figure>
+<h2 id="Reference-links"><a href="#Reference-links" class="headerlink" title="Reference links"></a>Reference links</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows/wsl/setup/environment">Setup WSL on windows</a></li>
+<li><a target="_blank" rel="noopener" href="https://winaero.com/reset-password-wsl-linux-distro-windows-10/">Reset WSL Distro password</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab">Get Windows Terminal</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows/wsl/about">What is Windows Subsystem for Linux?</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.linux.com/training-tutorials/understanding-linux-file-permissions/">Understanding Linux file permissions</a></li>
+<li><a target="_blank" rel="noopener" href="https://superuser.com/questions/1323645/unable-to-change-file-permissions-on-ubuntu-bash-for-windows-10">https://superuser.com/questions/1323645/unable-to-change-file-permissions-on-ubuntu-bash-for-windows-10</a></li>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/46610256/chmod-wsl-bash-doesnt-work">https://stackoverflow.com/questions/46610256/chmod-wsl-bash-doesnt-work</a></li>
+</ol>
+
+    </div>
+    <!-- Tags and Categories links -->
     
     
-    
+    <div id="disqus_thread"></div>
+<script>
 
-    
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
 
-  
-    <h2 class="archive-title ">2021</h2>
-   
+var disqus_config = function () {
+this.page.url = 'https://chetansachdev.com/';   // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = 'chetan-sachdev.disqus.com'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
 
-
-<div class="blog-post ">
-    <!-- Title -->
-    <h2 class="post-title-archive">
-        <a href="/2021/12/28/How-to-set-file-permissions-in-WSL/">
-            How to set file permissions in WSL?
-        </a>
-    </h2>
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        Dec 28, 2021
-        
-    </p>
-</div>
-
-<div class="blog-post ">
-    <!-- Title -->
-    <h2 class="post-title-archive">
-        <a href="/2021/05/24/Getting-started-with-flutter-on-Apple-M1/">
-            Getting started with flutter on Apple M1
-        </a>
-    </h2>
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        May 24, 2021
-        
-    </p>
-</div>
-
-<div class="blog-post ">
-    <!-- Title -->
-    <h2 class="post-title-archive">
-        <a href="/2021/03/05/post/">
-            post
-        </a>
-    </h2>
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        Mar 05, 2021
-        
-    </p>
-</div>
-
-<div class="blog-post ">
-    <!-- Title -->
-    <h2 class="post-title-archive">
-        <a href="/2021/03/01/Transparent-Whiteboard-in-Teams-or-Zoom-with-OBS/">
-            Transparent Whiteboard in Teams or Zoom with OBS
-        </a>
-    </h2>
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        Mar 01, 2021
-        
-    </p>
-</div>
-
-<div class="blog-post ">
-    <!-- Title -->
-    <h2 class="post-title-archive">
-        <a href="/2021/02/23/Shortcuts-to-Pause-Resume-recording-in-QuickTime/">
-            Shortcuts to Pause/Resume recording in QuickTime
-        </a>
-    </h2>
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        Feb 23, 2021
-        
-    </p>
-</div>
-
-<div class="blog-post ">
-    <!-- Title -->
-    <h2 class="post-title-archive">
-        <a href="/2021/02/16/Batch-photos-to-powerpoint-slideshow-in-macOS/">
-            Batch photos to powerpoint slideshow in macOS
-        </a>
-    </h2>
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        Feb 16, 2021
-        
-    </p>
-</div>
-
-<div class="blog-post ">
-    <!-- Title -->
-    <h2 class="post-title-archive">
-        <a href="/2021/02/08/Day-1-with-Macbook-Air-Apple-Silicon/">
-            Day 1 with Macbook Air - Apple Silicon
-        </a>
-    </h2>
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        Feb 08, 2021
-        
-    </p>
-</div>
-
-<div class="blog-post ">
-    <!-- Title -->
-    <h2 class="post-title-archive">
-        <a href="/2021/01/22/How-to-write-test-cases-in-Manual-testing/">
-            How to write test cases in Manual testing
-        </a>
-    </h2>
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        Jan 22, 2021
-        
-    </p>
-</div>
-
-<div class="blog-post ">
-    <!-- Title -->
-    <h2 class="post-title-archive">
-        <a href="/2021/01/02/XAPI/">
-            XAPI
-        </a>
-    </h2>
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        Jan 02, 2021
-        
-    </p>
-</div>
-
-<div class="blog-post ">
-    <!-- Title -->
-    <h2 class="post-title-archive">
-        <a href="/2021/01/02/Lodash-quick-experiments-in-Chrome/">
-            Lodash - quick experiments in Chrome
-        </a>
-    </h2>
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        Jan 02, 2021
-        
-    </p>
-</div>
-
-<nav>
-    <ul class="pager ">
-        
-        
-    </ul>
-</nav>
-</div>
-
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://chetan-sachdev.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <!---->                      
+    <section class="comments" id="comments">
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname = 'chetansachdev';
+        lazyScripts.push('//' + disqus_shortname + '.disqus.com/embed.js')
+        </script>
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+ 
             </article>
             <aside class="side-page ">
                 <aside class="sidebar ">
@@ -264,12 +184,12 @@
     <div class="menu-bar ">
      
   
-      <a class="menu-item home   " id="home" onclick="hide()" href="../../index.html"> <i  class="fa fa-home fa-lg " aria-hidden="true"></i>Home </a> 
-      <a class="menu-item home " href="../"> <i class="fa fa-archive " aria-hidden="true"></i> Archives</a>
+      <a class="menu-item home   " id="home" onclick="hide()" href="../../../../index.html"> <i  class="fa fa-home fa-lg " aria-hidden="true"></i>Home </a> 
+      <a class="menu-item home " href="../../../../archives/"> <i class="fa fa-archive " aria-hidden="true"></i> Archives</a>
       <a class="menu-item  " href="https://github.com/cksachdev" target="_blank"><i class="fa fa-github " aria-hidden=""></i>  Github</a>
       <a class="menu-item home " href="http://plantyouridea.com/services/" target="_blank"> <i class="fa fa-briefcase" aria-hidden="true"></i> Services </a>
-      <a class="menu-item  " href="../../about/"><i class="fa fa-info-circle " aria-hidden="true"></i> About me</a>
-      <a class="menu-item " href="../../payment/"><i class="fa fa-money " aria-hidden="true"></i>Payment</a>
+      <a class="menu-item  " href="../../../../about/"><i class="fa fa-info-circle " aria-hidden="true"></i> About me</a>
+      <a class="menu-item " href="../../../../payment/"><i class="fa fa-money " aria-hidden="true"></i>Payment</a>
   
     </div>
     
@@ -304,7 +224,7 @@
             <p>
                 
                     <span>
-                        <a href="../../atom.xml" target="_blank" class="rss" title="rss">
+                        <a href="../../../../atom.xml" target="_blank" class="rss" title="rss">
                             <i class="icon icon-lg icon-rss"></i>
                         </a>
                     </span>

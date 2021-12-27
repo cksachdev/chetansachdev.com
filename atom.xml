@@ -6,7 +6,7 @@
   <link href="http://chetansachdev.com/atom.xml" rel="self"/>
   
   <link href="http://chetansachdev.com/"/>
-  <updated>2021-05-24T08:59:26.668Z</updated>
+  <updated>2021-12-27T19:40:20.501Z</updated>
   <id>http://chetansachdev.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How to set file permissions in WSL?</title>
+    <link href="http://chetansachdev.com/2021/12/28/How-to-set-file-permissions-in-WSL/"/>
+    <id>http://chetansachdev.com/2021/12/28/How-to-set-file-permissions-in-WSL/</id>
+    <published>2021-12-27T19:40:20.000Z</published>
+    <updated>2021-12-27T19:40:20.501Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="What-is-WSL"><a href="#What-is-WSL" class="headerlink" title="What is WSL?"></a>What is WSL?</h2><p>Windows Subsystem for Linux lets developrs run Linux environment. You can use your favorite commands from linux such as grep, sed, awk etc. I am using Ubuntu 18 on my Windows 10 machine.</p><h2 id="File-permissions"><a href="#File-permissions" class="headerlink" title="File permissions"></a>File permissions</h2><p>File permissions in linux work in a different way, compared to windows. You need to set it in rwxrwxrwx format. Here r gets a value of 4, w gets a value of 2 and x i.e. execute gets a value of 1, total 7.</p><p>If you are trying to using a .pem or .cer file, you will be getting error saying too open permissions. For a .pem or .cer file you should set it to 600 i.e. <code>rw-------</code>.</p><p><span class="ql-cursor">﻿</span></p><h2 id="Steps-to-retain-the-chmod-settings-in-Windows"><a href="#Steps-to-retain-the-chmod-settings-in-Windows" class="headerlink" title="Steps to retain the chmod settings in Windows"></a>Steps to retain the chmod settings in Windows</h2><p>If you try to use chmod in the WSL, your permissions won’t take affect on the file. You need to have wsl.conf file in place to retain the permissions set using chmod command.</p><p><strong>Step 1: Create wsl.conf file</strong></p><p>Commands:</p><p><code>**sudo nano /etc/wsl.conf**</code></p><p>Add following lines in wsl.conf</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[automount]</span><br><span class="line">enabled  &#x3D; true</span><br><span class="line">root     &#x3D; &#x2F;mnt&#x2F;</span><br><span class="line">options  &#x3D; &quot;metadata,umask&#x3D;22,fmask&#x3D;11&quot;</span><br></pre></td></tr></table></figure><p>Save the file using <code>**Ctrl + x**</code></p><p><strong>Step 2: Shutdown wsl for the settings to take affect</strong></p><p>Open normal command prompt and run</p><p><code>wsl --shutdown</code></p><p><strong>Step 3: Run chmod again to apply the permissions</strong></p><p>Open Windows Terminal again and switch to Ubuntu shell.</p><p><code>chmod 600 mykey.pem</code></p><p><strong>Step 4: Verify using</strong> <code>**ls -l**</code></p><p>Run <code>ls -l</code> to verify that permissions are set properly</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rw-------    mykey.pem</span><br></pre></td></tr></table></figure><h2 id="Reference-links"><a href="#Reference-links" class="headerlink" title="Reference links"></a>Reference links</h2><ol><li><a href="https://docs.microsoft.com/en-us/windows/wsl/setup/environment">Setup WSL on windows</a></li><li><a href="https://winaero.com/reset-password-wsl-linux-distro-windows-10/">Reset WSL Distro password</a></li><li><a href="https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab">Get Windows Terminal</a></li><li><a href="https://docs.microsoft.com/en-us/windows/wsl/about">What is Windows Subsystem for Linux?</a></li><li><a href="https://www.linux.com/training-tutorials/understanding-linux-file-permissions/">Understanding Linux file permissions</a></li><li><a href="https://superuser.com/questions/1323645/unable-to-change-file-permissions-on-ubuntu-bash-for-windows-10">https://superuser.com/questions/1323645/unable-to-change-file-permissions-on-ubuntu-bash-for-windows-10</a></li><li><a href="https://stackoverflow.com/questions/46610256/chmod-wsl-bash-doesnt-work">https://stackoverflow.com/questions/46610256/chmod-wsl-bash-doesnt-work</a></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;What-is-WSL&quot;&gt;&lt;a href=&quot;#What-is-WSL&quot; class=&quot;headerlink&quot; title=&quot;What is WSL?&quot;&gt;&lt;/a&gt;What is WSL?&lt;/h2&gt;&lt;p&gt;Windows Subsystem for Linux lets</summary>
+      
+    
+    
+    
+    <category term="computer" scheme="http://chetansachdev.com/categories/computer/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Getting started with flutter on Apple M1</title>
@@ -79,13 +101,34 @@
   </entry>
   
   <entry>
+    <title>Shortcuts to Pause/Resume recording in QuickTime</title>
+    <link href="http://chetansachdev.com/2021/02/23/Shortcuts-to-Pause-Resume-recording-in-QuickTime/"/>
+    <id>http://chetansachdev.com/2021/02/23/Shortcuts-to-Pause-Resume-recording-in-QuickTime/</id>
+    <published>2021-02-23T10:56:02.000Z</published>
+    <updated>2021-12-27T19:38:25.326Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.youtube.com/watch?v=T4INEPTH5bU">https://www.youtube.com/watch?v=T4INEPTH5bU</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=T4INEPTH5bU&quot;&gt;https://www.youtube.com/watch?v=T4INEPTH5bU&lt;/a&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Batch photos to powerpoint slideshow in macOS</title>
     <link href="http://chetansachdev.com/2021/02/16/Batch-photos-to-powerpoint-slideshow-in-macOS/"/>
     <id>http://chetansachdev.com/2021/02/16/Batch-photos-to-powerpoint-slideshow-in-macOS/</id>
     <published>2021-02-15T18:59:22.000Z</published>
-    <updated>2021-03-01T18:12:53.438Z</updated>
+    <updated>2021-12-27T19:38:25.326Z</updated>
     
-    <content type="html"><![CDATA[<p>In Microsoft PowerPoint for Mac Version 16.45, feature to bulk import images and having them in separate slides isn’t present. This post covers how to achieve this in macOS. You need to create an Automator script to achieve the same. With Powerpoint 2011 Automator scripts were available but these are not present with latest version of Microsoft PowerPoint for Mac. Follow the instructions below to get started:<br><strong>Step 1: Download Automator scripts</strong><br>Forum post which discussion on the same issue.<br><a href="https://answers.microsoft.com/en-us/msoffice/forum/msoffice_powerpoint-mso_mac-mso_mac2016/powerpoint-2016-and-automator-cant-see-ppt-in-the/464748a8-43f3-4c2c-badf-a76a644ea265">https://answers.microsoft.com/en-us/msoffice/forum/msoffice_powerpoint-mso_mac-mso_mac2016/powerpoint-2016-and-automator-cant-see-ppt-in-the/464748a8-43f3-4c2c-badf-a76a644ea265</a><br>One drive link to download:<br><a href="https://onedrive.live.com/redir?resid=DE8ADB12A20968E4!3226&amp;authkey=!AMh-grSm44uwOC0&amp;ithint=file%2czip">https://onedrive.live.com/redir?resid=DE8ADB12A20968E4!3226&amp;authkey=!AMh-grSm44uwOC0&amp;ithint=file%2czip</a><br><strong>Step 2: Create the Automator script</strong><br>Watch the video to create the Automator script<br><a href="https://www.youtube.com/watch?v=5VEdJvVOOLY">https://www.youtube.com/watch?v=5VEdJvVOOLY</a><br><strong>Step 3: Granting permission</strong><br>I had 200 images to convert to a slidedeck and I run into permission issues. Moving the images to a sandboxed folder helped to resolve this.<br>Folder path is:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;Users &#x2F; (YourUsername) &#x2F; Library &#x2F; Group Containers &#x2F;UBF8T346G9.Office</span><br></pre></td></tr></table></figure><br>Move your files in the above folder and then run the Automator script and it should work without any issues.<br>Reference: <a href="https://answers.microsoft.com/en-us/msoffice/forum/msoffice_powerpoint-mso_mac-mso_mac2016/the-dreaded-grant-file-access-in-powerpoint/d54b41d2-939d-4989-a788-df6c53cda536">https://answers.microsoft.com/en-us/msoffice/forum/msoffice_powerpoint-mso_mac-mso_mac2016/the-dreaded-grant-file-access-in-powerpoint/d54b41d2-939d-4989-a788-df6c53cda536</a></p><p><strong>Permanent fix for permission issue:(yet to try)</strong><br><a href="https://appuals.com/office-2016-grant-access-error-on-macos/">https://appuals.com/office-2016-grant-access-error-on-macos/</a><a href="https://translate.google.com/translate?hl=en&amp;sl=zh-CN&amp;u=https://w6u.netlify.app/microsoft-office-mac-grant-access.html&amp;prev=search&amp;pto=aue">https://translate.google.com/translate?hl=en&amp;sl=zh-CN&amp;u=https://w6u.netlify.app/microsoft-office-mac-grant-access.html&amp;prev=search&amp;pto=aue</a></p>]]></content>
+    <content type="html"><![CDATA[<p>In Microsoft PowerPoint for Mac Version 16.45, feature to bulk import images and having them in separate slides isn’t present. This post covers how to achieve this in macOS. You need to create an Automator script to achieve the same. With Powerpoint 2011 Automator scripts were available but these are not present with latest version of Microsoft PowerPoint for Mac. Follow the instructions below to get started:<br><strong>Step 1: Download Automator scripts</strong><br>Forum post which discussion on the same issue.<br><a href="https://answers.microsoft.com/en-us/msoffice/forum/msoffice_powerpoint-mso_mac-mso_mac2016/powerpoint-2016-and-automator-cant-see-ppt-in-the/464748a8-43f3-4c2c-badf-a76a644ea265">https://answers.microsoft.com/en-us/msoffice/forum/msoffice_powerpoint-mso_mac-mso_mac2016/powerpoint-2016-and-automator-cant-see-ppt-in-the/464748a8-43f3-4c2c-badf-a76a644ea265</a><br>One drive link to download:<br><a href="https://onedrive.live.com/redir?resid=DE8ADB12A20968E4!3226&amp;authkey=!AMh-grSm44uwOC0&amp;ithint=file%2czip">https://onedrive.live.com/redir?resid=DE8ADB12A20968E4!3226&amp;authkey=!AMh-grSm44uwOC0&amp;ithint=file%2czip</a><br><strong>Step 2: Create the Automator script</strong><br>Watch the video to create the Automator script<br><a href="https://www.youtube.com/watch?v=5VEdJvVOOLY">https://www.youtube.com/watch?v=5VEdJvVOOLY</a><br><strong>Step 3: Granting permission</strong><br>I had 200 images to convert to a slidedeck and I run into permission issues. Moving the images to a sandboxed folder helped to resolve this.<br>Folder path is:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;Users &#x2F; (YourUsername) &#x2F; Library &#x2F; Group Containers &#x2F;UBF8T346G9.Office</span><br></pre></td></tr></table></figure><br>Move your files in the above folder and then run the Automator script and it should work without any issues.<br>Reference: <a href="https://answers.microsoft.com/en-us/msoffice/forum/msoffice_powerpoint-mso_mac-mso_mac2016/the-dreaded-grant-file-access-in-powerpoint/d54b41d2-939d-4989-a788-df6c53cda536">https://answers.microsoft.com/en-us/msoffice/forum/msoffice_powerpoint-mso_mac-mso_mac2016/the-dreaded-grant-file-access-in-powerpoint/d54b41d2-939d-4989-a788-df6c53cda536</a></p><p><strong>Permanent fix for permission issue:(yet to try)</strong><br><a href="https://appuals.com/office-2016-grant-access-error-on-macos/">https://appuals.com/office-2016-grant-access-error-on-macos/</a><a href="https://translate.google.com/translate?hl=en&amp;sl=zh-CN&amp;u=https://w6u.netlify.app/microsoft-office-mac-grant-access.html&amp;prev=search&amp;pto=aue">https://translate.google.com/translate?hl=en&amp;sl=zh-CN&amp;u=https://w6u.netlify.app/microsoft-office-mac-grant-access.html&amp;prev=search&amp;pto=aue</a></p><p>Disable snapshot thumbnail in VLC:<br><a href="https://forum.videolan.org/viewtopic.php?f=12&amp;p=517835">https://forum.videolan.org/viewtopic.php?f=12&amp;p=517835</a><br>This is quite hidden indeed. Click on “Show all” in the Preferences dialog, then on Video on the left and uncheck “Display video snapshot preview” on the right (you need to scroll down). Save and restart VLC.</p>]]></content>
     
     
       
