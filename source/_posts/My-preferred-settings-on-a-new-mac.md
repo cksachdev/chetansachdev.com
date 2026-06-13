@@ -74,4 +74,7 @@ By default, the top row acts as media keys. To use them as standard F1–F12:
 ## Reference
 
 - [Better development experience on Mac](https://ahadsheriff.medium.com/how-to-get-a-better-development-experience-on-your-mac-8478be58bba4)
-- [Mac setup video — Coding Garden](https://www.youtube.com/watch?v=tMNOpaQrfAE&t=275s)
+
+**Mac setup video by Coding Garden:**
+
+{% youtube tMNOpaQrfAE %}

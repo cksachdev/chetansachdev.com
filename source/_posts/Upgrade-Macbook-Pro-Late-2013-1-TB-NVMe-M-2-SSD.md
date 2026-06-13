@@ -16,8 +16,6 @@ The MacBook Pro Late 2013 uses a proprietary SSD connector, but you can upgrade 
 
 {% youtube 4SSxtWPogFQ %}
 
-[Watch on YouTube: Guide to upgrade NVMe M.2 SSD in MacBook Pro 2013](https://www.youtube.com/watch?v=4SSxtWPogFQ)
-
 ## What you need
 
 - A 1 TB NVMe M.2 SSD (PCIe Gen 3)

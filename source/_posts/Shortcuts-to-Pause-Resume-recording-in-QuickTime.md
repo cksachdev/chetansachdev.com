@@ -22,4 +22,4 @@ For audio recordings, you can also click directly on the recording waveform in t
 
 For a visual demo of the shortcut in action:
 
-[Watch on YouTube](https://www.youtube.com/watch?v=T4INEPTH5bU)
+{% youtube T4INEPTH5bU %}

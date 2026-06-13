@@ -15,17 +15,17 @@ I was mounting my Apple Thunderbolt Display on a VESA stand and the mount screw 
 
 Two methods for removing the Thunderbolt Display stand:
 
-[![Remove the stand — method 1](https://img.youtube.com/vi/9M-JZ4DV9kA/0.jpg)](https://www.youtube.com/watch?v=9M-JZ4DV9kA)
+{% youtube 9M-JZ4DV9kA %}
 
-[![Remove the stand — method 2](https://img.youtube.com/vi/InGXgPqLQH8/0.jpg)](https://www.youtube.com/watch?v=InGXgPqLQH8)
+{% youtube InGXgPqLQH8 %}
 
 ## Retrieving a lost screw from inside the display
 
 If the screw falls inside:
 
-[![How to get it out — method 1](https://img.youtube.com/vi/XdY2jXus22E/0.jpg)](https://www.youtube.com/watch?v=XdY2jXus22E)
+{% youtube XdY2jXus22E %}
 
-[![How to get it out — method 2](https://img.youtube.com/vi/RUVgzVlvWcQ/0.jpg)](https://www.youtube.com/watch?v=RUVgzVlvWcQ)
+{% youtube RUVgzVlvWcQ %}
 
 ## Full teardown (what I ultimately did)
 

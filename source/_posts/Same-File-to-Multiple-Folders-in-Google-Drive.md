@@ -33,7 +33,7 @@ Navigate to the folder you want and click **Add here**. The file now appears in 
 
 ## Video walkthrough
 
-[Watch on YouTube](https://www.youtube.com/watch?v=stPoO-zRT6g)
+{% youtube stPoO-zRT6g %}
 
 ## Note on Google Drive's 2020 changes
 

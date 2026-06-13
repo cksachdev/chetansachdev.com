@@ -25,7 +25,7 @@ The script was shared on the Microsoft community forum. Download it from OneDriv
 
 Follow this video walkthrough to set up the script in Automator:
 
-[Watch the tutorial on YouTube](https://www.youtube.com/watch?v=5VEdJvVOOLY)
+{% youtube 5VEdJvVOOLY %}
 
 **Step 3: Fix permission errors (if you hit them)**
 

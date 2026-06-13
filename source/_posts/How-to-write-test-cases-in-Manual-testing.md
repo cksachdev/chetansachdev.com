@@ -37,4 +37,4 @@ Manual test cases are structured documents that define inputs, execution conditi
 
 For a detailed walkthrough on writing test cases:
 
-[Watch on YouTube](https://www.youtube.com/watch?v=g0PrXoWKM2Y)
+{% youtube g0PrXoWKM2Y %}

@@ -19,7 +19,7 @@ You use **OBS Studio** with its **Virtual Camera** feature. OBS composites your 
 
 ## Video walkthrough
 
-[Watch on YouTube](https://www.youtube.com/watch?v=-oaikJCR6ec)
+{% youtube -oaikJCR6ec %}
 
 ## What you need
 
