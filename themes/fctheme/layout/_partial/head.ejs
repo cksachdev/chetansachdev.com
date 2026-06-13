@@ -1,11 +1,11 @@
 <head>
   <!-- Google Analytics 4 — replace G-XXXXXXXXXX with your GA4 Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VDR4WJ56Q9"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-VDR4WJ56Q9');
   </script>
 
   <meta charset="UTF-8">
@@ -64,8 +64,80 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- Icons -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0Q4LphifmFQbiakJDd+l4SQ4zD3Tg==" crossorigin="anonymous">
+  <!-- JSON-LD Structured Data -->
+  <% if (page.layout === 'post') { %>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "<%- page.title.replace(/"/g, '\\"') %>",
+    "datePublished": "<%= page.date.toISOString() %>",
+    "dateModified": "<%= (page.updated || page.date).toISOString() %>",
+    "author": {
+      "@type": "Person",
+      "name": "<%= config.author %>",
+      "url": "<%= config.url %>/about/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "<%= config.author %>",
+      "url": "<%= config.url %>"
+    },
+    "url": "<%= config.url %>/<%= page.path %>",
+    "description": "<%- (page.description || page.excerpt || '').replace(/<[^>]+>/g, '').replace(/"/g, '\\"').substring(0, 200) %>",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "<%= config.url %>/<%= page.path %>"
+    }
+  }
+  </script>
+  <% } else if (page.path === 'about/index.html') { %>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "<%= config.author %>",
+    "url": "<%= config.url %>",
+    "sameAs": [
+      "https://www.linkedin.com/in/cksachdev/",
+      "https://github.com/cksachdev",
+      "https://x.com/cksachdev"
+    ],
+    "jobTitle": "eLearning Developer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Freelance"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bangalore",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
+  <% } else if (page.type === 'index' || !page.layout || page.layout === 'index') { %>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "<%= config.title %>",
+    "url": "<%= config.url %>",
+    "description": "<%= config.description %>",
+    "author": {
+      "@type": "Person",
+      "name": "<%= config.author %>"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "<%= config.url %>/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <% } %>
+
+  <!-- Icons — Font Awesome 6 Free -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
 
   <!-- Theme stylesheet -->
   <%- css('css/styles.css') %>

@@ -138,6 +138,12 @@
       var INTRO_KEY = 'cs-intro-seen';
       var intro = document.getElementById('scifi-intro');
 
+      // Skip if user prefers reduced motion
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        intro.style.display = 'none';
+        return;
+      }
+
       // Skip if already seen this session
       var seen = false;
       try { seen = sessionStorage.getItem(INTRO_KEY); } catch(e) {}
