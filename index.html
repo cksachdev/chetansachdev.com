@@ -79,6 +79,19 @@
 <link rel="stylesheet" href="css/styles.css">
 
 
+  <!-- Mermaid diagrams -->
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+    mermaid.initialize({ startOnLoad: false, theme: isDark ? 'dark' : 'default' });
+    const run = () => mermaid.run({ querySelector: '.mermaid' });
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', run);
+    } else {
+      run();
+    }
+  </script>
+
   <!-- Apply saved theme before paint to prevent flash -->
   <script>
     (function() {
