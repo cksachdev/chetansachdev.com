@@ -3,7 +3,8 @@
 <%- partial('_partial/head') %>
 <body>
 
-  <!-- Sci-fi intro overlay -->
+<% if (page.type === 'index') { %>
+  <!-- Sci-fi intro overlay — landing page only, shown once per session -->
   <div id="scifi-intro" aria-hidden="true">
     <canvas id="scifi-canvas"></canvas>
     <div id="scifi-content">
@@ -134,7 +135,18 @@
 
   <script>
     (function () {
+      var INTRO_KEY = 'cs-intro-seen';
       var intro = document.getElementById('scifi-intro');
+
+      // Skip if already seen this session
+      var seen = false;
+      try { seen = sessionStorage.getItem(INTRO_KEY); } catch(e) {}
+      if (seen) {
+        intro.style.display = 'none';
+        return;
+      }
+      try { sessionStorage.setItem(INTRO_KEY, '1'); } catch(e) {}
+
       var canvas = document.getElementById('scifi-canvas');
       var ctx = canvas.getContext('2d');
 
@@ -184,6 +196,7 @@
       setTimeout(dismiss, 10000);
     })();
   </script>
+<% } %>
 
   <%- partial('_partial/header') %>
 
