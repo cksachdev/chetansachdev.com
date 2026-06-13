@@ -1,15 +1,6 @@
-<div class="blog-post ">
-    <!-- Title -->
-    <h2 class="post-title-archive">
-        <a href="<%- config.root %><%- item.path %>">
-            <%- item.title || item.link%>
-        </a>
-    </h2>
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        <%= item.date.format(config.date_format) %>
-        <% if(item.author) { %>
-            by <%- item.author %>
-        <% } %>
-    </p>
-</div>
+<li class="archive-item">
+  <a href="<%- config.root %><%- item.path %>">
+    <span class="archive-date"><%= item.date.format('MMM DD, YYYY') %></span>
+    <span class="archive-title"><%- item.title || item.link %></span>
+  </a>
+</li>

@@ -1,18 +1,10 @@
-<div class="">
-    
-    <div class="">
-        <!-- Title -->
-        <h2 class="">
-            <a class="" href="<%- config.root %><%- item.path %>">
-                <%- item.title || item.link%>
-            </a>
-        </h2>
-       
-       
+<div class="page-container">
+  <% if (item.title) { %>
+    <div class="archive-header">
+      <h1><%- item.title %></h1>
     </div>
-    <div class=""  >
-        <%- item.content %>
-    </div>
-    <!-- Content -->
-    
+  <% } %>
+  <div class="page-content">
+    <%- item.content %>
+  </div>
 </div>

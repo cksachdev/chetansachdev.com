@@ -1,8 +1,35 @@
-  
-<%
-   var posts = [];
-   page.posts.each(function(item){ %>
-    <%- partial('_partial/article-excerpt', {item: item}) %>
-<% }); %>
+<div class="page-container">
+  <div class="posts-header">
+    <h1 class="posts-header-title">Writing</h1>
+    <div class="search-wrap">
+      <input
+        id="post-search"
+        class="search-input"
+        type="search"
+        placeholder="Search posts…"
+        aria-label="Search posts"
+      >
+    </div>
+  </div>
 
-<%#- partial('_partial/pagination') %>
+  <ul class="post-list" id="post-list">
+    <% page.posts.each(function(item){ %>
+      <%- partial('_partial/article-excerpt', {item: item}) %>
+    <% }); %>
+  </ul>
+</div>
+
+<script>
+  (function() {
+    var input = document.getElementById('post-search');
+    var items = document.querySelectorAll('#post-list .post-list-item');
+    if (!input) return;
+    input.addEventListener('input', function() {
+      var q = this.value.trim().toLowerCase();
+      items.forEach(function(item) {
+        var text = item.textContent.toLowerCase();
+        item.style.display = (!q || text.includes(q)) ? '' : 'none';
+      });
+    });
+  })();
+</script>

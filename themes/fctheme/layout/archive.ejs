@@ -1,25 +1,25 @@
-<div class="archive-container ">
-   <%# page.posts.each(function(item){ %>
-    <%#- partial('_partial/article-archive', {item: item}) %>
-    <%# }); %>
-    <%#- partial('_partial/pagination') %>
-
-    <%
+<div class="page-container">
+  <%
     var title = '';
     if (page.category) title = page.category;
     if (page.tag) title = page.tag;
-    if (page.archive){
-        if (page.year) title = page.year + (page.month ? '/' + page.month : '');
-        else title = "Archives";
+    if (page.archive) {
+      if (page.year) title = page.year + (page.month ? '/' + page.month : '');
+      else title = 'Archives';
     }
-%>
-<% if(title) { %>
-  
-    <h2 class="archive-title "><%- title %></h2>
-   
-<% } %>
-<% page.posts.each(function(item){ %>
-<%- partial('_partial/article-archive', {item: item}) %>
-<% }); %>
-<%- partial('_partial/pagination') %>
+  %>
+
+  <div class="archive-header">
+    <% if (title) { %>
+      <h1><%- title %></h1>
+    <% } %>
+  </div>
+
+  <ul class="archive-list">
+    <% page.posts.each(function(item){ %>
+      <%- partial('_partial/article-archive', {item: item}) %>
+    <% }); %>
+  </ul>
+
+  <%- partial('_partial/pagination') %>
 </div>

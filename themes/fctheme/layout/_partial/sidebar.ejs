@@ -1,77 +1,21 @@
-<aside class="sidebar ">
+<aside class="post-sidebar">
 
-  <div class="hidden menu-container" >
-    <div class="" >
-      <a href="index.html">
-        <img class="image-id " src="<%- theme.avatar %>" alt="">
+  <div class="sidebar-section">
+    <span class="sidebar-label">Connect</span>
+    <div class="sidebar-social">
+      <a href="https://twitter.com/cksachdev" target="_blank" rel="noopener">
+        <i class="fa fa-twitter" aria-hidden="true"></i> Twitter
       </a>
-      
+      <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener">
+        <i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn
+      </a>
+      <a href="https://github.com/cksachdev" target="_blank" rel="noopener">
+        <i class="fa fa-github" aria-hidden="true"></i> GitHub
+      </a>
+      <a href="mailto:<%- theme.email %>">
+        <i class="fa fa-envelope" aria-hidden="true"></i> Email
+      </a>
     </div>
-    <div class="">
-      <h1 class="sidebar-title "><%= config.title %> </h1>
-    </div>
-    
-    <a class="email " href="mailto:mail@chetansachdev.com"><%- theme.email %></a>
-  
-  
-    <div class="searchbar-container ">
-      <input id="searchbar " class="searchbar " onkeyup="search_post()" type="text" placeholder="Search">
-    </div>
-    
-    <div class="menu-bar ">
-     
-  
-      <a class="menu-item home   " id="home" onclick="hide()" href="<%- url_for(theme.menu.home.url) %>"> <i  class="fa fa-home fa-lg " aria-hidden="true"></i><%- theme.menu.home.text %> </a> 
-      <a class="menu-item home " href="<%- url_for(theme.menu.archives.url) %>"> <i class="fa fa-archive " aria-hidden="true"></i> Archives</a>
-      <a class="menu-item  " href="https://github.com/cksachdev" target="_blank"><i class="fa fa-github " aria-hidden=""></i>  Github</a>
-      <a class="menu-item home " href="http://plantyouridea.com/services/" target="_blank"> <i class="fa fa-briefcase" aria-hidden="true"></i> Services </a>
-      <a class="menu-item  " href="<%- url_for(theme.menu.about.url) %>"><i class="fa fa-info-circle " aria-hidden="true"></i> About me</a>
-      <a class="menu-item " href="<%- url_for(theme.menu.payment.url) %>"><i class="fa fa-money " aria-hidden="true"></i>Payment</a>
-  
-    </div>
-    
-  
-    
   </div>
-  <div class="social-bar  ">
-    <a class="social-site" href="https://twitter.com/cksachdev" target="_blank"><i class="fa fa-twitter fa-lg " aria-hidden="true"></i><span class="social-link ">Twitter</span></a>
-    <a class="social-site" href="https://www.linkedin.com/in/cksachdev/" target="_blank"><i class="fa fa-linkedin-square fa-lg  " aria-hidden="true"></i>
-     <span class="social-link">Linkedin</span> </a>
-    <a class="social-site" href="https://www.facebook.com/cksachdev" target="_blank"><i class="fa fa-facebook-square fa-lg  " aria-hidden="true"></i>
-      <span class="social-link">Facebook</span> </a> 
-  </div>
-  
-  <p class=" question-sction ">✉️ Questions? <a class="email-link" href="mailto:mail@chetansachdev.com">Email me</a>  (no guest posts, no "add this link", no product placement or review requests pls)
-  </p>
-  
-  
-  <p class=""><%- partial('_partial/footer') %> </p>
-  <script>
-    function search_post(){
-      let input = document.getElementById("searchbar").value
-      input = input.toLowerCase();
-      let x = document.getElementsByClassName("post-stub");
-      for (i=0; i<x.length; i++){
-        x[i].style.display = "flex";
-      }
-      if (input != '' ){
-      for (i=0; i<x.length; i++){
-         if (x[i].innerHTML.toLowerCase().includes(input)){
-           x[i].style.display = "flex";
-         }
-         else{
-           x[i].style.display = "none";
-         }
-      }
-     }
-    }
-
-    function hide(){
-      var x = document.getElementById("home");
-        x.style.visibility = "hidden"
-    }
-
-  </script>
- 
 
 </aside>

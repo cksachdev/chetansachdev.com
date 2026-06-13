@@ -1,26 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- partial('_partial/head') %>
-<body class="">
-    <div class="">
-        <h1 class=""><%- partial('_partial/header') %> </h1>
-        
-        <div class="container page-wrapper single-post-container has-sidebar ">
-            
-            <article class="post-page">
-                <%- body %>
-            </article>
-            <aside class="side-page ">
-                <%- partial('_partial/sidebar.ejs') %>
-            </aside>
-                
-            
-        </div>
-        
-    </div>
-    
-    
- 
+<body>
+
+  <%- partial('_partial/header') %>
+
+  <main class="site-main" id="main-content">
+    <%- body %>
+  </main>
+
+  <%- partial('_partial/footer') %>
+
   <script id="dsq-count-scr" src="//chetan-sachdev.disqus.com/count.js" async></script>
 </body>
 </html>
