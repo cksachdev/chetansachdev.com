@@ -69,6 +69,23 @@ Here's a simplified version of what's working in practice:
 
 **Step 7 (Human):** Final ID pass for flow, accessibility, and brand voice
 
+<div class="mermaid">
+flowchart LR
+A[ID: Objectives] --> B[AI: Outline]
+B --> C[ID: Review structure]
+C --> D[AI: Storyboard]
+D --> E[SME: Fact check]
+E --> F[AI: Regenerate]
+F --> G[ID: Final polish]
+style A fill:#1e3a5f,stroke:#4e9cff,color:#fff
+style C fill:#1e3a5f,stroke:#4e9cff,color:#fff
+style E fill:#1e3a5f,stroke:#4e9cff,color:#fff
+style G fill:#1e3a5f,stroke:#4e9cff,color:#fff
+style B fill:#1f2937,stroke:#4b5563,color:#9ca3af
+style D fill:#1f2937,stroke:#4b5563,color:#9ca3af
+style F fill:#1f2937,stroke:#4b5563,color:#9ca3af
+</div>
+
 This isn't slower than a traditional process. It's about the same speed — but the AI is doing the heavy lifting on drafting while humans are doing the work only humans can do: judgment, accuracy, and design.
 
 ## The trap most teams fall into
