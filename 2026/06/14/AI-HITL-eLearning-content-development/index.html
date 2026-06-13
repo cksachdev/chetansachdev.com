@@ -76,7 +76,7 @@
     "@type": "BlogPosting",
     "headline": "AI wrote the course. The SME hated it. Here's what actually works.",
     "datePublished": "2026-06-14T04:30:00.000Z",
-    "dateModified": "2026-06-13T20:53:36.666Z",
+    "dateModified": "2026-06-13T21:06:36.306Z",
     "author": {
       "@type": "Person",
       "name": "Chetan Sachdev",
@@ -427,20 +427,18 @@
 <p><strong>Step 6 (AI):</strong> Apply SME feedback and regenerate flagged sections</p>
 <p><strong>Step 7 (Human):</strong> Final ID pass for flow, accessibility, and brand voice</p>
 <div class="mermaid">
-flowchart LR
-A[ID: Objectives] --> B[AI: Outline]
-B --> C[ID: Review structure]
-C --> D[AI: Storyboard]
-D --> E[SME: Fact check]
-E --> F[AI: Regenerate]
-F --> G[ID: Final polish]
-style A fill:#1e3a5f,stroke:#4e9cff,color:#fff
-style C fill:#1e3a5f,stroke:#4e9cff,color:#fff
-style E fill:#1e3a5f,stroke:#4e9cff,color:#fff
-style G fill:#1e3a5f,stroke:#4e9cff,color:#fff
-style B fill:#1f2937,stroke:#4b5563,color:#9ca3af
-style D fill:#1f2937,stroke:#4b5563,color:#9ca3af
-style F fill:#1f2937,stroke:#4b5563,color:#9ca3af
+%%{init: {'themeVariables': {'fontSize': '18px', 'fontFamily': 'Inter, sans-serif'}, 'flowchart': {'nodeSpacing': 30, 'rankSpacing': 50, 'padding': 20, 'curve': 'basis'}}}%%
+flowchart TD
+A["ID — Objectives & activity map"] --> B["AI — Draft content outline"]
+B --> C["ID — Review & fix structure"]
+C --> D["AI — Generate full storyboard"]
+D --> E["SME — Fact-check accuracy"]
+E --> F["AI — Apply feedback & regenerate"]
+F --> G["ID — Final polish & accessibility"]
+classDef human fill:#1e3a5f,stroke:#4e9cff,stroke-width:2px,color:#fff
+classDef ai fill:#1f2937,stroke:#4b5563,stroke-width:2px,color:#9ca3af
+class A,C,E,G human
+class B,D,F ai
 </div>
 
 <p>This isn’t slower than a traditional process. It’s about the same speed — but the AI is doing the heavy lifting on drafting while humans are doing the work only humans can do: judgment, accuracy, and design.</p>
