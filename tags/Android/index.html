@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167238494-1"></script>
+  <!-- Google Analytics 4 — replace G-XXXXXXXXXX with your GA4 Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'UA-167238494-1');
+    gtag('config', 'G-XXXXXXXXXX');
   </script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 
   
 
   <!-- Primary Meta -->
   <meta name="description" content="chetan sachdev&#39;s personal website">
   <meta name="author" content="Chetan Sachdev">
-  <link rel="canonical" href="http://chetansachdev.com/tags/Android/index.html">
+  <link rel="canonical" href="https://chetansachdev.com/tags/Android/index.html">
 
   <!-- Open Graph (Facebook, LinkedIn) -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Chetan Sachdev">
   <meta property="og:description" content="chetan sachdev&#39;s personal website">
-  <meta property="og:url" content="http://chetansachdev.com/tags/Android/index.html">
+  <meta property="og:url" content="https://chetansachdev.com/tags/Android/index.html">
   <meta property="og:site_name" content="Chetan Sachdev">
-  <meta property="og:image" content="http://chetansachdev.com/img/og-default.png">
+  <meta property="og:image" content="https://chetansachdev.com/img/og-default.png">
   <meta property="og:locale" content="en_US">
   
 
@@ -34,11 +36,16 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Chetan Sachdev">
   <meta name="twitter:description" content="chetan sachdev&#39;s personal website">
-  <meta name="twitter:image" content="http://chetansachdev.com/img/og-default.png">
-  <meta name="twitter:site" content="@chetansachdev">
-  <meta name="twitter:creator" content="@chetansachdev">
+  <meta name="twitter:image" content="https://chetansachdev.com/img/og-default.png">
+  <meta name="twitter:site" content="@cksachdev">
+  <meta name="twitter:creator" content="@cksachdev">
+
+  <!-- RSS / Atom feed autodiscovery -->
+  <link rel="alternate" type="application/atom+xml" title="Chetan Sachdev" href="/atom.xml">
 
   <link rel="icon" href="/img/favicon.ico">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/icon-192.png">
   <title>Chetan Sachdev</title>
 
   <!-- Fonts -->
@@ -47,198 +54,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Icons -->
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0Q4LphifmFQbiakJDd+l4SQ4zD3Tg==" crossorigin="anonymous">
 
   <!-- Theme stylesheet -->
   
 <link rel="stylesheet" href="../../css/styles.css">
 
-<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="atom.xml" title="Chetan Sachdev" type="application/atom+xml">
-</head>
+
+  <!-- Apply saved theme before paint to prevent flash -->
+  <script>
+    (function() {
+      var t = null;
+      try { t = localStorage.getItem('cs-theme'); } catch(e) {}
+      document.documentElement.setAttribute('data-theme', t === 'light' ? 'light' : 'dark');
+    })();
+  </script>
+<meta name="generator" content="Hexo 5.0.2"></head>
 
 <body>
 
-  <!-- Sci-fi intro overlay -->
-  <div id="scifi-intro" aria-hidden="true">
-    <canvas id="scifi-canvas"></canvas>
-    <div id="scifi-content">
-      <div id="scifi-glitch" data-text="CHETAN SACHDEV">CHETAN SACHDEV</div>
-      <div id="scifi-sub">// initializing...</div>
-    </div>
-    <div id="scifi-dismiss">CLICK ANYWHERE TO SKIP</div>
-  </div>
 
-  <style>
-    #scifi-intro {
-      position: fixed;
-      inset: 0;
-      z-index: 99999;
-      background: #000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: opacity 0.8s ease;
-    }
-    #scifi-intro.fade-out {
-      opacity: 0;
-      pointer-events: none;
-    }
-    #scifi-canvas {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0.18;
-    }
-    #scifi-content {
-      position: relative;
-      text-align: center;
-      z-index: 2;
-    }
-    #scifi-glitch {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: clamp(2rem, 6vw, 5rem);
-      font-weight: 700;
-      color: #00ffcc;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      position: relative;
-      animation: scifi-flicker 3s infinite;
-    }
-    #scifi-glitch::before,
-    #scifi-glitch::after {
-      content: attr(data-text);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-    }
-    #scifi-glitch::before {
-      color: #ff003c;
-      animation: scifi-glitch-1 2.5s infinite;
-      clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
-    }
-    #scifi-glitch::after {
-      color: #0066ff;
-      animation: scifi-glitch-2 2.5s infinite;
-      clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
-    }
-    #scifi-sub {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: clamp(0.7rem, 2vw, 1rem);
-      color: #00ffcc88;
-      margin-top: 1.2rem;
-      letter-spacing: 0.3em;
-      animation: scifi-type 2s steps(20) forwards;
-      overflow: hidden;
-      white-space: nowrap;
-      border-right: 2px solid #00ffcc;
-    }
-    #scifi-dismiss {
-      position: absolute;
-      bottom: 2rem;
-      left: 50%;
-      transform: translateX(-50%);
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.65rem;
-      color: #ffffff33;
-      letter-spacing: 0.25em;
-      animation: scifi-pulse 2s ease-in-out infinite;
-    }
-    #scifi-timer-bar {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 2px;
-      background: linear-gradient(90deg, #00ffcc, #0066ff);
-      animation: scifi-timer 10s linear forwards;
-    }
-    @keyframes scifi-timer {
-      from { width: 100%; }
-      to   { width: 0%; }
-    }
-    @keyframes scifi-flicker {
-      0%, 95%, 100% { opacity: 1; }
-      96% { opacity: 0.4; }
-      97% { opacity: 1; }
-      98% { opacity: 0.2; }
-      99% { opacity: 1; }
-    }
-    @keyframes scifi-glitch-1 {
-      0%, 90%, 100% { transform: translate(0); opacity: 0; }
-      91% { transform: translate(-4px, 2px); opacity: 0.8; }
-      92% { transform: translate(4px, -2px); opacity: 0.8; }
-      93% { transform: translate(-2px, 0); opacity: 0; }
-    }
-    @keyframes scifi-glitch-2 {
-      0%, 87%, 100% { transform: translate(0); opacity: 0; }
-      88% { transform: translate(5px, 1px); opacity: 0.7; }
-      89% { transform: translate(-3px, -1px); opacity: 0.7; }
-      90% { transform: translate(0); opacity: 0; }
-    }
-    @keyframes scifi-type {
-      from { max-width: 0; }
-      to   { max-width: 400px; }
-    }
-    @keyframes scifi-pulse {
-      0%, 100% { opacity: 0.3; }
-      50% { opacity: 0.7; }
-    }
-  </style>
 
-  <script>
-    (function () {
-      var intro = document.getElementById('scifi-intro');
-      var canvas = document.getElementById('scifi-canvas');
-      var ctx = canvas.getContext('2d');
-
-      // Matrix rain
-      function resizeCanvas() {
-        canvas.width  = window.innerWidth;
-        canvas.height = window.innerHeight;
-      }
-      resizeCanvas();
-      window.addEventListener('resize', resizeCanvas);
-
-      var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*<>/\\|[]{}';
-      var fontSize = 14;
-      var cols, drops;
-      function initDrops() {
-        cols  = Math.floor(canvas.width / fontSize);
-        drops = Array.from({ length: cols }, function () { return Math.random() * -50 | 0; });
-      }
-      initDrops();
-
-      function drawMatrix() {
-        ctx.fillStyle = 'rgba(0,0,0,0.05)';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = '#00ffcc';
-        ctx.font = fontSize + 'px monospace';
-        drops.forEach(function (y, i) {
-          var ch = chars[Math.random() * chars.length | 0];
-          ctx.fillText(ch, i * fontSize, y * fontSize);
-          if (y * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
-          drops[i]++;
-        });
-      }
-      var raf = setInterval(drawMatrix, 40);
-
-      // Timer bar
-      var bar = document.createElement('div');
-      bar.id = 'scifi-timer-bar';
-      intro.appendChild(bar);
-
-      function dismiss() {
-        clearInterval(raf);
-        intro.classList.add('fade-out');
-        setTimeout(function () { intro.style.display = 'none'; }, 850);
-      }
-
-      intro.addEventListener('click', dismiss);
-      setTimeout(dismiss, 10000);
-    })();
-  </script>
+  <a href="#main-content" class="skip-link">Skip to content</a>
 
   <header class="site-header">
   <div class="header-inner">
@@ -345,9 +182,20 @@
   var navToggle = document.getElementById('nav-toggle');
   var mobileNav = document.getElementById('mobile-nav');
   if (navToggle && mobileNav) {
-    navToggle.addEventListener('click', function() {
+    navToggle.addEventListener('click', function(e) {
+      e.stopPropagation();
       var open = mobileNav.classList.toggle('open');
       navToggle.setAttribute('aria-expanded', String(open));
+    });
+
+    // Close mobile nav when clicking outside
+    document.addEventListener('click', function(e) {
+      if (mobileNav.classList.contains('open') &&
+          !mobileNav.contains(e.target) &&
+          !navToggle.contains(e.target)) {
+        mobileNav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
     });
   }
 
@@ -500,7 +348,7 @@
       hosted on <a href="https://github.com/cksachdev/chetansachdev.com" target="_blank" rel="noopener">GitHub Pages</a>.
     </p>
     <div class="footer-links">
-      <a href="https://twitter.com/cksachdev" target="_blank" rel="noopener"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a>
+      <a href="https://x.com/cksachdev" target="_blank" rel="noopener"><i class="fa fa-twitter" aria-hidden="true"></i> X</a>
       <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
       <a href="https://github.com/cksachdev" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
       <a href="mailto:mail@chetansachdev.com"><i class="fa fa-envelope" aria-hidden="true"></i> Email</a>

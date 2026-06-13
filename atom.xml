@@ -3,11 +3,11 @@
   <title>Chetan Sachdev</title>
   
   <subtitle>planting ideas</subtitle>
-  <link href="http://chetansachdev.com/atom.xml" rel="self"/>
+  <link href="https://chetansachdev.com/atom.xml" rel="self"/>
   
-  <link href="http://chetansachdev.com/"/>
+  <link href="https://chetansachdev.com/"/>
   <updated>2026-06-13T18:50:51.591Z</updated>
-  <id>http://chetansachdev.com/</id>
+  <id>https://chetansachdev.com/</id>
   
   <author>
     <name>Chetan Sachdev</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>How to set file permissions in WSL (Windows Subsystem for Linux)</title>
-    <link href="http://chetansachdev.com/2021/12/28/How-to-set-file-permissions-in-WSL/"/>
-    <id>http://chetansachdev.com/2021/12/28/How-to-set-file-permissions-in-WSL/</id>
+    <link href="https://chetansachdev.com/2021/12/28/How-to-set-file-permissions-in-WSL/"/>
+    <id>https://chetansachdev.com/2021/12/28/How-to-set-file-permissions-in-WSL/</id>
     <published>2021-12-27T19:40:20.000Z</published>
     <updated>2026-06-13T18:50:51.591Z</updated>
     
@@ -30,21 +30,21 @@
     
     
     
-    <category term="Development" scheme="http://chetansachdev.com/categories/Development/"/>
+    <category term="Development" scheme="https://chetansachdev.com/categories/Development/"/>
     
     
-    <category term="WSL" scheme="http://chetansachdev.com/tags/WSL/"/>
+    <category term="WSL" scheme="https://chetansachdev.com/tags/WSL/"/>
     
-    <category term="Linux" scheme="http://chetansachdev.com/tags/Linux/"/>
+    <category term="Linux" scheme="https://chetansachdev.com/tags/Linux/"/>
     
-    <category term="Windows" scheme="http://chetansachdev.com/tags/Windows/"/>
+    <category term="Windows" scheme="https://chetansachdev.com/tags/Windows/"/>
     
   </entry>
   
   <entry>
     <title>Getting started with Flutter on Apple M1</title>
-    <link href="http://chetansachdev.com/2021/05/24/Getting-started-with-flutter-on-Apple-M1/"/>
-    <id>http://chetansachdev.com/2021/05/24/Getting-started-with-flutter-on-Apple-M1/</id>
+    <link href="https://chetansachdev.com/2021/05/24/Getting-started-with-flutter-on-Apple-M1/"/>
+    <id>https://chetansachdev.com/2021/05/24/Getting-started-with-flutter-on-Apple-M1/</id>
     <published>2021-05-24T08:59:26.000Z</published>
     <updated>2026-06-13T18:49:58.114Z</updated>
     
@@ -55,46 +55,21 @@
     
     
     
-    <category term="Development" scheme="http://chetansachdev.com/categories/Development/"/>
+    <category term="Development" scheme="https://chetansachdev.com/categories/Development/"/>
     
     
-    <category term="Apple Silicon" scheme="http://chetansachdev.com/tags/Apple-Silicon/"/>
+    <category term="Apple Silicon" scheme="https://chetansachdev.com/tags/Apple-Silicon/"/>
     
-    <category term="Flutter" scheme="http://chetansachdev.com/tags/Flutter/"/>
+    <category term="Flutter" scheme="https://chetansachdev.com/tags/Flutter/"/>
     
-    <category term="Android" scheme="http://chetansachdev.com/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Making Logi Capture work on macOS Catalina and Mojave</title>
-    <link href="http://chetansachdev.com/2021/03/05/post/"/>
-    <id>http://chetansachdev.com/2021/03/05/post/</id>
-    <published>2021-03-05T05:33:48.000Z</published>
-    <updated>2026-06-13T18:55:39.984Z</updated>
-    
-    <content type="html"><![CDATA[<p>Logi Capture stopped working for many users on macOS Catalina and Mojave after newer versions dropped support. The fix is to install version 2.0.200 specifically, which prompts for the required permissions correctly.</p><h2 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h2><p><strong>Step 1: Uninstall the current version of Logi Capture</strong></p><p>Remove it from your Applications folder before installing the older version.</p><p><strong>Step 2: Download version 2.0.200</strong></p><p>Direct download link:<br><a href="https://download01.logi.com/web/ftp/pub/techsupport/capture/Capture_2.0.200.zip">Capture_2.0.200.zip</a></p><p>Alternatively, find it on the <a href="https://support.logi.com/hc/en-us/articles/360025141614">Logitech support page</a>.</p><p><strong>Step 3: Install and launch</strong></p><p>Install the downloaded version. When you launch it, it will prompt for the necessary permissions (Camera, Microphone, Screen Recording). Grant them.</p><p>Logi Capture should now work normally on Catalina or Mojave.</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://www.reddit.com/r/MacOS/comments/ijzp9f/logitech_web_cam_owners_logi_capture_software_not/">Reddit thread: Logitech webcam owners — Logi Capture software not working</a></p>]]></content>
-    
-    
-    <summary type="html">How to fix Logi Capture (Logitech webcam software) not working on macOS Catalina and Mojave by downgrading to version 2.0.200.</summary>
-    
-    
-    
-    <category term="Computers" scheme="http://chetansachdev.com/categories/Computers/"/>
-    
-    
-    <category term="macOS" scheme="http://chetansachdev.com/tags/macOS/"/>
-    
-    <category term="Logitech" scheme="http://chetansachdev.com/tags/Logitech/"/>
-    
-    <category term="Webcam" scheme="http://chetansachdev.com/tags/Webcam/"/>
+    <category term="Android" scheme="https://chetansachdev.com/tags/Android/"/>
     
   </entry>
   
   <entry>
     <title>Transparent whiteboard in Microsoft Teams or Zoom using OBS</title>
-    <link href="http://chetansachdev.com/2021/03/01/Transparent-Whiteboard-in-Teams-or-Zoom-with-OBS/"/>
-    <id>http://chetansachdev.com/2021/03/01/Transparent-Whiteboard-in-Teams-or-Zoom-with-OBS/</id>
+    <link href="https://chetansachdev.com/2021/03/01/Transparent-Whiteboard-in-Teams-or-Zoom-with-OBS/"/>
+    <id>https://chetansachdev.com/2021/03/01/Transparent-Whiteboard-in-Teams-or-Zoom-with-OBS/</id>
     <published>2021-03-01T18:13:57.000Z</published>
     <updated>2026-06-13T19:12:11.117Z</updated>
     
@@ -105,23 +80,23 @@
     
     
     
-    <category term="Productivity" scheme="http://chetansachdev.com/categories/Productivity/"/>
+    <category term="Productivity" scheme="https://chetansachdev.com/categories/Productivity/"/>
     
     
-    <category term="OBS" scheme="http://chetansachdev.com/tags/OBS/"/>
+    <category term="OBS" scheme="https://chetansachdev.com/tags/OBS/"/>
     
-    <category term="Zoom" scheme="http://chetansachdev.com/tags/Zoom/"/>
+    <category term="Zoom" scheme="https://chetansachdev.com/tags/Zoom/"/>
     
-    <category term="Microsoft Teams" scheme="http://chetansachdev.com/tags/Microsoft-Teams/"/>
+    <category term="Microsoft Teams" scheme="https://chetansachdev.com/tags/Microsoft-Teams/"/>
     
-    <category term="Teaching" scheme="http://chetansachdev.com/tags/Teaching/"/>
+    <category term="Teaching" scheme="https://chetansachdev.com/tags/Teaching/"/>
     
   </entry>
   
   <entry>
     <title>Shortcuts to pause and resume recording in QuickTime</title>
-    <link href="http://chetansachdev.com/2021/02/23/Shortcuts-to-Pause-Resume-recording-in-QuickTime/"/>
-    <id>http://chetansachdev.com/2021/02/23/Shortcuts-to-Pause-Resume-recording-in-QuickTime/</id>
+    <link href="https://chetansachdev.com/2021/02/23/Shortcuts-to-Pause-Resume-recording-in-QuickTime/"/>
+    <id>https://chetansachdev.com/2021/02/23/Shortcuts-to-Pause-Resume-recording-in-QuickTime/</id>
     <published>2021-02-23T10:56:02.000Z</published>
     <updated>2026-06-13T19:12:00.776Z</updated>
     
@@ -132,21 +107,21 @@
     
     
     
-    <category term="Computers" scheme="http://chetansachdev.com/categories/Computers/"/>
+    <category term="Computers" scheme="https://chetansachdev.com/categories/Computers/"/>
     
     
-    <category term="macOS" scheme="http://chetansachdev.com/tags/macOS/"/>
+    <category term="macOS" scheme="https://chetansachdev.com/tags/macOS/"/>
     
-    <category term="Productivity" scheme="http://chetansachdev.com/tags/Productivity/"/>
+    <category term="Productivity" scheme="https://chetansachdev.com/tags/Productivity/"/>
     
-    <category term="QuickTime" scheme="http://chetansachdev.com/tags/QuickTime/"/>
+    <category term="QuickTime" scheme="https://chetansachdev.com/tags/QuickTime/"/>
     
   </entry>
   
   <entry>
     <title>Batch photos to PowerPoint slideshow in macOS</title>
-    <link href="http://chetansachdev.com/2021/02/16/Batch-photos-to-powerpoint-slideshow-in-macOS/"/>
-    <id>http://chetansachdev.com/2021/02/16/Batch-photos-to-powerpoint-slideshow-in-macOS/</id>
+    <link href="https://chetansachdev.com/2021/02/16/Batch-photos-to-powerpoint-slideshow-in-macOS/"/>
+    <id>https://chetansachdev.com/2021/02/16/Batch-photos-to-powerpoint-slideshow-in-macOS/</id>
     <published>2021-02-15T18:59:22.000Z</published>
     <updated>2026-06-13T19:11:53.813Z</updated>
     
@@ -157,21 +132,21 @@
     
     
     
-    <category term="Productivity" scheme="http://chetansachdev.com/categories/Productivity/"/>
+    <category term="Productivity" scheme="https://chetansachdev.com/categories/Productivity/"/>
     
     
-    <category term="macOS" scheme="http://chetansachdev.com/tags/macOS/"/>
+    <category term="macOS" scheme="https://chetansachdev.com/tags/macOS/"/>
     
-    <category term="PowerPoint" scheme="http://chetansachdev.com/tags/PowerPoint/"/>
+    <category term="PowerPoint" scheme="https://chetansachdev.com/tags/PowerPoint/"/>
     
-    <category term="Automator" scheme="http://chetansachdev.com/tags/Automator/"/>
+    <category term="Automator" scheme="https://chetansachdev.com/tags/Automator/"/>
     
   </entry>
   
   <entry>
     <title>Day 1 with MacBook Air - Apple Silicon (M1)</title>
-    <link href="http://chetansachdev.com/2021/02/08/Day-1-with-Macbook-Air-Apple-Silicon/"/>
-    <id>http://chetansachdev.com/2021/02/08/Day-1-with-Macbook-Air-Apple-Silicon/</id>
+    <link href="https://chetansachdev.com/2021/02/08/Day-1-with-Macbook-Air-Apple-Silicon/"/>
+    <id>https://chetansachdev.com/2021/02/08/Day-1-with-Macbook-Air-Apple-Silicon/</id>
     <published>2021-02-07T20:31:36.000Z</published>
     <updated>2026-06-13T18:49:34.967Z</updated>
     
@@ -182,21 +157,21 @@
     
     
     
-    <category term="Computers" scheme="http://chetansachdev.com/categories/Computers/"/>
+    <category term="Computers" scheme="https://chetansachdev.com/categories/Computers/"/>
     
     
-    <category term="macOS" scheme="http://chetansachdev.com/tags/macOS/"/>
+    <category term="macOS" scheme="https://chetansachdev.com/tags/macOS/"/>
     
-    <category term="Apple Silicon" scheme="http://chetansachdev.com/tags/Apple-Silicon/"/>
+    <category term="Apple Silicon" scheme="https://chetansachdev.com/tags/Apple-Silicon/"/>
     
-    <category term="Node.js" scheme="http://chetansachdev.com/tags/Node-js/"/>
+    <category term="Node.js" scheme="https://chetansachdev.com/tags/Node-js/"/>
     
   </entry>
   
   <entry>
     <title>How to write test cases in Manual testing</title>
-    <link href="http://chetansachdev.com/2021/01/22/How-to-write-test-cases-in-Manual-testing/"/>
-    <id>http://chetansachdev.com/2021/01/22/How-to-write-test-cases-in-Manual-testing/</id>
+    <link href="https://chetansachdev.com/2021/01/22/How-to-write-test-cases-in-Manual-testing/"/>
+    <id>https://chetansachdev.com/2021/01/22/How-to-write-test-cases-in-Manual-testing/</id>
     <published>2021-01-22T05:50:27.000Z</published>
     <updated>2026-06-13T19:12:03.790Z</updated>
     
@@ -207,19 +182,19 @@
     
     
     
-    <category term="Development" scheme="http://chetansachdev.com/categories/Development/"/>
+    <category term="Development" scheme="https://chetansachdev.com/categories/Development/"/>
     
     
-    <category term="Testing" scheme="http://chetansachdev.com/tags/Testing/"/>
+    <category term="Testing" scheme="https://chetansachdev.com/tags/Testing/"/>
     
-    <category term="QA" scheme="http://chetansachdev.com/tags/QA/"/>
+    <category term="QA" scheme="https://chetansachdev.com/tags/QA/"/>
     
   </entry>
   
   <entry>
     <title>Getting started with xAPI (Tin Can API)</title>
-    <link href="http://chetansachdev.com/2021/01/02/XAPI/"/>
-    <id>http://chetansachdev.com/2021/01/02/XAPI/</id>
+    <link href="https://chetansachdev.com/2021/01/02/XAPI/"/>
+    <id>https://chetansachdev.com/2021/01/02/XAPI/</id>
     <published>2021-01-01T20:31:26.000Z</published>
     <updated>2026-06-13T18:55:15.126Z</updated>
     
@@ -230,21 +205,21 @@
     
     
     
-    <category term="Development" scheme="http://chetansachdev.com/categories/Development/"/>
+    <category term="Development" scheme="https://chetansachdev.com/categories/Development/"/>
     
     
-    <category term="JavaScript" scheme="http://chetansachdev.com/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="https://chetansachdev.com/tags/JavaScript/"/>
     
-    <category term="xAPI" scheme="http://chetansachdev.com/tags/xAPI/"/>
+    <category term="xAPI" scheme="https://chetansachdev.com/tags/xAPI/"/>
     
-    <category term="eLearning" scheme="http://chetansachdev.com/tags/eLearning/"/>
+    <category term="eLearning" scheme="https://chetansachdev.com/tags/eLearning/"/>
     
   </entry>
   
   <entry>
     <title>Lodash - quick experiments in Chrome DevTools</title>
-    <link href="http://chetansachdev.com/2021/01/02/Lodash-quick-experiments-in-Chrome/"/>
-    <id>http://chetansachdev.com/2021/01/02/Lodash-quick-experiments-in-Chrome/</id>
+    <link href="https://chetansachdev.com/2021/01/02/Lodash-quick-experiments-in-Chrome/"/>
+    <id>https://chetansachdev.com/2021/01/02/Lodash-quick-experiments-in-Chrome/</id>
     <published>2021-01-01T19:37:30.000Z</published>
     <updated>2026-06-13T18:51:29.059Z</updated>
     
@@ -255,21 +230,21 @@
     
     
     
-    <category term="Development" scheme="http://chetansachdev.com/categories/Development/"/>
+    <category term="Development" scheme="https://chetansachdev.com/categories/Development/"/>
     
     
-    <category term="JavaScript" scheme="http://chetansachdev.com/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="https://chetansachdev.com/tags/JavaScript/"/>
     
-    <category term="Lodash" scheme="http://chetansachdev.com/tags/Lodash/"/>
+    <category term="Lodash" scheme="https://chetansachdev.com/tags/Lodash/"/>
     
-    <category term="Chrome" scheme="http://chetansachdev.com/tags/Chrome/"/>
+    <category term="Chrome" scheme="https://chetansachdev.com/tags/Chrome/"/>
     
   </entry>
   
   <entry>
     <title>Installing an SSL certificate for Adapt Authoring</title>
-    <link href="http://chetansachdev.com/2020/12/11/Installing-SSL-certificate-for-Adapt-Authoring/"/>
-    <id>http://chetansachdev.com/2020/12/11/Installing-SSL-certificate-for-Adapt-Authoring/</id>
+    <link href="https://chetansachdev.com/2020/12/11/Installing-SSL-certificate-for-Adapt-Authoring/"/>
+    <id>https://chetansachdev.com/2020/12/11/Installing-SSL-certificate-for-Adapt-Authoring/</id>
     <published>2020-12-10T18:45:23.000Z</published>
     <updated>2026-06-13T18:51:18.272Z</updated>
     
@@ -280,23 +255,23 @@
     
     
     
-    <category term="DevOps" scheme="http://chetansachdev.com/categories/DevOps/"/>
+    <category term="DevOps" scheme="https://chetansachdev.com/categories/DevOps/"/>
     
     
-    <category term="Adapt" scheme="http://chetansachdev.com/tags/Adapt/"/>
+    <category term="Adapt" scheme="https://chetansachdev.com/tags/Adapt/"/>
     
-    <category term="AWS" scheme="http://chetansachdev.com/tags/AWS/"/>
+    <category term="AWS" scheme="https://chetansachdev.com/tags/AWS/"/>
     
-    <category term="SSL" scheme="http://chetansachdev.com/tags/SSL/"/>
+    <category term="SSL" scheme="https://chetansachdev.com/tags/SSL/"/>
     
-    <category term="NGINX" scheme="http://chetansachdev.com/tags/NGINX/"/>
+    <category term="NGINX" scheme="https://chetansachdev.com/tags/NGINX/"/>
     
   </entry>
   
   <entry>
     <title>Solved: MAMP + Moodle on macOS Catalina</title>
-    <link href="http://chetansachdev.com/2020/08/30/Solved-MAMP-in-macOS-Catalina-for-Moodle-dev/"/>
-    <id>http://chetansachdev.com/2020/08/30/Solved-MAMP-in-macOS-Catalina-for-Moodle-dev/</id>
+    <link href="https://chetansachdev.com/2020/08/30/Solved-MAMP-in-macOS-Catalina-for-Moodle-dev/"/>
+    <id>https://chetansachdev.com/2020/08/30/Solved-MAMP-in-macOS-Catalina-for-Moodle-dev/</id>
     <published>2020-08-30T09:32:14.000Z</published>
     <updated>2026-06-13T18:53:21.993Z</updated>
     
@@ -307,23 +282,23 @@
     
     
     
-    <category term="Development" scheme="http://chetansachdev.com/categories/Development/"/>
+    <category term="Development" scheme="https://chetansachdev.com/categories/Development/"/>
     
     
-    <category term="macOS" scheme="http://chetansachdev.com/tags/macOS/"/>
+    <category term="macOS" scheme="https://chetansachdev.com/tags/macOS/"/>
     
-    <category term="Moodle" scheme="http://chetansachdev.com/tags/Moodle/"/>
+    <category term="Moodle" scheme="https://chetansachdev.com/tags/Moodle/"/>
     
-    <category term="MAMP" scheme="http://chetansachdev.com/tags/MAMP/"/>
+    <category term="MAMP" scheme="https://chetansachdev.com/tags/MAMP/"/>
     
-    <category term="PHP" scheme="http://chetansachdev.com/tags/PHP/"/>
+    <category term="PHP" scheme="https://chetansachdev.com/tags/PHP/"/>
     
   </entry>
   
   <entry>
     <title>Fix: MacBook Pro 2010 crashing after macOS upgrade</title>
-    <link href="http://chetansachdev.com/2020/08/13/Fix-MacBookPro-2010-crashing-after-macOS-upgrade/"/>
-    <id>http://chetansachdev.com/2020/08/13/Fix-MacBookPro-2010-crashing-after-macOS-upgrade/</id>
+    <link href="https://chetansachdev.com/2020/08/13/Fix-MacBookPro-2010-crashing-after-macOS-upgrade/"/>
+    <id>https://chetansachdev.com/2020/08/13/Fix-MacBookPro-2010-crashing-after-macOS-upgrade/</id>
     <published>2020-08-13T10:48:48.000Z</published>
     <updated>2026-06-13T18:49:42.700Z</updated>
     
@@ -334,19 +309,19 @@
     
     
     
-    <category term="Computers" scheme="http://chetansachdev.com/categories/Computers/"/>
+    <category term="Computers" scheme="https://chetansachdev.com/categories/Computers/"/>
     
     
-    <category term="macOS" scheme="http://chetansachdev.com/tags/macOS/"/>
+    <category term="macOS" scheme="https://chetansachdev.com/tags/macOS/"/>
     
-    <category term="Computers" scheme="http://chetansachdev.com/tags/Computers/"/>
+    <category term="Computers" scheme="https://chetansachdev.com/tags/Computers/"/>
     
   </entry>
   
   <entry>
     <title>How to solve &quot;Permission denied (publickey)&quot; error in Git</title>
-    <link href="http://chetansachdev.com/2020/06/30/How-to-solve-permission-denied-public-key-error/"/>
-    <id>http://chetansachdev.com/2020/06/30/How-to-solve-permission-denied-public-key-error/</id>
+    <link href="https://chetansachdev.com/2020/06/30/How-to-solve-permission-denied-public-key-error/"/>
+    <id>https://chetansachdev.com/2020/06/30/How-to-solve-permission-denied-public-key-error/</id>
     <published>2020-06-30T17:18:59.000Z</published>
     <updated>2026-06-13T18:51:01.405Z</updated>
     
@@ -357,19 +332,19 @@
     
     
     
-    <category term="Development" scheme="http://chetansachdev.com/categories/Development/"/>
+    <category term="Development" scheme="https://chetansachdev.com/categories/Development/"/>
     
     
-    <category term="Git" scheme="http://chetansachdev.com/tags/Git/"/>
+    <category term="Git" scheme="https://chetansachdev.com/tags/Git/"/>
     
-    <category term="SSH" scheme="http://chetansachdev.com/tags/SSH/"/>
+    <category term="SSH" scheme="https://chetansachdev.com/tags/SSH/"/>
     
   </entry>
   
   <entry>
     <title>Add the same file to multiple folders in Google Drive</title>
-    <link href="http://chetansachdev.com/2020/06/13/Same-File-to-Multiple-Folders-in-Google-Drive/"/>
-    <id>http://chetansachdev.com/2020/06/13/Same-File-to-Multiple-Folders-in-Google-Drive/</id>
+    <link href="https://chetansachdev.com/2020/06/13/Same-File-to-Multiple-Folders-in-Google-Drive/"/>
+    <id>https://chetansachdev.com/2020/06/13/Same-File-to-Multiple-Folders-in-Google-Drive/</id>
     <published>2020-06-13T09:58:40.000Z</published>
     <updated>2026-06-13T19:11:57.440Z</updated>
     
@@ -380,19 +355,19 @@
     
     
     
-    <category term="Productivity" scheme="http://chetansachdev.com/categories/Productivity/"/>
+    <category term="Productivity" scheme="https://chetansachdev.com/categories/Productivity/"/>
     
     
-    <category term="Google Drive" scheme="http://chetansachdev.com/tags/Google-Drive/"/>
+    <category term="Google Drive" scheme="https://chetansachdev.com/tags/Google-Drive/"/>
     
-    <category term="Productivity" scheme="http://chetansachdev.com/tags/Productivity/"/>
+    <category term="Productivity" scheme="https://chetansachdev.com/tags/Productivity/"/>
     
   </entry>
   
   <entry>
     <title>Upgrade MacBook Pro Late 2013 to a 1 TB NVMe M.2 SSD</title>
-    <link href="http://chetansachdev.com/2020/06/05/Upgrade-Macbook-Pro-Late-2013-1-TB-NVMe-M-2-SSD/"/>
-    <id>http://chetansachdev.com/2020/06/05/Upgrade-Macbook-Pro-Late-2013-1-TB-NVMe-M-2-SSD/</id>
+    <link href="https://chetansachdev.com/2020/06/05/Upgrade-Macbook-Pro-Late-2013-1-TB-NVMe-M-2-SSD/"/>
+    <id>https://chetansachdev.com/2020/06/05/Upgrade-Macbook-Pro-Late-2013-1-TB-NVMe-M-2-SSD/</id>
     <published>2020-06-05T17:14:01.000Z</published>
     <updated>2026-06-13T19:12:07.735Z</updated>
     
@@ -403,21 +378,21 @@
     
     
     
-    <category term="Computers" scheme="http://chetansachdev.com/categories/Computers/"/>
+    <category term="Computers" scheme="https://chetansachdev.com/categories/Computers/"/>
     
     
-    <category term="macOS" scheme="http://chetansachdev.com/tags/macOS/"/>
+    <category term="macOS" scheme="https://chetansachdev.com/tags/macOS/"/>
     
-    <category term="Computers" scheme="http://chetansachdev.com/tags/Computers/"/>
+    <category term="Computers" scheme="https://chetansachdev.com/tags/Computers/"/>
     
-    <category term="Hardware" scheme="http://chetansachdev.com/tags/Hardware/"/>
+    <category term="Hardware" scheme="https://chetansachdev.com/tags/Hardware/"/>
     
   </entry>
   
   <entry>
     <title>Sync MongoDB data from production to dev machine via SSH</title>
-    <link href="http://chetansachdev.com/2020/06/04/Sync-Mongo-data-from-prod-to-dev-machine-via-ssh/"/>
-    <id>http://chetansachdev.com/2020/06/04/Sync-Mongo-data-from-prod-to-dev-machine-via-ssh/</id>
+    <link href="https://chetansachdev.com/2020/06/04/Sync-Mongo-data-from-prod-to-dev-machine-via-ssh/"/>
+    <id>https://chetansachdev.com/2020/06/04/Sync-Mongo-data-from-prod-to-dev-machine-via-ssh/</id>
     <published>2020-06-04T09:10:32.000Z</published>
     <updated>2026-06-13T18:53:32.929Z</updated>
     
@@ -428,23 +403,23 @@
     
     
     
-    <category term="Development" scheme="http://chetansachdev.com/categories/Development/"/>
+    <category term="Development" scheme="https://chetansachdev.com/categories/Development/"/>
     
     
-    <category term="AWS" scheme="http://chetansachdev.com/tags/AWS/"/>
+    <category term="AWS" scheme="https://chetansachdev.com/tags/AWS/"/>
     
-    <category term="SSH" scheme="http://chetansachdev.com/tags/SSH/"/>
+    <category term="SSH" scheme="https://chetansachdev.com/tags/SSH/"/>
     
-    <category term="MongoDB" scheme="http://chetansachdev.com/tags/MongoDB/"/>
+    <category term="MongoDB" scheme="https://chetansachdev.com/tags/MongoDB/"/>
     
-    <category term="Database" scheme="http://chetansachdev.com/tags/Database/"/>
+    <category term="Database" scheme="https://chetansachdev.com/tags/Database/"/>
     
   </entry>
   
   <entry>
     <title>How to mount a Thunderbolt Display on a VESA stand</title>
-    <link href="http://chetansachdev.com/2020/05/26/How-to-mount-Thunderbolt-display-on-a-VESA-stand/"/>
-    <id>http://chetansachdev.com/2020/05/26/How-to-mount-Thunderbolt-display-on-a-VESA-stand/</id>
+    <link href="https://chetansachdev.com/2020/05/26/How-to-mount-Thunderbolt-display-on-a-VESA-stand/"/>
+    <id>https://chetansachdev.com/2020/05/26/How-to-mount-Thunderbolt-display-on-a-VESA-stand/</id>
     <published>2020-05-25T20:00:51.000Z</published>
     <updated>2026-06-13T19:11:49.506Z</updated>
     
@@ -455,19 +430,19 @@
     
     
     
-    <category term="Computers" scheme="http://chetansachdev.com/categories/Computers/"/>
+    <category term="Computers" scheme="https://chetansachdev.com/categories/Computers/"/>
     
     
-    <category term="Computers" scheme="http://chetansachdev.com/tags/Computers/"/>
+    <category term="Computers" scheme="https://chetansachdev.com/tags/Computers/"/>
     
-    <category term="Apple" scheme="http://chetansachdev.com/tags/Apple/"/>
+    <category term="Apple" scheme="https://chetansachdev.com/tags/Apple/"/>
     
   </entry>
   
   <entry>
     <title>Fix: postgres command not found in the PATH</title>
-    <link href="http://chetansachdev.com/2020/05/10/When-Postgres-command-not-found-in-the-PATH/"/>
-    <id>http://chetansachdev.com/2020/05/10/When-Postgres-command-not-found-in-the-PATH/</id>
+    <link href="https://chetansachdev.com/2020/05/10/When-Postgres-command-not-found-in-the-PATH/"/>
+    <id>https://chetansachdev.com/2020/05/10/When-Postgres-command-not-found-in-the-PATH/</id>
     <published>2020-05-10T17:05:47.000Z</published>
     <updated>2026-06-13T18:55:01.835Z</updated>
     
@@ -478,21 +453,21 @@
     
     
     
-    <category term="Development" scheme="http://chetansachdev.com/categories/Development/"/>
+    <category term="Development" scheme="https://chetansachdev.com/categories/Development/"/>
     
     
-    <category term="macOS" scheme="http://chetansachdev.com/tags/macOS/"/>
+    <category term="macOS" scheme="https://chetansachdev.com/tags/macOS/"/>
     
-    <category term="Database" scheme="http://chetansachdev.com/tags/Database/"/>
+    <category term="Database" scheme="https://chetansachdev.com/tags/Database/"/>
     
-    <category term="PostgreSQL" scheme="http://chetansachdev.com/tags/PostgreSQL/"/>
+    <category term="PostgreSQL" scheme="https://chetansachdev.com/tags/PostgreSQL/"/>
     
   </entry>
   
   <entry>
     <title>Fix: The data directory contains an old postmaster.pid</title>
-    <link href="http://chetansachdev.com/2020/05/10/The-data-directory-contains-an-old-postmaster-pid/"/>
-    <id>http://chetansachdev.com/2020/05/10/The-data-directory-contains-an-old-postmaster-pid/</id>
+    <link href="https://chetansachdev.com/2020/05/10/The-data-directory-contains-an-old-postmaster-pid/"/>
+    <id>https://chetansachdev.com/2020/05/10/The-data-directory-contains-an-old-postmaster-pid/</id>
     <published>2020-05-10T17:04:17.000Z</published>
     <updated>2026-06-13T18:53:41.356Z</updated>
     
@@ -503,21 +478,21 @@
     
     
     
-    <category term="Development" scheme="http://chetansachdev.com/categories/Development/"/>
+    <category term="Development" scheme="https://chetansachdev.com/categories/Development/"/>
     
     
-    <category term="macOS" scheme="http://chetansachdev.com/tags/macOS/"/>
+    <category term="macOS" scheme="https://chetansachdev.com/tags/macOS/"/>
     
-    <category term="Database" scheme="http://chetansachdev.com/tags/Database/"/>
+    <category term="Database" scheme="https://chetansachdev.com/tags/Database/"/>
     
-    <category term="PostgreSQL" scheme="http://chetansachdev.com/tags/PostgreSQL/"/>
+    <category term="PostgreSQL" scheme="https://chetansachdev.com/tags/PostgreSQL/"/>
     
   </entry>
   
   <entry>
     <title>Backup and restore an Adapt Authoring instance</title>
-    <link href="http://chetansachdev.com/2020/05/10/Backup-and-restore-an-adapt-authoring-instance/"/>
-    <id>http://chetansachdev.com/2020/05/10/Backup-and-restore-an-adapt-authoring-instance/</id>
+    <link href="https://chetansachdev.com/2020/05/10/Backup-and-restore-an-adapt-authoring-instance/"/>
+    <id>https://chetansachdev.com/2020/05/10/Backup-and-restore-an-adapt-authoring-instance/</id>
     <published>2020-05-10T17:00:47.000Z</published>
     <updated>2026-06-13T18:49:03.072Z</updated>
     
@@ -528,21 +503,21 @@
     
     
     
-    <category term="Development" scheme="http://chetansachdev.com/categories/Development/"/>
+    <category term="Development" scheme="https://chetansachdev.com/categories/Development/"/>
     
     
-    <category term="Adapt" scheme="http://chetansachdev.com/tags/Adapt/"/>
+    <category term="Adapt" scheme="https://chetansachdev.com/tags/Adapt/"/>
     
-    <category term="AWS" scheme="http://chetansachdev.com/tags/AWS/"/>
+    <category term="AWS" scheme="https://chetansachdev.com/tags/AWS/"/>
     
-    <category term="DevOps" scheme="http://chetansachdev.com/tags/DevOps/"/>
+    <category term="DevOps" scheme="https://chetansachdev.com/tags/DevOps/"/>
     
   </entry>
   
   <entry>
     <title>Running a production Node.js app on port 80 on AWS</title>
-    <link href="http://chetansachdev.com/2020/05/10/Running-production-node-on-port-80-on-AWS/"/>
-    <id>http://chetansachdev.com/2020/05/10/Running-production-node-on-port-80-on-AWS/</id>
+    <link href="https://chetansachdev.com/2020/05/10/Running-production-node-on-port-80-on-AWS/"/>
+    <id>https://chetansachdev.com/2020/05/10/Running-production-node-on-port-80-on-AWS/</id>
     <published>2020-05-10T16:54:13.000Z</published>
     <updated>2026-06-13T18:52:53.470Z</updated>
     
@@ -553,21 +528,21 @@
     
     
     
-    <category term="DevOps" scheme="http://chetansachdev.com/categories/DevOps/"/>
+    <category term="DevOps" scheme="https://chetansachdev.com/categories/DevOps/"/>
     
     
-    <category term="AWS" scheme="http://chetansachdev.com/tags/AWS/"/>
+    <category term="AWS" scheme="https://chetansachdev.com/tags/AWS/"/>
     
-    <category term="Node.js" scheme="http://chetansachdev.com/tags/Node-js/"/>
+    <category term="Node.js" scheme="https://chetansachdev.com/tags/Node-js/"/>
     
-    <category term="Linux" scheme="http://chetansachdev.com/tags/Linux/"/>
+    <category term="Linux" scheme="https://chetansachdev.com/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>My preferred settings on a new Mac</title>
-    <link href="http://chetansachdev.com/2020/03/14/My-preferred-settings-on-a-new-mac/"/>
-    <id>http://chetansachdev.com/2020/03/14/My-preferred-settings-on-a-new-mac/</id>
+    <link href="https://chetansachdev.com/2020/03/14/My-preferred-settings-on-a-new-mac/"/>
+    <id>https://chetansachdev.com/2020/03/14/My-preferred-settings-on-a-new-mac/</id>
     <published>2020-03-14T13:00:02.000Z</published>
     <updated>2026-06-13T19:12:21.273Z</updated>
     
@@ -578,19 +553,19 @@
     
     
     
-    <category term="Computers" scheme="http://chetansachdev.com/categories/Computers/"/>
+    <category term="Computers" scheme="https://chetansachdev.com/categories/Computers/"/>
     
     
-    <category term="macOS" scheme="http://chetansachdev.com/tags/macOS/"/>
+    <category term="macOS" scheme="https://chetansachdev.com/tags/macOS/"/>
     
-    <category term="Setup" scheme="http://chetansachdev.com/tags/Setup/"/>
+    <category term="Setup" scheme="https://chetansachdev.com/tags/Setup/"/>
     
   </entry>
   
   <entry>
     <title>Wix SSL certificate won&#39;t work for an externally hosted site</title>
-    <link href="http://chetansachdev.com/2020/03/13/wix-certificate-won-t-work-for-externally-hosted/"/>
-    <id>http://chetansachdev.com/2020/03/13/wix-certificate-won-t-work-for-externally-hosted/</id>
+    <link href="https://chetansachdev.com/2020/03/13/wix-certificate-won-t-work-for-externally-hosted/"/>
+    <id>https://chetansachdev.com/2020/03/13/wix-certificate-won-t-work-for-externally-hosted/</id>
     <published>2020-03-13T06:42:32.000Z</published>
     <updated>2026-06-13T18:55:52.134Z</updated>
     
@@ -601,21 +576,21 @@
     
     
     
-    <category term="DevOps" scheme="http://chetansachdev.com/categories/DevOps/"/>
+    <category term="DevOps" scheme="https://chetansachdev.com/categories/DevOps/"/>
     
     
-    <category term="AWS" scheme="http://chetansachdev.com/tags/AWS/"/>
+    <category term="AWS" scheme="https://chetansachdev.com/tags/AWS/"/>
     
-    <category term="SSL" scheme="http://chetansachdev.com/tags/SSL/"/>
+    <category term="SSL" scheme="https://chetansachdev.com/tags/SSL/"/>
     
-    <category term="Wix" scheme="http://chetansachdev.com/tags/Wix/"/>
+    <category term="Wix" scheme="https://chetansachdev.com/tags/Wix/"/>
     
   </entry>
   
   <entry>
     <title>Migrating data from one MacBook to another</title>
-    <link href="http://chetansachdev.com/2020/03/13/Migrating-data-from-one-macbook-to-another-macbook/"/>
-    <id>http://chetansachdev.com/2020/03/13/Migrating-data-from-one-macbook-to-another-macbook/</id>
+    <link href="https://chetansachdev.com/2020/03/13/Migrating-data-from-one-macbook-to-another-macbook/"/>
+    <id>https://chetansachdev.com/2020/03/13/Migrating-data-from-one-macbook-to-another-macbook/</id>
     <published>2020-03-13T06:34:57.000Z</published>
     <updated>2026-06-13T18:51:53.805Z</updated>
     
@@ -626,19 +601,19 @@
     
     
     
-    <category term="Computers" scheme="http://chetansachdev.com/categories/Computers/"/>
+    <category term="Computers" scheme="https://chetansachdev.com/categories/Computers/"/>
     
     
-    <category term="macOS" scheme="http://chetansachdev.com/tags/macOS/"/>
+    <category term="macOS" scheme="https://chetansachdev.com/tags/macOS/"/>
     
-    <category term="Computers" scheme="http://chetansachdev.com/tags/Computers/"/>
+    <category term="Computers" scheme="https://chetansachdev.com/tags/Computers/"/>
     
   </entry>
   
   <entry>
     <title>Understanding JavaScript closures and scope</title>
-    <link href="http://chetansachdev.com/2020/03/03/Understanding-javascript-better/"/>
-    <id>http://chetansachdev.com/2020/03/03/Understanding-javascript-better/</id>
+    <link href="https://chetansachdev.com/2020/03/03/Understanding-javascript-better/"/>
+    <id>https://chetansachdev.com/2020/03/03/Understanding-javascript-better/</id>
     <published>2020-03-03T18:01:55.000Z</published>
     <updated>2026-06-13T18:54:19.293Z</updated>
     
@@ -649,17 +624,17 @@
     
     
     
-    <category term="Development" scheme="http://chetansachdev.com/categories/Development/"/>
+    <category term="Development" scheme="https://chetansachdev.com/categories/Development/"/>
     
     
-    <category term="JavaScript" scheme="http://chetansachdev.com/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="https://chetansachdev.com/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>How to install Adapt Authoring on an AWS EC2 instance</title>
-    <link href="http://chetansachdev.com/2020/03/03/How-to-install-adaptauthoring-on-AWS-EC2-instance/"/>
-    <id>http://chetansachdev.com/2020/03/03/How-to-install-adaptauthoring-on-AWS-EC2-instance/</id>
+    <link href="https://chetansachdev.com/2020/03/03/How-to-install-adaptauthoring-on-AWS-EC2-instance/"/>
+    <id>https://chetansachdev.com/2020/03/03/How-to-install-adaptauthoring-on-AWS-EC2-instance/</id>
     <published>2020-03-03T11:02:51.000Z</published>
     <updated>2026-06-13T18:50:08.526Z</updated>
     
@@ -670,21 +645,21 @@
     
     
     
-    <category term="DevOps" scheme="http://chetansachdev.com/categories/DevOps/"/>
+    <category term="DevOps" scheme="https://chetansachdev.com/categories/DevOps/"/>
     
     
-    <category term="Adapt" scheme="http://chetansachdev.com/tags/Adapt/"/>
+    <category term="Adapt" scheme="https://chetansachdev.com/tags/Adapt/"/>
     
-    <category term="AWS" scheme="http://chetansachdev.com/tags/AWS/"/>
+    <category term="AWS" scheme="https://chetansachdev.com/tags/AWS/"/>
     
-    <category term="Docker" scheme="http://chetansachdev.com/tags/Docker/"/>
+    <category term="Docker" scheme="https://chetansachdev.com/tags/Docker/"/>
     
   </entry>
   
   <entry>
     <title>Using Google Sheets as a database for an experimental project</title>
-    <link href="http://chetansachdev.com/2020/02/25/Using-google-sheet-as-db-for-experimental-project/"/>
-    <id>http://chetansachdev.com/2020/02/25/Using-google-sheet-as-db-for-experimental-project/</id>
+    <link href="https://chetansachdev.com/2020/02/25/Using-google-sheet-as-db-for-experimental-project/"/>
+    <id>https://chetansachdev.com/2020/02/25/Using-google-sheet-as-db-for-experimental-project/</id>
     <published>2020-02-25T17:17:55.000Z</published>
     <updated>2026-06-13T18:54:43.852Z</updated>
     
@@ -695,21 +670,21 @@
     
     
     
-    <category term="Development" scheme="http://chetansachdev.com/categories/Development/"/>
+    <category term="Development" scheme="https://chetansachdev.com/categories/Development/"/>
     
     
-    <category term="JavaScript" scheme="http://chetansachdev.com/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="https://chetansachdev.com/tags/JavaScript/"/>
     
-    <category term="Database" scheme="http://chetansachdev.com/tags/Database/"/>
+    <category term="Database" scheme="https://chetansachdev.com/tags/Database/"/>
     
-    <category term="Google Sheets" scheme="http://chetansachdev.com/tags/Google-Sheets/"/>
+    <category term="Google Sheets" scheme="https://chetansachdev.com/tags/Google-Sheets/"/>
     
   </entry>
   
   <entry>
     <title>Using a remote to turn pages in Apple Books (iBooks)</title>
-    <link href="http://chetansachdev.com/2020/02/23/Remote-settings-to-turn-page-in-iBooks/"/>
-    <id>http://chetansachdev.com/2020/02/23/Remote-settings-to-turn-page-in-iBooks/</id>
+    <link href="https://chetansachdev.com/2020/02/23/Remote-settings-to-turn-page-in-iBooks/"/>
+    <id>https://chetansachdev.com/2020/02/23/Remote-settings-to-turn-page-in-iBooks/</id>
     <published>2020-02-23T17:31:36.000Z</published>
     <updated>2026-06-13T18:52:19.877Z</updated>
     
@@ -720,21 +695,21 @@
     
     
     
-    <category term="Computers" scheme="http://chetansachdev.com/categories/Computers/"/>
+    <category term="Computers" scheme="https://chetansachdev.com/categories/Computers/"/>
     
     
-    <category term="Computers" scheme="http://chetansachdev.com/tags/Computers/"/>
+    <category term="Computers" scheme="https://chetansachdev.com/tags/Computers/"/>
     
-    <category term="iOS" scheme="http://chetansachdev.com/tags/iOS/"/>
+    <category term="iOS" scheme="https://chetansachdev.com/tags/iOS/"/>
     
-    <category term="Apple Books" scheme="http://chetansachdev.com/tags/Apple-Books/"/>
+    <category term="Apple Books" scheme="https://chetansachdev.com/tags/Apple-Books/"/>
     
   </entry>
   
   <entry>
     <title>Mapping a Wix subdomain to an AWS EC2 instance</title>
-    <link href="http://chetansachdev.com/2020/02/14/Mapping-wix-subdomain-to-AWS-EC2-instance/"/>
-    <id>http://chetansachdev.com/2020/02/14/Mapping-wix-subdomain-to-AWS-EC2-instance/</id>
+    <link href="https://chetansachdev.com/2020/02/14/Mapping-wix-subdomain-to-AWS-EC2-instance/"/>
+    <id>https://chetansachdev.com/2020/02/14/Mapping-wix-subdomain-to-AWS-EC2-instance/</id>
     <published>2020-02-13T21:45:57.000Z</published>
     <updated>2026-06-13T18:51:39.716Z</updated>
     
@@ -745,23 +720,23 @@
     
     
     
-    <category term="DevOps" scheme="http://chetansachdev.com/categories/DevOps/"/>
+    <category term="DevOps" scheme="https://chetansachdev.com/categories/DevOps/"/>
     
     
-    <category term="AWS" scheme="http://chetansachdev.com/tags/AWS/"/>
+    <category term="AWS" scheme="https://chetansachdev.com/tags/AWS/"/>
     
-    <category term="SSL" scheme="http://chetansachdev.com/tags/SSL/"/>
+    <category term="SSL" scheme="https://chetansachdev.com/tags/SSL/"/>
     
-    <category term="Wix" scheme="http://chetansachdev.com/tags/Wix/"/>
+    <category term="Wix" scheme="https://chetansachdev.com/tags/Wix/"/>
     
-    <category term="DNS" scheme="http://chetansachdev.com/tags/DNS/"/>
+    <category term="DNS" scheme="https://chetansachdev.com/tags/DNS/"/>
     
   </entry>
   
   <entry>
     <title>Git clone into non-empty directory</title>
-    <link href="http://chetansachdev.com/2020/02/14/Git-clone-into-non-empty-directory/"/>
-    <id>http://chetansachdev.com/2020/02/14/Git-clone-into-non-empty-directory/</id>
+    <link href="https://chetansachdev.com/2020/02/14/Git-clone-into-non-empty-directory/"/>
+    <id>https://chetansachdev.com/2020/02/14/Git-clone-into-non-empty-directory/</id>
     <published>2020-02-13T21:30:36.000Z</published>
     <updated>2026-06-13T18:48:54.315Z</updated>
     
@@ -772,17 +747,17 @@
     
     
     
-    <category term="Development" scheme="http://chetansachdev.com/categories/Development/"/>
+    <category term="Development" scheme="https://chetansachdev.com/categories/Development/"/>
     
     
-    <category term="Git" scheme="http://chetansachdev.com/tags/Git/"/>
+    <category term="Git" scheme="https://chetansachdev.com/tags/Git/"/>
     
   </entry>
   
   <entry>
     <title>Removing the Moodle logo and updating the favicon</title>
-    <link href="http://chetansachdev.com/2020/02/12/Removing-Moodle-logo-and-updating-favicon/"/>
-    <id>http://chetansachdev.com/2020/02/12/Removing-Moodle-logo-and-updating-favicon/</id>
+    <link href="https://chetansachdev.com/2020/02/12/Removing-Moodle-logo-and-updating-favicon/"/>
+    <id>https://chetansachdev.com/2020/02/12/Removing-Moodle-logo-and-updating-favicon/</id>
     <published>2020-02-11T19:38:47.000Z</published>
     <updated>2026-06-13T18:52:33.956Z</updated>
     
@@ -793,21 +768,21 @@
     
     
     
-    <category term="Development" scheme="http://chetansachdev.com/categories/Development/"/>
+    <category term="Development" scheme="https://chetansachdev.com/categories/Development/"/>
     
     
-    <category term="AWS" scheme="http://chetansachdev.com/tags/AWS/"/>
+    <category term="AWS" scheme="https://chetansachdev.com/tags/AWS/"/>
     
-    <category term="Moodle" scheme="http://chetansachdev.com/tags/Moodle/"/>
+    <category term="Moodle" scheme="https://chetansachdev.com/tags/Moodle/"/>
     
-    <category term="HTML" scheme="http://chetansachdev.com/tags/HTML/"/>
+    <category term="HTML" scheme="https://chetansachdev.com/tags/HTML/"/>
     
   </entry>
   
   <entry>
     <title>Focus inside an iframe from a &quot;Skip to main content&quot; link</title>
-    <link href="http://chetansachdev.com/2020/02/08/focus-inside-iframe-from-skip-to-main-content/"/>
-    <id>http://chetansachdev.com/2020/02/08/focus-inside-iframe-from-skip-to-main-content/</id>
+    <link href="https://chetansachdev.com/2020/02/08/focus-inside-iframe-from-skip-to-main-content/"/>
+    <id>https://chetansachdev.com/2020/02/08/focus-inside-iframe-from-skip-to-main-content/</id>
     <published>2020-02-07T22:53:50.000Z</published>
     <updated>2026-06-13T18:55:25.460Z</updated>
     
@@ -818,21 +793,21 @@
     
     
     
-    <category term="Development" scheme="http://chetansachdev.com/categories/Development/"/>
+    <category term="Development" scheme="https://chetansachdev.com/categories/Development/"/>
     
     
-    <category term="HTML" scheme="http://chetansachdev.com/tags/HTML/"/>
+    <category term="HTML" scheme="https://chetansachdev.com/tags/HTML/"/>
     
-    <category term="Accessibility" scheme="http://chetansachdev.com/tags/Accessibility/"/>
+    <category term="Accessibility" scheme="https://chetansachdev.com/tags/Accessibility/"/>
     
-    <category term="jQuery" scheme="http://chetansachdev.com/tags/jQuery/"/>
+    <category term="jQuery" scheme="https://chetansachdev.com/tags/jQuery/"/>
     
   </entry>
   
   <entry>
     <title>Resetting Visual Studio Code in macOS</title>
-    <link href="http://chetansachdev.com/2020/02/08/Resetting-Visual-Studio-Code-in-macOS/"/>
-    <id>http://chetansachdev.com/2020/02/08/Resetting-Visual-Studio-Code-in-macOS/</id>
+    <link href="https://chetansachdev.com/2020/02/08/Resetting-Visual-Studio-Code-in-macOS/"/>
+    <id>https://chetansachdev.com/2020/02/08/Resetting-Visual-Studio-Code-in-macOS/</id>
     <published>2020-02-07T21:59:30.000Z</published>
     <updated>2026-06-13T18:52:45.162Z</updated>
     
@@ -843,21 +818,21 @@
     
     
     
-    <category term="Development" scheme="http://chetansachdev.com/categories/Development/"/>
+    <category term="Development" scheme="https://chetansachdev.com/categories/Development/"/>
     
     
-    <category term="macOS" scheme="http://chetansachdev.com/tags/macOS/"/>
+    <category term="macOS" scheme="https://chetansachdev.com/tags/macOS/"/>
     
-    <category term="Computers" scheme="http://chetansachdev.com/tags/Computers/"/>
+    <category term="Computers" scheme="https://chetansachdev.com/tags/Computers/"/>
     
-    <category term="VS Code" scheme="http://chetansachdev.com/tags/VS-Code/"/>
+    <category term="VS Code" scheme="https://chetansachdev.com/tags/VS-Code/"/>
     
   </entry>
   
   <entry>
     <title>Vue.js Awesome Conf 2019 — Takeaways</title>
-    <link href="http://chetansachdev.com/2019/05/08/Vue-awesomeconf-2019/"/>
-    <id>http://chetansachdev.com/2019/05/08/Vue-awesomeconf-2019/</id>
+    <link href="https://chetansachdev.com/2019/05/08/Vue-awesomeconf-2019/"/>
+    <id>https://chetansachdev.com/2019/05/08/Vue-awesomeconf-2019/</id>
     <published>2019-05-08T07:07:34.000Z</published>
     <updated>2026-06-13T18:54:53.184Z</updated>
     
@@ -868,14 +843,14 @@
     
     
     
-    <category term="Development" scheme="http://chetansachdev.com/categories/Development/"/>
+    <category term="Development" scheme="https://chetansachdev.com/categories/Development/"/>
     
     
-    <category term="JavaScript" scheme="http://chetansachdev.com/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="https://chetansachdev.com/tags/JavaScript/"/>
     
-    <category term="Vue" scheme="http://chetansachdev.com/tags/Vue/"/>
+    <category term="Vue" scheme="https://chetansachdev.com/tags/Vue/"/>
     
-    <category term="Conference" scheme="http://chetansachdev.com/tags/Conference/"/>
+    <category term="Conference" scheme="https://chetansachdev.com/tags/Conference/"/>
     
   </entry>
   
