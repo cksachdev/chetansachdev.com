@@ -20,6 +20,7 @@
   <!-- Primary Meta -->
   <meta name="description" content="An introduction to writing test cases for manual software testing, covering test case structure, components, and best practices.">
   <meta name="author" content="Chetan Sachdev">
+  <meta name="keywords" content="elearning developer bangalore, SCORM developer, xAPI tin can developer, Adapt Framework developer, Sunbird platform, LMS developer, accessible HTML5 courseware, WCAG 2.1, Moodle developer, javascript developer bangalore">
   <link rel="canonical" href="https://chetansachdev.com/2021/01/22/How-to-write-test-cases-in-Manual-testing/">
 
   <!-- Open Graph (Facebook, LinkedIn) -->
@@ -130,7 +131,7 @@
     <nav class="site-nav" aria-label="Main navigation">
       <a href="/" class="nav-link">Home</a>
       <a href="/archives/" class="nav-link">Archives</a>
-      <a href="https://github.com/cksachdev" class="nav-link" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/cksachdev" class="nav-link" target="_blank" rel="noopener noreferrer">GitHub</a>
       <a href="/about/" class="nav-link">About</a>
     </nav>
 
@@ -169,7 +170,7 @@
   <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
     <a href="/" class="nav-link">Home</a>
     <a href="/archives/" class="nav-link">Archives</a>
-    <a href="https://github.com/cksachdev" class="nav-link" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://github.com/cksachdev" class="nav-link" target="_blank" rel="noopener noreferrer">GitHub</a>
     <a href="/about/" class="nav-link">About</a>
   </nav>
 </header>
@@ -179,8 +180,9 @@
   <div class="search-palette">
     <div class="search-palette-header">
       <svg class="search-palette-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <input class="search-palette-input" id="search-palette-input" type="text" placeholder="Search posts…" autocomplete="off" spellcheck="false">
-      <span class="search-palette-hint">esc</span>
+      <label for="search-palette-input" class="sr-only">Search posts</label>
+      <input class="search-palette-input" id="search-palette-input" type="search" placeholder="Search posts…" autocomplete="off" spellcheck="false" aria-label="Search posts">
+      <span class="search-palette-hint" aria-label="Press Escape to close">esc</span>
     </div>
     <div class="search-palette-results" id="search-palette-results"></div>
     <div class="search-palette-footer">
@@ -246,16 +248,42 @@
   var activeIdx = -1;
   var loaded = false;
 
+  // Focus trap helpers
+  var focusableSelectors = 'a[href], button:not([disabled]), input, [tabindex]:not([tabindex="-1"])';
+  var lastFocusedBeforeSearch = null;
+
+  function trapFocus(e) {
+    if (!backdrop || !backdrop.classList.contains('open')) return;
+    var focusable = Array.from(backdrop.querySelectorAll(focusableSelectors));
+    if (!focusable.length) return;
+    var first = focusable[0];
+    var last = focusable[focusable.length - 1];
+    if (e.key === 'Tab') {
+      if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+      } else {
+        if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    }
+  }
+
   function openPalette() {
+    lastFocusedBeforeSearch = document.activeElement;
     backdrop.classList.add('open');
     paletteInput.focus();
     paletteInput.select();
+    document.addEventListener('keydown', trapFocus);
     if (!loaded) loadPosts();
   }
 
   function closePalette() {
     backdrop.classList.remove('open');
     activeIdx = -1;
+    document.removeEventListener('keydown', trapFocus);
+    if (lastFocusedBeforeSearch) {
+      lastFocusedBeforeSearch.focus();
+      lastFocusedBeforeSearch = null;
+    }
   }
 
   function loadPosts() {
@@ -417,7 +445,7 @@
       <a href="/" class="back-link">Back to all posts</a>
     </div>
 
-    <div class="post-comments">
+    <section class="post-comments" aria-label="Comments">
       <div id="disqus_thread"></div>
       <script>
         var disqus_config = function () {
@@ -432,7 +460,7 @@
         })();
       </script>
       <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
+    </section>
 
   </article>
 
@@ -441,13 +469,13 @@
   <div class="sidebar-section">
     <span class="sidebar-label">Connect</span>
     <div class="sidebar-social">
-      <a href="https://x.com/cksachdev" target="_blank" rel="noopener">
+      <a href="https://x.com/cksachdev" target="_blank" rel="noopener noreferrer">
         <i class="fa-brands fa-x-twitter" aria-hidden="true"></i> X
       </a>
-      <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener">
+      <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener noreferrer">
         <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn
       </a>
-      <a href="https://github.com/cksachdev" target="_blank" rel="noopener">
+      <a href="https://github.com/cksachdev" target="_blank" rel="noopener noreferrer">
         <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
       </a>
       <a href="mailto:mail@chetansachdev.com">
@@ -472,12 +500,12 @@
       Built with <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>,
       hosted on <a href="https://github.com/cksachdev/chetansachdev.com" target="_blank" rel="noopener">GitHub Pages</a>.
     </p>
-    <div class="footer-links">
-      <a href="https://x.com/cksachdev" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i> X</a>
-      <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a>
-      <a href="https://github.com/cksachdev" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+    <nav class="footer-links" aria-label="Social links">
+      <a href="https://x.com/cksachdev" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i> X</a>
+      <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a>
+      <a href="https://github.com/cksachdev" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
       <a href="mailto:mail@chetansachdev.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</a>
-    </div>
+    </nav>
   </div>
 </footer>
 
