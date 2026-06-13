@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167238494-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-167238494-1');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+
+  <!-- Primary Meta -->
+  <meta name="description" content="Fix the &#34;Permission denied (publickey)&#34; SSH error when connecting to GitHub or GitLab by generating an SSH key and adding it to your account.">
+  <meta name="author" content="Chetan Sachdev">
+  <link rel="canonical" href="http://chetansachdev.com/2020/06/30/How-to-solve-permission-denied-public-key-error/">
+
+  <!-- Open Graph (Facebook, LinkedIn) -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to solve &#34;Permission denied (publickey)&#34; error in Git — Chetan Sachdev">
+  <meta property="og:description" content="Fix the &#34;Permission denied (publickey)&#34; SSH error when connecting to GitHub or GitLab by generating an SSH key and adding it to your account.">
+  <meta property="og:url" content="http://chetansachdev.com/2020/06/30/How-to-solve-permission-denied-public-key-error/">
+  <meta property="og:site_name" content="Chetan Sachdev">
+  <meta property="og:image" content="http://chetansachdev.com/img/og-default.png">
+  <meta property="og:locale" content="en_US">
+  
+  <meta property="article:published_time" content="2020-06-30T17:18:59.000Z">
+  <meta property="article:author" content="Chetan Sachdev">
+  
+  <meta property="article:tag" content="Git">
+  
+  <meta property="article:tag" content="SSH">
+  
+  
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to solve &#34;Permission denied (publickey)&#34; error in Git — Chetan Sachdev">
+  <meta name="twitter:description" content="Fix the &#34;Permission denied (publickey)&#34; SSH error when connecting to GitHub or GitLab by generating an SSH key and adding it to your account.">
+  <meta name="twitter:image" content="http://chetansachdev.com/img/og-default.png">
+  <meta name="twitter:site" content="@chetansachdev">
+  <meta name="twitter:creator" content="@chetansachdev">
+
+  <link rel="icon" href="/img/favicon.ico">
+  <title>How to solve &#34;Permission denied (publickey)&#34; error in Git — Chetan Sachdev</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <!-- Theme stylesheet -->
+  
+<link rel="stylesheet" href="../../../../css/styles.css">
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="atom.xml" title="Chetan Sachdev" type="application/atom+xml">
+</head>
+
+<body>
+
+  <header class="site-header">
+  <div class="header-inner">
+
+    <!-- Brand -->
+    <a href="/" class="site-brand">
+      <img class="brand-avatar" src="/img/cksachdev.jpg" alt="Chetan Sachdev">
+      <span class="brand-text">
+        <span class="brand-name">Chetan Sachdev</span>
+        <span class="brand-tagline">planting ideas</span>
+      </span>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/archives/" class="nav-link">Archives</a>
+      <a href="https://github.com/cksachdev" class="nav-link" target="_blank" rel="noopener">GitHub</a>
+      <a href="/about/" class="nav-link">About</a>
+    </nav>
+
+    <!-- Header actions -->
+    <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
+
+      <!-- Search trigger (Cmd+K) -->
+      <button class="nav-toggle" id="search-trigger" aria-label="Search (⌘K)" style="width:auto;padding:0 10px;gap:6px;display:flex;font-size:0.8rem;color:var(--color-text-muted);">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span class="search-kbd-label" style="font-size:0.72rem;font-family:var(--font-mono);">⌘K</span>
+      </button>
+
+      <!-- Theme toggle -->
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <!-- Sun icon (shown in dark mode) -->
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <!-- Moon icon (shown in light mode) -->
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+
+      <!-- Mobile hamburger -->
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Mobile nav drawer -->
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+    <a href="/" class="nav-link">Home</a>
+    <a href="/archives/" class="nav-link">Archives</a>
+    <a href="https://github.com/cksachdev" class="nav-link" target="_blank" rel="noopener">GitHub</a>
+    <a href="/about/" class="nav-link">About</a>
+  </nav>
+</header>
+
+<!-- Cmd+K Search Palette -->
+<div class="search-backdrop" id="search-backdrop" role="dialog" aria-modal="true" aria-label="Search">
+  <div class="search-palette">
+    <div class="search-palette-header">
+      <svg class="search-palette-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input class="search-palette-input" id="search-palette-input" type="text" placeholder="Search posts…" autocomplete="off" spellcheck="false">
+      <span class="search-palette-hint">esc</span>
+    </div>
+    <div class="search-palette-results" id="search-palette-results"></div>
+    <div class="search-palette-footer">
+      <span><kbd>↑↓</kbd> navigate</span>
+      <span><kbd>↵</kbd> open</span>
+      <span><kbd>esc</kbd> close</span>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  // ── Theme toggle ────────────────────────────────────────────
+  var THEME_KEY = 'cs-theme';
+  var root = document.documentElement;
+
+  function applyTheme(theme) {
+    root.setAttribute('data-theme', theme);
+    try { localStorage.setItem(THEME_KEY, theme); } catch(e) {}
+  }
+
+  // Default: dark. Override only if user previously chose light.
+  var saved = null;
+  try { saved = localStorage.getItem(THEME_KEY); } catch(e) {}
+  applyTheme(saved === 'light' ? 'light' : 'dark');
+
+  var themeBtn = document.getElementById('theme-toggle');
+  if (themeBtn) {
+    themeBtn.addEventListener('click', function() {
+      var current = root.getAttribute('data-theme');
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
+  }
+
+  // ── Nav toggle ──────────────────────────────────────────────
+  var navToggle = document.getElementById('nav-toggle');
+  var mobileNav = document.getElementById('mobile-nav');
+  if (navToggle && mobileNav) {
+    navToggle.addEventListener('click', function() {
+      var open = mobileNav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', String(open));
+    });
+  }
+
+  // ── Cmd+K Search palette ────────────────────────────────────
+  var backdrop = document.getElementById('search-backdrop');
+  var paletteInput = document.getElementById('search-palette-input');
+  var resultsList = document.getElementById('search-palette-results');
+  var searchTrigger = document.getElementById('search-trigger');
+
+  var allPosts = [];
+  var activeIdx = -1;
+  var loaded = false;
+
+  function openPalette() {
+    backdrop.classList.add('open');
+    paletteInput.focus();
+    paletteInput.select();
+    if (!loaded) loadPosts();
+  }
+
+  function closePalette() {
+    backdrop.classList.remove('open');
+    activeIdx = -1;
+  }
+
+  function loadPosts() {
+    loaded = true;
+    fetch('/content.json')
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        var posts = (data.posts || []).concat(data.pages || []);
+        allPosts = posts.map(function(p) {
+          return { title: p.title || '', path: p.path || p.permalink || '', date: p.date ? p.date.slice(0,10) : '' };
+        });
+        renderResults(paletteInput.value);
+      })
+      .catch(function() {
+        resultsList.innerHTML = '<p style="text-align:center;padding:24px;color:var(--color-text-muted);font-size:0.875rem;">Search unavailable</p>';
+      });
+  }
+
+  function renderResults(query) {
+    activeIdx = -1;
+    var q = query.trim().toLowerCase();
+    var items = q
+      ? allPosts.filter(function(p) { return p.title.toLowerCase().indexOf(q) !== -1; })
+      : allPosts.slice(0, 12);
+
+    if (!items.length) {
+      resultsList.innerHTML = '';
+      return;
+    }
+
+    resultsList.innerHTML = items.map(function(p, i) {
+      var url = p.path.startsWith('/') ? p.path : '/' + p.path;
+      return '<a class="search-result-item" href="' + url + '" data-idx="' + i + '">' +
+        '<span class="search-result-title">' + esc(p.title) + '</span>' +
+        '<span class="search-result-date">' + esc(p.date) + '</span>' +
+        '</a>';
+    }).join('');
+  }
+
+  function esc(str) {
+    return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  function setActive(idx) {
+    var items = resultsList.querySelectorAll('.search-result-item');
+    items.forEach(function(el) { el.classList.remove('active'); });
+    if (idx >= 0 && idx < items.length) {
+      items[idx].classList.add('active');
+      items[idx].scrollIntoView({ block: 'nearest' });
+      activeIdx = idx;
+    }
+  }
+
+  if (paletteInput) {
+    paletteInput.addEventListener('input', function() { renderResults(this.value); });
+
+    paletteInput.addEventListener('keydown', function(e) {
+      var items = resultsList.querySelectorAll('.search-result-item');
+      if (e.key === 'ArrowDown') { e.preventDefault(); setActive(Math.min(activeIdx + 1, items.length - 1)); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); setActive(Math.max(activeIdx - 1, 0)); }
+      else if (e.key === 'Enter') {
+        if (activeIdx >= 0 && items[activeIdx]) { items[activeIdx].click(); }
+        else if (items[0]) { items[0].click(); }
+      }
+    });
+  }
+
+  if (backdrop) {
+    backdrop.addEventListener('click', function(e) {
+      if (e.target === backdrop) closePalette();
+    });
+  }
+
+  if (searchTrigger) {
+    searchTrigger.addEventListener('click', openPalette);
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault();
+      if (backdrop && backdrop.classList.contains('open')) { closePalette(); } else { openPalette(); }
+    }
+    if (e.key === 'Escape' && backdrop && backdrop.classList.contains('open')) { closePalette(); }
+  });
+})();
+</script>
+
+
+  <main class="site-main" id="main-content">
+    <div class="post-layout">
+
+  <article class="post-article">
+
+    <p class="post-header-meta">Jun 30, 2020</p>
+
+    <h1 class="post-title">How to solve "Permission denied (publickey)" error in Git</h1>
+
+    <div class="post-body">
+      <p>The <code>Permission denied (publickey)</code> error means your local SSH key either doesn’t exist, isn’t loaded, or hasn’t been added to your Git host (GitHub, GitLab, etc.).</p>
+<h2 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h2><p><strong>Step 1: Check if you already have an SSH key</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -al ~/.ssh</span><br></pre></td></tr></table></figure>
+<p>Look for files named <code>id_rsa</code> / <code>id_rsa.pub</code> or <code>id_ed25519</code> / <code>id_ed25519.pub</code>. If they exist, skip to Step 3.</p>
+<p><strong>Step 2: Generate a new SSH key</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+<p>Press Enter to accept the default file location and optionally set a passphrase.</p>
+<p><strong>Step 3: Add the key to the SSH agent</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">eval</span> <span class="string">&quot;<span class="subst">$(ssh-agent -s)</span>&quot;</span></span><br><span class="line">ssh-add ~/.ssh/id_ed25519</span><br></pre></td></tr></table></figure>
+<p><strong>Step 4: Copy your public key</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.ssh/id_ed25519.pub</span><br></pre></td></tr></table></figure>
+<p>Copy the entire output.</p>
+<p><strong>Step 5: Add the key to GitHub / GitLab</strong></p>
+<ul>
+<li><strong>GitHub:</strong> Settings → SSH and GPG keys → New SSH key → paste and save</li>
+<li><strong>GitLab:</strong> Preferences → SSH Keys → paste and save</li>
+</ul>
+<p><strong>Step 6: Test the connection</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>You should see: <code>Hi username! You&#39;ve successfully authenticated...</code></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/2643502/how-to-solve-permission-denied-publickey-error-when-using-git">Stack Overflow: How to solve Permission denied (publickey)</a></p>
+
+    </div>
+
+    <div class="post-footer">
+      <a href="/" class="back-link">Back to all posts</a>
+    </div>
+
+    <div class="post-comments">
+      <div id="disqus_thread"></div>
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https://chetansachdev.com/2020/06/30/How-to-solve-permission-denied-public-key-error/';
+          this.page.identifier = '2020/06/30/How-to-solve-permission-denied-public-key-error/';
+        };
+        (function() {
+          var d = document, s = d.createElement('script');
+          s.src = 'https://chetan-sachdev.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+  </article>
+
+  <aside class="post-sidebar">
+
+  <div class="sidebar-section">
+    <span class="sidebar-label">Connect</span>
+    <div class="sidebar-social">
+      <a href="https://twitter.com/cksachdev" target="_blank" rel="noopener">
+        <i class="fa fa-twitter" aria-hidden="true"></i> Twitter
+      </a>
+      <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener">
+        <i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn
+      </a>
+      <a href="https://github.com/cksachdev" target="_blank" rel="noopener">
+        <i class="fa fa-github" aria-hidden="true"></i> GitHub
+      </a>
+      <a href="mailto:mail@chetansachdev.com">
+        <i class="fa fa-envelope" aria-hidden="true"></i> Email
+      </a>
+    </div>
+  </div>
+
+</aside>
+
+
+</div>
+
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <p class="footer-copy">
+      &copy; 2018–2026
+      Chetan Sachdev.
+      Built with <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>,
+      hosted on <a href="https://github.com/cksachdev/chetansachdev.com" target="_blank" rel="noopener">GitHub Pages</a>.
+    </p>
+    <div class="footer-links">
+      <a href="https://twitter.com/cksachdev" target="_blank" rel="noopener"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a>
+      <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+      <a href="https://github.com/cksachdev" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+      <a href="mailto:mail@chetansachdev.com"><i class="fa fa-envelope" aria-hidden="true"></i> Email</a>
+    </div>
+  </div>
+</footer>
+
+
+  <script id="dsq-count-scr" src="//chetan-sachdev.disqus.com/count.js" async></script>
+</body>
+</html>
