@@ -70,6 +70,23 @@ html { font-size: 16px; line-height: 1.6; scroll-behavior: smooth; }
 img { max-width: 100%; display: block; }
 button { cursor: pointer; font: inherit; border: none; background: none; }
 
+/* --- Skip to content --- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 99999;
+  padding: 8px 16px;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 0 0 var(--radius) var(--radius);
+  text-decoration: none;
+  transition: top 0.1s;
+}
+.skip-link:focus { top: 0; }
+
 /* --- Base --- */
 body {
   font-family: var(--font-sans);
