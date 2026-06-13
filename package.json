@@ -2,6 +2,12 @@
   "name": "hexo-site",
   "version": "0.0.0",
   "private": true,
+  "scripts": {
+    "start": "hexo server",
+    "new": "hexo new post",
+    "build": "hexo clean && hexo generate",
+    "deploy": "hexo clean && hexo generate && hexo deploy"
+  },
   "hexo": {
     "version": "5.0.2"
   },
