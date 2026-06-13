@@ -103,9 +103,20 @@
   var navToggle = document.getElementById('nav-toggle');
   var mobileNav = document.getElementById('mobile-nav');
   if (navToggle && mobileNav) {
-    navToggle.addEventListener('click', function() {
+    navToggle.addEventListener('click', function(e) {
+      e.stopPropagation();
       var open = mobileNav.classList.toggle('open');
       navToggle.setAttribute('aria-expanded', String(open));
+    });
+
+    // Close mobile nav when clicking outside
+    document.addEventListener('click', function(e) {
+      if (mobileNav.classList.contains('open') &&
+          !mobileNav.contains(e.target) &&
+          !navToggle.contains(e.target)) {
+        mobileNav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
     });
   }
 
