@@ -70,6 +70,188 @@
 
 <body>
 
+  <!-- Sci-fi intro overlay -->
+  <div id="scifi-intro" aria-hidden="true">
+    <canvas id="scifi-canvas"></canvas>
+    <div id="scifi-content">
+      <div id="scifi-glitch" data-text="CHETAN SACHDEV">CHETAN SACHDEV</div>
+      <div id="scifi-sub">// initializing...</div>
+    </div>
+    <div id="scifi-dismiss">CLICK ANYWHERE TO SKIP</div>
+  </div>
+
+  <style>
+    #scifi-intro {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: opacity 0.8s ease;
+    }
+    #scifi-intro.fade-out {
+      opacity: 0;
+      pointer-events: none;
+    }
+    #scifi-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.18;
+    }
+    #scifi-content {
+      position: relative;
+      text-align: center;
+      z-index: 2;
+    }
+    #scifi-glitch {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: clamp(2rem, 6vw, 5rem);
+      font-weight: 700;
+      color: #00ffcc;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      position: relative;
+      animation: scifi-flicker 3s infinite;
+    }
+    #scifi-glitch::before,
+    #scifi-glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    #scifi-glitch::before {
+      color: #ff003c;
+      animation: scifi-glitch-1 2.5s infinite;
+      clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+    }
+    #scifi-glitch::after {
+      color: #0066ff;
+      animation: scifi-glitch-2 2.5s infinite;
+      clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+    }
+    #scifi-sub {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: clamp(0.7rem, 2vw, 1rem);
+      color: #00ffcc88;
+      margin-top: 1.2rem;
+      letter-spacing: 0.3em;
+      animation: scifi-type 2s steps(20) forwards;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid #00ffcc;
+    }
+    #scifi-dismiss {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      color: #ffffff33;
+      letter-spacing: 0.25em;
+      animation: scifi-pulse 2s ease-in-out infinite;
+    }
+    #scifi-timer-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #00ffcc, #0066ff);
+      animation: scifi-timer 10s linear forwards;
+    }
+    @keyframes scifi-timer {
+      from { width: 100%; }
+      to   { width: 0%; }
+    }
+    @keyframes scifi-flicker {
+      0%, 95%, 100% { opacity: 1; }
+      96% { opacity: 0.4; }
+      97% { opacity: 1; }
+      98% { opacity: 0.2; }
+      99% { opacity: 1; }
+    }
+    @keyframes scifi-glitch-1 {
+      0%, 90%, 100% { transform: translate(0); opacity: 0; }
+      91% { transform: translate(-4px, 2px); opacity: 0.8; }
+      92% { transform: translate(4px, -2px); opacity: 0.8; }
+      93% { transform: translate(-2px, 0); opacity: 0; }
+    }
+    @keyframes scifi-glitch-2 {
+      0%, 87%, 100% { transform: translate(0); opacity: 0; }
+      88% { transform: translate(5px, 1px); opacity: 0.7; }
+      89% { transform: translate(-3px, -1px); opacity: 0.7; }
+      90% { transform: translate(0); opacity: 0; }
+    }
+    @keyframes scifi-type {
+      from { max-width: 0; }
+      to   { max-width: 400px; }
+    }
+    @keyframes scifi-pulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.7; }
+    }
+  </style>
+
+  <script>
+    (function () {
+      var intro = document.getElementById('scifi-intro');
+      var canvas = document.getElementById('scifi-canvas');
+      var ctx = canvas.getContext('2d');
+
+      // Matrix rain
+      function resizeCanvas() {
+        canvas.width  = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      resizeCanvas();
+      window.addEventListener('resize', resizeCanvas);
+
+      var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*<>/\\|[]{}';
+      var fontSize = 14;
+      var cols, drops;
+      function initDrops() {
+        cols  = Math.floor(canvas.width / fontSize);
+        drops = Array.from({ length: cols }, function () { return Math.random() * -50 | 0; });
+      }
+      initDrops();
+
+      function drawMatrix() {
+        ctx.fillStyle = 'rgba(0,0,0,0.05)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = '#00ffcc';
+        ctx.font = fontSize + 'px monospace';
+        drops.forEach(function (y, i) {
+          var ch = chars[Math.random() * chars.length | 0];
+          ctx.fillText(ch, i * fontSize, y * fontSize);
+          if (y * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+          drops[i]++;
+        });
+      }
+      var raf = setInterval(drawMatrix, 40);
+
+      // Timer bar
+      var bar = document.createElement('div');
+      bar.id = 'scifi-timer-bar';
+      intro.appendChild(bar);
+
+      function dismiss() {
+        clearInterval(raf);
+        intro.classList.add('fade-out');
+        setTimeout(function () { intro.style.display = 'none'; }, 850);
+      }
+
+      intro.addEventListener('click', dismiss);
+      setTimeout(dismiss, 10000);
+    })();
+  </script>
+
   <header class="site-header">
   <div class="header-inner">
 
