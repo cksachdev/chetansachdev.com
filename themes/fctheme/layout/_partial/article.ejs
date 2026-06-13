@@ -18,7 +18,7 @@
       <div id="disqus_thread"></div>
       <script>
         var disqus_config = function () {
-          this.page.url = 'https://chetansachdev.com/<%- item.path %>';
+          this.page.url = '<%- config.url %>/<%- item.path %>';
           this.page.identifier = '<%- item.path %>';
         };
         (function() {
