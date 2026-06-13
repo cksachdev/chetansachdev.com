@@ -1,0 +1,232 @@
+<div class="page-container">
+  <div class="archive-header"><h1>About</h1></div>
+  <div class="page-content">
+
+    <div class="about-layout">
+
+      <!-- Profile Card -->
+      <aside class="about-card">
+        <div class="about-card-accent"></div>
+        <div class="about-card-body">
+          <div class="about-avatar-wrap">
+            <img class="about-avatar" src="/images/2020/08/cksachdev.jpg" alt="Chetan Sachdev" loading="lazy">
+          </div>
+          <h2 class="about-name">Chetan Sachdev</h2>
+          <p class="about-role">eLearning Developer</p>
+          <p class="about-location"><i class="fa-solid fa-location-dot"></i> Bangalore, India</p>
+
+          <div class="about-socials">
+            <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener" class="about-social-btn about-social-linkedin" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/cksachdev" target="_blank" rel="noopener" class="about-social-btn about-social-github" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://x.com/cksachdev" target="_blank" rel="noopener" class="about-social-btn about-social-x" aria-label="X (Twitter)">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </div>
+
+          <div class="about-contact">
+            <a href="mailto:mail@chetansachdev.com" class="about-contact-btn">
+              <i class="fa-solid fa-paper-plane"></i> Get in touch
+            </a>
+            <a href="mailto:mail@chetansachdev.com" class="about-email-link">
+              <i class="fa-solid fa-envelope"></i> mail@chetansachdev.com
+            </a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Bio -->
+      <div class="about-bio">
+        <p>I'm an eLearning developer based in Bangalore with a decade of experience building scalable, accessible digital learning solutions for global organisations.</p>
+        <p>My core stack spans the full eLearning delivery chain — from authoring standards like <strong>SCORM 1.2 / 2004</strong> and <strong>xAPI (Tin Can)</strong> to open-source frameworks including the <strong>Adapt Framework</strong> for responsive HTML5 courseware and <strong>Sunbird</strong> for large-scale learning platforms. I work closely with LMS administrators and instructional designers to make sure content doesn't just launch — it tracks, reports, and improves.</p>
+        <p>Beyond standards and frameworks, I enjoy the intersection of JavaScript engineering and learning design — writing custom Adapt plugins, configuring xAPI statement templates, or wiring up a Sunbird instance for a government skilling programme.</p>
+        <p>This blog is where I document the things I figure out along the way: server setups, LMS quirks, tooling experiments, and the occasional deep dive into accessibility in courseware.</p>
+
+        <h3 class="about-section-title">Focus areas</h3>
+        <div class="about-tags">
+          <span class="about-tag">SCORM 1.2 &amp; 2004</span>
+          <span class="about-tag">xAPI / Tin Can</span>
+          <span class="about-tag">Adapt Framework</span>
+          <span class="about-tag">Sunbird</span>
+          <span class="about-tag">Moodle</span>
+          <span class="about-tag">TalentLMS</span>
+          <span class="about-tag">WCAG 2.1</span>
+          <span class="about-tag">HTML5 Courseware</span>
+          <span class="about-tag">LRS Integration</span>
+          <span class="about-tag">JavaScript</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<style>
+.about-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+  margin-top: 1rem;
+}
+.about-card {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  position: sticky;
+  top: 1.5rem;
+}
+.about-card-accent {
+  height: 5px;
+  background: linear-gradient(90deg, var(--color-accent) 0%, #7c3aed 100%);
+}
+.about-card-body {
+  padding: 1.75rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.about-avatar-wrap { margin-bottom: 1rem; }
+.about-avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border: 3px solid var(--color-accent);
+  box-shadow: 0 0 0 4px var(--color-surface), 0 0 0 6px var(--color-border);
+  display: block;
+}
+.about-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 0.2rem;
+}
+.about-role {
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  margin: 0 0 0.4rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.about-location {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin: 0 0 1.25rem;
+}
+.about-location i { margin-right: 4px; }
+.about-socials {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1.25rem;
+}
+.about-social-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  color: #fff;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  text-decoration: none;
+}
+.about-social-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  text-decoration: none;
+}
+.about-social-linkedin { background: #0a66c2; }
+.about-social-github   { background: #24292e; }
+.about-social-x        { background: #000; }
+.about-contact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.about-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 22px;
+  background: var(--color-accent);
+  color: #fff !important;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  width: 100%;
+  justify-content: center;
+}
+.about-contact-btn:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+  text-decoration: none !important;
+}
+.about-email-link {
+  font-size: 0.78rem;
+  color: var(--color-text-muted) !important;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.15s ease;
+}
+.about-email-link:hover { color: var(--color-accent) !important; }
+.about-bio p {
+  line-height: 1.85;
+  color: var(--color-text);
+  margin-bottom: 1.1rem;
+}
+.about-section-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  margin: 1.75rem 0 0.85rem;
+}
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.about-tag {
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  transition: border-color 0.15s, color 0.15s;
+  cursor: default;
+}
+.about-tag:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+@media (max-width: 768px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+  .about-card {
+    position: static;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+</style>

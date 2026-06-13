@@ -103,6 +103,7 @@ pagination_dir: page
 
 # Markdown renderer (hexo-renderer-marked)
 marked:
+  html: true
   lazyload: true
   prependRoot: true
   postAsset: false
