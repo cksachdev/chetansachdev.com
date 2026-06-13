@@ -10,6 +10,8 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 
   <%
     var pageTitle = (page.title && page.title !== config.title)
@@ -49,7 +51,12 @@
   <meta name="twitter:site" content="@cksachdev">
   <meta name="twitter:creator" content="@cksachdev">
 
+  <!-- RSS / Atom feed autodiscovery -->
+  <link rel="alternate" type="application/atom+xml" title="<%= config.title %>" href="/atom.xml">
+
   <link rel="icon" href="/img/favicon.ico">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/icon-192.png">
   <title><%= pageTitle %></title>
 
   <!-- Fonts -->
@@ -62,4 +69,13 @@
 
   <!-- Theme stylesheet -->
   <%- css('css/styles.css') %>
+
+  <!-- Apply saved theme before paint to prevent flash -->
+  <script>
+    (function() {
+      var t = null;
+      try { t = localStorage.getItem('cs-theme'); } catch(e) {}
+      document.documentElement.setAttribute('data-theme', t === 'light' ? 'light' : 'dark');
+    })();
+  </script>
 </head>
