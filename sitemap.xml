@@ -2,6 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://chetansachdev.com/2020/03/14/My-preferred-settings-on-a-new-mac/</loc>
+    
+    <lastmod>2026-06-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chetansachdev.com/2021/03/01/Transparent-Whiteboard-in-Teams-or-Zoom-with-OBS/</loc>
+    
+    <lastmod>2026-06-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chetansachdev.com/2020/06/05/Upgrade-Macbook-Pro-Late-2013-1-TB-NVMe-M-2-SSD/</loc>
+    
+    <lastmod>2026-06-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chetansachdev.com/2021/01/22/How-to-write-test-cases-in-Manual-testing/</loc>
+    
+    <lastmod>2026-06-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chetansachdev.com/2021/02/23/Shortcuts-to-Pause-Resume-recording-in-QuickTime/</loc>
+    
+    <lastmod>2026-06-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chetansachdev.com/2020/06/13/Same-File-to-Multiple-Folders-in-Google-Drive/</loc>
+    
+    <lastmod>2026-06-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chetansachdev.com/2021/02/16/Batch-photos-to-powerpoint-slideshow-in-macOS/</loc>
+    
+    <lastmod>2026-06-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chetansachdev.com/2020/05/26/How-to-mount-Thunderbolt-display-on-a-VESA-stand/</loc>
+    
+    <lastmod>2026-06-13</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://chetansachdev.com/2020/03/13/wix-certificate-won-t-work-for-externally-hosted/</loc>
     
     <lastmod>2026-06-13</lastmod>
@@ -51,21 +107,7 @@
   </url>
   
   <url>
-    <loc>http://chetansachdev.com/2020/06/05/Upgrade-Macbook-Pro-Late-2013-1-TB-NVMe-M-2-SSD/</loc>
-    
-    <lastmod>2026-06-13</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://chetansachdev.com/2020/03/03/Understanding-javascript-better/</loc>
-    
-    <lastmod>2026-06-13</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chetansachdev.com/2021/03/01/Transparent-Whiteboard-in-Teams-or-Zoom-with-OBS/</loc>
     
     <lastmod>2026-06-13</lastmod>
     
@@ -87,20 +129,6 @@
   
   <url>
     <loc>http://chetansachdev.com/2020/08/30/Solved-MAMP-in-macOS-Catalina-for-Moodle-dev/</loc>
-    
-    <lastmod>2026-06-13</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chetansachdev.com/2021/02/23/Shortcuts-to-Pause-Resume-recording-in-QuickTime/</loc>
-    
-    <lastmod>2026-06-13</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chetansachdev.com/2020/06/13/Same-File-to-Multiple-Folders-in-Google-Drive/</loc>
     
     <lastmod>2026-06-13</lastmod>
     
@@ -135,13 +163,6 @@
   </url>
   
   <url>
-    <loc>http://chetansachdev.com/2020/03/14/My-preferred-settings-on-a-new-mac/</loc>
-    
-    <lastmod>2026-06-13</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://chetansachdev.com/2020/03/13/Migrating-data-from-one-macbook-to-another-macbook/</loc>
     
     <lastmod>2026-06-13</lastmod>
@@ -170,13 +191,6 @@
   </url>
   
   <url>
-    <loc>http://chetansachdev.com/2021/01/22/How-to-write-test-cases-in-Manual-testing/</loc>
-    
-    <lastmod>2026-06-13</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://chetansachdev.com/2020/06/30/How-to-solve-permission-denied-public-key-error/</loc>
     
     <lastmod>2026-06-13</lastmod>
@@ -185,13 +199,6 @@
   
   <url>
     <loc>http://chetansachdev.com/2021/12/28/How-to-set-file-permissions-in-WSL/</loc>
-    
-    <lastmod>2026-06-13</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chetansachdev.com/2020/05/26/How-to-mount-Thunderbolt-display-on-a-VESA-stand/</loc>
     
     <lastmod>2026-06-13</lastmod>
     
@@ -220,13 +227,6 @@
   
   <url>
     <loc>http://chetansachdev.com/2021/02/08/Day-1-with-Macbook-Air-Apple-Silicon/</loc>
-    
-    <lastmod>2026-06-13</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chetansachdev.com/2021/02/16/Batch-photos-to-powerpoint-slideshow-in-macOS/</loc>
     
     <lastmod>2026-06-13</lastmod>
     
@@ -361,6 +361,13 @@
   </url>
   
   <url>
+    <loc>http://chetansachdev.com/tags/Git/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://chetansachdev.com/tags/Flutter/</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>daily</changefreq>
@@ -375,7 +382,7 @@
   </url>
   
   <url>
-    <loc>http://chetansachdev.com/tags/Git/</loc>
+    <loc>http://chetansachdev.com/tags/Apple/</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -383,13 +390,6 @@
   
   <url>
     <loc>http://chetansachdev.com/tags/Docker/</loc>
-    <lastmod>2026-06-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://chetansachdev.com/tags/Apple/</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
