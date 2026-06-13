@@ -32,7 +32,7 @@ date: 2019-05-08 12:51:14
       <ul style="display:flex;justify-content:center;gap:16px;list-style:none;padding:0;margin-top:12px;">
         <li><a href="https://www.linkedin.com/in/cksachdev/" title="LinkedIn" style="color:var(--color-text-secondary);font-size:1.25rem;"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
         <li><a href="https://github.com/cksachdev" title="GitHub" style="color:var(--color-text-secondary);font-size:1.25rem;"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-        <li><a href="https://twitter.com/cksachdev" title="Twitter" style="color:var(--color-text-secondary);font-size:1.25rem;"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="https://x.com/cksachdev" title="X (Twitter)" style="color:var(--color-text-secondary);font-size:1.25rem;"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
       </ul>
       <div style="margin-top:16px;text-align:center;">
         <a href="mailto:mail@chetansachdev.com" style="display:inline-block;padding:8px 20px;background:var(--color-accent);color:#fff;border-radius:8px;font-size:0.875rem;font-weight:500;text-decoration:none;">Get in touch</a>
