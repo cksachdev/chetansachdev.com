@@ -1,42 +1,42 @@
 ---
-title: Sync Mongo data from prod to dev machine via ssh
-category:
-  - null
-tags: Database
-top: ssh
-author: Database
-originContent: ''
-categories: []
-toc: false
+title: Sync MongoDB data from production to dev machine via SSH
 date: 2020-06-04 14:40:32
+tags:
+  - MongoDB
+  - SSH
+  - Database
+  - AWS
+categories:
+  - Development
+description: How to copy a MongoDB database from an AWS EC2 production server to your local dev machine in one command using SSH, mongodump, and mongorestore piped together.
 ---
 
-With MongoDB 4.0 and earlier there db.copyDatabase() and db.cloneDatabase().<br> Stackoverflow script available on the link below for MongoDB 4.0 and earlier:<br>
-https://stackoverflow.com/questions/16619598/sync-mongodb-via-ssh
-https://sheharyar.me/blog/sync-mongodb-local-and-production-heroku/ 
-<br>
+When you need to replicate a production MongoDB database locally to debug an issue, you can do it in one piped command over SSH — no intermediate file needed.
 
-For MongoDB >4.0 mongo-sync module doesn't seem to work. I had a mongodb<br> instance on AWS EC2 and needed to sync the data to debug the issue and <br>replicate in dev environment. Below is a command which will sync mongodb from<br> aws ec2. Below command does the following:
-<br>
-1 .  connect to aws instance using keypair pem file
-2 . use mongodump to export the data from server
-3 . pipe the data to local machine
-4 . restore the data in local machine
-<br>
+## Context
 
-```sh
-ssh -i PATH_TO_KEYPAIR.pem 
-USERNAME@IP_ADDRESS 'mongodump > 
-/dev/null && tar -zc dump && rm -rf dump' 
-| tar -zx && 
-mongorestore dump && rm -rf dump
+- `db.copyDatabase()` and `db.cloneDatabase()` were removed in MongoDB 4.0+
+- The `mongo-sync` module doesn't work well with MongoDB >4.0
+- The approach below works with any version by piping `mongodump` output directly over SSH
+
+## The command
+
+```bash
+ssh -i PATH_TO_KEYPAIR.pem USERNAME@IP_ADDRESS \
+  'mongodump > /dev/null && tar -zc dump && rm -rf dump' \
+  | tar -zx && mongorestore dump && rm -rf dump
 ```
 
-```javascript
-  var text = "Hello World";
-  console.log("text");
-```
-{% codeblock lang:javascript %}
-   var text = "Hello World";
-   console.log("text");
-{% endcodeblock %}
+**What this does, step by step:**
+
+1. SSH into your EC2 instance using your key pair
+2. Run `mongodump` on the server to export the database
+3. Compress the dump with `tar -zc` and stream it back through the pipe
+4. `tar -zx` decompresses it locally
+5. `mongorestore dump` imports it into your local MongoDB
+6. Clean up the local dump folder
+
+## Reference
+
+- [Sync MongoDB via SSH — Stack Overflow](https://stackoverflow.com/questions/16619598/sync-mongodb-via-ssh)
+- [Sync MongoDB local and production (Heroku)](https://sheharyar.me/blog/sync-mongodb-local-and-production-heroku/)

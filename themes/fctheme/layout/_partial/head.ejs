@@ -10,10 +10,47 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="<%= config.description %>">
+
+  <%
+    var pageTitle = (page.title && page.title !== config.title)
+      ? page.title + ' — ' + config.title
+      : config.title;
+    var pageDesc = page.description || config.description;
+    var pageUrl = config.url + '/' + (page.path || '');
+    var pageImage = page.cover || page.thumbnail || (config.url + '/img/og-default.png');
+  %>
+
+  <!-- Primary Meta -->
+  <meta name="description" content="<%= pageDesc %>">
+  <meta name="author" content="Chetan Sachdev">
+  <link rel="canonical" href="<%= pageUrl %>">
+
+  <!-- Open Graph (Facebook, LinkedIn) -->
+  <meta property="og:type" content="<%= page.layout === 'post' ? 'article' : 'website' %>">
+  <meta property="og:title" content="<%= pageTitle %>">
+  <meta property="og:description" content="<%= pageDesc %>">
+  <meta property="og:url" content="<%= pageUrl %>">
+  <meta property="og:site_name" content="<%= config.title %>">
+  <meta property="og:image" content="<%= pageImage %>">
+  <meta property="og:locale" content="en_US">
+  <% if (page.layout === 'post') { %>
+  <meta property="article:published_time" content="<%= page.date.toISOString() %>">
+  <meta property="article:author" content="Chetan Sachdev">
+  <% if (page.tags && page.tags.length) { page.tags.each(function(tag) { %>
+  <meta property="article:tag" content="<%= tag.name %>">
+  <% }); } %>
+  <% } %>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="<%= pageTitle %>">
+  <meta name="twitter:description" content="<%= pageDesc %>">
+  <meta name="twitter:image" content="<%= pageImage %>">
+  <meta name="twitter:site" content="@chetansachdev">
+  <meta name="twitter:creator" content="@chetansachdev">
 
   <link rel="icon" href="/img/favicon.ico">
-  <title><% if (page.title && page.title !== config.title) { %><%= page.title %> — <% } %><%= config.title %></title>
+  <title><%= pageTitle %></title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">

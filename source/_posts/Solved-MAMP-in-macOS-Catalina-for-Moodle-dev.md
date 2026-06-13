@@ -1,48 +1,56 @@
 ---
-title: 'Solved: MAMP in macOS Catalina for Moodle dev'
-category:
-  - null
-tags:
-  - null
-author: [Computers]
-top: 1
-originContent: ''
-categories: []
-toc: false
+title: 'Solved: MAMP + Moodle on macOS Catalina'
 date: 2020-08-30 15:02:14
+tags:
+  - macOS
+  - MAMP
+  - Moodle
+  - PHP
+categories:
+  - Development
+description: How to get Moodle running locally with MAMP on macOS Catalina, including disabling Gatekeeper, editing php.ini to increase file upload limits, and fixing SCORM issues.
 ---
 
-**Steps**
+Getting Moodle to work locally with MAMP on macOS Catalina requires a few extra steps beyond a standard install.
 
-1. Download Moodle package from https://download.moodle.org/macosx/
-2. Disable Security in macOS Catalina
-   ```
-   sudo spctl --master-disable
-   ```
-3. edit the php.ini file for the php version you are using. i.e. v7.2.1. First check which version you're using by going to
-   ```
-   MAMP-> Preferences -> PHP -> Select/Specify PHP Version
-   ```
-   Then go to /Applications/MAMP/bin/php/php7.2.10/conf/php.ini and input the new settings there.
-   Increase SCORM package file size limit
-   ```
-   - change the "post_max_size" to 100M
-   - change the " upload_max_filesize" to 90M
-   ```
-4. Stop your server and restart MAMP. Import should now run as expected.
+## Steps
 
-**Other relevant links**
-suspend_data encoding and its usage:
-https://stackoverflow.com/questions/944582/what-is-cmistring4096-and-how-can-i-extract-the-data-within-it
-https://community.adaptlearning.org/mod/forum/discuss.php?d=3756
+**Step 1: Download Moodle for macOS**
 
-Tracking course specific data:
-https://elearningindustry.com/getting-started-with-scorm-tracking-course-specific-data
+Get the Moodle package from the [official macOS download page](https://download.moodle.org/macosx/).
 
-Reference:
+**Step 2: Disable Gatekeeper to allow unsigned apps**
 
-- https://moodle.org/mod/forum/discuss.php?d=224311
-- https://osxdaily.com/2015/05/04/disable-gatekeeper-command-line-mac-osx/
-- https://www.rjerz.com/professional/work/Presentations/MoodleMoot2019/Moodle_Sandbox.html
-- https://moodle.org/mod/forum/discuss.php?d=392057
-- https://vimeo.com/367749541
+macOS Catalina's security settings may block the MAMP app. To disable Gatekeeper:
+
+```bash
+sudo spctl --master-disable
+```
+
+Reference: [How to disable Gatekeeper via command line](https://osxdaily.com/2015/05/04/disable-gatekeeper-command-line-mac-osx/)
+
+**Step 3: Find and edit php.ini for your PHP version**
+
+1. Open MAMP → **Preferences → PHP** and note your current PHP version (e.g., 7.2.10)
+2. Edit the corresponding `php.ini` file:
+
+```
+/Applications/MAMP/bin/php/php7.2.10/conf/php.ini
+```
+
+Increase the upload limits (important for large SCORM packages):
+
+```ini
+post_max_size = 100M
+upload_max_filesize = 90M
+```
+
+**Step 4: Restart MAMP**
+
+Stop your MAMP server, then start it again. Imports and SCORM uploads should now work without errors.
+
+## Other useful links
+
+- [SCORM suspend_data encoding](https://stackoverflow.com/questions/944582/what-is-cmistring4096-and-how-can-i-extract-the-data-within-it)
+- [Tracking course-specific data with SCORM](https://elearningindustry.com/getting-started-with-scorm-tracking-course-specific-data)
+- [Moodle forum: PHP settings for large uploads](https://moodle.org/mod/forum/discuss.php?d=224311)

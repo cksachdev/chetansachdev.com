@@ -1,46 +1,53 @@
 ---
-title: How to install adaptauthoring on AWS EC2 instance
-category:
-  - null
+title: How to install Adapt Authoring on an AWS EC2 instance
+date: 2020-03-03 16:32:51
 tags:
   - AWS
-author: [AWS]
-top: 1
-categories: []
-toc: false
-date: 2020-03-03 16:32:51
+  - Docker
+  - Adapt
+categories:
+  - DevOps
+description: Step-by-step guide to installing the Adapt Authoring tool on an AWS EC2 instance using Docker, including setting up root access and pulling the Docker image.
 ---
 
-https://github.com/pvadimr/docker-adaptauthoring
+This guide covers installing the Adapt Authoring tool on an AWS EC2 instance using Docker.
 
-Switch to root account, where password isn't set
-```
+## Prerequisites
+
+- An AWS EC2 instance running Ubuntu
+- SSH access to the instance
+
+## Steps
+
+**Step 1: Switch to root user**
+
+```bash
 sudo su
 ```
 
-Install docker on AWS EC2 instance
-```
-https://www.digitalocean.com/community/tutorials/how-to
--install-and-use-docker-on-ubuntu-16-04#step-1-%E2%80%94
--installing-docker
-https://blog.e-zest.com/install-docker-on-aws-ec2
-```
-<br> 
+**Step 2: Install Docker on EC2**
 
-Pull docker image
-```
+Follow one of these guides to install Docker on Ubuntu:
+
+- [DigitalOcean: How to install and use Docker on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04)
+- [e-Zest: Install Docker on AWS EC2](https://blog.e-zest.com/install-docker-on-aws-ec2)
+
+**Step 3: Pull the Adapt Authoring Docker image**
+
+```bash
 docker pull pvadimr/adaptauthoring
 ```
-Follow the instructions on https://hub.docker.com/r/pvadimr/adaptauthoring
 
+**Step 4: Run the container**
 
+Follow the instructions on [Docker Hub](https://hub.docker.com/r/pvadimr/adaptauthoring) for the `pvadimr/adaptauthoring` image to start the container with the correct port and volume settings.
 
-### Set the password for root
-https://aws.amazon.com/premiumsupport/knowledge-center/set-change-root-linux/
+**Step 5: (Optional) Set a root password**
 
+If needed, follow [AWS's guide to setting a root password on Linux](https://aws.amazon.com/premiumsupport/knowledge-center/set-change-root-linux/).
 
-Reference links:
-https://medium.com/statuscode/dockerising-a-node-js-and-mongodb-app-d22047e2806f
-https://dev.to/nyagarcia/pokeapi-rest-in-nodejs-with-express-typescript-mongodb-and-docker-part-2-b56
-https://github.com/hueter/docker-node-express-boilerplate
-https://blog.sourcerer.io/a-crash-course-on-docker-learn-to-swim-with-the-big-fish-6ff25e8958b0
+## Reference links
+
+- [Docker Hub — adaptauthoring image](https://hub.docker.com/r/pvadimr/adaptauthoring)
+- [GitHub — pvadimr/docker-adaptauthoring](https://github.com/pvadimr/docker-adaptauthoring)
+- [Dockerising a Node.js and MongoDB app](https://medium.com/statuscode/dockerising-a-node-js-and-mongodb-app-d22047e2806f)

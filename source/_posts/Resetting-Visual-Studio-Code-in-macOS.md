@@ -1,40 +1,55 @@
 ---
 title: Resetting Visual Studio Code in macOS
-category:
-  - null
-tags:
-  - Computers
-top: 1
-author: Computers
-originContent: ''
-categories: []
-toc: false
 date: 2020-02-08 03:29:30
+tags:
+  - VS Code
+  - macOS
+  - Computers
+categories:
+  - Development
+description: How to reset VS Code on macOS to a clean state by backing up your settings and extensions, then restoring your preferred configuration.
 ---
 
-I have been exploring lot of visual studio code extensions and the side affect of it was that it slowed down my experience with Visual Studio Code. I wanted to preserve the extensions which I have already tried. To achieve this I found the settings folder of VSCode and then took a backup of those files. Below are the commands, in case you are trying to achieve the same:
-Close VScode and run below two commands in terminal
-```
-mv ~/Library/Application Support/Code ~/Library/Application Support/backup-Code
+After installing too many extensions, VS Code can slow down noticeably. This guide shows how to reset it to a clean state while keeping a backup of your old settings so you can selectively restore what you actually need.
+
+## Step 1: Close VS Code
+
+Make sure VS Code is fully closed before running any commands.
+
+## Step 2: Back up your settings and extensions
+
+```bash
+mv ~/Library/Application\ Support/Code ~/Library/Application\ Support/backup-Code
 mv ~/.vscode ~/backup-vscode
 ```
-After these, all your settings and extensions are backed up. Next launch VSCode and then press **⌘ + ,** to open Visual Studio Code settings.
-and then add:
-```
+
+Your old settings and all installed extensions are now safely backed up in those folders.
+
+## Step 3: Launch VS Code
+
+Open VS Code — it will start fresh with no extensions or custom settings.
+
+## Step 4: Apply your preferred settings
+
+Press `⌘ + ,` to open Settings, switch to the JSON view, and paste:
+
+```json
 {
-    "workbench.colorTheme": "ArtSchool",
-    "editor.fontFamily": "Operator Mono",
-    "editor.fontLigatures": true,
-    "editor.wordWrap": "on",
-    "editor.mouseWheelZoom": true,
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+  "workbench.colorTheme": "ArtSchool",
+  "editor.fontFamily": "Operator Mono",
+  "editor.fontLigatures": true,
+  "editor.wordWrap": "on",
+  "editor.mouseWheelZoom": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
 ```
 
-Ofcourse, you need to install the specified theme, font and formatter plugin to make it work. After the above settings, your editor should look like below screenshot:
-![image.png](/images/2020/02/08/06ba4fb0-49f5-11ea-984d-f70f4cd221c6.png)
+> You'll need to install the **ArtSchool** theme, **Operator Mono** font, and **Prettier** extension for these settings to take effect.
 
+After applying the settings, your editor should look clean and fast again:
+
+![VS Code after reset](/images/2020/02/08/06ba4fb0-49f5-11ea-984d-f70f4cd221c6.png)

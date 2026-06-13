@@ -1,76 +1,76 @@
 ---
-title: How to set file permissions in WSL?
-category:
-  - null
-tags:
-  - null
-top: 1
-originContent: ''
-categories:
-  - computer
-toc: false
+title: How to set file permissions in WSL (Windows Subsystem for Linux)
 date: 2021-12-28 01:10:20
+tags:
+  - WSL
+  - Linux
+  - Windows
+categories:
+  - Development
+description: How to make chmod work persistently in WSL by creating a wsl.conf file, so file permissions like 600 for .pem keys are retained after reboot.
 ---
 
 ## What is WSL?
 
-Windows Subsystem for Linux lets developrs run Linux environment. You can use your favorite commands from linux such as grep, sed, awk etc. I am using Ubuntu 18 on my Windows 10 machine.
+Windows Subsystem for Linux (WSL) lets you run a Linux environment directly on Windows — including tools like `grep`, `sed`, `awk`, and SSH. This guide uses Ubuntu 18 on Windows 10.
 
-## File permissions
+## The Problem
 
-File permissions in linux work in a different way, compared to windows. You need to set it in rwxrwxrwx format. Here r gets a value of 4, w gets a value of 2 and x i.e. execute gets a value of 1, total 7\.
+If you run `chmod` inside WSL to set permissions on a file (e.g., a `.pem` key), the change doesn't stick. Windows and Linux handle permissions differently, so WSL ignores `chmod` by default unless you configure it to respect Linux metadata.
 
-If you are trying to using a .pem or .cer file, you will be getting error saying too open permissions. For a .pem or .cer file you should set it to 600 i.e. `rw-------`.
+For SSH keys (`.pem`, `.cer`), you typically need permissions set to `600` (`rw-------`). Without the fix below, you'll see "permissions are too open" errors.
 
-<span class="ql-cursor">﻿</span>
+## Fix: Enable metadata in WSL
 
-## Steps to retain the chmod settings in Windows
+**Step 1: Create or edit `/etc/wsl.conf`**
 
-If you try to use chmod in the WSL, your permissions won't take affect on the file. You need to have wsl.conf file in place to retain the permissions set using chmod command.
-
-**Step 1: Create wsl.conf file**
-
-Commands:
-
-`**sudo nano /etc/wsl.conf**`
-
-Add following lines in wsl.conf
-
+```bash
+sudo nano /etc/wsl.conf
 ```
+
+Add the following:
+
+```ini
 [automount]
 enabled  = true
 root     = /mnt/
 options  = "metadata,umask=22,fmask=11"
 ```
 
-Save the file using `**Ctrl + x**`
+Save with `Ctrl + X`, then `Y`, then `Enter`.
 
-**Step 2: Shutdown wsl for the settings to take affect**
+**Step 2: Shut down WSL**
 
-Open normal command prompt and run
+Open a regular Windows Command Prompt (not WSL) and run:
 
-`wsl --shutdown`
+```bash
+wsl --shutdown
+```
 
-**Step 3: Run chmod again to apply the permissions**
+**Step 3: Apply permissions**
 
-Open Windows Terminal again and switch to Ubuntu shell.
+Re-open Windows Terminal, switch to Ubuntu, then set your permissions:
 
-`chmod 600 mykey.pem`
+```bash
+chmod 600 mykey.pem
+```
 
-**Step 4: Verify using** `**ls -l**`
+**Step 4: Verify**
 
-Run `ls -l` to verify that permissions are set properly
+```bash
+ls -l mykey.pem
+```
+
+You should see:
 
 ```
-rw-------    mykey.pem
+-rw------- 1 user group ... mykey.pem
 ```
 
 ## Reference links
 
-1.  [Setup WSL on windows](https://docs.microsoft.com/en-us/windows/wsl/setup/environment)
-2.  [Reset WSL Distro password](https://winaero.com/reset-password-wsl-linux-distro-windows-10/)
-3.  [Get Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab)
-4.  [What is Windows Subsystem for Linux?](https://docs.microsoft.com/en-us/windows/wsl/about)
-5.  [Understanding Linux file permissions](https://www.linux.com/training-tutorials/understanding-linux-file-permissions/)
-6.  [https://superuser.com/questions/1323645/unable-to-change-file-permissions-on-ubuntu-bash-for-windows-10](https://superuser.com/questions/1323645/unable-to-change-file-permissions-on-ubuntu-bash-for-windows-10)
-7.  [https://stackoverflow.com/questions/46610256/chmod-wsl-bash-doesnt-work](https://stackoverflow.com/questions/46610256/chmod-wsl-bash-doesnt-work)
+1. [Setup WSL on Windows](https://docs.microsoft.com/en-us/windows/wsl/setup/environment)
+2. [Reset WSL distro password](https://winaero.com/reset-password-wsl-linux-distro-windows-10/)
+3. [Get Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701)
+4. [Understanding Linux file permissions](https://www.linux.com/training-tutorials/understanding-linux-file-permissions/)
+5. [chmod in WSL doesn't work — Stack Overflow](https://stackoverflow.com/questions/46610256/chmod-wsl-bash-doesnt-work)
