@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <!-- Google Analytics 4 — replace G-XXXXXXXXXX with your GA4 Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VDR4WJ56Q9"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-VDR4WJ56Q9');
   </script>
 
   <meta charset="UTF-8">
@@ -63,8 +63,37 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- Icons -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0Q4LphifmFQbiakJDd+l4SQ4zD3Tg==" crossorigin="anonymous">
+  <!-- JSON-LD Structured Data -->
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Getting started with Flutter on Apple M1",
+    "datePublished": "2021-05-24T08:59:26.000Z",
+    "dateModified": "2026-06-13T18:49:58.114Z",
+    "author": {
+      "@type": "Person",
+      "name": "Chetan Sachdev",
+      "url": "https://chetansachdev.com/about/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Chetan Sachdev",
+      "url": "https://chetansachdev.com"
+    },
+    "url": "https://chetansachdev.com/2021/05/24/Getting-started-with-flutter-on-Apple-M1/",
+    "description": "How to set up Flutter on an Apple M1 Mac, including installing Android Studio, fixing the Android Command Line Tools error, and accepting Android licenses.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://chetansachdev.com/2021/05/24/Getting-started-with-flutter-on-Apple-M1/"
+    }
+  }
+  </script>
+  
+
+  <!-- Icons — Font Awesome 6 Free -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
 
   <!-- Theme stylesheet -->
   
@@ -79,7 +108,7 @@
       document.documentElement.setAttribute('data-theme', t === 'light' ? 'light' : 'dark');
     })();
   </script>
-<meta name="generator" content="Hexo 5.0.2"></head>
+<meta name="generator" content="Hexo 8.1.2"></head>
 
 <body>
 
@@ -329,10 +358,11 @@
     <div class="post-body">
       <p>This guide covers setting up Flutter on an Apple M1 Mac, including fixing common errors with Android Studio and SDK licensing.</p>
 <h2 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h2><p><strong>Step 1: Download Flutter</strong></p>
-<p>Get the latest stable release for macOS from the <a target="_blank" rel="noopener" href="https://flutter.dev/docs/get-started/install/macos">official Flutter install page</a>.</p>
+<p>Get the latest stable release for macOS from the <a href="https://flutter.dev/docs/get-started/install/macos">official Flutter install page</a>.</p>
 <p>As of writing, this was <code>flutter_macos_2.2.0-stable.zip</code>.</p>
 <p><strong>Step 2: Run Flutter Doctor</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flutter doctor</span><br></pre></td></tr></table></figure>
+
 <p>This will show you what’s missing. Common issues on a fresh install:</p>
 <ul>
 <li>Android toolchain not found</li>
@@ -340,7 +370,7 @@
 <li>CocoaPods not installed</li>
 </ul>
 <p><strong>Step 3: Install Android Studio</strong></p>
-<p>Download from <a target="_blank" rel="noopener" href="https://developer.android.com/studio/index.html">developer.android.com/studio</a> and install it.</p>
+<p>Download from <a href="https://developer.android.com/studio/index.html">developer.android.com&#x2F;studio</a> and install it.</p>
 <p><strong>Step 4: Install Android Command Line Tools (critical step)</strong></p>
 <p>Android Studio does not install the Command Line Tools by default. Without them, <code>flutter doctor --android-licenses</code> throws a <code>NoClassDefFoundError</code>.</p>
 <p>To install them:</p>
@@ -351,19 +381,23 @@
 <li>Check <strong>Android SDK Command-line Tools (latest)</strong></li>
 <li>Click <strong>Apply</strong> and let it install</li>
 </ol>
-<p><img src="/images/2021/05/19/83236218-2523-430d-8a78-dc9a27c3f065.png" alt="SDK Tools screenshot"></p>
+<p><img src="/images/2021/05/19/83236218-2523-430d-8a78-dc9a27c3f065.png" alt="SDK Tools screenshot" loading="lazy"></p>
 <p><strong>Step 5: Accept Android licenses</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flutter doctor --android-licenses</span><br></pre></td></tr></table></figure>
+
 <p>Accept all prompts. If Step 4 was done correctly, this runs without errors.</p>
 <p><strong>Step 6: Install Xcode</strong></p>
-<p>Download Xcode from the <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/xcode/id497799835">Mac App Store</a> or <a target="_blank" rel="noopener" href="https://developer.apple.com/xcode/download/">Apple Developer</a>. Then run:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer</span><br><span class="line">sudo xcodebuild -runFirstLaunch</span><br></pre></td></tr></table></figure>
+<p>Download Xcode from the <a href="https://apps.apple.com/us/app/xcode/id497799835">Mac App Store</a> or <a href="https://developer.apple.com/xcode/download/">Apple Developer</a>. Then run:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> xcode-select --switch /Applications/Xcode.app/Contents/Developer</span><br><span class="line"><span class="built_in">sudo</span> xcodebuild -runFirstLaunch</span><br></pre></td></tr></table></figure>
+
 <p><strong>Step 7: Install CocoaPods</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem install cocoapods</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> gem install cocoapods</span><br></pre></td></tr></table></figure>
+
 <p><strong>Step 8: Verify everything is working</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flutter doctor</span><br></pre></td></tr></table></figure>
+
 <p>All items should show a green checkmark. You’re ready to build.</p>
-<h2 id="Getting-Started-with-your-first-app"><a href="#Getting-Started-with-your-first-app" class="headerlink" title="Getting Started with your first app"></a>Getting Started with your first app</h2><p>Try the official Flutter codelab:<br><a target="_blank" rel="noopener" href="https://codelabs.developers.google.com/codelabs/first-flutter-app-pt1">Build your first Flutter app</a></p>
+<h2 id="Getting-Started-with-your-first-app"><a href="#Getting-Started-with-your-first-app" class="headerlink" title="Getting Started with your first app"></a>Getting Started with your first app</h2><p>Try the official Flutter codelab:<br><a href="https://codelabs.developers.google.com/codelabs/first-flutter-app-pt1">Build your first Flutter app</a></p>
 
     </div>
 
@@ -385,7 +419,7 @@
           (d.head || d.body).appendChild(s);
         })();
       </script>
-      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
   </article>
@@ -396,16 +430,16 @@
     <span class="sidebar-label">Connect</span>
     <div class="sidebar-social">
       <a href="https://x.com/cksachdev" target="_blank" rel="noopener">
-        <i class="fa fa-twitter" aria-hidden="true"></i> X
+        <i class="fa-brands fa-x-twitter" aria-hidden="true"></i> X
       </a>
       <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener">
-        <i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn
+        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn
       </a>
       <a href="https://github.com/cksachdev" target="_blank" rel="noopener">
-        <i class="fa fa-github" aria-hidden="true"></i> GitHub
+        <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
       </a>
       <a href="mailto:mail@chetansachdev.com">
-        <i class="fa fa-envelope" aria-hidden="true"></i> Email
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i> Email
       </a>
     </div>
   </div>
@@ -427,10 +461,10 @@
       hosted on <a href="https://github.com/cksachdev/chetansachdev.com" target="_blank" rel="noopener">GitHub Pages</a>.
     </p>
     <div class="footer-links">
-      <a href="https://x.com/cksachdev" target="_blank" rel="noopener"><i class="fa fa-twitter" aria-hidden="true"></i> X</a>
-      <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
-      <a href="https://github.com/cksachdev" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
-      <a href="mailto:mail@chetansachdev.com"><i class="fa fa-envelope" aria-hidden="true"></i> Email</a>
+      <a href="https://x.com/cksachdev" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i> X</a>
+      <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a>
+      <a href="https://github.com/cksachdev" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+      <a href="mailto:mail@chetansachdev.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</a>
     </div>
   </div>
 </footer>

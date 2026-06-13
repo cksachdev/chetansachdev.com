@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <!-- Google Analytics 4 — replace G-XXXXXXXXXX with your GA4 Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VDR4WJ56Q9"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-VDR4WJ56Q9');
   </script>
 
   <meta charset="UTF-8">
@@ -65,8 +65,37 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- Icons -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0Q4LphifmFQbiakJDd+l4SQ4zD3Tg==" crossorigin="anonymous">
+  <!-- JSON-LD Structured Data -->
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Solved: MAMP + Moodle on macOS Catalina",
+    "datePublished": "2020-08-30T09:32:14.000Z",
+    "dateModified": "2026-06-13T18:53:21.993Z",
+    "author": {
+      "@type": "Person",
+      "name": "Chetan Sachdev",
+      "url": "https://chetansachdev.com/about/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Chetan Sachdev",
+      "url": "https://chetansachdev.com"
+    },
+    "url": "https://chetansachdev.com/2020/08/30/Solved-MAMP-in-macOS-Catalina-for-Moodle-dev/",
+    "description": "How to get Moodle running locally with MAMP on macOS Catalina, including disabling Gatekeeper, editing php.ini to increase file upload limits, and fixing SCORM issues.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://chetansachdev.com/2020/08/30/Solved-MAMP-in-macOS-Catalina-for-Moodle-dev/"
+    }
+  }
+  </script>
+  
+
+  <!-- Icons — Font Awesome 6 Free -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
 
   <!-- Theme stylesheet -->
   
@@ -81,7 +110,7 @@
       document.documentElement.setAttribute('data-theme', t === 'light' ? 'light' : 'dark');
     })();
   </script>
-<meta name="generator" content="Hexo 5.0.2"></head>
+<meta name="generator" content="Hexo 8.1.2"></head>
 
 <body>
 
@@ -331,25 +360,28 @@
     <div class="post-body">
       <p>Getting Moodle to work locally with MAMP on macOS Catalina requires a few extra steps beyond a standard install.</p>
 <h2 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h2><p><strong>Step 1: Download Moodle for macOS</strong></p>
-<p>Get the Moodle package from the <a target="_blank" rel="noopener" href="https://download.moodle.org/macosx/">official macOS download page</a>.</p>
+<p>Get the Moodle package from the <a href="https://download.moodle.org/macosx/">official macOS download page</a>.</p>
 <p><strong>Step 2: Disable Gatekeeper to allow unsigned apps</strong></p>
 <p>macOS Catalina’s security settings may block the MAMP app. To disable Gatekeeper:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo spctl --master-disable</span><br></pre></td></tr></table></figure>
-<p>Reference: <a target="_blank" rel="noopener" href="https://osxdaily.com/2015/05/04/disable-gatekeeper-command-line-mac-osx/">How to disable Gatekeeper via command line</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> spctl --master-disable</span><br></pre></td></tr></table></figure>
+
+<p>Reference: <a href="https://osxdaily.com/2015/05/04/disable-gatekeeper-command-line-mac-osx/">How to disable Gatekeeper via command line</a></p>
 <p><strong>Step 3: Find and edit php.ini for your PHP version</strong></p>
 <ol>
 <li>Open MAMP → <strong>Preferences → PHP</strong> and note your current PHP version (e.g., 7.2.10)</li>
 <li>Edit the corresponding <code>php.ini</code> file:</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;Applications&#x2F;MAMP&#x2F;bin&#x2F;php&#x2F;php7.2.10&#x2F;conf&#x2F;php.ini</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/Applications/MAMP/bin/php/php7.2.10/conf/php.ini</span><br></pre></td></tr></table></figure>
+
 <p>Increase the upload limits (important for large SCORM packages):</p>
 <figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">post_max_size</span> = <span class="number">100</span>M</span><br><span class="line"><span class="attr">upload_max_filesize</span> = <span class="number">90</span>M</span><br></pre></td></tr></table></figure>
+
 <p><strong>Step 4: Restart MAMP</strong></p>
 <p>Stop your MAMP server, then start it again. Imports and SCORM uploads should now work without errors.</p>
 <h2 id="Other-useful-links"><a href="#Other-useful-links" class="headerlink" title="Other useful links"></a>Other useful links</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/944582/what-is-cmistring4096-and-how-can-i-extract-the-data-within-it">SCORM suspend_data encoding</a></li>
-<li><a target="_blank" rel="noopener" href="https://elearningindustry.com/getting-started-with-scorm-tracking-course-specific-data">Tracking course-specific data with SCORM</a></li>
-<li><a target="_blank" rel="noopener" href="https://moodle.org/mod/forum/discuss.php?d=224311">Moodle forum: PHP settings for large uploads</a></li>
+<li><a href="https://stackoverflow.com/questions/944582/what-is-cmistring4096-and-how-can-i-extract-the-data-within-it">SCORM suspend_data encoding</a></li>
+<li><a href="https://elearningindustry.com/getting-started-with-scorm-tracking-course-specific-data">Tracking course-specific data with SCORM</a></li>
+<li><a href="https://moodle.org/mod/forum/discuss.php?d=224311">Moodle forum: PHP settings for large uploads</a></li>
 </ul>
 
     </div>
@@ -372,7 +404,7 @@
           (d.head || d.body).appendChild(s);
         })();
       </script>
-      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
   </article>
@@ -383,16 +415,16 @@
     <span class="sidebar-label">Connect</span>
     <div class="sidebar-social">
       <a href="https://x.com/cksachdev" target="_blank" rel="noopener">
-        <i class="fa fa-twitter" aria-hidden="true"></i> X
+        <i class="fa-brands fa-x-twitter" aria-hidden="true"></i> X
       </a>
       <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener">
-        <i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn
+        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn
       </a>
       <a href="https://github.com/cksachdev" target="_blank" rel="noopener">
-        <i class="fa fa-github" aria-hidden="true"></i> GitHub
+        <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
       </a>
       <a href="mailto:mail@chetansachdev.com">
-        <i class="fa fa-envelope" aria-hidden="true"></i> Email
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i> Email
       </a>
     </div>
   </div>
@@ -414,10 +446,10 @@
       hosted on <a href="https://github.com/cksachdev/chetansachdev.com" target="_blank" rel="noopener">GitHub Pages</a>.
     </p>
     <div class="footer-links">
-      <a href="https://x.com/cksachdev" target="_blank" rel="noopener"><i class="fa fa-twitter" aria-hidden="true"></i> X</a>
-      <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
-      <a href="https://github.com/cksachdev" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
-      <a href="mailto:mail@chetansachdev.com"><i class="fa fa-envelope" aria-hidden="true"></i> Email</a>
+      <a href="https://x.com/cksachdev" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i> X</a>
+      <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a>
+      <a href="https://github.com/cksachdev" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+      <a href="mailto:mail@chetansachdev.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</a>
     </div>
   </div>
 </footer>

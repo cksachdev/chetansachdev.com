@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <!-- Google Analytics 4 — replace G-XXXXXXXXXX with your GA4 Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VDR4WJ56Q9"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-VDR4WJ56Q9');
   </script>
 
   <meta charset="UTF-8">
@@ -63,8 +63,37 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- Icons -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0Q4LphifmFQbiakJDd+l4SQ4zD3Tg==" crossorigin="anonymous">
+  <!-- JSON-LD Structured Data -->
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Wix SSL certificate won't work for an externally hosted site",
+    "datePublished": "2020-03-13T06:42:32.000Z",
+    "dateModified": "2026-06-13T18:55:52.134Z",
+    "author": {
+      "@type": "Person",
+      "name": "Chetan Sachdev",
+      "url": "https://chetansachdev.com/about/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Chetan Sachdev",
+      "url": "https://chetansachdev.com"
+    },
+    "url": "https://chetansachdev.com/2020/03/13/wix-certificate-won-t-work-for-externally-hosted/",
+    "description": "Why Wix's SSL certificate doesn't apply to externally hosted sites and how to install your own SSL certificate on an AWS EC2 instance instead.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://chetansachdev.com/2020/03/13/wix-certificate-won-t-work-for-externally-hosted/"
+    }
+  }
+  </script>
+  
+
+  <!-- Icons — Font Awesome 6 Free -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
 
   <!-- Theme stylesheet -->
   
@@ -79,7 +108,7 @@
       document.documentElement.setAttribute('data-theme', t === 'light' ? 'light' : 'dark');
     })();
   </script>
-<meta name="generator" content="Hexo 5.0.2"></head>
+<meta name="generator" content="Hexo 8.1.2"></head>
 
 <body>
 
@@ -331,22 +360,23 @@
 <h2 id="Why-Wix-SSL-doesn’t-work-here"><a href="#Why-Wix-SSL-doesn’t-work-here" class="headerlink" title="Why Wix SSL doesn’t work here"></a>Why Wix SSL doesn’t work here</h2><p>Wix’s SSL is provisioned only for sites hosted on Wix’s own infrastructure. When you point a subdomain or domain to an external IP, Wix has no control over the SSL on that server — you must set it up yourself.</p>
 <h2 id="Solution-Install-SSL-on-your-AWS-EC2-instance"><a href="#Solution-Install-SSL-on-your-AWS-EC2-instance" class="headerlink" title="Solution: Install SSL on your AWS EC2 instance"></a>Solution: Install SSL on your AWS EC2 instance</h2><p><strong>Option 1: Use Let’s Encrypt (free)</strong></p>
 <p>Let’s Encrypt provides free SSL certificates. Install <code>certbot</code> on your EC2 instance and follow the prompts:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install certbot python3-certbot-nginx</span><br><span class="line">sudo certbot --nginx -d yourdomain.com</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install certbot python3-certbot-nginx</span><br><span class="line"><span class="built_in">sudo</span> certbot --nginx -d yourdomain.com</span><br></pre></td></tr></table></figure>
+
 <ul>
-<li><a target="_blank" rel="noopener" href="https://community.letsencrypt.org/t/wix-wildcard-ssl-for-externally-hosted-site/77346">Let’s Encrypt community: Wix wildcard SSL for externally hosted site</a></li>
-<li><a target="_blank" rel="noopener" href="https://crt.sh/?q=chetansachdev.com">Check existing certificates for your domain</a></li>
+<li><a href="https://community.letsencrypt.org/t/wix-wildcard-ssl-for-externally-hosted-site/77346">Let’s Encrypt community: Wix wildcard SSL for externally hosted site</a></li>
+<li><a href="https://crt.sh/?q=chetansachdev.com">Check existing certificates for your domain</a></li>
 </ul>
 <p><strong>Option 2: Use AWS Certificate Manager (ACM)</strong></p>
 <p>If your EC2 instance sits behind a Load Balancer, you can use a free ACM certificate:</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/34945299/how-to-add-ssl-certificate-to-aws-ec2-with-the-help-of-new-aws-certificate-manag">How to add SSL certificate to AWS EC2 with ACM</a></li>
-<li><a target="_blank" rel="noopener" href="https://serverfault.com/questions/947057/install-aws-ssl-certificate-to-ec2-instance-without-load-balancer">Install AWS SSL certificate to EC2 without Load Balancer</a></li>
+<li><a href="https://stackoverflow.com/questions/34945299/how-to-add-ssl-certificate-to-aws-ec2-with-the-help-of-new-aws-certificate-manag">How to add SSL certificate to AWS EC2 with ACM</a></li>
+<li><a href="https://serverfault.com/questions/947057/install-aws-ssl-certificate-to-ec2-instance-without-load-balancer">Install AWS SSL certificate to EC2 without Load Balancer</a></li>
 </ul>
 <p><strong>Option 3: Use RapidSSL for a paid certificate</strong></p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://www.rapidsslonline.com/ssl/how-to-install-an-ssl-certificate-on-aws-ec2-instance/">RapidSSL: How to install an SSL certificate on AWS EC2</a></li>
+<li><a href="https://www.rapidsslonline.com/ssl/how-to-install-an-ssl-certificate-on-aws-ec2-instance/">RapidSSL: How to install an SSL certificate on AWS EC2</a></li>
 </ul>
-<h2 id="Requesting-a-third-party-SSL-through-Wix-limited-cases"><a href="#Requesting-a-third-party-SSL-through-Wix-limited-cases" class="headerlink" title="Requesting a third-party SSL through Wix (limited cases)"></a>Requesting a third-party SSL through Wix (limited cases)</h2><p>Wix has limited support for this scenario:<br><a target="_blank" rel="noopener" href="https://support.wix.com/en/article/request-third-party-ssl-certificates">Wix: Request third-party SSL certificates</a></p>
+<h2 id="Requesting-a-third-party-SSL-through-Wix-limited-cases"><a href="#Requesting-a-third-party-SSL-through-Wix-limited-cases" class="headerlink" title="Requesting a third-party SSL through Wix (limited cases)"></a>Requesting a third-party SSL through Wix (limited cases)</h2><p>Wix has limited support for this scenario:<br><a href="https://support.wix.com/en/article/request-third-party-ssl-certificates">Wix: Request third-party SSL certificates</a></p>
 
     </div>
 
@@ -368,7 +398,7 @@
           (d.head || d.body).appendChild(s);
         })();
       </script>
-      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
   </article>
@@ -379,16 +409,16 @@
     <span class="sidebar-label">Connect</span>
     <div class="sidebar-social">
       <a href="https://x.com/cksachdev" target="_blank" rel="noopener">
-        <i class="fa fa-twitter" aria-hidden="true"></i> X
+        <i class="fa-brands fa-x-twitter" aria-hidden="true"></i> X
       </a>
       <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener">
-        <i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn
+        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn
       </a>
       <a href="https://github.com/cksachdev" target="_blank" rel="noopener">
-        <i class="fa fa-github" aria-hidden="true"></i> GitHub
+        <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
       </a>
       <a href="mailto:mail@chetansachdev.com">
-        <i class="fa fa-envelope" aria-hidden="true"></i> Email
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i> Email
       </a>
     </div>
   </div>
@@ -410,10 +440,10 @@
       hosted on <a href="https://github.com/cksachdev/chetansachdev.com" target="_blank" rel="noopener">GitHub Pages</a>.
     </p>
     <div class="footer-links">
-      <a href="https://x.com/cksachdev" target="_blank" rel="noopener"><i class="fa fa-twitter" aria-hidden="true"></i> X</a>
-      <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
-      <a href="https://github.com/cksachdev" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
-      <a href="mailto:mail@chetansachdev.com"><i class="fa fa-envelope" aria-hidden="true"></i> Email</a>
+      <a href="https://x.com/cksachdev" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i> X</a>
+      <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a>
+      <a href="https://github.com/cksachdev" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+      <a href="mailto:mail@chetansachdev.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</a>
     </div>
   </div>
 </footer>

@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <!-- Google Analytics 4 — replace G-XXXXXXXXXX with your GA4 Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VDR4WJ56Q9"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-VDR4WJ56Q9');
   </script>
 
   <meta charset="UTF-8">
@@ -63,8 +63,37 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- Icons -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0Q4LphifmFQbiakJDd+l4SQ4zD3Tg==" crossorigin="anonymous">
+  <!-- JSON-LD Structured Data -->
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Using Google Sheets as a database for an experimental project",
+    "datePublished": "2020-02-25T17:17:55.000Z",
+    "dateModified": "2026-06-13T18:54:43.852Z",
+    "author": {
+      "@type": "Person",
+      "name": "Chetan Sachdev",
+      "url": "https://chetansachdev.com/about/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Chetan Sachdev",
+      "url": "https://chetansachdev.com"
+    },
+    "url": "https://chetansachdev.com/2020/02/25/Using-google-sheet-as-db-for-experimental-project/",
+    "description": "How to use Google Sheets as a lightweight backend database for small experimental projects, with a comparison of Sheetrock, Tabletop, and Sheetsee libraries.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://chetansachdev.com/2020/02/25/Using-google-sheet-as-db-for-experimental-project/"
+    }
+  }
+  </script>
+  
+
+  <!-- Icons — Font Awesome 6 Free -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
 
   <!-- Theme stylesheet -->
   
@@ -79,7 +108,7 @@
       document.documentElement.setAttribute('data-theme', t === 'light' ? 'light' : 'dark');
     })();
   </script>
-<meta name="generator" content="Hexo 5.0.2"></head>
+<meta name="generator" content="Hexo 8.1.2"></head>
 
 <body>
 
@@ -331,24 +360,25 @@
 <h2 id="Library-options"><a href="#Library-options" class="headerlink" title="Library options"></a>Library options</h2><p>After evaluating several libraries, these three are the most commonly used:</p>
 <p><strong>1. Sheetrock</strong> — simplest option for read-only display of sheet data in HTML</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://chriszarate.github.io/sheetrock/">chriszarate.github.io/sheetrock</a></li>
+<li><a href="https://chriszarate.github.io/sheetrock/">chriszarate.github.io&#x2F;sheetrock</a></li>
 </ul>
 <p><strong>2. Tabletop</strong> — fetch Google Sheets data as JSON in JavaScript</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/jsoma/tabletop">github.com/jsoma/tabletop</a></li>
-<li><a target="_blank" rel="noopener" href="https://css-tricks.com/creating-an-editable-webpage-with-google-spreadsheets-and-tabletop-js/">CSS-Tricks walkthrough</a></li>
+<li><a href="https://github.com/jsoma/tabletop">github.com&#x2F;jsoma&#x2F;tabletop</a></li>
+<li><a href="https://css-tricks.com/creating-an-editable-webpage-with-google-spreadsheets-and-tabletop-js/">CSS-Tricks walkthrough</a></li>
 </ul>
 <p><strong>3. Sheetsee</strong> — adds sorting, filtering and templating on top of Tabletop</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://jlord.us/sheetsee.js/docs/basics.html">jlord.us/sheetsee.js</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/jlord/sheetsee">GitHub — jlord/sheetsee</a></li>
+<li><a href="https://jlord.us/sheetsee.js/docs/basics.html">jlord.us&#x2F;sheetsee.js</a></li>
+<li><a href="https://github.com/jlord/sheetsee">GitHub — jlord&#x2F;sheetsee</a></li>
 </ul>
-<h2 id="Most-useful-reference-CRUD-with-Google-Apps-Script"><a href="#Most-useful-reference-CRUD-with-Google-Apps-Script" class="headerlink" title="Most useful reference (CRUD with Google Apps Script)"></a>Most useful reference (CRUD with Google Apps Script)</h2><p>For read/write access (not just read), use Google Apps Script as a backend:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;gist.github.com&#x2F;nyancodeid&#x2F;abc7f2c3ce47eda753dee8a2b63070ab</span><br></pre></td></tr></table></figure>
+<h2 id="Most-useful-reference-CRUD-with-Google-Apps-Script"><a href="#Most-useful-reference-CRUD-with-Google-Apps-Script" class="headerlink" title="Most useful reference (CRUD with Google Apps Script)"></a>Most useful reference (CRUD with Google Apps Script)</h2><p>For read&#x2F;write access (not just read), use Google Apps Script as a backend:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://gist.github.com/nyancodeid/abc7f2c3ce47eda753dee8a2b63070ab</span><br></pre></td></tr></table></figure>
+
 <p>This lets you do full CRUD (Create, Read, Update, Delete) by deploying a script as a web app endpoint.</p>
 <h2 id="Working-examples"><a href="#Working-examples" class="headerlink" title="Working examples"></a>Working examples</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://codepen.io/ashrafali46/pen/bJgwEN">Codepen — Sheets CRUD demo</a></li>
-<li><a target="_blank" rel="noopener" href="https://programming-steps.blogspot.com/2016/10/google-sheet-data-crud-app-script-jquery.html">Google Sheets as backend tutorial</a></li>
+<li><a href="https://codepen.io/ashrafali46/pen/bJgwEN">Codepen — Sheets CRUD demo</a></li>
+<li><a href="https://programming-steps.blogspot.com/2016/10/google-sheet-data-crud-app-script-jquery.html">Google Sheets as backend tutorial</a></li>
 </ul>
 <h2 id="When-to-use-this-approach"><a href="#When-to-use-this-approach" class="headerlink" title="When to use this approach"></a>When to use this approach</h2><p>Best for: prototypes, demos, internal tools with small datasets, and projects where you want non-technical collaborators to edit the data.</p>
 <p>Not suitable for: production apps, large datasets, or anything requiring authentication and security.</p>
@@ -373,7 +403,7 @@
           (d.head || d.body).appendChild(s);
         })();
       </script>
-      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
   </article>
@@ -384,16 +414,16 @@
     <span class="sidebar-label">Connect</span>
     <div class="sidebar-social">
       <a href="https://x.com/cksachdev" target="_blank" rel="noopener">
-        <i class="fa fa-twitter" aria-hidden="true"></i> X
+        <i class="fa-brands fa-x-twitter" aria-hidden="true"></i> X
       </a>
       <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener">
-        <i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn
+        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn
       </a>
       <a href="https://github.com/cksachdev" target="_blank" rel="noopener">
-        <i class="fa fa-github" aria-hidden="true"></i> GitHub
+        <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
       </a>
       <a href="mailto:mail@chetansachdev.com">
-        <i class="fa fa-envelope" aria-hidden="true"></i> Email
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i> Email
       </a>
     </div>
   </div>
@@ -415,10 +445,10 @@
       hosted on <a href="https://github.com/cksachdev/chetansachdev.com" target="_blank" rel="noopener">GitHub Pages</a>.
     </p>
     <div class="footer-links">
-      <a href="https://x.com/cksachdev" target="_blank" rel="noopener"><i class="fa fa-twitter" aria-hidden="true"></i> X</a>
-      <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
-      <a href="https://github.com/cksachdev" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
-      <a href="mailto:mail@chetansachdev.com"><i class="fa fa-envelope" aria-hidden="true"></i> Email</a>
+      <a href="https://x.com/cksachdev" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i> X</a>
+      <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a>
+      <a href="https://github.com/cksachdev" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+      <a href="mailto:mail@chetansachdev.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</a>
     </div>
   </div>
 </footer>

@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <!-- Google Analytics 4 — replace G-XXXXXXXXXX with your GA4 Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VDR4WJ56Q9"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-VDR4WJ56Q9');
   </script>
 
   <meta charset="UTF-8">
@@ -63,8 +63,37 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- Icons -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0Q4LphifmFQbiakJDd+l4SQ4zD3Tg==" crossorigin="anonymous">
+  <!-- JSON-LD Structured Data -->
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Fix: postgres command not found in the PATH",
+    "datePublished": "2020-05-10T17:05:47.000Z",
+    "dateModified": "2026-06-13T18:55:01.835Z",
+    "author": {
+      "@type": "Person",
+      "name": "Chetan Sachdev",
+      "url": "https://chetansachdev.com/about/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Chetan Sachdev",
+      "url": "https://chetansachdev.com"
+    },
+    "url": "https://chetansachdev.com/2020/05/10/When-Postgres-command-not-found-in-the-PATH/",
+    "description": "How to fix the \"command not found\" error for psql and other PostgreSQL commands on macOS by adding the Postgres.app bin directory to your PATH.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://chetansachdev.com/2020/05/10/When-Postgres-command-not-found-in-the-PATH/"
+    }
+  }
+  </script>
+  
+
+  <!-- Icons — Font Awesome 6 Free -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
 
   <!-- Theme stylesheet -->
   
@@ -79,7 +108,7 @@
       document.documentElement.setAttribute('data-theme', t === 'light' ? 'light' : 'dark');
     })();
   </script>
-<meta name="generator" content="Hexo 5.0.2"></head>
+<meta name="generator" content="Hexo 8.1.2"></head>
 
 <body>
 
@@ -327,14 +356,17 @@
     <h1 class="post-title">Fix: postgres command not found in the PATH</h1>
 
     <div class="post-body">
-      <p>If you’ve installed <a target="_blank" rel="noopener" href="https://postgresapp.com/">Postgres.app</a> on macOS but get <code>command not found</code> when running <code>psql</code> or other Postgres commands, the binary directory isn’t in your <code>PATH</code>.</p>
+      <p>If you’ve installed <a href="https://postgresapp.com/">Postgres.app</a> on macOS but get <code>command not found</code> when running <code>psql</code> or other Postgres commands, the binary directory isn’t in your <code>PATH</code>.</p>
 <h2 id="Fix"><a href="#Fix" class="headerlink" title="Fix"></a>Fix</h2><p><strong>Step 1: Add Postgres binaries to your PATH</strong></p>
 <p>Run this in your terminal (replacing <code>12</code> with your installed Postgres version):</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:/Applications/Postgres.app/Contents/Versions/12/bin</span><br></pre></td></tr></table></figure>
+
 <p>To make this permanent, add the line to your shell config file (<code>~/.zshrc</code> for Zsh, <code>~/.bash_profile</code> for Bash):</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/12/bin&#x27;</span> &gt;&gt; ~/.zshrc</span><br><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
+
 <p><strong>Step 2: Verify</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">psql --version</span><br></pre></td></tr></table></figure>
+
 <p>You should see the Postgres version output without any error.</p>
 <h2 id="Bonus-Install-the-pg-Ruby-gem"><a href="#Bonus-Install-the-pg-Ruby-gem" class="headerlink" title="Bonus: Install the pg Ruby gem"></a>Bonus: Install the <code>pg</code> Ruby gem</h2><p>If you’re also getting errors installing the <code>pg</code> gem in a Rails project after fixing the PATH:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem install pg -v <span class="string">&#x27;1.2.2&#x27;</span> --<span class="built_in">source</span> <span class="string">&#x27;https://rubygems.org/&#x27;</span></span><br></pre></td></tr></table></figure>
@@ -359,7 +391,7 @@
           (d.head || d.body).appendChild(s);
         })();
       </script>
-      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
   </article>
@@ -370,16 +402,16 @@
     <span class="sidebar-label">Connect</span>
     <div class="sidebar-social">
       <a href="https://x.com/cksachdev" target="_blank" rel="noopener">
-        <i class="fa fa-twitter" aria-hidden="true"></i> X
+        <i class="fa-brands fa-x-twitter" aria-hidden="true"></i> X
       </a>
       <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener">
-        <i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn
+        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn
       </a>
       <a href="https://github.com/cksachdev" target="_blank" rel="noopener">
-        <i class="fa fa-github" aria-hidden="true"></i> GitHub
+        <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
       </a>
       <a href="mailto:mail@chetansachdev.com">
-        <i class="fa fa-envelope" aria-hidden="true"></i> Email
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i> Email
       </a>
     </div>
   </div>
@@ -401,10 +433,10 @@
       hosted on <a href="https://github.com/cksachdev/chetansachdev.com" target="_blank" rel="noopener">GitHub Pages</a>.
     </p>
     <div class="footer-links">
-      <a href="https://x.com/cksachdev" target="_blank" rel="noopener"><i class="fa fa-twitter" aria-hidden="true"></i> X</a>
-      <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
-      <a href="https://github.com/cksachdev" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
-      <a href="mailto:mail@chetansachdev.com"><i class="fa fa-envelope" aria-hidden="true"></i> Email</a>
+      <a href="https://x.com/cksachdev" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i> X</a>
+      <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a>
+      <a href="https://github.com/cksachdev" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+      <a href="mailto:mail@chetansachdev.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</a>
     </div>
   </div>
 </footer>

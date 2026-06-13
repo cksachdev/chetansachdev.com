@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <!-- Google Analytics 4 — replace G-XXXXXXXXXX with your GA4 Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VDR4WJ56Q9"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-VDR4WJ56Q9');
   </script>
 
   <meta charset="UTF-8">
@@ -63,8 +63,37 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- Icons -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0Q4LphifmFQbiakJDd+l4SQ4zD3Tg==" crossorigin="anonymous">
+  <!-- JSON-LD Structured Data -->
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Lodash - quick experiments in Chrome DevTools",
+    "datePublished": "2021-01-01T19:37:30.000Z",
+    "dateModified": "2026-06-13T18:51:29.059Z",
+    "author": {
+      "@type": "Person",
+      "name": "Chetan Sachdev",
+      "url": "https://chetansachdev.com/about/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Chetan Sachdev",
+      "url": "https://chetansachdev.com"
+    },
+    "url": "https://chetansachdev.com/2021/01/02/Lodash-quick-experiments-in-Chrome/",
+    "description": "How to load Lodash into any web page via Chrome DevTools console so you can experiment with Lodash methods without a project setup.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://chetansachdev.com/2021/01/02/Lodash-quick-experiments-in-Chrome/"
+    }
+  }
+  </script>
+  
+
+  <!-- Icons — Font Awesome 6 Free -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
 
   <!-- Theme stylesheet -->
   
@@ -79,7 +108,7 @@
       document.documentElement.setAttribute('data-theme', t === 'light' ? 'light' : 'dark');
     })();
   </script>
-<meta name="generator" content="Hexo 5.0.2"></head>
+<meta name="generator" content="Hexo 8.1.2"></head>
 
 <body>
 
@@ -329,18 +358,27 @@
     <div class="post-body">
       <p>Want to try out a Lodash method quickly without creating a project? You can inject Lodash into any page using the Chrome DevTools console.</p>
 <h2 id="Step-1-Allow-JavaScript-on-the-page-if-blocked"><a href="#Step-1-Allow-JavaScript-on-the-page-if-blocked" class="headerlink" title="Step 1: Allow JavaScript on the page (if blocked)"></a>Step 1: Allow JavaScript on the page (if blocked)</h2><p>If you’re on a page that blocks scripts, navigate to:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chrome:&#x2F;&#x2F;settings&#x2F;content&#x2F;javascript</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chrome://settings/content/javascript</span><br></pre></td></tr></table></figure>
+
 <p>And enable JavaScript for that site.</p>
 <h2 id="Step-2-Inject-Lodash-via-the-console"><a href="#Step-2-Inject-Lodash-via-the-console" class="headerlink" title="Step 2: Inject Lodash via the console"></a>Step 2: Inject Lodash via the console</h2><p>Open DevTools (<code>Cmd + Option + J</code> on Mac, <code>Ctrl + Shift + J</code> on Windows), then paste:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> el = <span class="built_in">document</span>.createElement(<span class="string">&#x27;script&#x27;</span>);</span><br><span class="line">el.src = <span class="string">&quot;https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js&quot;</span>;</span><br><span class="line">el.type = <span class="string">&quot;text/javascript&quot;</span>;</span><br><span class="line"><span class="built_in">document</span>.head.appendChild(el);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> el = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;script&#x27;</span>);</span><br><span class="line">el.<span class="property">src</span> = <span class="string">&quot;https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js&quot;</span>;</span><br><span class="line">el.<span class="property">type</span> = <span class="string">&quot;text/javascript&quot;</span>;</span><br><span class="line"><span class="variable language_">document</span>.<span class="property">head</span>.<span class="title function_">appendChild</span>(el);</span><br></pre></td></tr></table></figure>
+
 <p>Now <code>_</code> is available in the console.</p>
 <h2 id="Step-3-Experiment-with-Lodash-methods"><a href="#Step-3-Experiment-with-Lodash-methods" class="headerlink" title="Step 3: Experiment with Lodash methods"></a>Step 3: Experiment with Lodash methods</h2><p>Some useful ones to try:</p>
-<p><strong>Remove specific keys from an object:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_.omit(obj, [<span class="string">&#x27;key1&#x27;</span>, <span class="string">&#x27;key2&#x27;</span>])</span><br></pre></td></tr></table></figure></p>
-<p><strong>Split an array into chunks:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_.chunk([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>], <span class="number">2</span>)</span><br><span class="line"><span class="comment">// =&gt; [[1, 2], [3, 4], [5]]</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>Remove elements from an array by index:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_.pullAt(array, [<span class="number">0</span>, <span class="number">2</span>])</span><br></pre></td></tr></table></figure></p>
+<p><strong>Remove specific keys from an object:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_.<span class="title function_">omit</span>(obj, [<span class="string">&#x27;key1&#x27;</span>, <span class="string">&#x27;key2&#x27;</span>])</span><br></pre></td></tr></table></figure>
+
+<p><strong>Split an array into chunks:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_.<span class="title function_">chunk</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>], <span class="number">2</span>)</span><br><span class="line"><span class="comment">// =&gt; [[1, 2], [3, 4], [5]]</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Remove elements from an array by index:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_.<span class="title function_">pullAt</span>(array, [<span class="number">0</span>, <span class="number">2</span>])</span><br></pre></td></tr></table></figure>
+
 <h2 id="Bookmarklet-version"><a href="#Bookmarklet-version" class="headerlink" title="Bookmarklet version"></a>Bookmarklet version</h2><p>Save this as a bookmark to inject Lodash into any page with one click:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript:var el&#x3D;document.createElement(&#39;script&#39;);el.src&#x3D;&quot;https:&#x2F;&#x2F;cdnjs.cloudflare.com&#x2F;ajax&#x2F;libs&#x2F;lodash.js&#x2F;4.17.20&#x2F;lodash.min.js&quot;;el.type&#x3D;&quot;text&#x2F;javascript&quot;;document.head.appendChild(el);</span><br></pre></td></tr></table></figure>
-<h2 id="Don’t-always-need-Lodash"><a href="#Don’t-always-need-Lodash" class="headerlink" title="Don’t always need Lodash?"></a>Don’t always need Lodash?</h2><p>Many Lodash methods have native JavaScript equivalents. See:<br><a target="_blank" rel="noopener" href="https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore">You Don’t Need Lodash/Underscore</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript:var el=document.createElement(&#x27;script&#x27;);el.src=&quot;https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js&quot;;el.type=&quot;text/javascript&quot;;document.head.appendChild(el);</span><br></pre></td></tr></table></figure>
+
+<h2 id="Don’t-always-need-Lodash"><a href="#Don’t-always-need-Lodash" class="headerlink" title="Don’t always need Lodash?"></a>Don’t always need Lodash?</h2><p>Many Lodash methods have native JavaScript equivalents. See:<br><a href="https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore">You Don’t Need Lodash&#x2F;Underscore</a></p>
 
     </div>
 
@@ -362,7 +400,7 @@
           (d.head || d.body).appendChild(s);
         })();
       </script>
-      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
   </article>
@@ -373,16 +411,16 @@
     <span class="sidebar-label">Connect</span>
     <div class="sidebar-social">
       <a href="https://x.com/cksachdev" target="_blank" rel="noopener">
-        <i class="fa fa-twitter" aria-hidden="true"></i> X
+        <i class="fa-brands fa-x-twitter" aria-hidden="true"></i> X
       </a>
       <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener">
-        <i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn
+        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn
       </a>
       <a href="https://github.com/cksachdev" target="_blank" rel="noopener">
-        <i class="fa fa-github" aria-hidden="true"></i> GitHub
+        <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
       </a>
       <a href="mailto:mail@chetansachdev.com">
-        <i class="fa fa-envelope" aria-hidden="true"></i> Email
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i> Email
       </a>
     </div>
   </div>
@@ -404,10 +442,10 @@
       hosted on <a href="https://github.com/cksachdev/chetansachdev.com" target="_blank" rel="noopener">GitHub Pages</a>.
     </p>
     <div class="footer-links">
-      <a href="https://x.com/cksachdev" target="_blank" rel="noopener"><i class="fa fa-twitter" aria-hidden="true"></i> X</a>
-      <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
-      <a href="https://github.com/cksachdev" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
-      <a href="mailto:mail@chetansachdev.com"><i class="fa fa-envelope" aria-hidden="true"></i> Email</a>
+      <a href="https://x.com/cksachdev" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i> X</a>
+      <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a>
+      <a href="https://github.com/cksachdev" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+      <a href="mailto:mail@chetansachdev.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</a>
     </div>
   </div>
 </footer>

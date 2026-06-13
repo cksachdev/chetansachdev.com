@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <!-- Google Analytics 4 — replace G-XXXXXXXXXX with your GA4 Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VDR4WJ56Q9"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-VDR4WJ56Q9');
   </script>
 
   <meta charset="UTF-8">
@@ -65,8 +65,37 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- Icons -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0Q4LphifmFQbiakJDd+l4SQ4zD3Tg==" crossorigin="anonymous">
+  <!-- JSON-LD Structured Data -->
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Mapping a Wix subdomain to an AWS EC2 instance",
+    "datePublished": "2020-02-13T21:45:57.000Z",
+    "dateModified": "2026-06-13T18:51:39.716Z",
+    "author": {
+      "@type": "Person",
+      "name": "Chetan Sachdev",
+      "url": "https://chetansachdev.com/about/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Chetan Sachdev",
+      "url": "https://chetansachdev.com"
+    },
+    "url": "https://chetansachdev.com/2020/02/14/Mapping-wix-subdomain-to-AWS-EC2-instance/",
+    "description": "How to point a Wix subdomain to an AWS EC2 instance using an A record and Elastic IP, then secure it with a Let's Encrypt SSL certificate.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://chetansachdev.com/2020/02/14/Mapping-wix-subdomain-to-AWS-EC2-instance/"
+    }
+  }
+  </script>
+  
+
+  <!-- Icons — Font Awesome 6 Free -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
 
   <!-- Theme stylesheet -->
   
@@ -81,7 +110,7 @@
       document.documentElement.setAttribute('data-theme', t === 'light' ? 'light' : 'dark');
     })();
   </script>
-<meta name="generator" content="Hexo 5.0.2"></head>
+<meta name="generator" content="Hexo 8.1.2"></head>
 
 <body>
 
@@ -332,18 +361,18 @@
       <p>This guide shows how to map a Wix-managed subdomain to an app running on an AWS EC2 instance, and then add an SSL certificate.</p>
 <h2 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h2><p><strong>Step 1: Configure an A record in Wix</strong></p>
 <p>In Wix, go to <strong>Domains → Advanced</strong> and add an A record pointing your subdomain to your EC2 instance’s IP.</p>
-<p>Detailed walkthrough: <a target="_blank" rel="noopener" href="https://support.wix.com/en/article/connecting-a-subdomain-to-an-external-resource-eg-a-blog">Wix — Connecting a subdomain to an external resource</a></p>
+<p>Detailed walkthrough: <a href="https://support.wix.com/en/article/connecting-a-subdomain-to-an-external-resource-eg-a-blog">Wix — Connecting a subdomain to an external resource</a></p>
 <p><strong>Step 2: Set up an Elastic IP on AWS</strong></p>
 <p>A regular EC2 IP changes on restart. Use an Elastic IP to get a static address:</p>
 <ol>
 <li>Go to <strong>EC2 → Elastic IPs → Allocate Elastic IP address</strong></li>
 <li>Associate it with your EC2 instance</li>
 </ol>
-<p>Guide: <a target="_blank" rel="noopener" href="https://dev.to/maybebored/how-to-set-up-a-custom-domain-for-your-ec2-instance-without-using-route53-f9">How to set up a custom domain for EC2 without Route53</a></p>
+<p>Guide: <a href="https://dev.to/maybebored/how-to-set-up-a-custom-domain-for-your-ec2-instance-without-using-route53-f9">How to set up a custom domain for EC2 without Route53</a></p>
 <p><strong>Step 3: Check DNS propagation</strong></p>
-<p>After saving the A record, it can take up to 48 hours to propagate globally. Check progress at:<br><a target="_blank" rel="noopener" href="https://www.whatsmydns.net/#A/chetansachdev.com">whatsmydns.net</a></p>
+<p>After saving the A record, it can take up to 48 hours to propagate globally. Check progress at:<br><a href="https://www.whatsmydns.net/#A/chetansachdev.com">whatsmydns.net</a></p>
 <p><strong>Step 4: Install a Let’s Encrypt SSL certificate</strong></p>
-<p>For Bitnami-based EC2 instances, use the <code>bncert</code> tool:<br><a target="_blank" rel="noopener" href="https://docs.bitnami.com/general/how-to/understand-bncert/">Bitnami: How to install SSL certificates using bncert</a></p>
+<p>For Bitnami-based EC2 instances, use the <code>bncert</code> tool:<br><a href="https://docs.bitnami.com/general/how-to/understand-bncert/">Bitnami: How to install SSL certificates using bncert</a></p>
 
     </div>
 
@@ -365,7 +394,7 @@
           (d.head || d.body).appendChild(s);
         })();
       </script>
-      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
   </article>
@@ -376,16 +405,16 @@
     <span class="sidebar-label">Connect</span>
     <div class="sidebar-social">
       <a href="https://x.com/cksachdev" target="_blank" rel="noopener">
-        <i class="fa fa-twitter" aria-hidden="true"></i> X
+        <i class="fa-brands fa-x-twitter" aria-hidden="true"></i> X
       </a>
       <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener">
-        <i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn
+        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn
       </a>
       <a href="https://github.com/cksachdev" target="_blank" rel="noopener">
-        <i class="fa fa-github" aria-hidden="true"></i> GitHub
+        <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
       </a>
       <a href="mailto:mail@chetansachdev.com">
-        <i class="fa fa-envelope" aria-hidden="true"></i> Email
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i> Email
       </a>
     </div>
   </div>
@@ -407,10 +436,10 @@
       hosted on <a href="https://github.com/cksachdev/chetansachdev.com" target="_blank" rel="noopener">GitHub Pages</a>.
     </p>
     <div class="footer-links">
-      <a href="https://x.com/cksachdev" target="_blank" rel="noopener"><i class="fa fa-twitter" aria-hidden="true"></i> X</a>
-      <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
-      <a href="https://github.com/cksachdev" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
-      <a href="mailto:mail@chetansachdev.com"><i class="fa fa-envelope" aria-hidden="true"></i> Email</a>
+      <a href="https://x.com/cksachdev" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i> X</a>
+      <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a>
+      <a href="https://github.com/cksachdev" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+      <a href="mailto:mail@chetansachdev.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</a>
     </div>
   </div>
 </footer>

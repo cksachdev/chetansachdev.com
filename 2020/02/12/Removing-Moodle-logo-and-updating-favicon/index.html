@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <!-- Google Analytics 4 — replace G-XXXXXXXXXX with your GA4 Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VDR4WJ56Q9"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-VDR4WJ56Q9');
   </script>
 
   <meta charset="UTF-8">
@@ -63,8 +63,37 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- Icons -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0Q4LphifmFQbiakJDd+l4SQ4zD3Tg==" crossorigin="anonymous">
+  <!-- JSON-LD Structured Data -->
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Removing the Moodle logo and updating the favicon",
+    "datePublished": "2020-02-11T19:38:47.000Z",
+    "dateModified": "2026-06-13T18:52:33.956Z",
+    "author": {
+      "@type": "Person",
+      "name": "Chetan Sachdev",
+      "url": "https://chetansachdev.com/about/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Chetan Sachdev",
+      "url": "https://chetansachdev.com"
+    },
+    "url": "https://chetansachdev.com/2020/02/12/Removing-Moodle-logo-and-updating-favicon/",
+    "description": "How to replace the favicon and remove the Moodle logo from the Boost theme footer on a Bitnami Moodle installation hosted on AWS EC2.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://chetansachdev.com/2020/02/12/Removing-Moodle-logo-and-updating-favicon/"
+    }
+  }
+  </script>
+  
+
+  <!-- Icons — Font Awesome 6 Free -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
 
   <!-- Theme stylesheet -->
   
@@ -79,7 +108,7 @@
       document.documentElement.setAttribute('data-theme', t === 'light' ? 'light' : 'dark');
     })();
   </script>
-<meta name="generator" content="Hexo 5.0.2"></head>
+<meta name="generator" content="Hexo 8.1.2"></head>
 
 <body>
 
@@ -329,13 +358,15 @@
     <div class="post-body">
       <p>Two common customizations for a Moodle site: replacing the favicon and removing the Moodle branding from the footer.</p>
 <h2 id="Updating-the-favicon"><a href="#Updating-the-favicon" class="headerlink" title="Updating the favicon"></a>Updating the favicon</h2><p><strong>Step 1: Create your favicon</strong></p>
-<p>Use <a target="_blank" rel="noopener" href="https://www.photopea.com/">Photopea</a> (free, browser-based) or any image editor to create a 32×32 or 64×64 pixel <code>.ico</code> file.</p>
+<p>Use <a href="https://www.photopea.com/">Photopea</a> (free, browser-based) or any image editor to create a 32×32 or 64×64 pixel <code>.ico</code> file.</p>
 <p><strong>Step 2: Locate the favicon directory on the server</strong></p>
 <p>On Bitnami Moodle, navigate to:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;opt&#x2F;bitnami&#x2F;apps&#x2F;moodle&#x2F;htdocs&#x2F;theme&#x2F;boost&#x2F;pix</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/bitnami/apps/moodle/htdocs/theme/boost/pix</span><br></pre></td></tr></table></figure>
+
 <p><strong>Step 3: Back up the existing favicon</strong></p>
 <p>Rename the current file before replacing it:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv favicon.ico favicon.ico.bak</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mv</span> favicon.ico favicon.ico.bak</span><br></pre></td></tr></table></figure>
+
 <p><strong>Step 4: Upload your new <code>favicon.ico</code></strong></p>
 <p>Copy your new file to the same directory.</p>
 <p><strong>Step 5: Clear the cache</strong></p>
@@ -349,10 +380,11 @@
 </ol>
 <h2 id="Removing-the-Moodle-logo-from-the-Boost-footer"><a href="#Removing-the-Moodle-logo-from-the-Boost-footer" class="headerlink" title="Removing the Moodle logo from the Boost footer"></a>Removing the Moodle logo from the Boost footer</h2><p><strong>Step 1: Locate the footer template</strong></p>
 <p>On Bitnami Moodle:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;opt&#x2F;bitnami&#x2F;apps&#x2F;moodle&#x2F;htdocs&#x2F;theme&#x2F;boost&#x2F;templates&#x2F;footer.mustache</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/bitnami/apps/moodle/htdocs/theme/boost/templates/footer.mustache</span><br></pre></td></tr></table></figure>
+
 <p><strong>Step 2: Edit <code>footer.mustache</code></strong></p>
 <p>Open the file and remove the <code>&lt;img&gt;</code> tag or block that references the Moodle logo.</p>
-<p><img src="/images/2020/02/12/62befb40-4d05-11ea-93b3-3feac072eb06.png" alt="footer.mustache example"></p>
+<p><img src="/images/2020/02/12/62befb40-4d05-11ea-93b3-3feac072eb06.png" alt="footer.mustache example" loading="lazy"></p>
 <p><strong>Step 3: Upload the modified file back to the server</strong></p>
 <p>The Moodle logo should no longer appear in the footer after the change.</p>
 <blockquote>
@@ -379,7 +411,7 @@
           (d.head || d.body).appendChild(s);
         })();
       </script>
-      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
   </article>
@@ -390,16 +422,16 @@
     <span class="sidebar-label">Connect</span>
     <div class="sidebar-social">
       <a href="https://x.com/cksachdev" target="_blank" rel="noopener">
-        <i class="fa fa-twitter" aria-hidden="true"></i> X
+        <i class="fa-brands fa-x-twitter" aria-hidden="true"></i> X
       </a>
       <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener">
-        <i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn
+        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn
       </a>
       <a href="https://github.com/cksachdev" target="_blank" rel="noopener">
-        <i class="fa fa-github" aria-hidden="true"></i> GitHub
+        <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
       </a>
       <a href="mailto:mail@chetansachdev.com">
-        <i class="fa fa-envelope" aria-hidden="true"></i> Email
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i> Email
       </a>
     </div>
   </div>
@@ -421,10 +453,10 @@
       hosted on <a href="https://github.com/cksachdev/chetansachdev.com" target="_blank" rel="noopener">GitHub Pages</a>.
     </p>
     <div class="footer-links">
-      <a href="https://x.com/cksachdev" target="_blank" rel="noopener"><i class="fa fa-twitter" aria-hidden="true"></i> X</a>
-      <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
-      <a href="https://github.com/cksachdev" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
-      <a href="mailto:mail@chetansachdev.com"><i class="fa fa-envelope" aria-hidden="true"></i> Email</a>
+      <a href="https://x.com/cksachdev" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i> X</a>
+      <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a>
+      <a href="https://github.com/cksachdev" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+      <a href="mailto:mail@chetansachdev.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</a>
     </div>
   </div>
 </footer>

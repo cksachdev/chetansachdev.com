@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <!-- Google Analytics 4 — replace G-XXXXXXXXXX with your GA4 Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VDR4WJ56Q9"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-VDR4WJ56Q9');
   </script>
 
   <meta charset="UTF-8">
@@ -61,8 +61,37 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- Icons -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0Q4LphifmFQbiakJDd+l4SQ4zD3Tg==" crossorigin="anonymous">
+  <!-- JSON-LD Structured Data -->
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "My preferred settings on a new Mac",
+    "datePublished": "2020-03-14T13:00:02.000Z",
+    "dateModified": "2026-06-13T19:12:21.273Z",
+    "author": {
+      "@type": "Person",
+      "name": "Chetan Sachdev",
+      "url": "https://chetansachdev.com/about/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Chetan Sachdev",
+      "url": "https://chetansachdev.com"
+    },
+    "url": "https://chetansachdev.com/2020/03/14/My-preferred-settings-on-a-new-mac/",
+    "description": "A personal setup checklist for a new Mac — running the laptop script, installing dev tools via Homebrew, configuring Karabiner, Itsycal, function keys, and more.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://chetansachdev.com/2020/03/14/My-preferred-settings-on-a-new-mac/"
+    }
+  }
+  </script>
+  
+
+  <!-- Icons — Font Awesome 6 Free -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
 
   <!-- Theme stylesheet -->
   
@@ -77,7 +106,7 @@
       document.documentElement.setAttribute('data-theme', t === 'light' ? 'light' : 'dark');
     })();
   </script>
-<meta name="generator" content="Hexo 5.0.2"></head>
+<meta name="generator" content="Hexo 8.1.2"></head>
 
 <body>
 
@@ -326,9 +355,11 @@
 
     <div class="post-body">
       <p>My go-to setup checklist when starting fresh on a new Mac. Tested on macOS Catalina.</p>
-<h2 id="Step-1-Run-the-laptop-script"><a href="#Step-1-Run-the-laptop-script" class="headerlink" title="Step 1: Run the laptop script"></a>Step 1: Run the laptop script</h2><p>The <a target="_blank" rel="noopener" href="https://github.com/thoughtbot/laptop">thoughtbot/laptop</a> script installs essential macOS and developer tools in one shot.</p>
+<h2 id="Step-1-Run-the-laptop-script"><a href="#Step-1-Run-the-laptop-script" class="headerlink" title="Step 1: Run the laptop script"></a>Step 1: Run the laptop script</h2><p>The <a href="https://github.com/thoughtbot/laptop">thoughtbot&#x2F;laptop</a> script installs essential macOS and developer tools in one shot.</p>
 <h2 id="Step-2-Install-apps-via-Homebrew"><a href="#Step-2-Install-apps-via-Homebrew" class="headerlink" title="Step 2: Install apps via Homebrew"></a>Step 2: Install apps via Homebrew</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install iterm2 alfred bartender dropbox google-chrome licecap skype slack sublime-text virtualbox whatsapp visual-studio-code karabiner-elements sourcetree araxis-merge itsycal the-unarchiver brave-browser easyfind omnidisksweeper vlc barrier keycastr</span><br></pre></td></tr></table></figure>
+
 <h2 id="Step-3-Set-up-Hexo-for-this-blog"><a href="#Step-3-Set-up-Hexo-for-this-blog" class="headerlink" title="Step 3: Set up Hexo (for this blog)"></a>Step 3: Set up Hexo (for this blog)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+
 <p>Then download and configure <strong>HexoClient</strong> for a GUI editor.</p>
 <h2 id="Step-4-Configure-productivity-tools"><a href="#Step-4-Configure-productivity-tools" class="headerlink" title="Step 4: Configure productivity tools"></a>Step 4: Configure productivity tools</h2><ul>
 <li><strong>Hydra</strong> — window management</li>
@@ -338,26 +369,34 @@
 <li>Disable <strong>Siri</strong></li>
 <li>Configure <strong>Itsycal</strong> date format: <code>EEEE, d-MMM-y h:mm a</code></li>
 </ul>
-<h2 id="Step-6-Install-older-VLC-for-Automator-compatibility"><a href="#Step-6-Install-older-VLC-for-Automator-compatibility" class="headerlink" title="Step 6: Install older VLC (for Automator compatibility)"></a>Step 6: Install older VLC (for Automator compatibility)</h2><p>The latest VLC can have issues with Automator scripts. Download version 2.2.8:<br><a target="_blank" rel="noopener" href="https://download.videolan.org/pub/videolan/vlc/">VLC download archive</a></p>
+<h2 id="Step-6-Install-older-VLC-for-Automator-compatibility"><a href="#Step-6-Install-older-VLC-for-Automator-compatibility" class="headerlink" title="Step 6: Install older VLC (for Automator compatibility)"></a>Step 6: Install older VLC (for Automator compatibility)</h2><p>The latest VLC can have issues with Automator scripts. Download version 2.2.8:<br><a href="https://download.videolan.org/pub/videolan/vlc/">VLC download archive</a></p>
 <h2 id="Step-7-App-Store-apps"><a href="#Step-7-App-Store-apps" class="headerlink" title="Step 7: App Store apps"></a>Step 7: App Store apps</h2><ol>
 <li><strong>Super Easy Timer</strong></li>
-<li><a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12">Microsoft Remote Desktop</a></li>
+<li><a href="https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12">Microsoft Remote Desktop</a></li>
 </ol>
 <h2 id="Tip-Reset-function-keys-for-easier-debugging"><a href="#Tip-Reset-function-keys-for-easier-debugging" class="headerlink" title="Tip: Reset function keys for easier debugging"></a>Tip: Reset function keys for easier debugging</h2><p>By default, the top row acts as media keys. To use them as standard F1–F12:</p>
 <ol>
 <li>Go to <strong>System Preferences → Keyboard</strong></li>
 <li>Check <strong>Use F1, F2, etc. keys as standard function keys</strong></li>
 </ol>
-<p><img src="/images/2020/03/14/de9b8d30-65df-11ea-b442-29d283043002.png" alt="Function key setting step 1"><br><img src="/images/2020/03/14/e7fcacb0-65df-11ea-b442-29d283043002.png" alt="Function key setting step 2"></p>
+<p><img src="/images/2020/03/14/de9b8d30-65df-11ea-b442-29d283043002.png" alt="Function key setting step 1" loading="lazy"><br><img src="/images/2020/03/14/e7fcacb0-65df-11ea-b442-29d283043002.png" alt="Function key setting step 2" loading="lazy"></p>
 <h2 id="Tip-Increase-Apple-Mouse-tracking-speed"><a href="#Tip-Increase-Apple-Mouse-tracking-speed" class="headerlink" title="Tip: Increase Apple Mouse tracking speed"></a>Tip: Increase Apple Mouse tracking speed</h2><p><strong>System Preferences → Mouse → Tracking speed</strong> — drag the slider to the right.</p>
-<p><img src="/images/2020/03/14/f3fcba00-65df-11ea-b442-29d283043002.png" alt="Mouse tracking speed"></p>
+<p><img src="/images/2020/03/14/f3fcba00-65df-11ea-b442-29d283043002.png" alt="Mouse tracking speed" loading="lazy"></p>
 <h2 id="Tip-Show-battery-percentage-in-menu-bar"><a href="#Tip-Show-battery-percentage-in-menu-bar" class="headerlink" title="Tip: Show battery percentage in menu bar"></a>Tip: Show battery percentage in menu bar</h2><p><strong>System Preferences → Battery</strong> → check <strong>Show percentage</strong>.</p>
-<p><img src="/images/2020/03/14/40a51e10-65f4-11ea-b442-29d283043002.png" alt="Battery percentage"></p>
+<p><img src="/images/2020/03/14/40a51e10-65f4-11ea-b442-29d283043002.png" alt="Battery percentage" loading="lazy"></p>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://ahadsheriff.medium.com/how-to-get-a-better-development-experience-on-your-mac-8478be58bba4">Better development experience on Mac</a></li>
+<li><a href="https://ahadsheriff.medium.com/how-to-get-a-better-development-experience-on-your-mac-8478be58bba4">Better development experience on Mac</a></li>
 </ul>
 <p><strong>Mac setup video by Coding Garden:</strong></p>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/tMNOpaQrfAE" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<div class="video-container">
+  <iframe width="560" height="315"
+    src="https://www.youtube.com/embed/tMNOpaQrfAE"
+    title="YouTube video"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    loading="lazy"></iframe>
+</div>
 
     </div>
 
@@ -379,7 +418,7 @@
           (d.head || d.body).appendChild(s);
         })();
       </script>
-      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
   </article>
@@ -390,16 +429,16 @@
     <span class="sidebar-label">Connect</span>
     <div class="sidebar-social">
       <a href="https://x.com/cksachdev" target="_blank" rel="noopener">
-        <i class="fa fa-twitter" aria-hidden="true"></i> X
+        <i class="fa-brands fa-x-twitter" aria-hidden="true"></i> X
       </a>
       <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener">
-        <i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn
+        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn
       </a>
       <a href="https://github.com/cksachdev" target="_blank" rel="noopener">
-        <i class="fa fa-github" aria-hidden="true"></i> GitHub
+        <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
       </a>
       <a href="mailto:mail@chetansachdev.com">
-        <i class="fa fa-envelope" aria-hidden="true"></i> Email
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i> Email
       </a>
     </div>
   </div>
@@ -421,10 +460,10 @@
       hosted on <a href="https://github.com/cksachdev/chetansachdev.com" target="_blank" rel="noopener">GitHub Pages</a>.
     </p>
     <div class="footer-links">
-      <a href="https://x.com/cksachdev" target="_blank" rel="noopener"><i class="fa fa-twitter" aria-hidden="true"></i> X</a>
-      <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
-      <a href="https://github.com/cksachdev" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
-      <a href="mailto:mail@chetansachdev.com"><i class="fa fa-envelope" aria-hidden="true"></i> Email</a>
+      <a href="https://x.com/cksachdev" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i> X</a>
+      <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a>
+      <a href="https://github.com/cksachdev" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+      <a href="mailto:mail@chetansachdev.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</a>
     </div>
   </div>
 </footer>

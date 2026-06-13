@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <!-- Google Analytics 4 — replace G-XXXXXXXXXX with your GA4 Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VDR4WJ56Q9"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-VDR4WJ56Q9');
   </script>
 
   <meta charset="UTF-8">
@@ -63,8 +63,37 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- Icons -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0Q4LphifmFQbiakJDd+l4SQ4zD3Tg==" crossorigin="anonymous">
+  <!-- JSON-LD Structured Data -->
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Day 1 with MacBook Air - Apple Silicon (M1)",
+    "datePublished": "2021-02-07T20:31:36.000Z",
+    "dateModified": "2026-06-13T18:49:34.967Z",
+    "author": {
+      "@type": "Person",
+      "name": "Chetan Sachdev",
+      "url": "https://chetansachdev.com/about/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Chetan Sachdev",
+      "url": "https://chetansachdev.com"
+    },
+    "url": "https://chetansachdev.com/2021/02/08/Day-1-with-Macbook-Air-Apple-Silicon/",
+    "description": "First impressions and developer setup notes for the Apple Silicon M1 MacBook Air, including how to install nvm, Node.js, and common tools via Homebrew using Rosetta.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://chetansachdev.com/2021/02/08/Day-1-with-Macbook-Air-Apple-Silicon/"
+    }
+  }
+  </script>
+  
+
+  <!-- Icons — Font Awesome 6 Free -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
 
   <!-- Theme stylesheet -->
   
@@ -79,7 +108,7 @@
       document.documentElement.setAttribute('data-theme', t === 'light' ? 'light' : 'dark');
     })();
   </script>
-<meta name="generator" content="Hexo 5.0.2"></head>
+<meta name="generator" content="Hexo 8.1.2"></head>
 
 <body>
 
@@ -343,22 +372,28 @@
 <li>Restart Terminal</li>
 </ol>
 <p>Now install nvm and Node.js normally — they’ll run under x86_64.</p>
-<p>References: <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/64899827/nodejs-on-apple-silicon-m1">Node.js on Apple Silicon</a></p>
+<p>References: <a href="https://stackoverflow.com/questions/64899827/nodejs-on-apple-silicon-m1">Node.js on Apple Silicon</a></p>
 <h3 id="Issue-2-“bad-CPU-type-in-executable”-errors"><a href="#Issue-2-“bad-CPU-type-in-executable”-errors" class="headerlink" title="Issue 2: “bad CPU type in executable” errors"></a>Issue 2: “bad CPU type in executable” errors</h3><p>Install Rosetta via the command line:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">softwareupdate --install-rosetta</span><br></pre></td></tr></table></figure>
-<p>Reference: <a target="_blank" rel="noopener" href="https://apple.stackexchange.com/questions/408375/zsh-bad-cpu-type-in-executable">zsh bad CPU type fix</a></p>
+
+<p>Reference: <a href="https://apple.stackexchange.com/questions/408375/zsh-bad-cpu-type-in-executable">zsh bad CPU type fix</a></p>
 <h3 id="Issue-3-Check-and-switch-architecture"><a href="#Issue-3-Check-and-switch-architecture" class="headerlink" title="Issue 3: Check and switch architecture"></a>Issue 3: Check and switch architecture</h3><p>To check which architecture your shell is running under:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -p process.arch</span><br></pre></td></tr></table></figure>
+
 <p>To switch to x86_64:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arch -x86_64 <span class="variable">$SHELL</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">arch</span> -x86_64 <span class="variable">$SHELL</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="Step-2-Install-common-dev-tools-via-Homebrew"><a href="#Step-2-Install-common-dev-tools-via-Homebrew" class="headerlink" title="Step 2: Install common dev tools via Homebrew"></a>Step 2: Install common dev tools via Homebrew</h3><p>Once Rosetta is set up, install everything you need:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install iterm2 alfred licecap sublime-text visual-studio-code karabiner-elements sourcetree araxis-merge itsycal the-unarchiver easyfind omnidisksweeper</span><br></pre></td></tr></table></figure>
+
 <h2 id="Miscellaneous-“You-don’t-have-permission-to-open-the-application”"><a href="#Miscellaneous-“You-don’t-have-permission-to-open-the-application”" class="headerlink" title="Miscellaneous: “You don’t have permission to open the application”"></a>Miscellaneous: “You don’t have permission to open the application”</h2><p>If an app is blocked from opening:</p>
 <p><strong>Step 1:</strong> Open Terminal</p>
-<p><strong>Step 2:</strong> Run:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod -R 755 /path/to/app</span><br></pre></td></tr></table></figure></p>
+<p><strong>Step 2:</strong> Run:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">chmod</span> -R 755 /path/to/app</span><br></pre></td></tr></table></figure>
+
 <p><strong>Step 3:</strong> Enter your password when prompted</p>
 <p><strong>Step 4:</strong> Try opening the app again — it should work now.</p>
-<p><em>Initial system stats (without any apps installed):</em><br><img src="/images/2021/02/08/a099994a-0d3c-4f1f-abe3-fd040dcdd4c4.png" alt="Initial stats"></p>
+<p><em>Initial system stats (without any apps installed):</em><br><img src="/images/2021/02/08/a099994a-0d3c-4f1f-abe3-fd040dcdd4c4.png" alt="Initial stats" loading="lazy"></p>
 
     </div>
 
@@ -380,7 +415,7 @@
           (d.head || d.body).appendChild(s);
         })();
       </script>
-      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
   </article>
@@ -391,16 +426,16 @@
     <span class="sidebar-label">Connect</span>
     <div class="sidebar-social">
       <a href="https://x.com/cksachdev" target="_blank" rel="noopener">
-        <i class="fa fa-twitter" aria-hidden="true"></i> X
+        <i class="fa-brands fa-x-twitter" aria-hidden="true"></i> X
       </a>
       <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener">
-        <i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn
+        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn
       </a>
       <a href="https://github.com/cksachdev" target="_blank" rel="noopener">
-        <i class="fa fa-github" aria-hidden="true"></i> GitHub
+        <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
       </a>
       <a href="mailto:mail@chetansachdev.com">
-        <i class="fa fa-envelope" aria-hidden="true"></i> Email
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i> Email
       </a>
     </div>
   </div>
@@ -422,10 +457,10 @@
       hosted on <a href="https://github.com/cksachdev/chetansachdev.com" target="_blank" rel="noopener">GitHub Pages</a>.
     </p>
     <div class="footer-links">
-      <a href="https://x.com/cksachdev" target="_blank" rel="noopener"><i class="fa fa-twitter" aria-hidden="true"></i> X</a>
-      <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
-      <a href="https://github.com/cksachdev" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
-      <a href="mailto:mail@chetansachdev.com"><i class="fa fa-envelope" aria-hidden="true"></i> Email</a>
+      <a href="https://x.com/cksachdev" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i> X</a>
+      <a href="https://www.linkedin.com/in/cksachdev/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a>
+      <a href="https://github.com/cksachdev" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+      <a href="mailto:mail@chetansachdev.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</a>
     </div>
   </div>
 </footer>
