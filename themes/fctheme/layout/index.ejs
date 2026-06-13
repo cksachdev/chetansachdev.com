@@ -2,17 +2,22 @@
   <div class="posts-header">
     <h1 class="posts-header-title">Writing</h1>
     <div class="search-wrap">
+      <label for="post-search" class="sr-only">Search posts</label>
       <input
         id="post-search"
         class="search-input"
         type="search"
         placeholder="Search posts…"
         aria-label="Search posts"
+        aria-controls="post-list"
       >
     </div>
   </div>
 
-  <ul class="post-list" id="post-list">
+  <!-- Screen-reader live region announces filter results -->
+  <div id="search-sr-status" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <ul class="post-list" id="post-list" role="list">
     <% page.posts.each(function(item){ %>
       <%- partial('_partial/article-excerpt', {item: item}) %>
     <% }); %>
@@ -23,13 +28,28 @@
   (function() {
     var input = document.getElementById('post-search');
     var items = document.querySelectorAll('#post-list .post-list-item');
+    var status = document.getElementById('search-sr-status');
     if (!input) return;
+    var announce = (function() {
+      var t;
+      return function(msg) {
+        clearTimeout(t);
+        t = setTimeout(function() { if (status) status.textContent = msg; }, 200);
+      };
+    })();
     input.addEventListener('input', function() {
       var q = this.value.trim().toLowerCase();
+      var visible = 0;
       items.forEach(function(item) {
-        var text = item.textContent.toLowerCase();
-        item.style.display = (!q || text.includes(q)) ? '' : 'none';
+        var show = !q || item.textContent.toLowerCase().includes(q);
+        item.style.display = show ? '' : 'none';
+        if (show) visible++;
       });
+      if (q) {
+        announce(visible + ' result' + (visible !== 1 ? 's' : '') + ' for "' + q + '"');
+      } else {
+        announce('');
+      }
     });
   })();
 </script>

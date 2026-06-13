@@ -32,7 +32,7 @@
   --color-border-light: #21262d;
   --color-text: #e6edf3;
   --color-text-secondary: #8d96a0;
-  --color-text-muted: #5c6370;
+  --color-text-muted: #7d8590; /* bumped for ≥4.5:1 contrast on #0d1117 */
   --color-accent: #58a6ff;
   --color-accent-hover: #79b8ff;
   --color-accent-light: #0d1f3c;
@@ -52,7 +52,7 @@
   --color-border-light: #f1f5f9;
   --color-text: #0f172a;
   --color-text-secondary: #475569;
-  --color-text-muted: #94a3b8;
+  --color-text-muted: #64748b; /* bumped for ≥4.5:1 contrast on #ffffff */
   --color-accent: #1e40af;
   --color-accent-hover: #1d4ed8;
   --color-accent-light: #eff6ff;
@@ -102,6 +102,20 @@ body {
 ::selection { background: var(--color-selection); color: var(--color-text); }
 
 a { color: inherit; text-decoration: none; }
+
+/* --- Focus Indicators (508 / WCAG 2.4.7) --- */
+/* Remove default outline only when we supply our own */
+:focus { outline: none; }
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+/* Skip link gets a stronger outline for high visibility */
+.skip-link:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
 
 /* ============================================================
    SITE HEADER
@@ -1038,6 +1052,19 @@ a { color: inherit; text-decoration: none; }
 }
 
 .search-wrap { position: relative; }
+
+/* Visually hidden utility — for screen-reader-only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
 @media (max-width: 400px) {
   .header-inner { padding: 0 16px; }

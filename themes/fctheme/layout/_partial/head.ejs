@@ -17,14 +17,19 @@
     var pageTitle = (page.title && page.title !== config.title)
       ? page.title + ' — ' + config.title
       : config.title;
-    var pageDesc = page.description || config.description;
-    var pageUrl = config.url + '/' + (page.path || '');
+    // Use page description → excerpt (stripped) → site description
+    var rawExcerpt = (page.excerpt || '').replace(/<[^>]+>/g, '').trim().substring(0, 200);
+    var pageDesc = page.description || rawExcerpt || config.description;
+    // Normalise canonical: avoid double-slash when page.path starts with /
+    var pagePath = (page.path || '').replace(/^\//, '');
+    var pageUrl = config.url + '/' + pagePath;
     var pageImage = page.cover || page.thumbnail || (config.url + '/img/og-default.png');
   %>
 
   <!-- Primary Meta -->
   <meta name="description" content="<%= pageDesc %>">
   <meta name="author" content="Chetan Sachdev">
+  <% if (config.keywords) { %><meta name="keywords" content="<%= config.keywords %>"><% } %>
   <link rel="canonical" href="<%= pageUrl %>">
 
   <!-- Open Graph (Facebook, LinkedIn) -->
@@ -126,11 +131,6 @@
     "author": {
       "@type": "Person",
       "name": "<%= config.author %>"
-    },
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "<%= config.url %>/?s={search_term_string}",
-      "query-input": "required name=search_term_string"
     }
   }
   </script>
