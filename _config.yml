@@ -36,12 +36,12 @@ jsonContent:
     tags: true
 
 # To automatically generate a Sitemap
-a Sitemap:
+sitemap:
   path: sitemap.xml
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://chetansachdev.com
+url: https://chetansachdev.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
